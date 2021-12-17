@@ -1,0 +1,125 @@
+{
+  "main": {
+    "id": "04671a667846a0bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "a25083790a8c0695",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Digital Humanities.md",
+            "mode": "source"
+          }
+        },
+        "group": "0f150ea6e26076d6"
+      },
+      {
+        "id": "8d1316cba432511a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Digital Humanities.md",
+            "mode": "preview"
+          }
+        },
+        "group": "0f150ea6e26076d6"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e4eecdccbf8f881e",
+    "type": "split",
+    "children": [
+      {
+        "id": "0c0aaa5ba09a7988",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4972470be55ee35b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "2317d904ca2167eb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 229.00405502319336
+  },
+  "right": {
+    "id": "4351db21b389b6a0",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3d868b18fdd377d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ea68abcfd928d9c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Digital Humanities.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3dc8cce6935788e1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Digital Humanities.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "a25083790a8c0695",
+  "lastOpenFiles": [
+    "Digital Humanities.md",
+    "Term4/Term 4.md",
+    "Term3/Mods/Data Driven World.md",
+    "Term3/Term3.md",
+    "README.md",
+    "Algo.md",
+    "IS & Programming Overview.md",
+    "Term3_MU/W10-13.md",
+    "Term3_MU/8.2 Some Important Statistics.md",
+    "Comp Struct.md"
+  ]
+}
