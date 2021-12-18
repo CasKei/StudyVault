@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Digital Humanities.md",
+            "file": "Term4/CompStruct/Comp Struct.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Digital Humanities.md",
+            "file": "Term4/CompStruct/Comp Struct.md",
             "mode": "preview"
           }
         },
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Digital Humanities.md",
+                "file": "Term4/CompStruct/Comp Struct.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Digital Humanities.md"
+                "file": "Term4/CompStruct/Comp Struct.md"
               }
             }
           }
@@ -109,17 +109,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a25083790a8c0695",
+  "active": "8d1316cba432511a",
   "lastOpenFiles": [
-    "Digital Humanities.md",
+    "Term4/CompStruct/Comp Struct.md",
     "Term4/Term 4.md",
-    "Term3/Mods/Data Driven World.md",
-    "Term3/Term3.md",
-    "README.md",
-    "Algo.md",
-    "IS & Programming Overview.md",
-    "Term3_MU/W10-13.md",
-    "Term3_MU/8.2 Some Important Statistics.md",
-    "Comp Struct.md"
+    "Term3/Term 3.md",
+    "Term3/DDW/Notes/Binary Heap and Heapsort.md",
+    "Term3/DDW/Notes/Bubble Sort and Insertion Sort.md",
+    "Term4/DH/Digital Humanities.md",
+    "Term4/ISP/IS & Programming.md",
+    "Term4/Algo/Algo.md",
+    "Term3/DDW/Data Driven World.md",
+    "README.md"
   ]
 }

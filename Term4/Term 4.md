@@ -1,5 +1,5 @@
 # Hell Term Indeed
 [[Comp Struct]]
 [[Algo]]
-[[IS & Programming Overview|ISP]]
+[[IS & Programming|ISP]]
 [[Digital Humanities]]
