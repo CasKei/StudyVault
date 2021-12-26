@@ -4,5 +4,10 @@
   "foldIndent": true,
   "showLineNumber": true,
   "alwaysUpdateLinks": true,
-  "fileSortOrder": "alphabetical"
+  "fileSortOrder": "byCreatedTimeReverse",
+  "legacyEditor": false,
+  "livePreview": true,
+  "defaultViewMode": "preview",
+  "strictLineBreaks": true,
+  "newFileLocation": "current"
 }

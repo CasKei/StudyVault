@@ -9,23 +9,11 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/CompStruct/Comp Struct.md",
-            "mode": "source"
+            "file": "Term3/DDW/Notes/Stacks and Queues.md",
+            "mode": "source",
+            "source": true
           }
-        },
-        "group": "0f150ea6e26076d6"
-      },
-      {
-        "id": "8d1316cba432511a",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term4/CompStruct/Comp Struct.md",
-            "mode": "preview"
-          }
-        },
-        "group": "0f150ea6e26076d6"
+        }
       }
     ],
     "direction": "vertical"
@@ -81,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/CompStruct/Comp Struct.md",
+                "file": "Term3/DDW/Notes/Stacks and Queues.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/CompStruct/Comp Struct.md"
+                "file": "Term3/DDW/Notes/Stacks and Queues.md"
               }
             }
           }
@@ -109,17 +97,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8d1316cba432511a",
+  "active": "a25083790a8c0695",
   "lastOpenFiles": [
-    "Term4/CompStruct/Comp Struct.md",
-    "Term4/Term 4.md",
-    "Term3/Term 3.md",
-    "Term3/DDW/Notes/Binary Heap and Heapsort.md",
-    "Term3/DDW/Notes/Bubble Sort and Insertion Sort.md",
-    "Term4/DH/Digital Humanities.md",
-    "Term4/ISP/IS & Programming.md",
-    "Term4/Algo/Algo.md",
+    "Term3/DDW/Notes/Stacks and Queues.md",
+    "Term3/DDW/Notes/Object Oriented Programming.md",
     "Term3/DDW/Data Driven World.md",
-    "README.md"
+    "Term3/DDW/Notes/Bubble Sort and Insertion Sort.md",
+    "Term3/DDW/Notes/Merge Sort.md",
+    "Term3/DDW/Notes/Divide and Conquer.md",
+    "README.md",
+    "Term4/Algo/Algo.md",
+    "Term3/Term 3.md",
+    "Term3/DDW/Notes/Binary Heap and Heapsort.md"
   ]
 }

@@ -1,5 +1,5 @@
 ---
-aliases: ISP
+aliases: ISP, 50.001
 ---
 #### Course Description
 

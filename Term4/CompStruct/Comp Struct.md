@@ -1,5 +1,5 @@
 ---
-aliases: computation structures, comp struct, cs
+aliases: computation structures, comp struct, cs, 50.002
 ---
 #### Course Description
 

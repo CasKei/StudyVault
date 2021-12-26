@@ -1,5 +1,5 @@
 ---
-aliases: algo, algorithms, intro to algorithms
+aliases: algo, algorithms, intro to algorithms, 50.004
 ---
 #### Course Description
 
