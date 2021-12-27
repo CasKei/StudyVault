@@ -5,16 +5,8 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
-  "colorGroups": [
-    {
-      "query": "DDW",
-      "color": {
-        "a": 1,
-        "rgb": 12669664
-      }
-    }
-  ],
+  "collapse-color-groups": true,
+  "colorGroups": [],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -26,5 +18,5 @@
   "linkStrength": 1,
   "linkDistance": 250,
   "scale": 0.62583242892285,
-  "close": true
+  "close": false
 }
