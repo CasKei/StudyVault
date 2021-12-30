@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term3/DDW/Notes/Creating Plots using Matplotlib and Seaborn.md",
+            "file": "Term3/DDW/Notes/Linear Regression.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 229.00405502319336
+    "width": 229.00405502319336,
+    "collapsed": true
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term3/DDW/Notes/Creating Plots using Matplotlib and Seaborn.md",
+                "file": "Term3/DDW/Notes/Linear Regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term3/DDW/Notes/Creating Plots using Matplotlib and Seaborn.md"
+                "file": "Term3/DDW/Notes/Linear Regression.md"
               }
             }
           }
@@ -99,15 +100,15 @@
   },
   "active": "fb10eef9af248753",
   "lastOpenFiles": [
-    "Term3/DDW/Notes/Creating Plots using Matplotlib and Seaborn.md",
+    "Term3/DDW/Notes/Linear Regression.md",
+    "Term3/DDW/Notes/^.md",
     "Term3/DDW/Notes/Working with Data.md",
     "Term3/DDW/Data Driven World.md",
+    "Term3/DDW/Notes/Creating Plots using Matplotlib and Seaborn.md",
     "Term3/DDW/Notes/Fixed-Size Array and Linked List.md",
     "Term3/DDW/Notes/Inheritance and Abstract Base Class.md",
     "Term3/DDW/Notes/Introduction to Graph.md",
     "Term3/DDW/Notes/Graph Search.md",
-    "Term4/ISP/IS & Programming.md",
-    "Term3/DDW/Notes/Object Oriented Programming.md",
-    "README.md"
+    "Term4/ISP/IS & Programming.md"
   ]
 }
