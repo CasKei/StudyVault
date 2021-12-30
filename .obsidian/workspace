@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term3/DDW/Notes/Inheritance and Abstract Base Class.md",
+            "file": "Term3/DDW/Notes/Creating Plots using Matplotlib and Seaborn.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term3/DDW/Notes/Inheritance and Abstract Base Class.md",
+                "file": "Term3/DDW/Notes/Creating Plots using Matplotlib and Seaborn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term3/DDW/Notes/Inheritance and Abstract Base Class.md"
+                "file": "Term3/DDW/Notes/Creating Plots using Matplotlib and Seaborn.md"
               }
             }
           }
@@ -99,15 +99,15 @@
   },
   "active": "fb10eef9af248753",
   "lastOpenFiles": [
+    "Term3/DDW/Notes/Creating Plots using Matplotlib and Seaborn.md",
+    "Term3/DDW/Notes/Working with Data.md",
+    "Term3/DDW/Data Driven World.md",
+    "Term3/DDW/Notes/Fixed-Size Array and Linked List.md",
     "Term3/DDW/Notes/Inheritance and Abstract Base Class.md",
     "Term3/DDW/Notes/Introduction to Graph.md",
-    "Term3/DDW/Data Driven World.md",
     "Term3/DDW/Notes/Graph Search.md",
     "Term4/ISP/IS & Programming.md",
     "Term3/DDW/Notes/Object Oriented Programming.md",
-    "README.md",
-    "Term4/DH/Digital Humanities.md",
-    "Term3/DDW/Notes/Analysing Computation Time.md",
-    "Term3/DDW/Notes/Bubble Sort and Insertion Sort.md"
+    "README.md"
   ]
 }
