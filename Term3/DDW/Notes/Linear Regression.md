@@ -1,6 +1,6 @@
 ---
 aliases: regression, simple linear regression
-tags: #regression, #data, ML
+tags: #regression, #data, #ML
 ---
 Back to [[Data Driven World|DDW]]
 Back to [[Term 3]]
@@ -45,6 +45,9 @@ $$
 $$
 ## Matrix Operations
 ### Hypothesis
+
+^9e397c
+
 Our predicted value for 1 data point was $\hat{y}(x^i)=\hat{\beta_0}+\hat{\beta_1}x^i$.
 If we have $m$ data points, we will have a set of equations from $i=1$ to $i=m$.
 We can rewrite this in terms of matrix.
@@ -123,5 +126,16 @@ After we build our model, we usually want to evaluate how good our model is. We 
 
 The training data set is used to build the model or the hypothesis. The test data set, on the other hand, is used to evaluate the model by computing some metrics.
 ### Mean Squared Error
-
+$$MSE =\dfrac{1}{n}\sum^n_{i=1}(y^i - \hat{y}^i)^2$$
+where $n$ is the number of predicted data points in the test data set,  $y^i$ is the actual value in the test data set, and $\hat{y}^i$ is the predicted value obtained using the hypothesis and the independent variable $x^i$ in the test data set.
 ### R2 Coefficient of Determination
+$$r^2 = 1-\dfrac{SS_{res}}{SS_{tot}}$$
+where $SS_{res}=\sum^n_{i=1}(y_i-\hat{y}_i)^2$ 
+and $SS_{tot}=\sum^n_{i=1}(y_i-\bar{y})^2$, 
+where $\bar{y}=\dfrac{1}{n}\sum^n_{i=1}y_i$ 
+and $n$ is the number of target values.
+
+This coefficient gives you how close the data is to a straight line.
+The closer it is to a straight line, the closer the value is to 1.0.
+This means there is a correlation between the independent variable and the dependent variable.
+When there is n correlation, the value will be close to 0.

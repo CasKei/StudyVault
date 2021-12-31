@@ -11,6 +11,9 @@ The `Vertex` and `Graph` classes may need some additional attributes.
 One way is to modify our classes to create a new class.
 Here, however, we wish to introduce the concept of [[#Inheritance]], which allows us to ruse our existing class and create a new class that is derived from our existing class.
 ## Breadth First Search (BFS)
+
+^7a8dcc
+
 Normally used to find shortest path between 2 vertices.
 ![[Pasted image 20211227131010.png]]
 Say we want shortest path from A to F.
@@ -134,6 +137,9 @@ where
 Redefining methods from parent class is called **method overriding**.
 More about inheritance in next lessons.
 ## Depth First Search (DFS)
+
+^729e6d
+
 Explores neighbouring vertices in a depth-wise manner.
 We go down the tree before moving to the next siblings.
 ![[Pasted image 20211227145430.png]]

@@ -1,6 +1,6 @@
 ---
 aliases: seaborn, data, matplotlib, data visualisation
-tags: #seaborn, #data, #matplotlib
+tags: #seaborn, #data, #matplotlib, #ML
 ---
 Back to [[Data Driven World|DDW]]
 Back to [[Term 3]]

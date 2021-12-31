@@ -1,6 +1,6 @@
 ---
 aliases: pandas, data
-tags: #pandas, #data
+tags: #pandas, #data, #ML
 ---
 Back to [[Data Driven World|DDW]]
 Back to [[Term 3]]

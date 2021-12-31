@@ -13,6 +13,13 @@
         "a": 1,
         "rgb": 5832959
       }
+    },
+    {
+      "query": "cs",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
     }
   ],
   "collapse-display": false,
