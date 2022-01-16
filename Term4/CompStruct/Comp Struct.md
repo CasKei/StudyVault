@@ -1,6 +1,7 @@
 ---
 aliases: computation structures, comp struct, cs, 50.002
 ---
+[Course Handout](https://docs.google.com/document/d/1Ye80CY1Ppvgr6_85lexZsFCkg7rU6UNwYrnt08IYAZo/edit#)
 # Contents
 [[Basics of Information]]
 [[Digital Abstraction]]
@@ -25,6 +26,7 @@ aliases: computation structures, comp struct, cs, 50.002
 [[FPGA4 - Building Beta CPU]]
 [[Creating a Programmable Machine]]
 ## Textbook
+
 [[The Digital Abstraction]]
 [[Binary Representations and Notation]]
 [[Combinatorial Devices and Circuits]]
@@ -51,6 +53,9 @@ aliases: computation structures, comp struct, cs, 50.002
 [[MAYBE Microcode Support for Interpreters]]
 [[S Machine Summary]]
 [[G Machine Summary]]
+
+
+
 #### Course Description
 
 This course introduces architecture of digital systems, emphasising structural principles common to a wide range of technologies. Topics include Multilevel implementation strategies; definition of new primitives (e.g., gates, instructions, procedures, and processes) and their mechanisation using lower-level elements. Analysis of potential concurrency; precedence constraints and performance measures; pipelined and multidimensional systems; instruction set design issues; architectural support for contemporary software structures.

@@ -10,6 +10,18 @@
           "type": "markdown",
           "state": {
             "file": "Term4/CompStruct/Comp Struct.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "ed0d53b2df4f93f6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term4/DH/Notes on Digital Humanities.md",
             "mode": "source",
             "source": false
           }
@@ -70,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/CompStruct/Comp Struct.md",
+                "file": "Term4/DH/Notes on Digital Humanities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/CompStruct/Comp Struct.md"
+                "file": "Term4/DH/Notes on Digital Humanities.md"
               }
             }
           }
@@ -98,17 +110,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "fb10eef9af248753",
+  "active": "ed0d53b2df4f93f6",
   "lastOpenFiles": [
+    "Term4/DH/Notes on Digital Humanities.md",
     "Term4/CompStruct/Comp Struct.md",
-    "Term4/ISP/IS & Programming.md",
-    "Term3/DDW/Notes/State Space Search.md",
-    "README.md",
-    "Term3/DDW/Data Driven World.md",
-    "Term3/DDW/Notes/SM Abstract Class.md",
-    "Term3/DDW/Notes/State Machine.md",
-    "Term3/DDW/Notes/Confusion Matrix and Metrics.md",
-    "Term3/DDW/Notes/Logistic Regression.md",
-    "Term3/DDW/Notes/Linear Regression.md"
+    "Term4/CompStruct/Computation structures by Stephen A. Ward, Robert H. Halstead (z-lib.org) 1.pdf.md",
+    "Term4/CompStruct/Assemblers and Compilers.md",
+    "Term4/DH/Digital Humanities.md",
+    "Term4/Algo/Problem Solving with Algorithms and Data Structures.md",
+    "Term4/Algo/Algo.md",
+    "Term4/Algo/CLRS.md",
+    "Term4/CompStruct/Untitled.md",
+    "Computation structures by Stephen A. Ward, Robert H. Halstead (z-lib.org) 1.pdf"
   ]
 }

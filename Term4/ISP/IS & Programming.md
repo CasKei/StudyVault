@@ -40,3 +40,4 @@ This course is an introduction to the design and programming of information syst
 -   IoT data analytics and programming
 -   OO Design pattern
 -   GUI
+
