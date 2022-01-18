@@ -1,23 +1,23 @@
 ---
 aliases: DH
 ---
-This course is an introduction to the principles and methods of digital humanities, an emerging interdisciplinary field that seeks to apply digital and computational methods to investigations in the humanities. The course will focus on how computational methods and tools can contribute to the interpretive activities that typically constitute humanistic inquiry, especially to the reading of textual matter as literature. Students will be acquainted with the history of the emergence of the digital humanities and will learn about the leading methodological and epistemological issues in this emerging field. They will also learn about a few classic case studies in the field. They will also learn about the capabilities as well as limitations of computational tools for interpretation, and carry out a hands-on collaborative project as part of coursework using some of the methods that they will learn about.
 
-*Note: This course is required for Digital Humanities (DH) Minor*
 
-HASS 2.137: INTRODUCTION TO DIGITAL HUMANITIES
+# HASS 2.137: INTRODUCTION TO DIGITAL HUMANITIES
+
+|Week|Reading|Supplementary Readings|Notes|
+|---|---|---|---|
+|1|[[A New History of the Humanities]]|[Beware the magic of metrics](https://www.eurozine.com/beware-the-magic-of-metrics/)</br>[Humanities to Digital Humanities](https://archive.org/details/DigitalHumanities_201701/page/n35/mode/2up)</br>[What were the Humanities, Anyway?](https://www.chronicle.com/article/what-were-the-humanities-anyway)|[[Week 1 notes]]|
 
 Instructors
 Dr. Sayan Bhattacharyya (Office: XXXX) and Dr. Alastair Gornall (Office: 1.202.15)
-Course Schedule
-Mondays 1–2.30pm; 2.30–4pm (Online)
-Thursdays 8.30–10am; 10–11.30am (Online)
 
 ## What this course is about:
 This course is an introduction to the principles and methods of digital humanities, an emerging interdisciplinary field that seeks to apply digital and computational methods to investigations in the humanities. In this course, we will discuss the capabilities as well as limitations of computational tools for interpretation in the humanities. The course is structured around the following premise: As technology permeates every corner of human activity, today's engineers and technologists are increasingly called upon to address complex problems in more unstructured contexts and situations than ever before. The humanities, therefore, provide a useful sandbox for students of engineering and technology to understand such complexity and explore how tools that work well for well-structured problems reach their limits of applicability. The course will focus on how computational methods and tools can contribute to the interpretive activities that typically constitute humanistic inquiry, especially to the reading of textual matter as literature. Students will be acquainted with the history of the emergence of the digital humanities and will learn about the leading methodological and epistemological issues in this emerging field. They will also learn about a few classic case studies in the field. Students will carry out a hands-on collaborative project as part of coursework using some of the methods that they will learn about. Digital Humanities is an ideal bridge between technical fields and the humanities. This subject helps students of engineering-and-design address less structured problem-areas than they may have been familiar with from their technically oriented classes, and helps to show them the limitations of their tools when applied to questions of interpretation in the humanities. Thus, the subject of Digital Humanities helps engineering-and-design students gain an understanding of how to operationalize questions that involve relatively unstructured and subjective judgment into actionable design and implementation steps.
 
 ## Readings:
 All readings will be made available in electronic format on eDimension, either as a pdf document or via a link to an online resource. Some select texts will also be available in hard copy in the library. In order to facilitate a fruitful conversation in class, it is important that all students do assigned readings. I may, at my discretion, occasionally ask students to print out hard copies of the week’s readings to bring to class.
+
 ## Learning objectives:
 1. Identify the suitability and limitations of digital tools for complex questions
 2. Choose, develop and adapt selected Digital Humanities tools to address
