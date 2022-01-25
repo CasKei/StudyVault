@@ -7,7 +7,7 @@ aliases: DH
 
 |Week|Reading|Supplementary Readings|Notes|
 |---|---|---|---|
-|1|[[A New History of the Humanities]]|[Beware the magic of metrics](https://www.eurozine.com/beware-the-magic-of-metrics/)</br>[Humanities to Digital Humanities](https://archive.org/details/DigitalHumanities_201701/page/n35/mode/2up)</br>[What were the Humanities, Anyway?](https://www.chronicle.com/article/what-were-the-humanities-anyway)|[[Week 1 notes]]|
+|1|[[A New History of the Humanities]]|[Beware the magic of metrics](https://www.eurozine.com/beware-the-magic-of-metrics/)</br>[Humanities to Digital Humanities](https://archive.org/details/DigitalHumanities_201701/page/n35/mode/2up)</br>[What were the Humanities, Anyway?](https://www.chronicle.com/article/what-were-the-humanities-anyway)</br>[Where is Cultural Criticism in the Digital Humanities?](https://dhdebates.gc.cuny.edu/read/untitled-88c11800-9446-469b-a3be-3fdb36bfbd1e/section/896742e7-5218-42c5-89b0-0c3c75682a2f)|[[Week 1 notes]]|
 
 Instructors
 Dr. Sayan Bhattacharyya (Office: XXXX) and Dr. Alastair Gornall (Office: 1.202.15)

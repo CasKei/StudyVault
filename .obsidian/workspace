@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "ed0d53b2df4f93f6",
+        "id": "b235093cbe059bbe",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/Algo/Algo.md",
-            "mode": "preview",
+            "file": "Term4/ISP/Week 1 - Iterating.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -69,13 +69,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/Algo/Algo.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "Term4/ISP/Week 1 - Iterating.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -86,28 +86,29 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/Algo/Algo.md"
+                "file": "Term4/ISP/Week 1 - Iterating.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "ed0d53b2df4f93f6",
+  "active": "b235093cbe059bbe",
   "lastOpenFiles": [
-    "Term4/Algo/Algo.md",
-    "Term4/Algo/CLRS.md",
-    "Term4/DH/Digital Humanities.md",
-    "Term4/DH/Beware the magic of metrics.md",
-    "Term4/DH/Readings/A New History of the Humanities.md",
-    "Attachments/SelectedPagesFrom_ANewHistoryOfTheHumanities_by_RensBod.pdf",
-    "Term4/DH/Notes on Digital Humanities.md",
-    "Term4/CompStruct/Notes/Basics of Information.md",
-    "Term4/CompStruct/Comp Struct.md",
-    "Term4/CompStruct/Computation structures by Stephen A. Ward, Robert H. Halstead (z-lib.org) 1.pdf.md"
+    "Term4/ISP/Week 1 - Iterating.md",
+    "Term4/ISP/IS & Programming.md",
+    "Term4/ISP/Notes/Week 1 - ArrayList, LinkedList, Generics.md",
+    "Term3/DDW/Notes/Object Oriented Programming.md",
+    "Term3/DDW/Notes/Graph Search.md",
+    "Other/Security/Crash Couse Cybersecurity.md",
+    "Other/Security/Crash Course Hackers and Cyber Attacks.md",
+    "Term3/DDW/Notes/Binary Heap and Heapsort.md",
+    "Term4/CompStruct/Computation structures by Stephen A. Ward, Robert H. Halstead (z-lib.org) 1.pdf.md",
+    "README.md"
   ]
 }

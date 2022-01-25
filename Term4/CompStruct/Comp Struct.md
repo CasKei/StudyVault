@@ -2,6 +2,7 @@
 aliases: computation structures, comp struct, cs, 50.002
 ---
 [Course Handout](https://docs.google.com/document/d/1Ye80CY1Ppvgr6_85lexZsFCkg7rU6UNwYrnt08IYAZo/edit#)
+[Website](https://natalieagus.github.io/50002/)
 # Contents
 [[Basics of Information]]
 [[Digital Abstraction]]
@@ -54,7 +55,57 @@ aliases: computation structures, comp struct, cs, 50.002
 [[S Machine Summary]]
 [[G Machine Summary]]
 
+## Extra
+[[Structured Computer Organisation: Levels, Machines]]
+[[Milestones in Computer Architecture]]
+[[The Computer Zoo]]
+[[Example Computer Families]]
+[[Processors]]
+[[Primary Memory]]
+[[Secondary Memory]]
+[[Input/Output]]
+[[Gates and Boolean Algebra]]
+[[Basic Digital Logic Circuits]]
+[[Memory]]
+[[CPU chips and buses]]
+[[Example CPU chips]]
+[[Example Buses]]
+[[Interfacing]]
+[[An Example Microarchitecture]]
+[[An Example ISA: IJVM]]
+[[An Example Implementation]]
+[[Design of the Microarchitecture Level]]
+[[Improving Performance]]
+[[Examples of the Microarchitecture Level]]
+[[Comparison of the I7, OMAP4430, and ATMEGA168]]
+[[Overview of the ISA Level]]
+[[Data Types]]
+[[Instruction Formats]]
+[[Addressing]]
+[[Instruction Types]]
+[[Flow of control]]
+[[A detailed example: the towers of hanoi]]
+[[The IA-64 Architecture and the Itanium 2]]
+[[Virtual Memory]]
+[[Hardware Virtualisation]]
+[[OSM-Level I/O instructions]]
+[[OSM-Level Instructions for parallel processing]]
+[[Example Operating Systems]]
+[[Introduction to Assembly Language]]
+[[Macros]]
+[[The Assembly Process]]
+[[Linking and Loading]]
+[[On-chip Paralellism]]
+[[Coprocessors]]
+[[Shared-Memory Multiprocessors]]
+[[Message-Passing Multicomputers]]
+[[Grid computing]]
 
+## Problem Sets/ Tutorial/ Practice
+[[Problem Set 1]]
+
+## Lab
+[[Lab 1: CMOS]]
 
 #### Course Description
 

@@ -1,6 +1,14 @@
 ---
 aliases: ISP, 50.001
 ---
+
+[Course Handout](https://docs.google.com/document/d/1UwOEHwjA18vm4vhfzTBcV6qRlVub2DHofblT_BcInSU/edit)
+# Lessons
+[[Week 1 - Admin]]
+[[Week 1 - Java Introduction]]
+[[Week 1 - Static Typing]]
+[[Week 1 - ArrayList, LinkedList, Generics]]
+[[Week 1 - Iterating]]
 #### Course Description
 
 This course is an introduction to the design and programming of information systems. Topics include object oriented programming, data structures, mobile system and programming, design pattern and use of software libraries. Sample applications include Internet of Things, Android app and data analytics.

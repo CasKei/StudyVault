@@ -71,6 +71,9 @@ If there is not enough space, we can double the size of the array as in the case
  Depending on the design, we may want to choose to keep the empty space available once we reserve it.
  This, however, may not be a preferred option in systems with small memories like embedded systems.
 # Linked List
+
+^780eaa
+
 Instead of just storing the element, a Linked List stores more information in one **node**. In a linked list, each node contains the following:
 -   the element
 -   and the reference to the next element

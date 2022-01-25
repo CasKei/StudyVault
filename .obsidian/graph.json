@@ -20,10 +20,17 @@
         "a": 1,
         "rgb": 14725458
       }
+    },
+    {
+      "query": "algo",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
     }
   ],
   "collapse-display": false,
-  "showArrow": true,
+  "showArrow": false,
   "textFadeMultiplier": -0.5,
   "nodeSizeMultiplier": 0.871891563124511,
   "lineSizeMultiplier": 1.33979494308802,
@@ -32,6 +39,6 @@
   "repelStrength": 9.10417933790946,
   "linkStrength": 1,
   "linkDistance": 109,
-  "scale": 0.44488517253755805,
+  "scale": 0.4984840982510928,
   "close": true
 }

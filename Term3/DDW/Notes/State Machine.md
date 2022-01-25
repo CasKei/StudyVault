@@ -6,6 +6,9 @@ Back to [[Data Driven World|DDW]]
 Back to [[Term 3]]
 # State Machine
 ## Pure Functions and State Machines as a Function
+
+^6d8a9a
+
 When the computation return a value, we can write its output in terms of a mathematical equation $o_t=f(i_t)$
 This is a **pure function**. The output only depends on the current input.
 
