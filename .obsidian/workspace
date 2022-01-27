@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/ISP/Week 1 - Iterating.md",
+            "file": "Term4/CompStruct/Problem Sets/Problem Set 1.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/ISP/Week 1 - Iterating.md",
+                "file": "Term4/CompStruct/Problem Sets/Problem Set 1.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/ISP/Week 1 - Iterating.md"
+                "file": "Term4/CompStruct/Problem Sets/Problem Set 1.md"
               }
             }
           }
@@ -100,15 +100,15 @@
   },
   "active": "b235093cbe059bbe",
   "lastOpenFiles": [
-    "Term4/ISP/Week 1 - Iterating.md",
+    "Term4/CompStruct/Problem Sets/Problem Set 1.md",
+    "Term4/CompStruct/Notes/Digital Abstraction.md",
+    "Term4/CompStruct/Comp Struct.md",
+    "Term4/ISP/Notes/Week 2 - Encapsulation.md",
     "Term4/ISP/IS & Programming.md",
-    "Term4/ISP/Notes/Week 1 - ArrayList, LinkedList, Generics.md",
-    "Term3/DDW/Notes/Object Oriented Programming.md",
-    "Term3/DDW/Notes/Graph Search.md",
-    "Other/Security/Crash Couse Cybersecurity.md",
-    "Other/Security/Crash Course Hackers and Cyber Attacks.md",
-    "Term3/DDW/Notes/Binary Heap and Heapsort.md",
-    "Term4/CompStruct/Computation structures by Stephen A. Ward, Robert H. Halstead (z-lib.org) 1.pdf.md",
-    "README.md"
+    "Term4/ISP/Notes/Week 2 - Instance and static variables or methods.md",
+    "Week 2 - Instance and static variables/methods.md",
+    "Term4/ISP/Notes/Week 2 - Constructors.md",
+    "Term4/ISP/Notes/Week 2 - OOP and Classes.md",
+    "Term4/ISP/Homework and ProblemSet/ISP Problem Set 1A.md"
   ]
 }

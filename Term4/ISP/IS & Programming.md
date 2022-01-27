@@ -9,6 +9,14 @@ aliases: ISP, 50.001
 [[Week 1 - Static Typing]]
 [[Week 1 - ArrayList, LinkedList, Generics]]
 [[Week 1 - Iterating]]
+[[Week 2 - OOP and Classes]]
+[[Week 2 - Constructors]]
+[[Week 2 - Instance and static variables or methods]]
+[[Week 2 - Encapsulation]]
+
+# Work
+[[ISP Problem Set 1A]]
+
 #### Course Description
 
 This course is an introduction to the design and programming of information systems. Topics include object oriented programming, data structures, mobile system and programming, design pattern and use of software libraries. Sample applications include Internet of Things, Android app and data analytics.

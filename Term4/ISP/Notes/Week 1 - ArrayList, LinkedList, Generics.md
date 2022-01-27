@@ -9,9 +9,9 @@ Can be used to store unlimited number of objects
 ![[Pasted image 20220125090625.png]]
 - Operations for ArrayList and LinkedList are similar (both implemented the List interface)
 - Underlying mechansms are different:
-	- ArrayList stores elements in an [[Week 1 - Java Introduction#Array|array]];
+	- [[Fixed-Size Array and Linked List#Fixed-Size Array|ArrayList]] stores elements in an [[Week 1 - Java Introduction#Array|array]];
 		- If [[Fixed-Size Array and Linked List#Adding an Element When Array is Full|capacity is exceeded]], a larger new array will be created and all the elements are copied to the new array
-	- LinkedList stores elements in a [[Fixed-Size Array and Linked List#^780eaa|Linked List data structure]]
+	- LinkedList stores elements in a [[Fixed-Size Array and Linked List#Linked List|Linked List data structure]]
 - Have different performance for various operations
 	- ArrayList is more efficient to support random access through an index
 ![[Pasted image 20220125091619.png]]
@@ -75,3 +75,9 @@ I.add("bye");
 I.add("haha");
 I.add(2); // error detect at compile time
 ```
+# Comparison: Array, ArrayList, LinkedList
+|Array|ArrayList|LinkedList|
+|---|---|---|
+|Size cannot be changed| Size can be changed|Size can be changed|
+| |consecutive|  |
+|  |  better for access| better for manipulation|

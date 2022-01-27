@@ -27,13 +27,14 @@ A specific type of digital device that has the following criteria:
     propagation time for the device to compute the specified output  
     values given a set of valid and stable input value(s)
 
+![[Pasted image 20220127090727.png]]
 Later on you will learn another type of digital logic devices called the **sequential** logic device, whose output depends not only on the present input but also on the history of the inputs, hence having a _memory_. [[State Machine#^6d8a9a|State function (DDW)]]
 
 ### Combinational Digital System
 A **set** of interconnected circuit elements is **combinational** and can be labeled as a **combinational digital system** if and only if:
 -   **Each circuit element is also combinational with no directed cycles** (no _feedback_ loop), and
 -   That very device’s input is connected to **exactly one output of another device** or to some vast supply of `0`s and `1`s.
-
+![[Pasted image 20220127090758.png]]
 ## Voltage to encode information
 The most naive way to use voltage to encode information is to use ‘low’ voltage to encode valid ‘0’ and ‘high’ voltage to encode valid ‘1’, and define the low and high threshold for each valid ‘0’ and ‘1’.
 Anything that is between the low and high threshold value is called the invalid zone, as shown in the figure below:
@@ -75,6 +76,28 @@ _Note that a noise can knock the voltage down as well, this is just an example t
 Device 1 in the figure above **violates** static discipline because _given a **valid** input, it *may_ be **unable** to produce a valid output (to **reach** the next device 2), because the `0.5V` produced at the output of Device 1 may meet some disturbances that caused it to be slightly off, e.g: `0.55V`.
 
 Hence, we need to account for the presence of some light **noise**.
-Instead of naively setting some voltage $V_{high}$ and $V_{low}$ as we did above, we need to set a _range_ of Voltages as valid bit `1` and `0` respectively, and ensuring that we
+Instead of naively setting some voltage $V_{high}$ and $V_{low}$ as we did above, we need to set a _range_ of Voltages as valid bit `1` and `0` respectively.
+
+Hence we need something called the **noise margin** -- the yellow region illustrated in the Figure below.
+The noise margin is formed by setting 4 Voltage specifications: ![[Pasted image 20220127090346.png]] which defines what range of voltage values signifies a vali digital bit and a valid digital bit `0` for any combinational logic component in the system:![[Pasted image 20220127090430.png]]
+> The noise margin adds as a precaution against externl disturbances (noise).
+
+1.  $V_{ol}$ (voltage output low) and $V_{oh}$ (voltage output high) is the voltage that **your system** outputs, depending on whether your system is outputting bit `0` or `1`. The output of this system is going to be received by another system after traversing through some wire.
+    
+2.  $V_{il}$ (voltage input low) or $V_{ih}$ (voltage input high) is the voltage that **your system** receives as **input** from another system.
+    
+3.  The **absolute difference** between $V_{ol}$ and $V_{il}$ is called the **low bit noise margin**, and the **absolute difference** between $V_{oh}$ and $V_{ih}$ is called the **high bit noise margin**.
+    
+    > Noise margin is formally defined as the **maximum** voltage amplitude of _extraneous_ (erronous) signal that can be added to the noise-free input level _without_ causing a drastic change in the output voltage and that it is still within the valid logic level.
+    
+4.  The **noise immunity** (like an “overall” or “effective” noise margin) is the **_minimum_** between the high bit noise margin and the low bit noise margin.
+    
+5.  $V_{ol}$ is **less** than $V_{il}$, because we would want to have some _buffer_ against noise. A device always outputs a lower voltage value to signify digital bit `0` `0` and accepts a slightly higher low-voltage value as digital bit `0` `0`. The same logic applies for the higher region as well, as $V_{oh}$ is greater than $V_{ih}$
+    
+6.  In our previous case in Figure earlier, if $V_{ol}$ is set to be `0.5V`, and $V_{il}$ is set to be `0.6V`, then _Device 2_ will be able to **tolerate** up to `0.1V` of noise (if any). Therefore, `0.55V` in our example above is still ‘_seen_’ as a valid bit `0` when it arrives at the input terminal of Device 2, thus making Device 1 **_obeys the static discipline._**
+
+Once **set and chosen,** these four voltage specifications: $V_{ol}$, $V_{oh}$, $V_{il}$, and $V_{ih}$ are to be obeyed by every digital **device in an entire combinational logic circuit**.
 ## Voltage Transfer Characteristic Function (VTC)
+The VTC is a **plot** between the input voltage ($V_{in}$) to a digital system/device vs the output voltage ($V_{out}$) of this digital system.
+
 ## Summary

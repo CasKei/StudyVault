@@ -1,5 +1,5 @@
 # Static Typing
-- Java vs Python: Java requires decalration of the variabls, specifying the types of variables
+- Java vs Python: Java requires declaration of the variabls, specifying the types of variables
 - The variable type stipulates:
 	- the set of values that can be taken
 	- the operations that can be performed on those values

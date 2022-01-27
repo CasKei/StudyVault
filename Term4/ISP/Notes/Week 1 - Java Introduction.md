@@ -1,7 +1,6 @@
 # Java Syntax
 How to describe the syntax of programmign languages?
 ## Backus Normal Form (BNF)
----
 C++ BNF: 140 rules
 Java BNF: 50 rules
 Java has a simple syntax.
@@ -82,7 +81,7 @@ int a;
 a = 1;
 ```
 ## Array
-Used to store a collection of data
+Used to store a collection of data.
 ```java
 int[] c; // declare c as an integer array
 c = new int[3]; // allocate memory for 3 int

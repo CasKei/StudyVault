@@ -234,6 +234,11 @@ settings:
 		description: Toggle on to edit headings individually.
 		id: head-spec
 		type: class-toggle
+    -
+		title: Specific Heading Notes Only
+		description: Toggle on to only affect notes. (Disable Adjustments toggle)
+		id: head-spec-note
+		type: class-toggle
 	-
 		title: Heading Fonts
 		id: Spec-Font-Head
@@ -808,32 +813,16 @@ settings:
         id: illusion
         type: class-toggle
     -
+        title: Header Color Override
+        description: Header color always applied over other markdown in the header
+        id: hd-ovr
+        type: class-toggle
+    -
         title: Lists
         id: Lists
         type: heading
         level: 3
         collapsed: true
-    - 
-        title: Colorful Task Text
-        description: Add color to the text of the task.
-        id: check-color
-        type: class-toggle
-        default: true
-    - 
-        title: Colorful Task Backgrounds
-        description: Add color to the background of the task.
-        id: check-bg
-        type: class-toggle
-        default: true
-    - 
-        title: Normal Task Text
-        description: Reapply regular text color to the text of the task.
-        id: check-text
-        type: class-toggle
-    -
-        title: Restore Crossed Checkbox
-        id: chkbx-strike
-        type: class-toggle
     - 
         title: Default Bullet Disc Shape
         id: def-bull
@@ -864,9 +853,136 @@ settings:
         max: 3
         step: 1
     -
+        title: Murf's Rainbow Line Spacing
+		id: rb-indent-width
+		type: variable-number-slider
+        default: 1.13
+        format: em
+        min: 1
+        max: 2
+        step: .01
+    -
+        title: Disable Murf's Rainbow Lines
+        id: murf-rbl
+        type: class-toggle
+    -
         title: Live Preview Alternate Indent Style
         description: Alternate style to differentiate lists sublevels in edit mode on cm6.
         id: alt-ind
+        type: class-toggle
+    -
+        title: Fix Double Bullet Issue
+        description: Bandaid solution that doesn't look good but fixes the double bullet LP issue.
+        id: fix-dbull
+        type: class-toggle
+    -
+        title: Checkboxes
+        id: Checkboxes
+        type: heading
+        level: 4
+        collapsed: true
+    - 
+        title: Disable Alternate Checkboxes
+        id: alt-chkbx-off
+        type: class-toggle
+    - 
+        title: Colorful Task Text
+        description: Add color to the text of the task.
+        id: check-color
+        type: class-toggle
+        default: true
+    - 
+        title: Colorful Task Backgrounds
+        description: Add color to the background of the task.
+        id: check-bg
+        type: class-toggle
+        default: true
+    - 
+        title: Normal Task Text
+        description: Reapply regular text color to the text of the task.
+        id: check-text
+        type: class-toggle
+    -
+        title: Restore Checkbox Strike
+        id: chkbx-strike
+        type: class-toggle
+    -
+        title: Checkbox Strike Specific
+        id: Checkbox-Strike-Specific
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        title: "[x] Regular"
+        id: chst-reg
+        type: class-toggle
+    -
+        title: "[X] Checked"
+        id: chst-chk
+        type: class-toggle
+    -
+        title: "[-] Dropped"
+        id: chst-drop
+        type: class-toggle
+    -
+        title: "[>] Forward"
+        id: chst-frwd
+        type: class-toggle
+    -
+        title: "[D] Defer"
+        id: chst-defr
+        type: class-toggle
+    -
+        title: "[?] Question"
+        id: chst-q
+        type: class-toggle
+    -
+        title: "[/] Half"
+        id: chst-half
+        type: class-toggle
+    -
+        title: "[+] Add"
+        id: chst-add
+        type: class-toggle
+    -
+        title: "[R] Research"
+        id: chst-rsrch
+        type: class-toggle
+    -
+        title: "[!] Important"
+        id: chst-imp
+        type: class-toggle
+    -
+        title: "[i] Idea"
+        id: chst-idea
+        type: class-toggle
+    -
+        title: "[B] Brainstorm"
+        id: chst-brn
+        type: class-toggle
+    -
+        title: "[P] Pro"
+        id: chst-pro
+        type: class-toggle
+    -
+        title: "[C] Con"
+        id: chst-con
+        type: class-toggle
+    -
+        title: "[Q] Quote"
+        id: chst-quot
+        type: class-toggle
+    -
+        title: "[N] Note"
+        id: chst-brn
+        type: class-toggle
+    -
+        title: "[b] Bookmark"
+        id: chst-book
+        type: class-toggle
+    -
+        title: "[I] info"
+        id: chst-info
         type: class-toggle
 	-
 		title: Colorful Lists
@@ -1163,6 +1279,22 @@ settings:
 		format: hex
 		default-dark: '#11151d'
 		default-light: '#f1f5ff'
+    -
+        title: Progress Bar Value Color
+        description: HTML <progress> value color
+        id: progress
+        type: variable-themed-color
+		format: hex
+		default-dark: '#863737'
+		default-light: '#912e2e'
+    -
+        title: Progress Bar Background Color
+        description: HTML <progress> value color
+        id: progress
+        type: variable-themed-color
+		format: hex
+		default-dark: '#252c36'
+		default-light: '#e1e9f6'
     -
         title: Other
         id: Other-Colors
@@ -2249,12 +2381,12 @@ body:not(.its-i) svg.clock-glyph {
   /*Outershadow*/
   --background-modifier-success: #197300;
   /*Publish Upload Success Background*/
-  --background-modifier-error: #3d0000;
+  --background-modifier-error: #610505;
   /*Delete Screen Button*/
   --background-modifier-error-rgb: 61, 0, 0;
   /*??*/
-  --background-modifier-error-hover: #470000;
-  /*??*/
+  --background-modifier-error-hover: #3d0000;
+  /*Delete Screen Button Hover*/
   --background-modifier-cover: black;
   /*Obsidian Title Bar Bg*/
   --text-on-accent: #dcddde;
@@ -2290,22 +2422,27 @@ body:not(.its-i) svg.clock-glyph {
   --interactive-accent-hover: var(--dark-accent);
   /*Menu Button Hover*/
   --interactive-success: #599049;
-  /*??*/
+  --interactive-failure: #772d2d;
   --scrollbar-bg: rgba(160, 214, 255, 0.07);
   --scrollbar-thumb-bg: rgba(162, 191, 255, 0.13);
   --highlight-mix-blend-mode: lighten;
   /*--DEFAULT VARIABLES--*/
   /*Compatibility Color Recoloring*/
-  --deep-dark-accent: #3f1010 /*#2f1010*/;
-  --dark-accent: #652121 /*#571a1a, #53201F*/;
+  --deep-dark-accent: #3f1010;
+  /*#2f1010*/
+  --dark-accent: #652121;
+  /*#571a1a, #53201F*/
   --lite-accent: #e06c75;
-  --accent: #863737/*#883737, #c14343*/;
-  --accent2: #42536e/*#4c78cc*/;
+  --accent: #863737;
+  /*#883737, #c14343*/
+  --accent2: #42536e;
+  /*#4c78cc*/
   --accent2-lite: #61afef;
   --bg: #252c36;
   --fg: #cfd7dd;
   --side-bar: var(--note);
-  --outer-bar: #0b0f13 /*#0e0f15*/;
+  --outer-bar: #0b0f13;
+  /*#0e0f15*/
   --dark-sidebar: #0d1014;
   --inactive: #586477;
   --outline: var(--outer-bar);
@@ -2338,6 +2475,8 @@ body:not(.its-i) svg.clock-glyph {
   /*#2a3b55, #3c5274*/
   --i-at: #bf5e5e;
   --bttn: var(--dark-accent);
+  --progress: var(--accent);
+  --progress-bg: var(--bg);
   --graph-bg: var(--outer-bar);
   --graph-lines: var(--dark-accent);
   --graph-node: var(--fg);
@@ -2392,11 +2531,11 @@ body:not(.its-i) svg.clock-glyph {
   /*??*/
   --background-modifier-success: #deedd9;
   /*Publish Upload Success Background*/
-  --background-modifier-error: #990000;
+  --background-modifier-error: #470000;
   /*Delete Screen Button*/
   --background-modifier-error-rgb: 240, 131, 131;
   /*Ctrl F Search Background*/
-  --background-modifier-error-hover: #470000;
+  --background-modifier-error-hover: var(--text-error-hover);
   /*??*/
   --background-modifier-cover: var(--deep-dark-accent);
   /*Obsidian Title Bar*/
@@ -2424,7 +2563,7 @@ body:not(.its-i) svg.clock-glyph {
   /*Cursor dragged highlights*/
   --interactive-normal: var(--outer-bar);
   /*Button background Color*/
-  --interactive-hover: var(--embed-bg)/*#5d2b2b*/;
+  --interactive-hover: var(--embed-bg);
   /*Button hover text*/
   --interactive-accent: var(--headers);
   /*Workspace Note Title Underline*/
@@ -2432,8 +2571,8 @@ body:not(.its-i) svg.clock-glyph {
   /*Publish item select, Resize Handle*/
   --interactive-accent-hover: var(--lite-accent);
   /*Menu Button Hover*/
-  --interactive-success: #197300;
-  /*??*/
+  --interactive-success: #66ad66;
+  --interactive-failure: #be4e4e;
   --scrollbar-bg: rgba(134, 173, 218, 0.157);
   --scrollbar-thumb-bg: rgba(108, 148, 212, 0.219);
   --highlight-mix-blend-mode: darken;
@@ -2480,6 +2619,8 @@ body:not(.its-i) svg.clock-glyph {
   --hr: #d6deea;
   --i-at: var(--headers)/*#804848*/;
   --bttn: var(--headers);
+  --progress: var(--accent);
+  --progress-bg: var(--bg);
   --graph-bg: var(--note);
   --graph-lines: #e4e7f8;
   --graph-node: var(--headers);
@@ -2674,6 +2815,10 @@ body:not(.its-i) svg.clock-glyph {
   margin-right: 5px;
 }
 
+.sync-log-container {
+  color: var(--text);
+}
+
 /*Settings: Community Themes*/
 .community-theme {
   background-color: var(--note);
@@ -2756,6 +2901,11 @@ body:not(.scrl-d) ::-webkit-scrollbar-thumb:active {
   opacity: 1;
 }
 
+/*Loading Screen*/
+.progress-bar {
+  border-radius: var(--radius);
+}
+
 /*Drop Menu*/
 .menu {
   border-radius: var(--radius) !important;
@@ -2806,14 +2956,10 @@ button:hover, button.mod-cta:hover {
 
 button,
 button.mod-cta,
-.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button {
+.markdown-source-view.mod-cm6 .cm-embed-block .edit-block-button {
   border-radius: var(--radius);
   font-size: calc(var(--f-text) - 0.12em);
   font-family: var(--default-font);
-}
-
-button.mod-warning {
-  color: var(--text-error);
 }
 
 /*Pinned Pane Button Color*/
@@ -3249,154 +3395,6 @@ table,
   font-size: var(--f-s-text);
 }
 
-/*--Headings--*/
-h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
-  font-weight: var(--f-w-h);
-  font-family: var(--font);
-  color: var(--headers);
-}
-
-.cm-header-1,
-.cm-header-2,
-.cm-header-3,
-.cm-header-4,
-.cm-header-5,
-.cm-header-6 {
-  margin-bottom: calc(var(--head-h) - 1.5em) !important;
-}
-
-.markdown-preview-view h1,
-.markdown-preview-view h2,
-.markdown-preview-view h3,
-.markdown-preview-view h4,
-.markdown-preview-view h5,
-.markdown-preview-view h6 {
-  margin: var(--head-h) 0 !important;
-  line-height: calc(var(--lh) - 0.3em) !important;
-}
-
-/*Font Sizes*/
-.markdown-preview-view h1,
-.cm-s-obsidian .cm-header-1 {
-  font-size: var(--f-s-h);
-}
-
-.markdown-preview-view h2 {
-  font-size: calc(var(--f-s-h) - 4px);
-}
-
-.cm-s-obsidian .cm-header-2 {
-  font-size: calc(var(--f-s-h) - 6px);
-}
-
-.markdown-preview-view h3 {
-  font-size: calc(var(--f-s-h) - 8px);
-}
-
-.cm-s-obsidian .cm-header-3 {
-  font-size: calc(var(--f-s-h) - 10px);
-}
-
-.markdown-preview-view h4 {
-  font-size: calc(var(--f-s-h) - 10px);
-}
-
-.cm-s-obsidian .cm-header-4 {
-  font-size: calc(var(--f-s-h) - 12px);
-}
-
-.markdown-preview-view h5,
-.cm-s-obsidian .cm-header-5 {
-  font-size: calc(var(--f-s-h) - 14px);
-}
-
-.markdown-preview-view h6,
-.cm-s-obsidian .cm-header-6 {
-  font-size: calc(var(--f-s-h) - 16px);
-}
-
-/*Heading: Inline Code Size Fix*/
-.cm-s-obsidian span.cm-inline-code.cm-header-1:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-1,
-.markdown-preview-view h1 code {
-  font-size: calc(var(--f-s-h) - 6px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-2:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-2,
-.markdown-preview-view h2 code {
-  font-size: calc(var(--f-s-h) - 10px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-3:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-3,
-.markdown-preview-view h3 code {
-  font-size: calc(var(--f-s-h) - 13px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-4:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-4,
-.markdown-preview-view h4 code {
-  font-size: calc(var(--f-s-h) - 17px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-5:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-5,
-.markdown-preview-view h5 code {
-  font-size: calc(var(--f-s-h) - 19px);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-header-6:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian span.cm-inline-code.cm-header-6,
-.markdown-preview-view h6 code {
-  font-size: calc(var(--f-s-h) - 21px);
-}
-
-/*Editor Heading Re-size*/
-/*Inspired by Red Graphite*/
-.cm-s-obsidian pre.HyperMD-header > span > span:first-child {
-  font-size: 10px;
-  color: var(--lines);
-}
-
-/*Heading Line*/
-h1:after,
-h2:after,
-h3:after,
-h4:after {
-  content: "";
-  display: block;
-  background: var(--table);
-  height: 4px;
-  left: 0;
-}
-
-h1:after {
-  width: 100%;
-}
-
-h2:after {
-  width: 85%;
-}
-
-h3:after {
-  width: 65%;
-}
-
-h4:after {
-  width: 40%;
-}
-
-/*Editor Heading Lines*/
-.cm-s-obsidian pre.HyperMD-header:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: var(--table);
-  left: 0;
-}
-
 /*-Code-*/
 code,
 .markdown-preview-view code,
@@ -3494,12 +3492,17 @@ mjx-container[jax=CHTML][display=true] {
 }*/
 /*--Links--*/
 /*Active Link*/
+.reveal a {
+  color: var(--interactive-normal);
+}
+
 .markdown-source-view.mod-cm6 .cm-underline,
 a, .markdown-preview-view .internal-link {
   text-decoration: none;
   /*No underline*/
 }
 
+.reveal a:hover,
 a:hover {
   color: var(--lite-accent);
 }
@@ -3597,7 +3600,7 @@ ul li:nth-child(even)::before {
 }
 
 li.task-list-item::before,
-ol li::before {
+.markdown-preview-view ol li::before {
   visibility: collapse;
 }
 
@@ -3645,14 +3648,14 @@ ul li > p {
 
 /*-Bullet Points-*/
 /*Editor Bullet Points*/
-.list-bullet::before,
+.markdown-source-view.mod-cm6 .list-bullet::after,
 .cm-s-obsidian span.cm-formatting-list-ul::before,
-.cm-s-obsidian span.cm-formatting-list-ol {
+.cm-s-obsidian span.cm-formatting-list-ol::before {
   color: var(--soft-text);
 }
 
 /*Live Preview List Adjustment*/
-.list-bullet::before,
+.markdown-source-view.mod-cm6 .list-bullet::after,
 .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
   content: var(--bullet);
   font-family: var(--bul-f);
@@ -3660,14 +3663,32 @@ ul li > p {
   margin-right: -10px;
 }
 
-.list-bullet::before {
-  padding: 0;
-  margin-right: -8px;
+.markdown-source-view.mod-cm6 .list-bullet::after {
+  padding-left: 0;
+  margin-right: 0;
+}
+
+.markdown-source-view.mod-cm6 .list-bullet {
+  padding-right: 7px;
+}
+
+/*Fix Bullet Alignment*/
+.fix-dbull .markdown-source-view.mod-cm6 .list-bullet {
+  padding-right: unset;
+  left: -5px;
+}
+
+.fix-dbull .markdown-source-view:not(.is-live-preview) .cm-formatting-list-ul::before {
+  content: unset;
 }
 
 /*Adjust Padding*/
-.cm-s-obsidian span.cm-formatting-list-ol {
+.cm-s-obsidian:not(.is-live-preview) span.cm-formatting-list-ol {
   margin-left: -0.2em;
+}
+
+.cm-s-obsidian.is-live-preview span.cm-formatting-list-ol {
+  padding-left: 5px;
 }
 
 /*Editor Bullet Lines*/
@@ -3718,6 +3739,7 @@ li:nth-child(even) {
 }
 
 /*--Checkboxes--*/
+.markdown-source-view.mod-cm6 .task-list-item-checkbox,
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
   box-sizing: border-box;
@@ -3727,37 +3749,42 @@ li:nth-child(even) {
   width: var(--f-s-nt);
   height: var(--f-s-nt);
   filter: none;
+  cursor: pointer;
+  font: var(--its);
+  font-family: var(--its);
+  font-size: inherit;
+}
+
+.markdown-preview-view .task-list-item-checkbox,
+.task-list-item input[type=checkbox],
+li.task-list-item {
+  vertical-align: 1px;
   margin-left: 0px;
   margin-right: 10px;
-  margin-top: 3px;
-  cursor: pointer;
-  vertical-align: 0.1em;
 }
 
 /*Checkbox Checked color*/
-.markdown-preview-view .task-list-item-checkbox:checked {
+.task-list-item-checkbox:checked {
   border: none;
   background-color: var(--accent);
 }
 
-/*Checked Checkbox*/
-body:not(.chkbx-strike) .markdown-preview-view ul > li.task-list-item.is-checked,
+/*Checked Checkbox*
+body:not(.chkbx-strike) .markdown-preview-view ul > li.task-list-item.is-checked, 
 body:not(.chkbx-strike) .markdown-preview-view ol > li.task-list-item.is-checked {
-  text-decoration: unset;
-  color: var(--lines);
-  font-weight: bold;
+    text-decoration: unset;
+    color: var(--lines);
+    font-weight: bold;
 }
-
 body:not(.chkbx-strike) li.task-list-item.is-checked > a,
 body:not(.chkbx-strike) li.task-list-item.is-checked > code {
-  opacity: 65%;
+    opacity: 65%;
 }
-
 /*Uncheck Subchecklists*/
-/*Thanks @foreveryone*/
+/*Thanks @foreveryone*
 body:not(.chkbx-strike) li.task-list-item.is-checked li:not(.is-checked) {
-  font-weight: initial;
-  color: var(--text);
+    font-weight: initial; 
+    color: var(--text)
 }
 
 /*Table Checkboxes*/
@@ -3784,6 +3811,7 @@ input[type=checkbox]:checked {
 }
 
 /*--Blockquote--*/
+.reveal blockquote,
 .markdown-preview-view blockquote {
   display: flow-root;
   border: 0px solid var(--bg);
@@ -3796,18 +3824,128 @@ input[type=checkbox]:checked {
   /*Don't overlap with "*/
 }
 
-/*Quotation Mark*/
-.markdown-preview-view blockquote:before {
-  content: "”";
-  position: absolute;
-  top: 0.4em;
-  right: 0.2em;
-  font-size: 50px;
-  font-family: var(--font);
-  color: var(--headers);
+/*Live Preview Quotes*/
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  background-color: var(--embed-bg);
+  border-color: var(--bg);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
 }
 
-/*Remove Margin From Block embedding*/
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:hover {
+  border-color: var(--hr);
+}
+
+/*Quotation Mark*/
+.reveal blockquote:before,
+.markdown-preview-view blockquote:before,
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-1 .cm-formatting-quote::before {
+  content: "”";
+  font-family: var(--font);
+  color: var(--headers);
+  transform: scale(3.2);
+}
+
+.reveal blockquote:before,
+.markdown-preview-view blockquote:before {
+  position: absolute;
+  top: 1.4em;
+  right: 1.2em;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-1 .cm-formatting-quote::before {
+  float: right;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-right: 2px;
+}
+
+/*Undo Slides Styling*/
+.reveal blockquote {
+  box-shadow: none;
+  font-style: initial;
+  margin: 10px auto;
+}
+
+.reveal blockquote p {
+  margin: 10px;
+}
+
+.reveal blockquote:before {
+  top: 1.5em;
+  right: 1em;
+  transform: scale(3.2);
+}
+
+/*Paraphrase Quotes*/
+blockquote > blockquote::before {
+  display: none;
+}
+
+.markdown-preview-view blockquote > blockquote {
+  background-color: var(--embed-bg);
+  padding: 0 0 0 20px;
+  margin-right: -30px;
+  margin-left: -20px;
+  padding-right: 20px;
+  border-left: 0;
+  border-right: 2px solid;
+  border-color: var(--accent);
+}
+
+.markdown-source-view.mod-cm6 .cm-blockquote-border {
+  border-color: var(--accent);
+  border-left-width: 2px;
+}
+
+/*--Special Blockquote Formatting--*/
+.cm-line:not(.cm-active) .cm-quote.cm-quote-3,
+.markdown-preview-view blockquote > blockquote > blockquote,
+blockquote mark strong {
+  display: block;
+  color: var(--headers);
+  text-align: right;
+  background-color: transparent;
+  font-style: italic;
+  font-weight: 900;
+  border: 0;
+}
+
+.cm-line:not(.cm-active) .cm-quote.cm-quote-3 {
+  display: unset;
+  float: right;
+  margin-top: 0;
+}
+
+.markdown-preview-view blockquote > blockquote > blockquote {
+  padding-right: 37px;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 .cm-blockquote-border {
+  border: 0;
+}
+
+em mark,
+em mark em {
+  text-decoration: unset;
+  color: transparent;
+  font-style: normal;
+  text-align: justify;
+  font-weight: unset;
+  float: right;
+  position: relative;
+  margin-right: -25.3em;
+  margin-bottom: 0.2em;
+  clear: right;
+  width: 400px;
+  padding: 0 1em;
+}
+
+em mark em {
+  font-style: unset;
+}
+
 /*Fix Blockquote Mark*/
 .markdown-preview-view li blockquote:before {
   top: 0.3em;
@@ -3819,10 +3957,50 @@ table .markdown-embed-content > .markdown-preview-view blockquote {
   overflow: hidden !important;
 }
 
+/*--Blockquote Adjustments--*/
+/*Turn b into a blockquote without the quotations*/
+.markdown-preview-view b {
+  display: flow-root;
+  border: 0px solid var(--lines);
+  background-color: var(--outer-bar);
+  border-left-width: 8px;
+  border-radius: var(--radius);
+  position: relative;
+  font-weight: unset;
+  padding: 10px 20px;
+  margin-left: 2%;
+}
+
+/*Quotes*/
+#quote {
+  padding-right: 2em;
+  text-align: justify;
+  border-color: var(--bg);
+  background-color: var(--embed-bg);
+}
+
+#quote:before {
+  content: "”";
+  position: absolute;
+  top: 0.4em;
+  right: 0.2em;
+  font-size: 50px;
+  font-family: var(--font);
+  color: var(--headers);
+}
+
+/*Quote Author*/
+b mark strong {
+  display: block;
+  color: var(--lite-accent) !important;
+  text-align: right;
+  background-color: transparent !important;
+  font-style: italic;
+}
+
 /*--Horizontal Linebreak, HR--*/
-.markdown-source-view.mod-cm6 .hr,
-.markdown-source-view.mod-cm6 .HyperMD-hr {
-  contain: unset;
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+  contain: style;
 }
 
 .markdown-preview-view hr,
@@ -3886,7 +4064,8 @@ table {
 .markdown-preview-view th,
 .reveal table th {
   background-color: var(--th);
-  color: #edf7ff;
+  color: var(--text-dl);
+  /*#edf7ff*/
   border: 0px;
 }
 
@@ -4393,6 +4572,20 @@ iframe {
   padding-bottom: 2px;
 }
 
+progress {
+  border-radius: var(--radius);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background: var(--progress-bg);
+}
+
+progress::-webkit-progress-value {
+  background: var(--progress);
+}
+
 /*CSS class, Hide Frontmatter*/
 .no-m .frontmatter-container,
 .reveal pre.frontmatter {
@@ -4409,6 +4602,13 @@ iframe {
 /*Thanks @foreveryone*/
 .markdown-preview-view.readable .markdown-preview-sizer {
   max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Center*/
+.center {
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -4494,8 +4694,7 @@ iframe {
 /*----Image Positions/Adjustments----*/
 /*Captions*/
 .img-cap .image-embed::after,
-.image-embed[src*="#cap"]::after,
-img[src*="#cap"]::after {
+.image-embed[src*="#cap"]::after {
   content: attr(alt);
   color: var(--inactive);
   display: block;
@@ -4506,8 +4705,7 @@ img[src*="#cap"]::after {
 .img-grid span.image-embed[alt*="."],
 span.image-embed[src*=grid],
 span.image-embed[alt*=grid],
-img[alt*=grid],
-img[src*="#grid"] {
+img[alt*=grid] {
   display: table-cell;
   vertical-align: middle;
   padding: 3px;
@@ -4515,48 +4713,47 @@ img[src*="#grid"] {
 
 .img-grid img[alt*="."],
 .image-embed[alt*=grid],
-.image-embed[src*="#grid"],
 img[alt*=grid],
-img[src*="#grid"] {
+.image-embed[src*="#grid"] {
   max-height: 30vh;
 }
 
 .img-grid img[alt*="."]:hover,
 .image-embed[src*="#grid"]:hover,
-img[src*="#grid"]:hover,
+.image-embed[src*="#grid"]:hover,
 img[alt*=grid]:hover {
   transform: scale(1.5);
 }
 
 /*Invert Colors*/
 .theme-dark img[alt*=invertb],
-.theme-dark img[src*="#invertb"] {
+.theme-dark .image-embed[src*="#invertb"] {
   filter: invert(1) hue-rotate(180deg);
 }
 
 .theme-light img[alt*=invertw],
-.theme-light img[src*="#invertw"] {
+.theme-light .image-embed[src*="#invertw"] {
   filter: invert(1) hue-rotate(180deg);
 }
 
 .theme-dark img[alt*=invertbc],
-.theme-dark img[src*="#invertbc"] {
+.theme-dark .image-embed[src*="#invertbc"] {
   filter: invert(1) hue-rotate(180deg) contrast(1.5);
 }
 
 .theme-light img[alt*=invertwc],
-.theme-light img[src*="#invertwc"] {
+.theme-light .image-embed[src*="#invertwc"] {
   filter: invert(1) hue-rotate(180deg) contrast(1.45);
 }
 
 /*Fix Float Issues*/
 img[alt*=clear],
-img[src*="#clear"] {
+.image-embed[src*="#clear"] {
   clear: both;
 }
 
 img[alt*=unclr],
-img[src*="#unclr"] {
+.image-embed[src*="#unclr"] {
   clear: none !important;
 }
 
@@ -4567,7 +4764,8 @@ img[alt*=circle] {
 
 /*Center Image*/
 img[alt*=ctr],
-img[src*="#ctr"], img[src*="#center"] .image-embed[alt*=center],
+.image-embed[src*="#ctr"],
+.image-embed[src*="#center"] .image-embed[alt*=center],
 .imgctr img {
   display: block;
   margin-left: auto;
@@ -4577,17 +4775,13 @@ img[src*="#ctr"], img[src*="#center"] .image-embed[alt*=center],
 /*--Simplified Version--*/
 /*Image Locations*/
 /*Left & Right*/
-img[alt*=left], img[src*="#left"],
-.image-embed[alt*=left],
-.image-embed[src*="#left"] {
+.view-content > :not(.is-live-preview) .image-embed[alt*=left], .view-content > :not(.is-live-preview) .image-embed[src*="#left"], .view-content > :not(.is-live-preview) .image-embed[alt*=locl], .view-content > :not(.is-live-preview) .image-embed[src*="#locl"] img {
   float: left;
   margin-right: 2%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-img[alt*=right], img[src*="#right"],
-.image-embed[alt*=right],
-.image-embed[src*="#right"] {
+.view-content > :not(.is-live-preview) .image-embed[alt*=right], .view-content > :not(.is-live-preview) .image-embed[src*="#right"], .view-content > :not(.is-live-preview) .image-embed[alt*=locr], .view-content > :not(.is-live-preview) .image-embed[src*="#locr"] img {
   float: right;
   margin-left: 2%;
   margin-bottom: 0px;
@@ -4595,9 +4789,7 @@ img[alt*=right], img[src*="#right"],
 
 /*Image Shapes*/
 /*Banners*/
-img[alt*=banner], img[src*="#banner"],
-.image-embed[alt*=banner],
-.image-embed[src*="#banner"] {
+.image-embed[alt*=banner], .image-embed[src*="#banner"] {
   display: block;
   object-fit: cover;
   height: 150px;
@@ -4665,115 +4857,100 @@ img[alt*="p.rofile+medium"],
 /*-Image Sizing-*/
 /*Fit image within bounds WITHOUT stretching*/
 img[alt*=cover],
-img[src*="#cover"],
+.image-embed[src*="#cover"],
 span.image-embed[src*="#cover"] img,
 img[alt*=cvr],
-img[src*="#cvr"],
+.image-embed[src*="#cvr"],
 span.image-embed[src*="#cvr"] img {
   object-fit: cover;
 }
 
 /*Height*/
 img[alt*=hmicro],
-img[src*="#hmicro"],
 .image-embed[src*="#hmicro"] img {
   height: var(--micro);
 }
 
 img[alt*=htiny],
-img[src*="#htiny"],
 .image-embed[src*="#htiny"] img {
   height: var(--tiny);
 }
 
 img[alt*=hsmall],
-img[src*="#hsmall"],
 .image-embed[src*="#hsmall"] img {
   height: var(--small);
 }
 
 img[alt*=hs-med],
-img[src*="#hs-med"],
 .image-embed[src*="#hs-med"] img {
   height: var(--small-med);
 }
 
 img[alt*=hm-sm],
-img[src*="#hm-sm"],
 .image-embed[src*="#hs-sm"] img {
   height: var(--med-small);
 }
 
 img[alt*=hmed],
-img[src*="#hmed"],
 .image-embed[src*="#hmed"] img {
   height: var(--medium);
 }
 
 img[alt*=hm-tl],
-img[src*="#hm-tl"],
+.image-embed[src*="#hm-tl"],
 .image-embed[src*="#hm-tl"] img {
   height: var(--med-tall);
 }
 
 img[alt*=htall],
-img[src*="#htall"],
 .image-embed[src*="#htall"] img {
   height: var(--tall);
 }
 
 /*Width*/
 img[alt*=wmicro],
-img[src*="#wmicro"],
 .image-embed[src*="#wmicro"] img,
 .image-embed[alt*="#wmicro"]::after {
   width: var(--micro);
 }
 
 img[alt*=wtiny],
-img[src*="#wtiny"],
 .image-embed[src*="#wtiny"] img,
 .image-embed[src*="#wtiny"]::after {
   width: var(--tiny);
 }
 
 img[alt*=wsmall],
-img[src*="#wsmall"],
 .image-embed[src*="#wsmall"] img,
 .image-embed[src*="#wsmall"]::after {
   width: var(--small);
 }
 
 img[alt*=ws-med],
-img[src*="#ws-med"],
 .image-embed[src*="#ws-med"] img,
 .image-embed[src*="#ws-med"]::after {
   width: var(--small-med);
 }
 
 img[alt*=wm-sm],
-img[src*="#wm-sm"],
 .image-embed[src*="#wm-sm"] img,
 .image-embed[src*="#wm-sm"]::after {
   width: var(--med-small);
 }
 
 img[alt*=wmed],
-img[src*="#med"],
 .image-embed[src*="#wmed"] img,
 .image-embed[src*="#wmed"]::after {
   width: var(--medium);
 }
 
 img[alt*=wm-tl],
-img[src*="#m-tl"],
 .image-embed[src*="#wm-tl"] img,
 .image-embed[src*="#wm-tl"]::after {
   width: var(--med-tall);
 }
 
 img[alt*=wtall],
-img[src*="#tall"],
 .image-embed[src*="#wtall"] img,
 .image-embed[src*="#wtall"]::after {
   width: var(--tall);
@@ -4871,23 +5048,6 @@ img[alt*="p+bcc"],
   object-position: 50% 90%;
 }
 
-/*Image Locations*/
-img[alt*=locl],
-.image-embed[src*="#locl"] img {
-  float: left;
-  margin-right: 2%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-img[alt*=locr],
-.image-embed[src*="#locr"] img {
-  float: right;
-  margin-left: 2%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 /*--Image Shapes--*/
 /*Banners*/
 img[alt*=sban],
@@ -4932,7 +5092,9 @@ img[alt*=sprf] {
 }
 
 /*Title Hide/Show*/
-.internal-embed[alt*=no-title] .markdown-embed-title, .file-embed-title {
+.internal-embed[alt*=no-t] .markdown-embed-title,
+.internal-embed[alt*=no-title] .markdown-embed-title,
+.file-embed-title {
   display: none;
 }
 
@@ -4940,12 +5102,11 @@ img[alt*=sprf] {
   display: block;
 }
 
-.internal-embed[alt*=right] {
+.view-content > :not(.is-live-preview) .internal-embed[alt*=right] {
   float: right;
   margin-left: 0.5em;
 }
-
-.internal-embed[alt*=left] {
+.view-content > :not(.is-live-preview) .internal-embed[alt*=left] {
   float: left;
   margin-right: 0.5em;
 }
@@ -5081,12 +5242,7 @@ img[alt*=sprf] {
   text-align: center;
 }
 
-.writing h1:after,
-.writing h2:after,
-.writing h3:after,
-.writing h4:after,
-.writing h5:after,
-.writing h6:after {
+.writing h1:after, .writing h2:after, .writing h3:after, .writing h4:after, .writing h5:after, .writing h6:after, .writing .HyperMD-header-1::after, .writing .HyperMD-header-2::after, .writing .HyperMD-header-3::after, .writing .HyperMD-header-4::after {
   height: 0 !important;
 }
 
@@ -5345,6 +5501,158 @@ img[alt*=sprf] {
   background-color: transparent !important;
 }
 
+/*--Headings--*/
+h1, h2, h3, h4, h5, h6, .cm-s-obsidian .cm-header {
+  font-weight: var(--f-w-h);
+  font-family: var(--font);
+  color: var(--headers);
+}
+
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  margin-bottom: calc(var(--head-h) - 1.5em) !important;
+}
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  margin: var(--head-h) 0;
+  line-height: calc(var(--lh) - 0.3em) !important;
+}
+
+/*Font Sizes*/
+.markdown-preview-view h1,
+.cm-s-obsidian .cm-header-1 {
+  font-size: var(--f-s-h);
+}
+
+.markdown-preview-view h2 {
+  font-size: calc(var(--f-s-h) - 4px);
+}
+
+.cm-s-obsidian .cm-header-2 {
+  font-size: calc(var(--f-s-h) - 6px);
+}
+
+.markdown-preview-view h3 {
+  font-size: calc(var(--f-s-h) - 8px);
+}
+
+.cm-s-obsidian .cm-header-3 {
+  font-size: calc(var(--f-s-h) - 10px);
+}
+
+.markdown-preview-view h4 {
+  font-size: calc(var(--f-s-h) - 10px);
+}
+
+.cm-s-obsidian .cm-header-4 {
+  font-size: calc(var(--f-s-h) - 12px);
+}
+
+.markdown-preview-view h5,
+.cm-s-obsidian .cm-header-5 {
+  font-size: calc(var(--f-s-h) - 14px);
+}
+
+.markdown-preview-view h6,
+.cm-s-obsidian .cm-header-6 {
+  font-size: calc(var(--f-s-h) - 16px);
+}
+
+/*Heading: Inline Code Size Fix*/
+.cm-s-obsidian span.cm-inline-code.cm-header-1:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-1,
+.markdown-preview-view h1 code {
+  font-size: calc(var(--f-s-h) - 6px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-2:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-2,
+.markdown-preview-view h2 code {
+  font-size: calc(var(--f-s-h) - 10px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-3:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-3,
+.markdown-preview-view h3 code {
+  font-size: calc(var(--f-s-h) - 13px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-4:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-4,
+.markdown-preview-view h4 code {
+  font-size: calc(var(--f-s-h) - 17px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-5:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-5,
+.markdown-preview-view h5 code {
+  font-size: calc(var(--f-s-h) - 19px);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-header-6:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian span.cm-inline-code.cm-header-6,
+.markdown-preview-view h6 code {
+  font-size: calc(var(--f-s-h) - 21px);
+}
+
+/*Editor Heading Re-size*/
+/*Inspired by Red Graphite*/
+.cm-s-obsidian pre.HyperMD-header > span > span:first-child {
+  font-size: 10px;
+  color: var(--lines);
+}
+
+/*Heading Line*/
+/*Editor Heading Lines*/
+.cm-s-obsidian pre.HyperMD-header:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--table);
+  left: 0;
+}
+
+h1::after,
+h2::after,
+h3::after,
+h4::after,
+.HyperMD-header-1::after,
+.HyperMD-header-2::after,
+.HyperMD-header-3::after,
+.HyperMD-header-4::after {
+  content: "";
+  display: block;
+  background: var(--table);
+  height: 4px;
+  left: 0;
+}
+
+h1::after, .HyperMD-header-1::after {
+  width: 100%;
+}
+
+h2::after, .HyperMD-header-2::after {
+  width: 85%;
+}
+
+h3::after, .HyperMD-header-3::after {
+  width: 65%;
+}
+
+h4::after, .HyperMD-header-4::after {
+  width: 40%;
+}
+
 /*--Center Headings--*/
 .hc h1,
 .hc h2,
@@ -5365,17 +5673,16 @@ img[alt*=sprf] {
 .hcl .heading-collapse-indicator {
   position: absolute;
 }
-.hcl h1:before, .hcl h2:before, .hcl h3:before, .hcl h4:before, .hcl h5:before, .hcl h6:before {
+.hcl h1:before, .hcl h1:after, .hcl h2:before, .hcl h2:after, .hcl h3:before, .hcl h3:after, .hcl h4:before, .hcl h4:after, .hcl h5:before, .hcl h5:after, .hcl h6:before, .hcl h6:after {
   content: "";
   height: 0;
-  margin-right: 0.3em;
   flex: 1;
 }
+.hcl h1:before, .hcl h2:before, .hcl h3:before, .hcl h4:before, .hcl h5:before, .hcl h6:before {
+  margin-right: 0.3em;
+}
 .hcl h1:after, .hcl h2:after, .hcl h3:after, .hcl h4:after, .hcl h5:after, .hcl h6:after {
-  content: "";
-  height: 0px;
   margin-left: 0.3em;
-  flex: 1;
 }
 .hcl h1:before, .hcl h1:after {
   border-top: 6px solid var(--accent);
@@ -5441,6 +5748,80 @@ body .illusion .markdown-preview-view .heading-collapse-indicator {
 }
 .markdown-preview-view.illusion .heading-collapse-indicator {
   padding-left: 40px;
+}
+
+.is-live-preview .HyperMD-header::before {
+  font-family: var(--font-monospace);
+  color: var(--footnote);
+  font-size: calc(var(--f-s-text) - 4px);
+  position: relative;
+  margin-left: -15px;
+  left: -12px;
+}
+.is-live-preview .HyperMD-header.HyperMD-header-1::before {
+  content: "H1";
+}
+.is-live-preview .HyperMD-header.HyperMD-header-2::before {
+  content: "H2";
+}
+.is-live-preview .HyperMD-header.HyperMD-header-3::before {
+  content: "H3";
+}
+.is-live-preview .HyperMD-header.HyperMD-header-4::before {
+  content: "H4";
+}
+.is-live-preview .HyperMD-header.HyperMD-header-5::before {
+  content: "H5";
+}
+.is-live-preview .HyperMD-header.HyperMD-header-6::before {
+  content: "H6";
+}
+.is-live-preview .HyperMD-header .cm-fold-indicator .collapse-indicator {
+  right: -5px;
+}
+
+/*Apply Header Color Over Link*/
+body.hd-ovr h1 > *, body.hd-ovr h2 > *, body.hd-ovr h3 > *, body.hd-ovr h4 > *, body.hd-ovr h5 > *, body.hd-ovr h6 > *, body.hd-ovr .cm-s-obsidian .cm-header > * {
+  color: var(--headers);
+}
+body.hd-ovr.head-spec h1 > * {
+  color: var(--sphd-pre-1);
+}
+body.hd-ovr.head-spec h1 > * {
+  color: var(--sphd-pre-1);
+}
+body.hd-ovr.head-spec h2 > * {
+  color: var(--sphd-pre-2);
+}
+body.hd-ovr.head-spec h3 > * {
+  color: var(--sphd-pre-3);
+}
+body.hd-ovr.head-spec h4 > * {
+  color: var(--sphd-pre-4);
+}
+body.hd-ovr.head-spec h5 > * {
+  color: var(--sphd-pre-5);
+}
+body.hd-ovr.head-spec h6 > * {
+  color: var(--sphd-pre-6);
+}
+body.hd-ovr.head-spec .cm-header-1 > * {
+  color: var(--sphd-ed-1);
+}
+body.hd-ovr.head-spec .cm-header-2 > * {
+  color: var(--sphd-ed-2);
+}
+body.hd-ovr.head-spec .cm-header-3 > * {
+  color: var(--sphd-ed-3);
+}
+body.hd-ovr.head-spec .cm-header-4 > * {
+  color: var(--sphd-ed-4);
+}
+body.hd-ovr.head-spec .cm-header-5 > * {
+  color: var(--sphd-ed-5);
+}
+body.hd-ovr.head-spec .cm-header-6 > * {
+  color: var(--sphd-ed-6);
 }
 
 /*--Kanban--*/
@@ -5699,14 +6080,6 @@ ul.kanban ul {
   margin-bottom: 10px;
 }
 
-/*Different/Alternate Checkbox*/
-input[type=checkbox]:checked::before {
-  padding-left: 0.2em;
-  font-family: var(--font-monospace);
-  font-weight: 900;
-  color: var(--soft-text);
-}
-
 .theme-dark {
   --chbx-q: 253, 175, 0;
   /*#fdaf00*/
@@ -5722,8 +6095,8 @@ input[type=checkbox]:checked::before {
   /*#aab3ca*/
   --chbx-id:231, 231, 171;
   /* #e7e7ab*/
-  --chbx-I: 82, 139, 212;
-  /*#528bd4*/
+  --chbx-B: 136, 94, 233;
+  /*#885ee9*/
   --chbx-P: 79, 165, 79;
   /*#4fa54f*/
   --chbx-C: 207, 67, 67;
@@ -5732,8 +6105,8 @@ input[type=checkbox]:checked::before {
   /*#855b41*/
   --chbx-b: 230, 129, 63;
   /*#e6813f*/
-  --chbx-B: 136, 94, 233;
-  /*#885ee9*/
+  --chbx-I: 82, 139, 212;
+  /*#528bd4*/
 }
 
 .theme-light {
@@ -5765,472 +6138,318 @@ input[type=checkbox]:checked::before {
   /*#b676ff*/
 }
 
-/* Hide Checkbox Border */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task=x]):not([data-task=" "]),
-.markdown-preview-view li:not(li[data-task=x]) > .task-list-item-checkbox:checked,
-.markdown-preview-view li:not(li[data-task=x]) p .task-list-item-checkbox:checked {
-  border: none;
-  background-color: transparent;
-}
-
-/* Checkbox Icon Setup*/
-.markdown-source-view.mod-cm6 .task-list-item-checkbox::before,
-.markdown-preview-view :not(li[data-task=x]) > .task-list-item-checkbox:checked::before,
-.markdown-preview-view :not(li[data-task=x]) p .task-list-item-checkbox:checked::before {
-  content: " ";
+/*Restyle Checkboxes*/
+/*Different/Alternate Checkbox*/
+body:not(.alt-chkbx-off) .task-list-item.is-checked:not([data-task=x]) input[type=checkbox]:checked::before, body:not(.alt-chkbx-off) .task-list-item.is-checked:not([data-task=x]) input[type=checkbox i]:checked, body:not(.alt-chkbx-off) .task-list-item.is-checked:not([data-task=x]) input[type=checkbox i]:checked::before, body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]):not([data-task=x]) .task-list-item-checkbox {
+  background-image: url();
   position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  filter: none;
+  cursor: pointer;
+  background: none;
+  font: var(--its);
   font-family: var(--its);
-  padding-left: 0px;
-  font-size: 1.2em;
-  top: -2px;
+  font-size: inherit;
+  top: var(--chbx-pre-height);
   font-weight: 10;
-  border: none;
-  width: initial;
-  height: initial;
-}
-
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) {
-  text-decoration: none;
-}
-
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X]::before {
-  margin-left: -2px;
-}
-
-/*CodeMirrorOptions Plugin Support*/
-body.theme-dark.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task,
-body.theme-light.hide-tokens.style-check-box .cm-s-obsidian span.cm-formatting-task {
-  filter: unset;
-}
-
-.hmd-inactive-line .cm-formatting-task {
-  margin-right: -10px;
-}
-
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task::before {
-  position: absolute;
-  content: " ";
-  font-family: var(--its);
-  border: 1px solid var(--accent, var(--interactive-accent));
-  height: 0.9em;
-  width: 0.9em;
-  margin-top: 0.3em;
-  margin-left: 0.25em;
+  border: 0;
+  vertical-align: 0px;
 }
 
 .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task:not([data-task=" "]):not([data-task=x])::before {
   border: none;
 }
 
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=x]::before {
-  background: var(--accent, var(--interactive-accent));
-}
-
-.markdown-source-view.mod-cm6 span[data-task]:not([data-task=" "]),
+/*Checked Text*/
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
-.markdown-source-view.mod-cm6 span:not(.cm-link):not(.cm-inline-code) span[data-task=x] {
+ul > li.task-list-item.is-checked,
+ol > li.task-list-item.is-checked {
+  color: var(--lines, var(--text-faint));
   font-weight: bold;
-  color: var(--lines);
 }
 
-.markdown-source-view.mod-cm6 .cm-link span[data-task=x],
-.markdown-source-view.mod-cm6 .cm-inline-code span[data-task=x] {
-  opacity: 50%;
-}
-
-/* Check Background Styling */
-.check-bg ul li:not([data-task=" "]).task-list-item.is-checked,
-.check-color ul li:not([data-task=" "]).task-list-item.is-checked {
-  color: var(--text, var(--text-normal));
-  margin-bottom: 5px;
-}
-
-body.check-bg:not(.chkbx-strike) li.task-list-item.is-checked > a,
-body.check-bg:not(.chkbx-strike) li.task-list-item.is-checked > code {
-  opacity: unset;
+:not(.chkbx-strike) .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]),
+:not(.chkbx-strike) .task-list-item.is-checked {
+  text-decoration: unset;
 }
 
 /* Checkbox Text Normal */
-body.check-text .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task],
+body.check-text.check-text .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task],
 body.check-text.check-text ul li:not([data-task=x]).task-list-item.is-checked {
   color: var(--text-normal);
   font-weight: unset;
 }
 
+/*Restore Strike Throughs*/
+.check-strike .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]), .check-strike .markdown-preview-view ul > li.task-list-item.is-checked, .check-strike .markdown-preview-view ol > li.task-list-item.is-checked {
+  text-decoration: line-through 2px;
+}
+
+.chst-reg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=x],
+.chst-reg ul li[data-task=x].task-list-item.is-checked,
+.chst-chk .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X],
+.chst-chk ul li[data-task=X].task-list-item.is-checked,
+.chst-drop .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
+.chst-drop ul li[data-task="-"].task-list-item.is-checked,
+.chst-frwd .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
+.chst-frwd ul li[data-task=">"].task-list-item.is-checked,
+.chst-defr .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D],
+.chst-defr ul li[data-task=D].task-list-item.is-checked,
+.chst-q .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
+.chst-q ul li[data-task="?"].task-list-item.is-checked,
+.chst-half .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
+.chst-half ul li[data-task="/"].task-list-item.is-checked,
+.chst-add .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
+.chst-add ul li[data-task="+"].task-list-item.is-checked,
+.chst-rsrch .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R],
+.chst-rsrch ul li[data-task=R].task-list-item.is-checked,
+.chst-imp .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
+.chst-imp ul li[data-task="!"].task-list-item.is-checked,
+.chst-idea .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i],
+.chst-idea ul li[data-task=i].task-list-item.is-checked,
+.chst-brn .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B],
+.chst-brn ul li[data-task=B].task-list-item.is-checked,
+.chst-pro .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P],
+.chst-pro ul li[data-task=P].task-list-item.is-checked,
+.chst-con .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C],
+.chst-con ul li[data-task=C].task-list-item.is-checked,
+.chst-quot .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q],
+.chst-quot ul li[data-task=Q].task-list-item.is-checked,
+.chst-note .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N],
+.chst-note ul li[data-task=N].task-list-item.is-checked,
+.chst-book .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b],
+.chst-book ul li[data-task=b].task-list-item.is-checked,
+.chst-info .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I],
+.chst-info ul li[data-task=I].task-list-item.is-checked {
+  text-decoration: line-through 2px;
+}
+
 /*--Checkbox Type Icons--*/
-/* SVG check mark for done ('- [x]') */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X]::before,
-.markdown-preview-view li[data-task=X] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=X] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=X]::before {
+body:not(.alt-chkbx-off) {
+  /* [X]: Checked: Checkmark */
+  /* [>]: Forward: SVG Plane */
+  /* [D]: Deferred/Scheduled: Calendar */
+  /* [-]: Cancelled/Non-Task: Line */
+  /* [?]: Question: Question Mark */
+  /* [!]: Important: Exclamation Mark */
+  /* [+]: Add: Plus */
+  /* [/]: Half Done: Right Triangle */
+  /* [R]: Research: Magnifying Glass */
+  /* [i]: Idea: Lightbulb */
+  /* [B]: Brainstorm: Bubbles */
+  /* [P]: Pro: Thumbs Up */
+  /* [C]: Con: Thumbs Down */
+  /* [I]: Info: Italicized I */
+  /* [Q]: Quote: Closing Quotation Mark */
+  /* [N]: Note: Open Scroll */
+  /* [b]: Bookmark: Bookmark Flag */
+}
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=X]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=X] input[type=checkbox]:checked::before {
   color: var(--accent2-lite, var(--text-accent));
   content: "\ec01";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=X],
-.check-color.check-color ul li[data-task=X].task-list-item.is-checked {
-  color: var(--text-faint);
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X],
-.check-bg li[data-task=X].task-list-item.is-checked {
-  border-left: 2px solid rgb(var(--chbx-R));
-  background: rgba(var(--chbx-R), 20%);
-  /*#bbcbff17*/
-}
-
-/* SVG Plane for Forward ('- [>]') */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"]::before,
-.markdown-preview-view li[data-task=">"] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=">"] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=">"]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=">"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=">"] input[type=checkbox]:checked::before {
   color: var(--text-normal);
   content: "\ec03";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=">"],
-.check-color.check-color ul li[data-task=">"].task-list-item.is-checked {
-  color: var(--text-normal);
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"],
-.check-bg li[data-task=">"].task-list-item.is-checked {
-  border-left: 3px double rgb(var(--chbx-h));
-  background: rgba(var(--chbx-h), 20%);
-}
-
-/* SVG Calendar for deferred/scheduled ('- [D]') */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=D]::before,
-.markdown-preview-view li[data-task=D] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=D] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=D]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=D]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=D]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=D] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-h));
   content: "\ec04";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=D],
-.check-color.check-color ul li[data-task=D].task-list-item.is-checked {
-  color: rgb(var(--chbx-h));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D],
-.check-bg li[data-task=D].task-list-item.is-checked {
-  border-left: 2px solid rgb(var(--chbx-h));
-  background: rgba(var(--chbx-h), 20%);
-}
-
-/* SVG line for cancelled/non-task ('- [-]') */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]::before,
-.markdown-preview-view li[data-task="-"] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task="-"] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="-"]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="-"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="-"] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-d));
   content: "\ec02";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
-.check-color span[data-task="-"],
-.check-color.check-color ul li[data-task="-"].task-list-item.is-checked {
-  color: rgb(var(--chbx-d));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"],
-.check-bg li[data-task="-"].task-list-item.is-checked {
-  border-left: 2px solid rgb(var(--chbx-d));
-  background: rgba(var(--chbx-d), 20%);
-}
-
-/* '?' for question/more info task ('- [?]') */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"]::before,
-.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task="?"] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="?"]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="?"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="?"] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-q));
   content: "\ec05";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="?"],
-.check-color.check-color ul li[data-task="?"].task-list-item.is-checked {
-  color: rgb(var(--chbx-q));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"],
-.check-bg li[data-task="?"].task-list-item.is-checked {
-  border-left: 2px dashed rgb(var(--chbx-q));
-  background: rgba(var(--chbx-q), 20%);
-  /*#fac35d17*/
-}
-
-/* '!' for important task ('- [!]') */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"]::before,
-.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task="!"] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="!"]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="!"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="!"] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-i));
   content: "\ec08";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="!"],
-.check-color.check-color ul li[data-task="!"].task-list-item.is-checked {
-  color: rgb(var(--chbx-i));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"],
-.check-bg li[data-task="!"].task-list-item.is-checked {
-  border-left: 3px solid rgb(var(--chbx-i));
-  background: rgba(var(--chbx-i), 20%);
-}
-
-/* '+' for adding a task ('- [+]') */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"]::before,
-.markdown-preview-view li[data-task="+"] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task="+"] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="+"]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="+"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="+"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="+"] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-a));
   content: "\ec06";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="+"],
-.check-color.check-color ul li[data-task="+"].task-list-item.is-checked {
-  color: rgb(var(--chbx-a));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"],
-.check-bg li[data-task="+"].task-list-item.is-checked {
-  border-left: 2px dashed rgb(var(--chbx-a));
-  background: rgba(var(--chbx-a), 20%);
-}
-
-/* "/" Half done */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"]::before,
-.markdown-preview-view li[data-task="/"] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task="/"] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="/"]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="/"]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task="/"]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task="/"] input[type=checkbox]:checked::before {
   color: var(--accent, var(--interactive-accent));
   content: "\ec17";
 }
-
-/**/
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="/"],
-.check-color.check-color ul li[data-task="/"].task-list-item.is-checked:not(::before) {
-  background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 10%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="/"] {
-  background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 80%);
-  -webkit-background-clip: text;
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"],
-.check-bg li[data-task="/"].task-list-item.is-checked {
-  border-left: 3px dashed rgb(var(--chbx-R));
-  background: linear-gradient(to left, var(--accent, var(--interactive-accent)) 0%, transparent 1%);
-}
-
-/* "R" Research */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=R]::before,
-.markdown-preview-view li[data-task=R] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=R] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=R]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=R]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=R]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=R] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-R));
   content: "\ec07";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=R],
-.check-color.check-color ul li[data-task=R].task-list-item.is-checked {
-  color: rgb(var(--chbx-R));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R],
-.check-bg li[data-task=R].task-list-item.is-checked {
-  border-left: 3px dashed rgb(var(--chbx-R));
-  background: rgba(var(--chbx-R), 20%);
-  /*#bbcbff17*/
-}
-
-/* "i" Idea */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=i]::before,
-.markdown-preview-view li[data-task=i] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=i] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=i]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=i]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=i]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=i] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-id));
   content: "\ec09";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=i],
-.check-color.check-color ul li[data-task=i].task-list-item.is-checked {
-  color: rgb(var(--chbx-id));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i],
-.check-bg li[data-task=i].task-list-item.is-checked {
-  border-left: 2px dashed rgb(var(--chbx-id));
-  background: rgba(var(--chbx-id), 20%);
-}
-
-/* "B" Brainstorm */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=B]::before,
-.markdown-preview-view li[data-task=B] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=B] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=B]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=B]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=B]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=B] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-B));
   content: "\ec10";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=B],
-.check-color.check-color ul li[data-task=B].task-list-item.is-checked {
-  color: rgb(var(--chbx-B));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B],
-.check-bg li[data-task=B].task-list-item.is-checked {
-  border-left: 3px double rgb(var(--chbx-B));
-  background: rgba(var(--chbx-B), 20%);
-  /*#945dfa25*/
-}
-
-/* "P" Pro */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=P]::before,
-.markdown-preview-view li[data-task=P] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=P] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=P]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=P]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=P]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=P] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-P));
   content: "\ec11";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=P],
-.check-color.check-color ul li[data-task=P].task-list-item.is-checked {
-  color: rgb(var(--chbx-P));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P],
-.check-bg li[data-task=P].task-list-item.is-checked {
-  border-left: 2px solid rgb(var(--chbx-P));
-  background: rgba(var(--chbx-P), 20%);
-}
-
-/* "C" Con */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=C]::before,
-.markdown-preview-view li[data-task=C] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=C] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=C]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=C]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=C]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=C] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-C));
   content: "\ec12";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=C],
-.check-color.check-color ul li[data-task=C].task-list-item.is-checked {
-  color: rgb(var(--chbx-C));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C],
-.check-bg li[data-task=C].task-list-item.is-checked {
-  border-left: 2px solid rgb(var(--chbx-C));
-  background: rgba(var(--chbx-C), 20%);
-}
-
-/* "I" Info */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=I]::before,
-.markdown-preview-view li[data-task=I] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=I] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=I]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=I]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=I]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=I] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-I));
   content: "\ec16";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=I],
-.check-color.check-color ul li[data-task=I].task-list-item.is-checked {
-  color: rgb(var(--chbx-I));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I],
-.check-bg li[data-task=I].task-list-item.is-checked {
-  border-left: 2px solid rgb(var(--chbx-I));
-  background: rgba(var(--chbx-I), 20%);
-}
-
-/* "Q" Quote */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=Q]::before,
-.markdown-preview-view li[data-task=Q] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=Q] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=Q]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=Q]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=Q]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=Q] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-R));
   content: "\ec13";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=Q],
-.check-color.check-color ul li[data-task=Q].task-list-item.is-checked {
-  color: rgb(var(--chbx-R));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q],
-.check-bg li[data-task=Q].task-list-item.is-checked {
-  border-left: 3px solid rgb(var(--chbx-R));
-  border-right: 3px solid rgb(var(--chbx-R));
-  background: rgba(var(--chbx-R), 20%);
-}
-
-/* "N" Note */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=N]::before,
-.markdown-preview-view li[data-task=N] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=N] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=N]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=N]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=N]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=N] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-N));
   content: "\ec14";
 }
-
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=N],
-.check-color.check-color ul li[data-task=N].task-list-item.is-checked {
-  color: rgb(var(--chbx-N));
-}
-
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N],
-.check-bg li[data-task=N].task-list-item.is-checked {
-  border-left: 2px solid rgb(var(--chbx-N));
-  background: rgba(var(--chbx-N), 20%);
-}
-
-/* "b" Bookmark */
-.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=b]::before,
-.markdown-preview-view li[data-task=b] > .task-list-item-checkbox:checked::before,
-.markdown-preview-view li[data-task=b] p .task-list-item-checkbox:checked::before,
-.cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=b]::before {
+body:not(.alt-chkbx-off) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=b]::before, body:not(.alt-chkbx-off) .cm-s-obsidian span.hmd-hidden-token.cm-formatting-task[data-task=b]::before, body:not(.alt-chkbx-off) .task-list-item.is-checked[data-task=b] input[type=checkbox]:checked::before {
   color: rgb(var(--chbx-b));
   content: "\ec15";
 }
 
-.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b],
-.check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=b],
-.check-color.check-color ul li[data-task=b].task-list-item.is-checked {
+/*--Checkbox Text Colors--*/
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=X], .check-color.check-color ul li[data-task=X].task-list-item.is-checked {
+  color: var(--text-faint);
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=">"], .check-color.check-color ul li[data-task=">"].task-list-item.is-checked {
+  color: var(--text-normal);
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=D], .check-color.check-color ul li[data-task=D].task-list-item.is-checked {
+  color: rgb(var(--chbx-h));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"], .check-color span[data-task="-"], .check-color.check-color ul li[data-task="-"].task-list-item.is-checked {
+  color: rgb(var(--chbx-d));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="?"], .check-color.check-color ul li[data-task="?"].task-list-item.is-checked {
+  color: rgb(var(--chbx-q));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="!"], .check-color.check-color ul li[data-task="!"].task-list-item.is-checked {
+  color: rgb(var(--chbx-i));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="+"], .check-color.check-color ul li[data-task="+"].task-list-item.is-checked {
+  color: rgb(var(--chbx-a));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="/"], .check-color.check-color ul li[data-task="/"].task-list-item.is-checked:not(::before) {
+  background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 10%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task="/"] {
+  background: linear-gradient(to right, var(--accent, var(--interactive-accent)) 0%, var(--chbx-d) 80%);
+  -webkit-background-clip: text;
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=R], .check-color.check-color ul li[data-task=R].task-list-item.is-checked {
+  color: rgb(var(--chbx-R));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=i], .check-color.check-color ul li[data-task=i].task-list-item.is-checked {
+  color: rgb(var(--chbx-id));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=B], .check-color.check-color ul li[data-task=B].task-list-item.is-checked {
+  color: rgb(var(--chbx-B));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=P], .check-color.check-color ul li[data-task=P].task-list-item.is-checked {
+  color: rgb(var(--chbx-P));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=C], .check-color.check-color ul li[data-task=C].task-list-item.is-checked {
+  color: rgb(var(--chbx-C));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=I], .check-color.check-color ul li[data-task=I].task-list-item.is-checked {
+  color: rgb(var(--chbx-I));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=Q], .check-color.check-color ul li[data-task=Q].task-list-item.is-checked {
+  color: rgb(var(--chbx-R));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=N], .check-color.check-color ul li[data-task=N].task-list-item.is-checked {
+  color: rgb(var(--chbx-N));
+}
+.check-color .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b], .check-color span:not(.cm-link):not(.cm-inline-code) span[data-task=b], .check-color.check-color ul li[data-task=b].task-list-item.is-checked {
   color: rgb(var(--chbx-b));
 }
 
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b],
-.check-bg li[data-task=b].task-list-item.is-checked {
+/*--Checkbox Background--*/
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=X], .check-bg li[data-task=X].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-R));
+  background: rgba(var(--chbx-R), 20%);
+  /*#bbcbff17*/
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=">"], .check-bg li[data-task=">"].task-list-item.is-checked {
+  border-left: 2px double rgb(var(--chbx-h));
+  background: rgba(var(--chbx-h), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=D], .check-bg li[data-task=D].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-h));
+  background: rgba(var(--chbx-h), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"], .check-bg li[data-task="-"].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-d));
+  background: rgba(var(--chbx-d), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="?"], .check-bg li[data-task="?"].task-list-item.is-checked {
+  border-left: 2px dashed rgb(var(--chbx-q));
+  background: rgba(var(--chbx-q), 20%);
+  /*#fac35d17*/
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"], .check-bg li[data-task="!"].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-i));
+  background: rgba(var(--chbx-i), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="+"], .check-bg li[data-task="+"].task-list-item.is-checked {
+  border-left: 2px dashed rgb(var(--chbx-a));
+  background: rgba(var(--chbx-a), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"], .check-bg li[data-task="/"].task-list-item.is-checked {
+  border-left: 2px dashed rgb(var(--chbx-R));
+  background: linear-gradient(to left, var(--accent, var(--interactive-accent)) 0%, transparent 1%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=R], .check-bg li[data-task=R].task-list-item.is-checked {
+  border-left: 2px dashed rgb(var(--chbx-R));
+  background: rgba(var(--chbx-R), 20%);
+  /*#bbcbff17*/
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=i], .check-bg li[data-task=i].task-list-item.is-checked {
+  border-left: 2px dashed rgb(var(--chbx-id));
+  background: rgba(var(--chbx-id), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=B], .check-bg li[data-task=B].task-list-item.is-checked {
+  border-left: 2px double rgb(var(--chbx-B));
+  background: rgba(var(--chbx-B), 20%);
+  /*#945dfa25*/
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=P], .check-bg li[data-task=P].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-P));
+  background: rgba(var(--chbx-P), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=C], .check-bg li[data-task=C].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-C));
+  background: rgba(var(--chbx-C), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=I], .check-bg li[data-task=I].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-I));
+  background: rgba(var(--chbx-I), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=Q], .check-bg li[data-task=Q].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-R));
+  border-right: 2px solid rgb(var(--chbx-R));
+  background: rgba(var(--chbx-R), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=N], .check-bg li[data-task=N].task-list-item.is-checked {
+  border-left: 2px solid rgb(var(--chbx-N));
+  background: rgba(var(--chbx-N), 20%);
+}
+.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task=b], .check-bg li[data-task=b].task-list-item.is-checked {
   border-left: 2px solid rgb(var(--chbx-b));
   background: rgba(var(--chbx-b), 20%);
 }
 
 /*Hide Border For LP (Aligns Items Strangely) */
-.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
+body.check-bg .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task] {
   border: 0;
 }
 
@@ -6540,76 +6759,6 @@ body.check-text.check-text ul li:not([data-task=x]).task-list-item.is-checked {
   width: 5px;
 }
 
-/*--Special Blockquote Formatting--*/
-blockquote mark strong {
-  display: block;
-  color: var(--headers);
-  text-align: right;
-  background-color: transparent;
-  font-style: italic;
-}
-
-em mark,
-em mark em {
-  text-decoration: unset;
-  color: transparent;
-  font-style: normal;
-  text-align: justify;
-  font-weight: unset;
-  float: right;
-  position: relative;
-  margin-right: -25.3em;
-  margin-bottom: 0.2em;
-  clear: right;
-  width: 400px;
-  padding: 0 1em;
-}
-
-em mark em {
-  font-style: unset;
-}
-
-/*--Blockquote Adjustments--*/
-/*Turn b into a blockquote without the quotations*/
-.markdown-preview-view b {
-  display: flow-root;
-  border: 0px solid var(--lines);
-  background-color: var(--outer-bar);
-  border-left-width: 8px;
-  border-radius: var(--radius);
-  position: relative;
-  font-weight: unset;
-  padding: 10px 20px;
-  margin-left: 2%;
-}
-
-/*Quotes*/
-#quote {
-  padding-right: 2em;
-  text-align: justify;
-  border-color: var(--bg);
-  background-color: var(--embed-bg);
-}
-
-#quote:before {
-  content: "”";
-  position: absolute;
-  top: 0.4em;
-  right: 0.2em;
-  font-size: 50px;
-  font-family: var(--font);
-  color: var(--headers);
-}
-
-/*Quote Author*/
-b mark strong {
-  display: block;
-  color: var(--lite-accent) !important;
-  text-align: right;
-  background-color: transparent !important;
-  font-style: italic;
-}
-
 /* Kepano: https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164
 Enlarge Image:*/
 .img-zoom .markdown-preview-view img {
@@ -6790,10 +6939,73 @@ input[type=number]:hover {
   padding: 0;
 }
 
-.search-suggest-item.is-selected,
-.suggestion-container,
-.suggestion {
-  border-radius: var(--radius) !important;
+body .search-result-hover-button,
+body .search-suggest-item.is-selected,
+body .suggestion-container,
+body .suggestion {
+  border-radius: var(--radius);
+}
+
+/*Search Styling*/
+.search-results-children .search-result {
+  margin-right: 7px;
+  margin-bottom: 10px;
+  background: var(--note);
+  border: 2px solid var(--outline);
+  box-shadow: 2px 2px 0 var(--outline);
+}
+
+.search-result-file-match:after {
+  left: -7px;
+}
+
+.internal-query .search-result-file-match:after {
+  left: 0;
+}
+
+.search-result-file-title {
+  background: var(--code-bg);
+  box-shadow: 0 2px 0 var(--td);
+  padding: 5px;
+  padding-left: 20px;
+  line-height: var(--lh);
+}
+
+/*
+.search-result-file-title .tree-item-inner::before {
+    content: "\E800";
+    font-family: var(--its);
+    padding-right: 5px;
+}*/
+.search-result .collapse-icon svg {
+  color: var(--soft-text);
+}
+
+.search-result-file-match {
+  margin: auto;
+  width: auto;
+  z-index: 0;
+  padding: 8px 10px;
+  color: var(--text);
+}
+
+.search-result-file-matches {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.search-result-file-match:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.search-result-file-match:after {
+  bottom: 0;
+  background-color: var(--bg);
+}
+
+.search-result:last-child .search-result-file-matches {
+  border-color: var(--outline);
 }
 
 /*-Graph Settings-*/
@@ -6882,22 +7094,51 @@ input[type=number]:hover {
   color: var(--graph-focused) !important;
 }
 
+/*--Outgoing Links--*/
+body .search-result-file-match-destination-file-container .search-result-file-match-destination-file {
+  border-radius: var(--radius);
+  border: 0;
+  font-weight: 900;
+  box-shadow: 0px 2px 0 var(--outline);
+}
+
+.outgoing-link-item.outgoing-link-item:nth-child(odd):not(:hover) {
+  background-color: var(--td);
+}
+
+.backlink-pane > .tree-item-self,
+.outgoing-link-pane > .tree-item-self {
+  text-align: center;
+  background-color: var(--aside-bg);
+  box-shadow: 0 2px 0 var(--outline);
+  margin-bottom: 10px;
+}
+
+.backlink-pane .search-result-container {
+  margin: 5px;
+}
+
 /*--Query--*/
 /*Remove Borders and Outer Margins*/
-.markdown-preview-view .internal-query.is-embed {
-  border: none;
-  margin-bottom: 1%;
-  margin-top: 1%;
+.internal-query {
+  margin: 10px 0;
+  border: 3px solid var(--code-bg);
+  border-top: 0;
+  background: var(--note);
+}
+
+.internal-query .search-result-container {
+  padding: 0 4px;
 }
 
 /*Query Header*/
-.markdown-preview-view .internal-query.is-embed .internal-query-header {
+.internal-query .internal-query-header {
   background-color: var(--code-bg);
-  padding: 0.5%;
+  padding: 5px;
 }
 
 /*Smaller Query Titles*/
-.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
+.internal-query .internal-query-header-title {
   font-size: 13px;
   font-weight: 600;
   color: var(--soft-text);
@@ -6905,26 +7146,59 @@ input[type=number]:hover {
 }
 
 /*Reduce Query Result Margins and Remove Borders*/
-.internal-query.is-embed .search-result-file-matches {
-  border: none;
+.internal-query .search-result-file-matches {
+  border: 0;
   padding: 0;
-  margin-right: 10px;
-  margin-bottom: 0.5%;
+  margin-left: 0;
 }
 
-/*Add border Under Query search result*/
-.internal-query.is-embed .search-result {
-  border-bottom: 1px solid var(--bg);
-  background-color: var(--note);
-  margin-bottom: 0;
+.internal-query .search-result-file-match::after {
+  bottom: 0;
+  background-color: var(--bg);
+}
+
+/*Style Query Match*/
+.internal-query .search-results-children .tree-item {
+  background: var(--note);
+  margin: 10px 0;
+}
+
+.internal-query .tree-item-self,
+.internal-query .search-result-file-matches {
+  color: var(--text);
+}
+
+.internal-query .search-result-file-match {
+  padding: 10px;
+  margin: 0;
+  margin-left: -4px;
+  width: 100%;
+  font-size: var(--f-s-text);
+}
+
+.search-result-file-match {
+  border-radius: var(--radius);
+}
+
+.workspace-split.mod-root .internal-query .search-result-file-match:hover,
+.internal-query .search-result-file-title {
+  box-shadow: 0 2px 0 var(--td);
 }
 
 /*Query No Matches Found*/
-.internal-query.is-embed .search-empty-state {
-  margin: 0;
-  color: var(--headers);
+.internal-query .search-empty-state {
+  color: var(--text-error);
+  font-family: var(--font-monospace);
+  text-align: center;
+  margin: 10px;
 }
 
+/*Query Number
+.tree-item.search-result:not(.is-collapsed) .search-result-file-title .tree-item-flair {
+    background-color: var(--note);
+    box-shadow: 0 2px var(--outline);
+    font-family: var(--font-monospace);
+}*/
 /*----Slides----*/
 /*Slides: Background*/
 .slides-container,
@@ -7039,17 +7313,12 @@ input[type=number]:hover {
   margin-right: -5px;
 }
 
-@media screen and (max-width: 750px) {
-  .site-footer {
-    visibility: hidden;
-  }
-}
 .site-footer {
   font-size: 13px;
   right: 12px;
   bottom: 0;
   position: absolute;
-  visibility: visible;
+  display: none;
 }
 
 .page-header {
@@ -7076,6 +7345,7 @@ input[type=number]:hover {
 
 .site-body-left-column {
   background-color: var(--outer-bar);
+  flex: 0 0 280px;
 }
 
 .site-body-left-column:before {
@@ -7089,11 +7359,39 @@ input[type=number]:hover {
   z-index: 0;
 }
 
+.site-body .tree-item-children .tree-item-children {
+  margin-left: 10px;
+  border-left: 2px solid var(--lines);
+}
+
+.site-body .outline-view .tree-item-children {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 2px solid var(--lines);
+}
+
+.site-body .outline-view .tree-item-self .tree-item-inner:before {
+  content: "H";
+  padding-right: 5px;
+  margin-left: -13px;
+  font-weight: 900;
+  font-family: "Fira Code";
+  color: var(--lite-accent);
+}
+
+.site-body .outline-view .tree-item-children .tree-item-self .tree-item-inner:before {
+  content: "\e802";
+  font-family: var(--its);
+  padding-right: 5px;
+  margin-left: -16px;
+  color: var(--accent2);
+}
+
 .graph-view-container {
   position: relative;
   height: 300px;
   border: 1px solid var(--table);
-  border-radius: 10px;
+  border-radius: var(--radius);
   background-color: var(--graph-bg);
   padding: 4px;
 }
@@ -7181,142 +7479,163 @@ pre:hover > button.copy-code-button {
   width: 6em;
 }
 
-/*Plugin: Breadcrumbs*/
-div.breadcrumbs-matrix-square {
-  border: 2px solid var(--outline) !important;
-  box-shadow: 4px 4px var(--outline);
+/*Admonition*/
+body .admonition {
   border-radius: var(--radius);
+  box-shadow: 5px 5px var(--outline);
 }
 
-h5.breadcrumbs-matrix-header {
-  font-size: 14px !important;
-  font-family: var(--default-font) !important;
-  font-weight: 700 !important;
+body .is-live-preview .admonition {
+  margin: 0;
 }
 
-h3.breadcrumbs-matrix-header {
-  font-size: 18px !important;
+body .admonition-title {
+  padding: 10px 15px;
+}
+
+body .admonition-content {
+  padding: 0 0 0 5px;
+}
+
+/*Plugin: Breadcrumbs*/
+div.BC-Matrix-square {
+  border: 2px solid var(--outline);
+}
+
+h4.BC-Matrix-header {
   text-transform: capitalize;
-  color: var(--headers) !important;
+  color: var(--headers);
 }
 
-h3.breadcrumbs-matrix-header:after {
+h4.BC-Matrix-header::after {
   display: none;
 }
 
-/*Button Plugin*/
-.button-default {
-  border-radius: var(--radius) !important;
-  box-shadow: none !important;
-  background-color: var(--th) !important;
+/* Side Panel */
+div.BC-Matrix > div {
   border: 0 !important;
-  display: block;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  color: var(--text-dl) !important;
 }
 
-.button-default:hover {
-  box-shadow: 0 0.5em var(--embed-bg) !important;
-  color: var(--text-dl) !important;
+body div.BC-Matrix-square {
+  border: 3px solid var(--outline) !important;
+  box-shadow: 4px 4px var(--outline);
+  border-radius: var(--radius);
+}
+body div.BC-Matrix-square ol {
+  text-align: left;
 }
 
-/*Admonition*/
-.admonition {
-  border-radius: var(--radius) !important;
-  box-shadow: 5px 5px var(--outline) !important;
+body .BC-Matrix.markdown-preview-view {
+  height: unset;
 }
 
-.admonition-title {
-  padding: 10px 15px !important;
+/*Banner + Breadcrumbs Trail Fixes*/
+body .markdown-preview-view:not(.is-live-preview).bc-ban .markdown-preview-section.BC-trail {
+  margin-top: 200px !important;
 }
 
-.admonition-content {
-  padding: 0 0 0 5px !important;
+/*Remove Banner Margins If Breadcrumbs Trail is near*/
+.BC-trail + div > .obsidian-banner-wrapper {
+  margin: 0;
+}
+
+/*Trail*/
+body .BC-trail {
+  padding: 0;
+  border: 2px solid var(--outline);
+  border-radius: var(--radius);
+  box-shadow: 3px 3px 0px var(--outline);
+  background-color: var(--note);
+  justify-content: center;
+  text-align: center;
+}
+body .BC-trail div.BC-trail-grid, body .BC-trail div.BC-trail-grid-item {
+  border: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+body .BC-trail div.BC-trail-grid-item {
+  margin: 5px;
+  background-color: var(--outer-bar);
+  text-align: center;
+}
+
+/*Button Plugin*/
+.block-language-button button,
+body .button-default.button-default {
+  border-radius: var(--radius);
+  box-shadow: none;
+  background-color: var(--th);
+  border: 0;
+  color: var(--text-dl);
+}
+
+body .button-default.button-default:hover {
+  box-shadow: 0 0.5em var(--embed-bg);
+  color: var(--text-dl);
 }
 
 /*--Checklist Plugin Edit--*/
 /*Square Checklist*/
-.checklist-plugin-main li,
-.checklist-plugin-main .checkbox,
-.checklist-plugin-main .count {
-  border-radius: var(--radius) !important;
+body .checklist-plugin-main.checklist-plugin-main {
+  margin-top: -0.8em;
+  padding: 0.4em;
+  /*Fix Checked Item*/
 }
-
-.checklist-plugin-main li {
-  border-left: 4px solid var(--accent) !important;
-  background-color: var(--code-bg) !important;
+body .checklist-plugin-main.checklist-plugin-main li, body .checklist-plugin-main.checklist-plugin-main .checkbox, body .checklist-plugin-main.checklist-plugin-main .count {
+  border-radius: var(--radius);
 }
-
-.checklist-plugin-main li:nth-child(even) {
-  border-left: 4px solid var(--accent2) !important;
+body .checklist-plugin-main.checklist-plugin-main .content {
+  padding: 0;
 }
-
-.checklist-plugin-main li:hover,
-.checklist-plugin-main li:nth-child(even):hover {
-  background-color: var(--outer-bar) !important;
+body .checklist-plugin-main.checklist-plugin-main li.compact {
+  padding: 0;
+  margin-bottom: 0.4em;
 }
-
-/*Reduce Padding*/
-.checklist-plugin-main {
-  margin-top: -0.8em !important;
-  padding: 0.4em !important;
+body .checklist-plugin-main.checklist-plugin-main li {
+  border-left: 4px solid var(--accent);
+  background-color: var(--code-bg);
 }
-
-.checklist-plugin-main .content {
-  padding: 0 !important;
+body .checklist-plugin-main.checklist-plugin-main li:nth-child(even) {
+  border-left: 4px solid var(--accent2);
 }
-
-.checklist-plugin-main li.compact {
-  padding: 0.1em;
-  margin-bottom: 0.4em !important;
+body .checklist-plugin-main.checklist-plugin-main li:hover, body .checklist-plugin-main.checklist-plugin-main li:nth-child(even):hover {
+  background-color: var(--outer-bar);
 }
-
-/*Hide Bullet*/
-.checklist-plugin-main li.compact:before,
-.checklist-plugin-main li.classic:before {
-  display: none !important;
+body .checklist-plugin-main.checklist-plugin-main li.compact:before, body .checklist-plugin-main.checklist-plugin-main li.classic:before {
+  display: none;
 }
-
-/*Resize Checkbox*/
-.checklist-plugin-main .compact .toggle {
-  padding: 0 0.4em !important;
+body .checklist-plugin-main.checklist-plugin-main .compact .toggle {
+  padding: 0 0.4em;
 }
-
-.checklist-plugin-main .checkbox {
-  border-width: 2px !important;
-  min-width: 0.5em !important;
-  min-height: 0.5em !important;
-  border-color: var(--accent) !important;
+body .checklist-plugin-main.checklist-plugin-main .checkbox {
+  border-width: 2px;
+  min-width: 0.5em;
+  min-height: 0.5em;
+  border-color: var(--accent);
 }
-
-.checklist-plugin-main .toggle:hover {
-  background-color: transparent !important;
+body .checklist-plugin-main.checklist-plugin-main .toggle:hover {
+  background-color: transparent;
 }
-
-.checklist-plugin-main .compact .checkbox {
-  width: 1.2em !important;
-  height: 1.2em !important;
+body .checklist-plugin-main.checklist-plugin-main .compact .checkbox {
+  width: 1.2em;
+  height: 1.2em;
 }
-
-.checklist-plugin-main .classic .checkbox {
-  width: 1.5em !important;
-  height: 1.5em !important;
+body .checklist-plugin-main.checklist-plugin-main .classic .checkbox {
+  width: 1.5em;
+  height: 1.5em;
 }
-
-/*Fix Checked Item*/
-.checklist-plugin-main .compact .checked {
-  border-radius: var(--radius) !important;
-  position: relative !important;
-  top: -2px !important;
-  left: -2px !important;
-  background-color: var(--accent) !important;
+body .checklist-plugin-main.checklist-plugin-main .compact .checked {
+  border-radius: var(--radius);
+  position: relative;
+  top: -2px;
+  left: -2px;
+  background-color: var(--accent);
 }
-
-.checklist-plugin-main .classic .checked {
-  border-radius: var(--radius) !important;
-  position: absolute !important;
-  background-color: var(--accent) !important;
+body .checklist-plugin-main.checklist-plugin-main .classic .checked {
+  border-radius: var(--radius);
+  position: absolute;
+  background-color: var(--accent);
 }
 
 /*Cross Reference*/
@@ -7442,11 +7761,11 @@ h3.breadcrumbs-matrix-header:after {
 }
 
 /*--Dataview Table--*/
-.table-view-table > thead > tr > th {
-  font-weight: 900 !important;
+body .table-view-table > thead > tr > th {
+  font-weight: 900;
   font-family: var(--font);
   color: var(--headers);
-  border-bottom: solid var(--accent) !important;
+  border-bottom: 2px solid var(--accent);
   background-color: var(--embed-bg);
 }
 
@@ -7518,10 +7837,12 @@ body .dataview.inline-field-value a.tag:first-child {
 }
 
 /*Dataview List Adjustments*/
+.dvl .block-language-dataviewjs .dataview-result-list-li,
 .dvl .list-view-ul li {
   padding: 10px;
-  margin-top: 15px;
   background-color: var(--aside-bg);
+  box-shadow: 2px 2px 0 var(--outline);
+  margin-bottom: 5px;
 }
 
 .dvl .dataview.list-view-ul li::before {
@@ -7529,17 +7850,140 @@ body .dataview.inline-field-value a.tag:first-child {
 }
 
 /*Kanban*/
+.kanban.dvl .block-language-dataviewjs .dataview-result-list-li,
 .kanban.dvl .list-view-ul li {
   background-color: var(--aside-bg);
 }
 
-.kanban.dvl ul li {
-  flex: 1 1 200px !important;
+.kanban.dvl .block-language-dataviewjs .dataview-result-list-li,
+.kanban.dvl .list-view-ul li {
+  flex: 1 1 200px;
+  box-shadow: 4px 4px 0 var(--outline);
+  border: 1px solid var(--outline);
+  margin-bottom: 10px;
 }
 
-.kanban .dataview-ul {
-  display: block !important;
-  padding-inline-start: 1em !important;
+.kanban table td > .dataview-ul {
+  display: block;
+  padding-inline-start: 1em;
+}
+
+/*Dice Roller*/
+.dice-button .clickable-icon {
+  margin: 0 7px;
+}
+
+body .dice-roller-view .dice-roller-grid .dice-buttons {
+  width: auto;
+}
+
+.dice-button .clickable-icon .cls-1 {
+  fill: var(--interactive-accent);
+  stroke: var(--interactive-accent);
+}
+
+body .dice-button:hover .cls-1 {
+  fill: var(--interactive-accent-hover);
+  stroke: var(--interactive-accent-hover);
+}
+
+body .dice-button svg g {
+  color: var(--text-dl);
+  fill: var(--text-dl);
+}
+
+body .dice-roller-view .dice-roller-grid .advantage-disadvantage button {
+  background: var(--interactive-success);
+  color: var(--text-dl);
+}
+body .dice-roller-view .dice-roller-grid .advantage-disadvantage button:hover {
+  background-color: var(--interactive-accent-hover);
+}
+body .dice-roller-view .dice-roller-grid .advantage-disadvantage button + button {
+  background: var(--interactive-failure);
+}
+
+/*Plugin: Fantasy Calendar*/
+.workspace-leaf-content[data-type=FANTASY_CALENDAR] .view-content {
+  padding: 0 10px;
+}
+
+body .fantasy-calendar .weekdays.weekdays, body .fantasy-calendar .weeks {
+  font-weight: 900;
+  background-color: var(--th);
+  color: var(--text-dl);
+  border-radius: var(--radius);
+}
+
+body .fantasy-calendar .weekdays .weekday, body .fantasy-calendar .weeks .week-num {
+  padding: 0px;
+  border-radius: var(--radius);
+}
+body .fantasy-calendar .weeks .week-num-container {
+  padding: 0px 5px;
+  color: var(--text);
+  background-color: var(--outer-bar);
+}
+
+textarea,
+body .fantasy-calendar-element details[open],
+body .fantasy-calendar-create-calendar details[open],
+body .fantasy-day.day {
+  border-radius: var(--radius);
+}
+
+.fantasy-day.day.active {
+  background-color: var(--bttn);
+  color: var(--text-dl);
+}
+.fantasy-day.day.viewing {
+  border: none;
+  background-color: var(--lite-accent);
+  color: var(--text-dl);
+}
+.fantasy-day.day.viewing .dots-container {
+  padding: 2px;
+}
+
+:not(.dnd):not(.wotc) h3.fantasy-title::after {
+  display: none;
+}
+
+.fantasy-calendar-create-calendar .modal {
+  padding: 20px;
+  min-width: 70vw;
+}
+.fantasy-calendar-create-calendar .modal-content {
+  padding: 0 30px;
+}
+.fantasy-calendar-create-calendar h3 {
+  font-size: var(--f-s-h);
+  text-align: center;
+  margin: 10px 0;
+}
+.fantasy-calendar-create-calendar h3::after {
+  width: 100%;
+  margin-top: 10px;
+}
+
+body .fantasy-calendar-date-fields {
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 30px;
+}
+
+body .fantasy-calendar-element details[open],
+body .fantasy-calendar-create-calendar details[open] {
+  margin: 10px 0;
+  border: 2px solid var(--outline);
+  box-shadow: 4px 4px 0 var(--outline);
+}
+
+.fantasy-calendar-container .event {
+  padding: 10px;
+}
+.fantasy-calendar-container .event:nth-child(even) {
+  box-shadow: 0 0 10px var(--outline);
 }
 
 /*Plugin: File Tree Alternative*/
@@ -7602,6 +8046,142 @@ body .dataview.inline-field-value a.tag:first-child {
 
 .gallery-info-section-value {
   color: var(--text) !important;
+}
+
+/*Plugin: Initiative Tracker*/
+.initiative-tracker-creature td {
+  border: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.initiative-tracker-creature:hover {
+  background: var(--outer-bar);
+}
+
+/*Difficulty Rating*/
+body .obsidian-initiative-tracker span meter.difficulty-bar.difficulty-bar {
+  border: 0;
+  border-radius: var(--radius);
+}
+
+body .obsidian-initiative-tracker span ::-webkit-meter-bar {
+  background-color: var(--outer-bar);
+  border: 1px var(--accent2);
+  border-radius: var(--radius);
+}
+
+.encounter-xp em {
+  visibility: visible !important;
+  text-transform: capitalize;
+  font-style: normal;
+  color: var(--h1);
+}
+
+body .encounter-xp > .easy.easy > .difficulty-label {
+  color: var(--interactive-success);
+}
+body .encounter-xp > .medium.medium > .difficulty-label {
+  color: #ff8800;
+}
+body .encounter-xp > .deadly.deadly > .difficulty-label {
+  color: var(--interactive-failure);
+}
+
+.encounter-xp em em {
+  padding-left: 5px;
+  color: var(--h2, var(--interactive-accent));
+}
+
+/*Encounters*/
+body .encounter-container > .encounter-instance {
+  margin: 5px;
+  padding: 15px;
+  border: 2px solid var(--outline, var(--background-modifier-box-shadow));
+  box-shadow: 4px 4px 0px var(--outline, var(--background-modifier-box-shadow));
+  border-radius: var(--radius, 0.5em);
+}
+
+body .block-language-encounter .encounter-container {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+body .block-language-encounter .encounter-name.encounter-name {
+  display: block;
+}
+
+body .encounter-instance .encounter-name h3 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: -5px !important;
+}
+body .encounter-instance .encounter-name h3::after {
+  content: "";
+  display: block;
+  background: linear-gradient(to right, var(--interactive-accent), transparent);
+  height: 4px;
+}
+body .encounter-instance .encounter-creatures h4 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--text, var(--text-normal));
+  font-family: var(--default-font);
+  font-weight: bold;
+}
+body .encounter-instance .encounter-creatures h4:after {
+  display: none;
+}
+body .encounter-instance .setting-editor-extra-setting-button.clickable-icon {
+  float: right;
+  margin-right: -5px;
+  right: 0;
+}
+body .encounter-instance ul {
+  margin-left: -25px;
+}
+body .encounter-instance ul li.creature-li.creature-li {
+  width: unset;
+}
+body .encounter-instance ul li::before {
+  display: none;
+}
+body .encounter-instance ul li:nth-child(even) {
+  background: var(--aside-bg, var(--background-modifier-box-shadow));
+}
+body .encounter-instance .dice-roller-result {
+  font-family: var(--font-monospace);
+  color: var(--lite-accent);
+}
+body .encounter-instance .dice-roller-button {
+  color: var(--text-faint);
+  vertical-align: -2px;
+  margin-right: -5px;
+}
+body .encounter-instance .encounter-xp, body .encounter-instance .xp-parent {
+  color: var(--h2, var(--interactive-accent));
+  font-weight: bold;
+  margin: 0;
+}
+body .encounter-instance .xp-parent:after {
+  content: "\f102";
+  /*"\e4fb" f753*/
+  font-family: var(--fa5);
+  color: var(--h2, var(--interactive-accent));
+  font-weight: 10 !important;
+  padding-left: 5px;
+}
+body .encounter-instance .xp-parent .paren.left, body .encounter-instance .xp-parent .paren.right, body .encounter-instance .xp.text {
+  display: none;
+}
+body .encounter-instance ul li:not(:hover) .xp-parent.xp-parent.xp-parent {
+  display: none;
+}
+
+.h-pcs .encounter-players {
+  display: none;
 }
 
 /*--Kanban Plugin--*/
@@ -7804,6 +8384,10 @@ body .dataview.inline-field-value a.tag:first-child {
   line-height: 14px !important;
 }
 
+body .kanban-plugin__item-tags .kanban-plugin__item-tag {
+  border-radius: var(--radius);
+}
+
 /*Card: Link Styling*/
 .kbn .kanban-plugin__item .markdown-preview-view a.internal-link {
   font-weight: 600;
@@ -7869,12 +8453,9 @@ body .dataview.inline-field-value a.tag:first-child {
   --plyr-color-main: var(--soft-text);
 }
 
+/*Plugin: Quick Explorer*/
 #quick-explorer .explorable {
   opacity: unset !important;
-}
-
-.workspace-leaf-content[data-type=FANTASY_CALENDAR] .view-content {
-  padding: 10px;
 }
 
 /*Block Reference*/
@@ -7889,6 +8470,28 @@ body .block-ref-count:hover {
   width: unset;
 }
 
+/*Plugin: Link Favicons*/
+object.link-favicon {
+  height: inherit !important;
+  margin-right: 5px;
+}
+
+/*Plugin: Indent Group*/
+body.ig-lists .HyperMD-list-line .ig-tab::before,
+body.ig-code .HyperMD-codeblock .ig-tab::before {
+  width: var(--b-line);
+  margin-left: 7px;
+}
+
+/*
+.ig-tab.ig-indent-group-level::before { background: var(--lite-accent) !important; }
+.ig-tab:not(.ig-indent-group-level)::before                 { background-color: var(--b-l-1) !important; }
+.ig-tab:not(.ig-indent-group-level):nth-child(2n):before    { background-color: var(--b-l-2) !important; }
+.ig-tab:not(.ig-indent-group-level):nth-child(3n):before    { background-color: var(--b-l-3) !important; }
+.ig-tab:not(.ig-indent-group-level):nth-child(4n):before    { background-color: var(--b-l-4) !important; }
+.ig-tab:not(.ig-indent-group-level):nth-child(5n):before    { background-color: var(--b-l-5) !important; }
+.ig-tab:not(.ig-indent-group-level):nth-child(6n):before    { background-color: var(--b-l-6) !important; }
+*/
 body.mtb.AT-multirow .mobile-toolbar-options-container {
   flex-flow: row wrap;
   overflow-y: auto;
@@ -7996,6 +8599,7 @@ body.theme-light {
   --statblock-alt: var(--td);
 }
 
+body .obsidian-statblock-plugin .creature-heading > .name,
 body .obsidian-statblock-plugin .heading {
   font-family: var(--font);
   color: var(--headers);
@@ -8004,6 +8608,7 @@ body .obsidian-statblock-plugin .heading {
   font-variant: unset;
 }
 
+body .obsidian-statblock-plugin > .content-wrap,
 body .obsidian-statblock-plugin > .statblock-content {
   border: none;
   box-shadow: 0px 0px 20px var(--outline);
@@ -8015,6 +8620,7 @@ body .statblock-item-container:nth-child(odd) .property {
   background: var(--statblock-alt);
 }
 
+body .obsidian-statblock-plugin .property > .property-name,
 body .obsidian-statblock-plugin .property-name {
   color: var(--headers);
   font-style: normal;
@@ -8206,7 +8812,6 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 .rsb-up .mod-right-split .workspace-leaf-content {
   padding-bottom: 22px;
 }
-
 .rsb-up .document-search-container, .rsb-up .document-search-container.mod-replace-mode {
   padding-bottom: 20px;
   height: fit-content;
@@ -8229,68 +8834,118 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
   font-family: var(--sphd-pre-ff-1);
   font-size: var(--sphd-pre-fs-1);
 }
-
 .head-spec h2 {
   color: var(--sphd-pre-2);
   font-family: var(--sphd-pre-ff-2);
   font-size: var(--sphd-pre-fs-2);
 }
-
 .head-spec h3 {
   color: var(--sphd-pre-3);
   font-family: var(--sphd-pre-ff-2);
   font-size: var(--sphd-pre-fs-3);
 }
-
 .head-spec h4 {
   color: var(--sphd-pre-4);
   font-family: var(--sphd-pre-ff-4);
   font-size: var(--sphd-pre-fs-4);
 }
-
 .head-spec h5 {
   color: var(--sphd-pre-5);
   font-family: var(--sphd-pre-ff-5);
   font-size: var(--sphd-pre-fs-5);
 }
-
 .head-spec h6 {
   color: var(--sphd-pre-6);
   font-family: var(--sphd-pre-ff-6);
   font-size: var(--sphd-pre-fs-6);
 }
-
 .head-spec .cm-header-1 {
   color: var(--sphd-ed-1);
   font-family: var(--sphd-ed-ff-1);
   font-size: var(--sphd-ed-fs-1);
 }
-
 .head-spec .cm-header-2 {
   color: var(--sphd-ed-2);
   font-family: var(--sphd-ed-ff-2);
   font-size: var(--sphd-ed-fs-2);
 }
-
 .head-spec .cm-header-3 {
   color: var(--sphd-ed-3);
   font-family: var(--sphd-ed-ff-3);
   font-size: var(--sphd-ed-fs-3);
 }
-
 .head-spec .cm-header-4 {
   color: var(--sphd-ed-4);
   font-family: var(--sphd-ed-ff-4);
   font-size: var(--sphd-ed-fs-4);
 }
-
 .head-spec .cm-header-5 {
   color: var(--sphd-ed-5);
   font-family: var(--sphd-ed-ff-5);
   font-size: var(--sphd-ed-fs-5);
 }
-
 .head-spec .cm-header-6 {
+  color: var(--sphd-ed-6);
+  font-family: var(--sphd-ed-ff-6);
+  font-size: var(--sphd-ed-fs-6);
+}
+
+.head-spec-note .markdown-preview-view h1 {
+  color: var(--sphd-pre-1);
+  font-family: var(--sphd-pre-ff-1);
+  font-size: var(--sphd-pre-fs-1);
+}
+.head-spec-note .markdown-preview-view h2 {
+  color: var(--sphd-pre-2);
+  font-family: var(--sphd-pre-ff-2);
+  font-size: var(--sphd-pre-fs-2);
+}
+.head-spec-note .markdown-preview-view h3 {
+  color: var(--sphd-pre-3);
+  font-family: var(--sphd-pre-ff-2);
+  font-size: var(--sphd-pre-fs-3);
+}
+.head-spec-note .markdown-preview-view h4 {
+  color: var(--sphd-pre-4);
+  font-family: var(--sphd-pre-ff-4);
+  font-size: var(--sphd-pre-fs-4);
+}
+.head-spec-note .markdown-preview-view h5 {
+  color: var(--sphd-pre-5);
+  font-family: var(--sphd-pre-ff-5);
+  font-size: var(--sphd-pre-fs-5);
+}
+.head-spec-note .markdown-preview-view h6 {
+  color: var(--sphd-pre-6);
+  font-family: var(--sphd-pre-ff-6);
+  font-size: var(--sphd-pre-fs-6);
+}
+.head-spec-note .cm-header-1 {
+  color: var(--sphd-ed-1);
+  font-family: var(--sphd-ed-ff-1);
+  font-size: var(--sphd-ed-fs-1);
+}
+.head-spec-note .cm-header-2 {
+  color: var(--sphd-ed-2);
+  font-family: var(--sphd-ed-ff-2);
+  font-size: var(--sphd-ed-fs-2);
+}
+.head-spec-note .cm-header-3 {
+  color: var(--sphd-ed-3);
+  font-family: var(--sphd-ed-ff-3);
+  font-size: var(--sphd-ed-fs-3);
+}
+.head-spec-note .cm-header-4 {
+  color: var(--sphd-ed-4);
+  font-family: var(--sphd-ed-ff-4);
+  font-size: var(--sphd-ed-fs-4);
+}
+.head-spec-note .cm-header-5 {
+  color: var(--sphd-ed-5);
+  font-family: var(--sphd-ed-ff-5);
+  font-size: var(--sphd-ed-fs-5);
+}
+.head-spec-note .cm-header-6 {
   color: var(--sphd-ed-6);
   font-family: var(--sphd-ed-ff-6);
   font-size: var(--sphd-ed-fs-6);
@@ -8792,6 +9447,69 @@ body.slp.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-si
 
 .bul-col ul ul ul ul ul ul .task-list-item-checkbox:checked {
   background: var(--b-l-6);
+}
+
+/* RAINBOW INDENT COLORS */
+:root,
+.theme-dark,
+.theme-light {
+  --rb-indent-width: 1.13em;
+  /*Bullet Spacing*/
+  --rb-color-count: 8;
+  --rb-indent-1: var(--sphd-pre-1);
+  /*#6854c1*/
+  --rb-indent-2: var(--sphd-pre-2);
+  /*#c724b1*/
+  --rb-indent-3: var(--sphd-pre-3);
+  /*#ff6900*/
+  --rb-indent-4: var(--sphd-pre-4);
+  /*#f6be00*/
+  --rb-indent-5: var(--sphd-pre-5);
+  /*#e4002b*/
+  --rb-indent-6: var(--sphd-ed-1);
+  /*#97d700*/
+  --rb-indent-7: var(--sphd-ed-2);
+  /*#00ab84*/
+  --rb-indent-8: var(--sphd-ed-3);
+  /*#00a3e0*/
+}
+
+.theme-dark.bul-li-col,
+.theme-light.bul-li-col {
+  --rb-indent-1: var(--b-l-1);
+  --rb-indent-2: var(--b-l-2);
+  --rb-indent-3: var(--b-l-3);
+  --rb-indent-4: var(--b-l-4);
+  --rb-indent-5: var(--b-l-5);
+  --rb-indent-6: var(--b-l-6);
+  --rb-indent-7: var(--b-l-5);
+  --rb-indent-8: var(--b-l-4);
+}
+
+body:not(.murf-rbl) .HyperMD-list-line.cm-line, body:not(.murf-rbl) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
+  overflow: hidden;
+}
+body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent, body:not(.murf-rbl) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+  position: relative;
+}
+body:not(.murf-rbl) .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body:not(.murf-rbl) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: -1.6em;
+  padding-bottom: 999em;
+  /*Line Colors*/
+  background-image: linear-gradient(to right, var(--rb-indent-1) 0 var(--b-line), transparent var(--b-line) calc(1 * var(--rb-indent-width)), var(--rb-indent-2) calc(1 * var(--rb-indent-width)) calc(1 * var(--rb-indent-width) + var(--b-line)), transparent calc(1 * var(--rb-indent-width) + var(--b-line)) calc(2 * var(--rb-indent-width)), var(--rb-indent-3) calc(2 * var(--rb-indent-width)) calc(2 * var(--rb-indent-width) + var(--b-line)), transparent calc(2 * var(--rb-indent-width) + var(--b-line)) calc(3 * var(--rb-indent-width)), var(--rb-indent-4) calc(3 * var(--rb-indent-width)) calc(3 * var(--rb-indent-width) + var(--b-line)), transparent calc(3 * var(--rb-indent-width) + var(--b-line)) calc(4 * var(--rb-indent-width)), var(--rb-indent-5) calc(4 * var(--rb-indent-width)) calc(4 * var(--rb-indent-width) + var(--b-line)), transparent calc(4 * var(--rb-indent-width) + var(--b-line)) calc(5 * var(--rb-indent-width)), var(--rb-indent-6) calc(5 * var(--rb-indent-width)) calc(5 * var(--rb-indent-width) + var(--b-line)), transparent calc(5 * var(--rb-indent-width) + var(--b-line)) calc(6 * var(--rb-indent-width)), var(--rb-indent-7) calc(6 * var(--rb-indent-width)) calc(6 * var(--rb-indent-width) + var(--b-line)), transparent calc(6 * var(--rb-indent-width) + var(--b-line)) calc(7 * var(--rb-indent-width)), var(--rb-indent-8) calc(7 * var(--rb-indent-width)) calc(7 * var(--rb-indent-width) + var(--b-line)), transparent calc(7 * var(--rb-indent-width) + var(--b-line)) calc(8 * var(--rb-indent-width)));
+  /*Line Width?
+  background-size: calc(var(--rb-color-count) * var(--rb-indent-width)) 1px;
+  */
+  /*Line Offset*/
+  left: 7px;
+}
+
+body.fix-dbull .HyperMD-list-line.cm-line .cm-hmd-list-indent::before, body.fix-dbull .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+  left: 2px;
 }
 
 /*Single Bullet/1 Bullet Color*/
