@@ -1,3 +1,4 @@
+#50.002
 [Lecture Video](https://youtu.be/IicB30kA3pY)
 # Basics of Information
 ## Overview
@@ -107,10 +108,10 @@ There is also variable length encoding but we will not learn that in this course
 We can create electronic devices that can map (decode) a given encoded information, perform computations based on the received information, and encode back the output so that the results can be interpreted by users or other devices.
 
 # Information and Uncertainty
-The amount of information held by an event is inversely proportional to the probabiity p of that evewnt happening.
-Information is proportiopnal to the uncertainty of that event happening.
+The amount of **information** held by an event is *inversely* *proportional* to the **probability** p of that event happening.
+**Information** is *proportional* to the **uncertainty** of that event happening.
 $$Information \propto Uncertainty \propto \frac{1}{p}$$
-More precisely, information is proportional to the logarithm of uncertainty of the event happening. However, since log is an increasing function, the sense of proportionality remains the same.
+More precisely, **information** is *proportional* to the **logarithm of uncertainty** of the event happening. However, since log is an increasing function, the sense of proportionality remains the same.
 
 > In laymen terms, if an event is bound to happen, then the fact that it happens does not give any information.
 
@@ -141,7 +142,7 @@ We begin with trying to create a digital device that is for a specific purpose:
 
 Regardless of the specific purpose, we need a way to implement the logic for the machine.
 If we were to explain the workings of an adder, it will be easy with the English language.
-Explaining this t oa machine requires us to carry information in bits and get used to encoding logic.
+Explaining this to a machine requires us to carry information in bits and get used to encoding logic.
 
 Once we are comfortable with carrying information in bits, we have to start finding components that can manipulate voltages, called a transistor.
 The transistor is not the first tool created to manipulate voltages: triode vacuum tubes and electro-mechanical relays were used in pre-1950s. Before electricity was discovered, people used mechanical gears and punch cards to encode digital data.
@@ -157,3 +158,5 @@ But having a digital device that can only do a specific job is not enough. We do
 Therefore towards the middle of the term,we will learn how to create a better digital device: a programmable one that is suitab;e to be used for a plethora of purposes without any hardware changes -- and can manipulate, store and produce digital data.
 
 We will consider all things necessary to create this programmable device that can tend to various general purposes -- meaning to create a device that can emulate the behaviour of many other devices, so that we simply need one device to perform many tasks and computations.
+[[Digital Abstraction|Next notes]]
+[[Comp Struct|Course Main]]

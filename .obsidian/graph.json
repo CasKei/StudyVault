@@ -8,6 +8,20 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
+      "query": "50.004",
+      "color": {
+        "a": 1,
+        "rgb": 43775
+      }
+    },
+    {
+      "query": "50.002",
+      "color": {
+        "a": 1,
+        "rgb": 16740096
+      }
+    },
+    {
       "query": "DDW",
       "color": {
         "a": 1,
@@ -15,17 +29,10 @@
       }
     },
     {
-      "query": "Comp Struct",
+      "query": "50.001",
       "color": {
         "a": 1,
-        "rgb": 14725458
-      }
-    },
-    {
-      "query": "algo",
-      "color": {
-        "a": 1,
-        "rgb": 11657298
+        "rgb": 4184383
       }
     }
   ],
@@ -39,6 +46,6 @@
   "repelStrength": 9.10417933790946,
   "linkStrength": 1,
   "linkDistance": 109,
-  "scale": 0.22481623366003264,
-  "close": true
+  "scale": 0.35435713109236266,
+  "close": false
 }

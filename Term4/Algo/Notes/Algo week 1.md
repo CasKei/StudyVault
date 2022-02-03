@@ -1,4 +1,5 @@
 [[Analysing Computation Time|Computation Time DDW]]
+#50.004
 # L01.01 Complexity
 ## Why study algo
 1. You want algo to terminate with correct output

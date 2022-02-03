@@ -1,6 +1,6 @@
 // **ATTENTION**
 // YOU DO NOT NEED TO EDIT THIS FILE
-
+package fibo;
 import java.*;
 import java.io.*;
 import java.util.*; 

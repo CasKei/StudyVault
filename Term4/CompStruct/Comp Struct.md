@@ -1,5 +1,6 @@
 ---
-aliases: computation structures, comp struct, cs, 50.002
+aliases: computation structures, comp struct, 50.002
+tags: #50.002
 ---
 [Course Handout](https://docs.google.com/document/d/1Ye80CY1Ppvgr6_85lexZsFCkg7rU6UNwYrnt08IYAZo/edit#)
 [Website](https://natalieagus.github.io/50002/)
