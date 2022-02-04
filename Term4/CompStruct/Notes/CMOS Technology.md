@@ -40,11 +40,11 @@ But before we learn to create such devices, we need to learn 2 basic types of MO
 1. **NFETs**:
 	1. Bulk: majority of charge carriers are holes (p-type)
 	2. Source and drain: majority of charge carriers are electrons (n-type)
-	3. Bulk is connected to `GND` to keep PN junction reverse biased
+	3. Bulk, S is connected to `GND` to keep PN junction reverse biased
 2. **PFETS**:
 	1. Bulk: majority of charge carriers are electrons (n-type)
 	2. Source and drain: majority of charge carriers are holes (p-type)
-	3. Bulk is connected to `VDD` to keep the PN junction reverse biased
+	3. Bulk, S is connected to `VDD` to keep the PN junction reverse biased
 
 Some terms:
 - `VDD`: Voltage source

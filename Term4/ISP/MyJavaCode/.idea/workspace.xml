@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e7273836-3051-4c1e-b020-2c8e5a09b43f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/1A/fibo/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/1A/fibo/Fibonacci.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1A/fibo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/1A/fibo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.obsidian/appearance.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.obsidian/appearance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.obsidian/graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.obsidian/graph.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.obsidian/workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.obsidian/workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220131175844.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220131175951.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220131204949.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220131210610.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220201155524.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220201172615.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220201172813.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220201192301.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220202094302.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220202102624.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220202102655.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220202113927.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Pasted image 20220202140350.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CompStruct/Comp Struct.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../CompStruct/Comp Struct.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CompStruct/Notes/CMOS Technology.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../CompStruct/Notes/CMOS Technology.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1A/1A.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1A/fibo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1A/fibo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1A/fibo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1A/fibo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1A/fibo/Fibonacci.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1A/fibo/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1A/fibo/fibo.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +55,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">

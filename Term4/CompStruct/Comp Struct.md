@@ -106,7 +106,7 @@ tags: #50.002
 [[Problem Set 1]]
 
 ## Lab
-[[Lab 1: CMOS]]
+[[Lab 1 - CMOS]]
 
 #### Course Description
 
