@@ -1,10 +1,14 @@
+---
+tags: #50.001
+---
+[[IS & Programming|ISP]]
 # Constructors
 - Special kind of methods that are invoked to create a new object (create an instance, or instantiation)
 ```java
 Circle() {
 
 }
-Circle(double newRarius) {
+Circle(double newRadius) {
 	radius = newRadius;
 }
 //method overloading:

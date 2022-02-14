@@ -1,4 +1,7 @@
-#50.002
+---
+aliases: logic, logic gates, gates, boolean algebra
+tags: #50.002
+---
 # Logic Synthesis
 [Lecture](https://youtu.be/yXBAy432vT8)
 [Notes](https://natalieagus.github.io/50002/notes/logicsynthesis)
@@ -9,17 +12,17 @@
 ![[Pasted image 20220202102655.png]]
 Purpose of creating combinational devices: synthesise logic.
 Create a device that is able to give a certain combination of output given a certain combination input.
-IOW: a device that can adhere to a truth table i.e. its functional specification.
+In other words: a device that can adhere to a truth table i.e. its functional specification.
 
 Any combinational device has to have a functional specification.
 Functional specifications are represented with truth tables.
 
-|NAND|A|B|Y|AND|A|B|Y|
-|---|---|---|---|---|---|---|---|
-||0|0|1||0|0|0|
-||0|1|1||0|1|0|
-||1|0|1||1|0|0|
-||1|1|0||1|1|1|
+| NAND | A   | B   | Y   | AND | A   | B   | Y   |
+| ---- | --- | --- | --- | --- | --- | --- | --- |
+|      | 0   | 0   | 1   |     | 0   | 0   | 0   |
+|      | 0   | 1   | 1   |     | 0   | 1   | 0   |
+|      | 1   | 0   | 1   |     | 1   | 0   | 0   |
+|      | 1   | 1   | 0   |     | 1   | 1   | 1   |
 
 NAND is just short for NotAND.
 
@@ -183,11 +186,122 @@ Do not change the order, they follow Gray code configuration to preserve adjacen
 ![[Pasted image 20220202140350.png]]
 Number of cells with $x$ inputs: $2^x$ cells.
 Fill in `1` to all cells that represent `1`.
+![[Pasted image 20220210151832.png]]
+- Groups should contain as many `1` cells
+- Can only contain powers of 2
+- a `1` cell can only be grouped with adjacent `1` cell  without diagonal grouping
+- groups of `1` cells can overlap
+- the top/bottom and left/ right edges, and the 4 corners of the map are considered to be continuous.
+	- larger grps can be made by grouping cells across the top and bottom or left and right edges
+	- top and bottom row can form one grp
+	- leftmost and rightmost column can form one grp
+- there should be as few groups as possible
 
+So the example above is groupes like this
+![[Pasted image 20220210152257.png]]
+To convert this back into boolean expression, we need some logic
+- Blue group: output is `1` regardless of A and C, so it is just M
+- Green: output is `1` regardless of M. So it is AC
+So X = M + AC
 
 ## Logic Synthesisation with CMOS
+We can create a combi logic device easily given the minimised boolean expression using any of the universal gates:
+- NANDs only
+- NORs only
+- AND, INV, and OR
+
+Each gate can be created usign transistors, PFETs and NFETs in a complementary way.
+![[Pasted image 20220210153325.png]]
+We can create the device  straight using CMOS recipe given the minimalised boolean expression, or the primitive way:
+1. construct a pulldown circuitry
+	1. for each OR we build parallel NFE
+	2. Each AND build a series NFET
+2. Add inverted at output if needed
+3. Construct complementary pullup of PFETs and assemble
+
+Does not guarantee minimal transistors, though more efficient than using just the expression and bruteforce.
+
 ## Special Combinational Logic Devices
 ### The Multiplexer
+It is implemented using basic logic gates (INV, AND, and OR, or NANDs).
+The mux is expensive to manufacture, but _universal_, meaning that it can **implement any boolean function because essentially it “hardcodes” the truth table**.
+A mux **always** has **three** types of terminals:
+-   2^k2k bits data inputs,
+-   `k` bits selector signal(s) –_this is also an input, but we have a special name for them them: selector_– , and
+-   1-bit output.
+
+It's function components: the inputs, the selector signals, and the output.
+It basically allows one of the input signals to pass trough when selected to be reflected at `OUT`.
+
+E.g. 2 input mux. When S=0, it will reflect whatever A carries as output
+![[Pasted image 20220210153905.png]]
+
+You can build a 2-input multiplexer using basic gates
+![[Pasted image 20220210153927.png]]
+
+Properties:
+- Muxes are universal: it can implement any boolean functions
+- Mux can have $2^k$ data inputs, and $k$ bits select inputs, and only can have 1 output terminal
+
+The following figure shows an example of a 4-input multiplexer, implemented as a big mux (left) or using a series of 2-input mux (right):
+![[Pasted image 20220210154033.png]]
+Similarly, you can build a 4-input mux using basic logic gates:
+![[Pasted image 20220210154051.png]]
+
+
+Full adder
+Below is an example of how a mux can be used to implement a more complex combinational device, the full adder that we encounter in the lab. The truth table of a full adder is as shown, it is basically an addition (of three inputs) in base 2:
+![[Pasted image 20220210154115.png]]
+The multiplexer can simply implement the truth table by mapping each type of output bit $C_{out}$, and $S$ in each of the input terminals of the mux as illustrated below (for the carry out):
+![[Pasted image 20220210154145.png]]
+
 ### Decoder / Demux
+The Decoder (also known as “demux”) is a special combinational logic device that is also very commonly used in practice. It can have $k$ select inputs, and $2^k$ possible output combinations. The schematic of a 1-select input decoder is:
+![[Pasted image 20220210154228.png]]
+The schematic of a 2-select inputs decoder: $S_0$ and $S_1$ is (we omit the “IN”) because it is usually just VDD:
+![[Pasted image 20220210154309.png]]
+
+Properties of decoders
+- Opposive of a multiplexer. Has $k$ select inputs, $2^k$ possible data outputs, and only 1 bit of input (typically VDD). The symbol is: ![[Pasted image 20220210154628.png]]
+- This figure omits the 1 bit input to the decoder because it is always set to 1 in practice
+- Therefore for a 4 bit decoder as shown in the figure above, the input signals are ony the two selector signals.
+- At any given time only 1 bit of the $2^k$ output bits can be `1`. This is apparant when we try to draw the truth table for a $k$ input decoder.
+1-selector bit:
+
+| S   | O1  | O2  |
+| --- | --- | --- |
+| 0   | 1   | 0   |
+| 1   | 0   | 1   |
+
+2-selector bit:
+
+| S1  | S0  | O0  | O1  | O2  | O3  |
+| --- | --- | --- | --- | --- | --- |
+| 0   | 0   | 1   | 0   | 0   | 0   |
+| 0   | 1   | 0   | 1   | 0   | 0   |
+| 1   | 0   | 0   | 0   | 1   | 0   |
+| 1   | 1   | 0   | 0   | 0   | 1   |
+
+In other words, only the selected output $i$ is `1` and the rest of $2^k - 1$ data output is `0`.
+
 ### Read-Only-Memories (ROM)
+One of the application of a decoder is to create a read-only-memories (ROM).
+
+For example, if we “hard-code” the Full-Adder using a decoder, we end up with the following schematic:
+![[Pasted image 20220210155450.png]]
+- At the output of the decoder, the littel circuit with inverted triangle symbol signifies a pulldown which will drain signal to 0
+- Recall that at reach combi of select signal A,B,C, only one of the 8 outputs of the decoder will be `1`
+- Note the presence of inverters by invention at the end of two vertical output lines for S and Cout, so the overall output is inverted to be `1` for S and `0` for Cout
+- By invention, the location of the pulldown circuits correspond to a `1` in the truth table for that particular output.
+- For $K$ inputs, decoder produces $2^K$ signals, only `1` which is asserted at a time.
+
+Properties of ROM:
+- ignores the structure of combinational functions (truth table is hardcoded)
+- selectors are like addresses of an entry
+- for an N-input boolean function, the size of ROM is roughly $2^n \times numOfOutputs$.
+
 ## Summary
+Synthesizing combinational logic is not a simple task. There are many ways to realise a functionality, i.e: the **logic** (that the device should implement) represented by the truth table or boolean expression. We can use universal gates (only NANDS, or only NORS), a combination of gates (INV, AND, and OR), or many other ways (multiplexers, ROMs, etc).
+
+Of course **hardcoding** a truth table using ROM and Multiplexers are convenient, because we do not need to think about simplifyfing the boolean expression of our truth table (which can get really difficult and complicated when the truth table is large, i.e: complicated functionality). However it comes at a cost: the **cost of the materials** to build the ROM / Multiplexers, and at the **cost of space** (we need use a lot of logic gates to build these).
+

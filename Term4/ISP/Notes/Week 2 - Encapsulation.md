@@ -1,3 +1,7 @@
+---
+tags: #50.001
+---
+[[IS & Programming|ISP]]
 # Data Field Encapsulation
 - Keep attributes private, if possible
 - Use `get` method (getter/accessor) to return the values of attributes, e.g. `double getRadius()`

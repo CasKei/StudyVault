@@ -15,12 +15,18 @@ MPD1 z a 0 0 NENH sw=16 sl=1
 MPU1 z a vdd vdd PENH sw=16 sl=1
 .ends
 
-* dc analysis to create VTC
-Xtest vin vin vout nand2
-Vin vin 0 0v
+* test jig for measuring tcd and tpd
+Xdriver vin nin inv
+Xtest vdd nin nout nand2
+Cload nout 0 .02pf
+Vin vin 0 pulse(3.3,0,5ns,.1ns,.1ns,4.8ns)
+   	
+Vol vol 0 0.3v   // make measurements easier!
+Vil vil 0 0.6v
+Vih vih 0 2.6v
+Voh voh 0 3.0v
 
-Vol vol 0 0.3v   
-Voh voh 0 3v 	 
-
-.dc Vin 0 3.3 .005
-.plot vin vout voh vol
+.temp 100
+.tran 15ns
+.plot vin
+.plot nin nout vol vil vih voh

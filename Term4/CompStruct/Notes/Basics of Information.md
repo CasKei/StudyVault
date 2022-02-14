@@ -1,4 +1,7 @@
-#50.002
+---
+aliases: information, binary, encoding, uncertainty
+tags: #50.002
+---
 [Lecture Video](https://youtu.be/IicB30kA3pY)
 # Basics of Information
 ## Overview

@@ -1,3 +1,8 @@
+---
+tags: #50.001
+---
+[[IS & Programming|ISP]]
+
 # Object-Oriented Programming
 - OOP: Porgramming using objects
 	- VS *procedural programming* (step by step statements, procedure call)

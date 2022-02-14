@@ -1,3 +1,7 @@
+---
+tags: #50.001
+---
+[[IS & Programming|ISP]]
 # Admin
 ## Learning Objectives
 - Understand and be proficient and effective in OOP

@@ -1,3 +1,8 @@
+---
+tags: #50.001
+---
+[[IS & Programming|ISP]]
+
 # Iteration Types
 ## For
 ![[Pasted image 20220125095359.png]]

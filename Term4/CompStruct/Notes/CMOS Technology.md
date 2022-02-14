@@ -1,4 +1,7 @@
-#50.002
+---
+aliases: MOSFET, semiconductor, timing specification
+tags: #50.002
+---
 # CMOS Technology
 [Lecture](https://youtu.be/JqgZcV_1IU4)
 [Notes](https://natalieagus.github.io/50002/notes/cmostechnology)
@@ -98,10 +101,10 @@ This figure explains how they operate. Top are PFET, left OFF right ON. Bottom N
 
 ## Supplementary Sections
 ### P-type and N-type Semiconductors
-|P-type|N-type|
-|---|---|
-|Plenty of acceptor atoms|Plenty of extra electrons (donor atoms)|
-|Majority charge carriers are holes|Majority charge carriers are electrons|
+| P-type                             | N-type                                  |
+| ---------------------------------- | --------------------------------------- |
+| Plenty of acceptor atoms           | Plenty of extra electrons (donor atoms) |
+| Majority charge carriers are holes | Majority charge carriers are electrons  |
 
 - Electron: one of the constituents of an atom, having a negative charge
 - Acceptor atom: has for example 3 electrons in valence shell and can accept one electron to complete the covalent bonding. Thus it gains one extra electon and acquires negative charge

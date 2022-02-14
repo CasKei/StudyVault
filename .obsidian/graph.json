@@ -22,17 +22,24 @@
       }
     },
     {
-      "query": "DDW",
-      "color": {
-        "a": 1,
-        "rgb": 5832959
-      }
-    },
-    {
       "query": "50.001",
       "color": {
         "a": 1,
         "rgb": 4184383
+      }
+    },
+    {
+      "query": "DDW",
+      "color": {
+        "a": 1,
+        "rgb": 3014789
+      }
+    },
+    {
+      "query": "02.137",
+      "color": {
+        "a": 1,
+        "rgb": 13791487
       }
     }
   ],
@@ -46,6 +53,6 @@
   "repelStrength": 9.10417933790946,
   "linkStrength": 1,
   "linkDistance": 109,
-  "scale": 0.521935530027441,
+  "scale": 0.28764327544479223,
   "close": true
 }

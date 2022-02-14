@@ -3,16 +3,12 @@ aliases: ISP, 50.001
 ---
 
 [Course Handout](https://docs.google.com/document/d/1UwOEHwjA18vm4vhfzTBcV6qRlVub2DHofblT_BcInSU/edit)
-# Lessons
-[[Week 1 - Admin]]
-[[Week 1 - Java Introduction]]
-[[Week 1 - Static Typing]]
-[[Week 1 - ArrayList, LinkedList, Generics]]
-[[Week 1 - Iterating]]
-[[Week 2 - OOP and Classes]]
-[[Week 2 - Constructors]]
-[[Week 2 - Instance and static variables or methods]]
-[[Week 2 - Encapsulation]]
+[[Textbook notes]]
+# Lectures
+[[W1]]
+[[W2]]
+[[W3]]
+[[W4]]
 
 # Work
 [[ISP Problem Set 1A]]

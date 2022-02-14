@@ -1,3 +1,8 @@
+---
+tags: #50.001
+---
+[[IS & Programming|ISP]]
+
 # ArrayList, LinkedList
 ## Array
 Once the array is created, its size is fixed.

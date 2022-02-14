@@ -1,3 +1,8 @@
+---
+tags: #50.001
+---
+[[IS & Programming|ISP]]
+
 # Static Typing
 - Java vs Python: Java requires declaration of the variabls, specifying the types of variables
 - The variable type stipulates:

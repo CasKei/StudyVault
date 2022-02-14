@@ -1,3 +1,7 @@
+---
+tags: #50.001
+---
+[[IS & Programming|ISP]]
 # Object Reference Variables
 To reference an object, assign the object to a reference variable.
 To declare a reference variable, use the syntax:

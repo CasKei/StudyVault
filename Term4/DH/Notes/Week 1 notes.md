@@ -1,4 +1,7 @@
-
+---
+aliases: 
+tags: #02.137
+---
 ![[DHwk1Slides.pdf]]
 # What are the Humanities
 Disciplies that investigate the expressions of the human mind

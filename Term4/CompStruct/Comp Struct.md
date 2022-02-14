@@ -10,6 +10,7 @@ tags: #50.002
 [[CMOS Technology]]
 [[Logic Synthesis]]
 [[Sequential Logic]]
+[[Synchronisation]]
 [[Finite State Machine]]
 [[Turing Machine and Programmability]]
 [[Designing an Instruction Set]]
@@ -56,7 +57,7 @@ tags: #50.002
 [[S Machine Summary]]
 [[G Machine Summary]]
 
-## Extra
+## Bernie Extra
 [[Structured Computer Organisation: Levels, Machines]]
 [[Milestones in Computer Architecture]]
 [[The Computer Zoo]]
@@ -102,11 +103,6 @@ tags: #50.002
 [[Message-Passing Multicomputers]]
 [[Grid computing]]
 
-## Problem Sets/ Tutorial/ Practice
-[[Problem Set 1]]
-
-## Lab
-[[Lab 1 - CMOS]]
 
 #### Course Description
 

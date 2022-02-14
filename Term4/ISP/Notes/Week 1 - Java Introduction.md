@@ -1,3 +1,8 @@
+---
+tags: #50.001
+---
+[[IS & Programming|ISP]]
+
 # Java Syntax
 How to describe the syntax of programmign languages?
 ## Backus Normal Form (BNF)

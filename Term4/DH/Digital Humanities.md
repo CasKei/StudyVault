@@ -1,13 +1,17 @@
 ---
 aliases: DH
+tags: #02.137
 ---
 
 
 # HASS 2.137: INTRODUCTION TO DIGITAL HUMANITIES
+[[Notes on Digital Humanities]]
 
-|Week|Reading|Supplementary Readings|Notes|
-|---|---|---|---|
-|1|[[A New History of the Humanities]]|[Beware the magic of metrics](https://www.eurozine.com/beware-the-magic-of-metrics/)</br>[Humanities to Digital Humanities](https://archive.org/details/DigitalHumanities_201701/page/n35/mode/2up)</br>[What were the Humanities, Anyway?](https://www.chronicle.com/article/what-were-the-humanities-anyway)</br>[Where is Cultural Criticism in the Digital Humanities?](https://dhdebates.gc.cuny.edu/read/untitled-88c11800-9446-469b-a3be-3fdb36bfbd1e/section/896742e7-5218-42c5-89b0-0c3c75682a2f)|[[Week 1 notes]]|
+| Week | Notes    |
+| ---- | -------- |
+| 1    | [[DHW1]] |
+| 2    | [[DHW2]] |
+| 3    | [[DHW3]]         |
 
 Instructors
 Dr. Sayan Bhattacharyya (Office: XXXX) and Dr. Alastair Gornall (Office: 1.202.15)
@@ -37,30 +41,31 @@ your final term-project).
 
 ## Assessment Methods
 
-|Assessment Items| Percentage |Deadline|
-|---|---|---|
-|Active Participation| 10% |Throughout term|
-|Quizzes x 22 |15% |Throughout term|
-|Mid-term assignment| 30% |Week 7|
-|Final assignment |35% |Week 13|
+| Assessment Items     | Percentage | Deadline        |
+| -------------------- | ---------- | --------------- |
+| Active Participation | 10%        | Throughout term |
+| Quizzes x 22         | 15%        | Throughout term |
+| Mid-term assignment  | 30%        | Week 7          |
+| Final assignment     | 35%        | Week 13         |
+
 
 ### Grading and Marking Policy
 
-|Grade| Percentage |Explanation|
-|---|---|---|
-|A+ |95 |Exceptional performance
-|A |90 |Excellent performance
-|A-| 85| Excellent performance in most aspects
-|B+| 80| Very good performance
-|B |75 |Very good performance in most aspects
-|B-| 70| Good performance
-|C+| 65| Fairly good performance
-|C |60 |Satisfactory Performance
-|D+| 55| Improvement Needed
-|D |50 |Minimally acceptable performance|
-|F |0|
+| Grade | Percentage | Explanation                           |
+| ----- | ---------- | ------------------------------------- |
+| A+    | 95         | Exceptional performance               |
+| A     | 90         | Excellent performance                 |
+| A-    | 85         | Excellent performance in most aspects |
+| B+    | 80         | Very good performance                 |
+| B     | 75         | Very good performance in most aspects |
+| B-    | 70         | Good performance                      |
+| C+    | 65         | Fairly good performance               |
+| C     | 60         | Satisfactory Performance              |
+| D+    | 55         | Improvement Needed                    |
+| D     | 50         | Minimally acceptable performance      |
+| F     | 0          | Fail                                  |
 
-|Fail
+
 
 Policies:
 The course will be graded from A – F ﴾with D and above as a passing grade﴿. To achieve a

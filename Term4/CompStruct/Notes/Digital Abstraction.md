@@ -1,4 +1,7 @@
-#50.002
+---
+aliases: combinational device, static discipline
+tags: #50.002
+---
 # Digital Abstraction
 [Lecture](https://youtu.be/xkVIr8jrtX0)
 [Notes](https://natalieagus.github.io/50002/notes/digitalabstraction)

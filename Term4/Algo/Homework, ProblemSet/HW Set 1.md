@@ -1,3 +1,7 @@
+---
+tags: #50.004
+---
+
 # 50.004 Homework Set 1
 ## Cassie Chong (1005301) Cohort 01
 ### Qn 1

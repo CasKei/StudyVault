@@ -36,7 +36,7 @@ The learning algorithm will then try to obtain the constants $\beta s$  that min
 ## Gradient Descent
 One of the algorithm that we can use to find the constants by minimizing the cost function is called _gradient descent_. The algorithm starts by some initial guess of the constants and use the gradient of the cost function to make a prediction where to go next to reach the bottom or the minimum of the function. In this way, some initial value of $\hat{\beta_0}$ and$\hat{\beta_1}$, we can calculate the its next values using the following equation.
 $$\hat{\beta_i} = \hat{\beta_i} - \alpha \dfrac{\delta}{\delta\hat{\beta_i}}J(\hat{\beta_0}, \hat{\beta_1})$$
-So calculating, (workings [here](https://github.com/CasKei/10.020DDW-CasKei/blob/main/d2w_notes-master/LinearRegression.ipynb), we have
+So calculating, (workings [here](https://github.com/CasKei/10.020DDW-CasKei/blob/main/d2w_notes-master/LinearRegression.ipynb)), we have
 $$
 \begin{align}
 \hat{\beta_0} &= \hat{\beta_0} - \alpha \dfrac{1}{m}\sum^m_{i=1}(\hat{y}(x^i)-y^i)\\

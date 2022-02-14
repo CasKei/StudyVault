@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "61e0ec7ee8c57390",
+        "id": "6a1d1f6c16a944ed",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Other/Git.md",
+            "file": "Term4/Algo/Notes/What is a Binary Seach Tree.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 229.00405502319336
+    "width": 156.00309371948242
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -69,13 +69,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Other/Git.md",
+                "file": "Term4/Algo/Notes/What is a Binary Seach Tree.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
+                "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
@@ -86,29 +86,37 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Other/Git.md"
+                "file": "Term4/Algo/Notes/What is a Binary Seach Tree.md"
               }
+            }
+          },
+          {
+            "id": "422217d650de9298",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 268.65509033203125,
     "collapsed": true
   },
-  "active": "61e0ec7ee8c57390",
+  "active": "6a1d1f6c16a944ed",
   "lastOpenFiles": [
-    "Other/Git.md",
-    "Term4/Algo/Notes/Insertion Sort and Merge Sort.md",
-    "Term4/Algo/Notes/Untitled.md",
-    "Term4/Algo/Notes/Analysing Complexity of Recursions.md",
-    "Pasted image 20220204115744.png",
-    "Term4/Algo/Notes/L02.01 - Sorting, solving recursion.md",
-    "Term4/Algo/Notes/Algo week 2.md",
-    "Term4/Algo/Notes/Algo week 1.md",
-    "Attachments/Pasted image 20220204105033.png",
-    "Term4/Algo/Notes/algo - C01.md"
+    "Term4/Algo/Notes/What is a Binary Seach Tree.md",
+    "Term4/Algo/Notes/Binary Seach Trees (BST).md",
+    "Term4/Algo/Notes/Algo week 4.md",
+    "Term4/Algo/Algo.md",
+    "Term4/Algo/Notes/Algo week 3.md",
+    "Term 4.md",
+    "Term4/CompStruct/Comp Struct.md",
+    "Term4/Algo/Homework, ProblemSet/HW Set 2.md",
+    "Term4/CompStruct/Synchronisation.md",
+    "Term4/CompStruct/Notes/Sequential Logic.md"
   ]
 }
