@@ -3,7 +3,7 @@ aliases: OOP
 tags: #oop, #OOP
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
+
 # Object Oriented Programming
 ## What is OOP?
 [[Object Oriented Programming|OOP]] is a programing paradigm based on the concept of 'objects'.

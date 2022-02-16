@@ -1,5 +1,5 @@
 ---
-aliases: tree
+aliases: tree, binary tree
 tags: #50.004
 ---
 [[Algo]]

@@ -1,9 +1,9 @@
 ---
 aliases: DDW, content
+Tags: #DDW, #Contents
+
 ---
 # Course Overview
-## Tags
-Tags: #DDW, #Contents
 
 ## Contents
 - [[Bubble Sort and Insertion Sort]]

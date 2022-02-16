@@ -2,7 +2,7 @@
 aliases: 
 tags: #02.137
 ---
-![[DHwk1Slides.pdf]]
+[[Digital Humanities|DH]]
 # What are the Humanities
 Disciplies that investigate the expressions of the human mind
 The study of these aspects of human culture takes place in the disciplines of philology, linguistics, musicology, literary studies, theatre studies, philosophy...

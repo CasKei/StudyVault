@@ -29,7 +29,7 @@ public abstract class GeometricObject {
 
 ## Properties
 - Cannot create instance of abstract class using te `new` operator
-- An abstract method is defind without implementation
+- An abstract method is defined without implementation
 - Implementation is provided by subclass
 - A class that contains abstract methods must be defined as an abstract class
 - Practical advantage: generic programming
@@ -48,3 +48,5 @@ public class TestGeoObject {
 	}
 }
 ```
+
+See also: [[Interfaces]]

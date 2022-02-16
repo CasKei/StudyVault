@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/Algo/Notes/What is a Binary Seach Tree.md",
-            "mode": "source",
+            "file": "Term4/ISP/Notes/W2.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/Algo/Notes/What is a Binary Seach Tree.md",
+                "file": "Term4/ISP/Notes/W2.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/Algo/Notes/What is a Binary Seach Tree.md"
+                "file": "Term4/ISP/Notes/W2.md"
               }
             }
           },
@@ -99,24 +99,24 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 268.65509033203125,
+    "width": 218.33169555664062,
     "collapsed": true
   },
   "active": "6a1d1f6c16a944ed",
   "lastOpenFiles": [
-    "Term4/Algo/Notes/What is a Binary Seach Tree.md",
-    "Term4/Algo/Notes/Binary Seach Trees (BST).md",
-    "Term4/Algo/Notes/Algo week 4.md",
-    "Term4/Algo/Algo.md",
-    "Term4/Algo/Notes/Algo week 3.md",
-    "Term 4.md",
-    "Term4/CompStruct/Comp Struct.md",
-    "Term4/Algo/Homework, ProblemSet/HW Set 2.md",
-    "Term4/CompStruct/Synchronisation.md",
-    "Term4/CompStruct/Notes/Sequential Logic.md"
+    "Term4/ISP/Notes/W2.md",
+    "Term4/ISP/IS & Programming.md",
+    "Term4/ISP/Notes/W3.md",
+    "Term4/ISP/Notes/W4.md",
+    "Overview.md",
+    "Term4/ISP/Effective Java.md",
+    "Term4/ISP/Java All-In-One for Dummies.md",
+    "Term4/ISP/Introduction to Java Programming.md",
+    "Term4/Algo/Problem Solving with Algorithms and Data Structures.md",
+    "Term4/Algo/CLRS.md"
   ]
 }
