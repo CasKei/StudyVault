@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/ISP/Notes/W2.md",
-            "mode": "preview",
+            "file": "Term4/CompStruct/Designing an Instruction Set.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 156.00309371948242
+    "width": 127.00825119018555,
+    "collapsed": true
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/ISP/Notes/W2.md",
+                "file": "Term4/CompStruct/Designing an Instruction Set.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -86,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/ISP/Notes/W2.md"
+                "file": "Term4/CompStruct/Designing an Instruction Set.md"
               }
             }
           },
@@ -108,15 +109,15 @@
   },
   "active": "6a1d1f6c16a944ed",
   "lastOpenFiles": [
-    "Term4/ISP/Notes/W2.md",
-    "Term4/ISP/IS & Programming.md",
-    "Term4/ISP/Notes/W3.md",
-    "Term4/ISP/Notes/W4.md",
-    "Overview.md",
-    "Term4/ISP/Effective Java.md",
-    "Term4/ISP/Java All-In-One for Dummies.md",
-    "Term4/ISP/Introduction to Java Programming.md",
-    "Term4/Algo/Problem Solving with Algorithms and Data Structures.md",
-    "Term4/Algo/CLRS.md"
+    "Term4/CompStruct/Designing an Instruction Set.md",
+    "Term4/CompStruct/Comp Struct.md",
+    "Term4/CompStruct/Finite State Machine.md",
+    "Attachments/Pasted image 20220216200957.png",
+    "Attachments/Pasted image 20220216215852.png",
+    "Attachments/Pasted image 20220217092602.png",
+    "Attachments/Pasted image 20220217094652.png",
+    "Term4/CompStruct/Turing Machine and Programmability.md",
+    "Term4/ISP/Notes/Method Overloading & Overriding.md",
+    "Term4/ISP/Notes/Polymorphism.md"
   ]
 }

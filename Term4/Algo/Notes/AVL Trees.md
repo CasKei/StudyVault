@@ -170,3 +170,7 @@ We want to redistribute the weight leftwards.
 Left rotate removes the violation at node `x`, but `y` now violates the [[AVL Trees#AVL Trees Definition Balanced Height Property|balanced height property]].
 Hence, use 2 other rotations: [[#Right-Rotate T x|right_rotate(y)]], then [[#Left-Rotate T x|left_rotate(x)]]
 ![[Pasted image 20220215172024.png]]
+The final BST is now height balanced.
+
+## Note
+For the insertion of a new element `x` into an AVL tree `T` with `n` elements, it is possible to use $O(\log n)$ steps so that the  [[AVL Trees#AVL Trees Definition Balanced Height Property|balanced height property]] of `T` is maintained, such that at most $O(1)$ rotations are used.

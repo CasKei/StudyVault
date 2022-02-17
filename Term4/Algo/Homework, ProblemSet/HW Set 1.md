@@ -76,6 +76,8 @@ Adam True (discrete), Beatrice False, Colin True, Diana True
 #### iii)
 ![[Pasted image 20220128101239.png]]
 **==Ans: c==**
+Correction: B
+The worst case occurs when all positive integers appear before the negative integers, and there are approximately n/2 positive integers. In the worst case, a total of $\lfloor \frac{n}{2} \rfloor$ pairs of entries have to be swapped.
 
 #### iv)
 ![[Pasted image 20220128101249.png]]
@@ -97,6 +99,8 @@ Adam True (discrete), Beatrice False, Colin True, Diana True
 ![[Pasted image 20220128101331.png]]
 (Edit: Errata: last line is `print(f(n))`)
 **==Ans: ==**$T(n) = \Theta(1)$
+Correction: $\Theta(n)$
+The subroutine $f(m)$ within the program will be recursively executed $m+1$ times in total, and each execution of this subroutine takes constant time to compute.
 
 #### iii)
 ![[Pasted image 20220128101341.png]]
@@ -119,7 +123,7 @@ Adam True (discrete), Beatrice False, Colin True, Diana True
 |$\log_2{n}$|$\log_8{n}$ |    T   |    T  |   T   |
 |$8^n$|$4^n$      |    F   |    T  |    F  |
 |$3^n$|$n2^n$     |    F    |   T    |   F    |
-|$\log{(n!)}$|$n \log{n}$|    T    |    F    |    F   |
+|$\log{(n!)}$|$n \log{n}$|    T    |    F ==T==   |    F ==T==  |
 
 ### Qn 5
 ![[Pasted image 20220128101430.png]]

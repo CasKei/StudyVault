@@ -1,7 +1,7 @@
 {
   "baseFontSize": 14,
   "cssTheme": "Atom",
-  "theme": "moonstone",
+  "theme": "obsidian",
   "translucency": false,
   "enabledCssSnippets": []
 }
