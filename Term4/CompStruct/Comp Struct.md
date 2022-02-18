@@ -22,6 +22,9 @@ tags: #50.002
 [[Virtual Memory]]
 [[Virtual Machine]]
 [[Asynchronous Handling of IO Devices]]
+
+[[Lab dump]]
+
 ## FPGA
 [[FPGA1 - Combinational Logic]]
 [[FPGA2 - Sequential Logic and FSM]]

@@ -9,7 +9,7 @@ tags: #50.002
 ## Overview
 To create a programmable control system suitable for general purposes (like the [[Turing Machine and Programmability#Universal Function|universal TM]]), we need to define a set of instructions for that system, such that it is able to support a rich repertoire of operations.
 
-We can create a machien that is simply programmable, but also has to support:
+We can create a machine that is simply programmable, but also has to support:
 - An expandable memory unit
 - A rich repertoire of operations
 - Ability to generate a new program and then execute it
@@ -27,7 +27,7 @@ We call this circuit a Datapath.
 
 | ![[Pasted image 20220217125655.png]]                                                                     | Note that since machine receives $N$ bit inputs, there are $N$ units of each 2-to-1 [[Logic Synthesis#The Multiplexer\|multiplexers]] in parallel |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![[Pasted image 20220217125826.png]] \| The [[Sequential Logic\|registers]] are actually 1-bit registers |                                                                                                                                                   |
+| ![[Pasted image 20220217125826.png]] | The [[Sequential Logic\|registers]] are actually 1-bit registers                                                                                                                                                 |
 
 In diagrams they are drawn once, but you can differentiate between a single wire (caryring 1bit of info) with a bunch of wires that carry >1 bits of info by the "/" symbol.
 
@@ -198,7 +198,7 @@ There are **only two types** of instruction encoding: ==Without Literal (Type 1)
 The 32-bit instruction `I` is segmented to various sections:
 
 The `OPCODE =I[31:26]` is 6 bits long. The `OPCODE` signifies different types of operation. They are summarised in the table below:
-![[Pasted image 20220217154611.png]]
+![[Pasted image 20220217154611 1.png]]
 1.  For Type 1 instruction (without literal), we have these three segments: `Rc = I[25:21]`, `Ra = I[20:16]`, and `Rb = I[15:11]`, each 5 bits in length, to signify the target _address_ of the registers in the REGFILE. _The last 11 bits are unused._
     -   `Rc` is the destination register to write output to.
     -   `Ra`, and `Rb` contain the source data
@@ -210,3 +210,104 @@ The `OPCODE =I[31:26]` is 6 bits long. The `OPCODE` signifies different types of
 The reason for this Type 2 instruction is that some operations require a constant instead. For examplem we want to add the _content_ of register `Ra` with a constant `c = 4` instead. Then we can encode `c=0000 0000 0000 0100` as the last 16 bits of the instruction.
 
 It is imperative that you read the [beta documentation](https://www.dropbox.com/s/2hzbawz9v51g6fu/beta_documentation.pdf?dl=0) up until page 12, to understand all 32 basic instructions of the $\beta$ machine individually **before proceeding** to the next chapter. In the next few weeks, we will take this knowledge to the next level as you learn how to hand assemble C-language into this low-level machine language.
+
+## High Level language, Assembly Language, and Machine Language
+We usually code in higher level language such as Python, Ruby, C/C++, Java, Javascript, C# and so on. However, our machines do not understand these languages _directly_. The human-friendly, intuitive high-level programming syntaxes are ultimately just a bunch of ones and zeros stored inside the machine.
+
+Our high level languages, are first translated into **assembly language**, before further converted into machine language in its binary form.
+C example:
+```C
+int x = 3;
+x = x + 10;
+```
+The compiler (GCC, for example) compiles the code above and translate it into the appropriate assembly language. Suppose we are running it on a $\beta$ machine and that the compiler supports it, the code above will be translated into $\beta$ assembly as an _intermediate_ step:
+
+```asm
+LDR(x, R0)
+ADDC(R0, 10, R0)
+ST(R0, x) | Note this is a "macro" for ST(R0, x, R31). You'll learn "macro" in later parts. 
+x : LONG(3)
+```
+
+Finally, it will be converted into $\beta$ machine language, 32-bit for each line of assembly code. We may know this as an “ _executable_”, that is a piece of information that is directly “understandable” by the machine without the help of an intemediary translator anymore like a compiler/interpreter, or an assembler:
+```
+011111 00000 11111 0000 0000 0000 0010
+110000 00000 00000 0000 0000 0000 1010
+011001 00000 11111 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0011
+```
+The difference between each type of language is obvious.
+
+-   Firstly, it is nearly impossible to directly code in binary format, and much more convenient to code using the higher language.
+-   Secondly, converting from high level language to assembly language is a little bit more complex (and not unique, meaning that there are many ways to translate the high level language to the assembly language that still results in the same output) than to convert from assembly to the machine language.
+
+Don’t worry yet as of now. What we need to know (and get familiar with) is simply how to do this task: _given a 32-bit machine language, write the corresponding assembly instruction and explain how it works (and vice versa)._
+
+## Preview: The Beta CPU
+The $\beta$ CPU falls under the family of RISC (reduced instruction set computing) processor. This type of computer processor possesses a small but highly optimised set of instructions, and are currently used for smartphones and tablet computers, among other devices.
+
+The full anatomy of the (general-purpose) $\beta$ datapath is shown in the Figure below. Remember that this is an **implementation** of the $\beta$ instruction set architecture (i.e: its abstraction). This circuitry is therefore able to execute any $\beta$ instruction as intended within a clock cycle.
+
+The details of the $\beta$ datapath will be explained in the next chapter, so that you have a complete understanding on how the datapath allows the working of each of the 32 instruction sets.
+
+![[Pasted image 20220217161155.png]]
+As of right now, we just need to understand the _big idea_ of the $\beta$ ISA , and how the$ \beta$ CPU realises it:
+
+1.  The **PC (program counter)** is a part of the CPU that in theory, fetch one instruction (set to be 32-bit in length) from the Memory Unit per clock cycle.
+2.  The **`OPCODE`** part of the instruction is processed by the Control Logic unit, and appropriate control signals are produced.
+3.  The _combination_ of these **control signals** reprogram the datapath so that we can reuse it to execute different types of instruction.
+4.  The other parts of the instruction: `Rb`, `Ra`, `Rc` or `c`, tells us which registers in the REGFILE to use for this instruction.
+5.  Step 1-4 are repeated for _each_ clock cycle, and each instruction is **atomic**.
+
+The $\beta$ CPU hardware is therefore designed so that it can **_implement_** the $\beta$ ISA, and therefore we can give an actual physical form (of a machine) that is programmable and able to execute each defined $\beta$ instruction correctly as intended.
+
+## Summary
+In the beginning of this chapter we were given the programmable Machine MM, that is capable of computing the simple factorial function. We then proceeded by arguing that Machine MM is not enough to be used for a _general_ purpose machine, that is to be used as an implementation of a Universal Turing Machine.
+
+What we need to do to create a general-purpose computer is to:
+
+-   **Design a general purpose data path** (architecture), which can be used to efficiently solve most problems, and
+-   **Design a proper instruction set** to allow for easier ways to control it.
+
+The \betaβ ISA and its implementation, the \betaβ CPU fulfils both requirement. If used to execute proper instruction, it should be able to emulate what Machine MM is able to do.
+
+Suppose we have the simple factorial program written in C:
+```C
+int n = 9; // or 10, or 11, any constant 
+int ans;
+
+int r1 = 1;
+int r2 = n;
+while (r2 != 0){
+	r1 = r1 * r2;
+	r2 = r2 - 1;
+}
+ans = r1;
+```
+
+This can be (hand) assembled into $\beta$ assembly language:
+```asm
+.include beta.uasm 
+
+ADDC(R31, 1, R1)        | R1 = 1
+LD(n, R2)               | R2 = n
+
+loop:
+BEQ(R2, done, R31)      | while (R2 != 0)
+MUL(R1, R2, R1)	        | R1 = R1 * R2
+SUBC(R2, 1, R2)	        | R2 = R2 -1
+BEQ(R31, loop, R31)     | Always branches!
+
+done:
+ST(R1, ans, R31)        | ans = R1
+HALT()
+
+n: LONG(9)
+ans: LONG(0)
+```
+
+Of course then the final step is to convert this into machine language and load it to the Memory Unit, and allow the PC of the $\beta$ machine to execute the first line of instruction (ADDC) .
+![[Pasted image 20220217161430.png]]
+When the machine halts, we should have the answered stored somewhere in the memory unit, thus effectively enabling $\beta$ machine to emulate the ability of Machine M without changing its datapath.
+
+We will learn more about how to hand assemble and manually execute the code soon. Right now, this is here to give you a _preview_ of what is to come in the next few weeks.
