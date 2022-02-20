@@ -3,7 +3,6 @@ aliases: regression, simple linear regression
 tags: #regression, #data, #ML
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Linear Regression
 ## Introduction
 Linear regression is a machine learning algorithm dealing with a continuous data and is considered a supervised machine learning algorithm. Linear regression is a useful tool for predicting a quantitative response. Though it may look just like another statistical methods, linear regression is a good jumping point for newer approaches in machine learning.

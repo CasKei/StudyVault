@@ -1,5 +1,4 @@
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Divide and Conquer
 Many computing problems are recursive in structure.
 Recursive: to solve a given problem, they call themselves one or more times to solve a closely related problem.

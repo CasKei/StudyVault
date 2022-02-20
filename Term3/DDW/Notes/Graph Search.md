@@ -3,7 +3,6 @@ aliases: graph search, bfs, dfs
 tags: #graph
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Graph Search
 ## Introduction
 We may need to search a graph to solve problems such as shortest path.

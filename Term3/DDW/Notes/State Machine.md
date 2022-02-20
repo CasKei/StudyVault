@@ -3,7 +3,6 @@ aliases: SM, intro to state machines
 tags: #SM, #OOP, #state
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # State Machine
 ## Pure Functions and State Machines as a Function
 

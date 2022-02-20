@@ -1,5 +1,4 @@
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Sorting Algorithm
 Sort some items in some way. Here with bubble and insertion, sort numbers from smallest to biggest.
 Can be adapted to sort others.

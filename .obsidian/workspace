@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "9192493ee6a8c325",
+        "id": "623a85fcd45a9a54",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/CompStruct/Lab dump.md",
-            "mode": "preview",
+            "file": "Term4/Algo/Homework, ProblemSet/PSet 1.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/CompStruct/Lab dump.md",
+                "file": "Term4/Algo/Homework, ProblemSet/PSet 1.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/CompStruct/Lab dump.md"
+                "file": "Term4/Algo/Homework, ProblemSet/PSet 1.md"
               }
             }
           },
@@ -107,17 +107,17 @@
     "width": 218.33169555664062,
     "collapsed": true
   },
-  "active": "9192493ee6a8c325",
+  "active": "623a85fcd45a9a54",
   "lastOpenFiles": [
-    "Term4/CompStruct/Lab dump.md",
-    "Term4/CompStruct/Notes/Logic Synthesis.md",
-    "Term4/CompStruct/Comp Struct.md",
-    "README.md",
-    "Overview.md",
-    "Term4/CompStruct/Notes/Synchronisation.md",
-    "Term4/CompStruct/Notes/Designing an Instruction Set.md",
-    "Attachments/Pasted image 20220217161155.png",
-    "Pasted image 20220217161202.png",
-    "Attachments/Pasted image 20220217131349.png"
+    "Term4/Algo/Homework, ProblemSet/PSet 1.md",
+    "Term4/Algo/Notes/L03.02 - Heap Operations.md",
+    "Term4/Algo/Notes/Algo week 3.md",
+    "Term4/Algo/Algo.md",
+    "Term4/Algo/Notes/Master Theorem.md",
+    "Term4/Algo/Notes/L02.02 - Master Theorem, Divide and Conquer, Peak Finding.md",
+    "Term4/Algo/Notes/Algo week 2.md",
+    "Term4/Algo/Notes/Traversals of a BST.md",
+    "Term4/Algo/Notes/Binary Seach Trees (BST).md",
+    "Term4/Algo/Notes/Algo week 4.md"
   ]
 }

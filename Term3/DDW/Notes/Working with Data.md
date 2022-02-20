@@ -3,7 +3,6 @@ aliases: pandas, data
 tags: #pandas, #data, #ML
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Working with Data
 ## Short Introduction to Machine Learning
 We will look into how computation can learn from data in order to make a new computation.

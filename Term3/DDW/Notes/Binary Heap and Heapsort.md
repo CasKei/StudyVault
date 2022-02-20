@@ -1,5 +1,4 @@
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Binary Heap
 ![Binary Tree Satisfying Heap Property](https://www.dropbox.com/s/zmy2r3hbte1twc3/Binary_Heap.png?raw=1)
 New data structure.
@@ -92,6 +91,11 @@ def max-heapify(A, i):
 			swapped = True
 		curr_i = max_child_i
 ```
+
+The above are iterative/looping.
+Recursive solution:
+[[L03.02 - Heap Operations#Pseudocode|Recursive heapify]]
+
 # Build a Heap with Heap Property
 We can then use the previous max-heapify to build a binary heap data structure from any arbitrary array. The idea is to go through every node and heapify them. However, we do not need to d so for all nodes, only half. This is because we do not need to heapify the leaves.
 

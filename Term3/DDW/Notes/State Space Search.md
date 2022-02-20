@@ -3,7 +3,6 @@ aliases:
 tags: #SM, #OOP, #state, #graph, #bfs
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # State-Space Search
 [[Graph Search|Previously]] we have learnt how to find data from a graph data structure.
 We implemented [[Graph Search#^7a8dcc|BFS]] and [[Graph Search#^729e6d|DFS]].

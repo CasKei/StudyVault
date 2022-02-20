@@ -2,7 +2,6 @@
 aliases: Computation Time, complexity, Complexity
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Computation Time
 A performance of a program can be measured using ==computation time== and its ==memory space== that it occupies. here we focus on measuring computation time.
 ## Asymptotic Notation

@@ -3,7 +3,6 @@ aliases: SM ABC
 tags: #SM, #OOP, #state, #ABC, #abc
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Abstract State Machine Class
 ## Designing StateMachine Class
 [[State Machine|As mentioned previously,]] all state machine have some common characteristics. This motivates us to design an Abstract Base Class for State Machine. In designing an Abstract Base Class for state machine we try to identify what is the thing that all state machines have. We know that all state machine has a **state**. This shall be one of our attributes. We also try to figure out what all state machines _can do_ in common. What are the common operations? For our design, we will create three methods that all state machines can do:

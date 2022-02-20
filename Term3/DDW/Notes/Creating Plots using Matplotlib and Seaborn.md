@@ -3,7 +3,6 @@ aliases: seaborn, data, matplotlib, data visualisation
 tags: #seaborn, #data, #matplotlib, #ML
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Visualization
 Seaborn works on top of Matplotlib and you will need to import both packages in most of the cases.
 Reference:

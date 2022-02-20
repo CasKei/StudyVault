@@ -1,5 +1,4 @@
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Merge Sort
 Merge sort uses the [[Divide and Conquer]] approach.
 The idea is to split the input sequence into 2 parts, call merge sort recursively on each part, then combine using merge.

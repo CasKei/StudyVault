@@ -3,7 +3,6 @@ aliases: FSarr, LL
 tags: #linear, #datastructure, #ds
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Fixed-Size Array
 Python does not have a fixed-size array data type.
 However, many programming languages like C/C++ and Java have this more basic and primitive list-like data type.

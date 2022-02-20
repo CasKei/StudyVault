@@ -169,6 +169,12 @@ T_D(n) &= \max{(T_A(n), T_B(n))}\\
 \end{align}$$
 This is evidently ==different== from the time complexity of C as it refers to the longer time complexity between A and B rather than their sum. C would definitely take longer than D as all time is positive and an addition would yield a higher time than picking out the maximum between them.
 
+***
+Ans:
+Since the 2 algorithms A and B run consecutively in C, the total time of C is $O(f(n) + n/f(n))$. From part i, we know that this is the same as $O(\max{(f(n), n/f(n))})$. Now, in order to minimise this, we need to choose $f(n)$ such that both $f(n)$ and $n/f(n)$ have the same complexity.
+Thus we choose $f(n) = \sqrt{n}$, so that the running time of algorithm C is $O(\sqrt{n})$. 
+For algorithm D, which executs A and B in parallel, its running time is $O(\max{f(n), n/f(n)})$, so by the previous part, we have the same complexity $O(\sqrt{n})$.
+
 #### iii)
 ![[Pasted image 20220128101513.png]]
 Given $T(n) = 2T\left(\dfrac{n}{2}\right) + \Theta(n)$, we observe that this algorithm does the following:

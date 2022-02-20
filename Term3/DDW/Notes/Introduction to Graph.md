@@ -3,7 +3,6 @@ aliases: graph
 tags: #data-structure, #graph
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Introduction to Graph
 ## What is a Graph?
 Previous data structures like lists, arrays, [[Stacks and Queues|stacks and queues]], only are related in a linear fashion.

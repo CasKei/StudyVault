@@ -3,7 +3,6 @@ aliases: confusion matrix, accuracy, specificity, precision, sensitivity
 tags: #regression, #data, #ML
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Confusion Matrix and Metrics
 In Linear Regression, we use the correlation coefficient and some mean square errors as metrics to see if our model fits the data well. What kind of metrics we can use in the case of classification problems?
 In this lesson we will use confusion matrix and a few metrics to evaluate our classification model.

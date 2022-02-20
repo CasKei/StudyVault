@@ -3,7 +3,6 @@ aliases: multiple regression
 tags: #regression, #data, #ML
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Multiple Linear Regression
 ## Introduction
 [[Linear Regression|Previously]] we only have one independent variable or one feature.

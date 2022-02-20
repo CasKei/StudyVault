@@ -5,7 +5,7 @@ tags: #50.004
 [[Algo]]
 [[Binary Heap and Heapsort]]
 [[L03.01 - Heap]]
-
+[[L03.02 - Heap Operations]]
 ## Data Structure and Heap
 A heap is a [[Data Types and Data Structures|data structure]].
 - Recall: a data structure is a format to store and organise data, in order to facilitate acess and modification
