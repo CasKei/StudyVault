@@ -2,6 +2,7 @@
 aliases:
 tags: #50.002
 ---
+[[Comp Struct]]
 ## Overview
 Goal of this chapter to help us understand how to improve the [[Turing Machine and Programmability#Programmability|programmability]] of the [[Building Beta CPU|beta]] (or any [[Designing an Instruction Set#Beta Instruction Set Architecture|ISA]]) in general.
 The beta machine language is [[Basics of Information|encoded]] into 32-bit instructions each:
@@ -20,9 +21,7 @@ We can do this by writing various **softwares** that allow us to abstract some d
 ## Content
 [[Abstraction]]
 [[Assembler]]
-[[UASM]]
 [[Interpreter and Compiler]]
-[[Compiling Expressions]]
 
 ## Summary
 There are a lot of ways to translate higher level language into a lower level language. The examples given above are not necessarily the _most optimised_ way, for example, we can ask ourselves:

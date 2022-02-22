@@ -25,12 +25,6 @@ tags: #50.002
 
 [[Lab dump]]
 
-## FPGA
-[[FPGA1 - Combinational Logic]]
-[[FPGA2 - Sequential Logic and FSM]]
-[[FPGA3 - Reset and I/O]]
-[[FPGA4 - Building Beta CPU]]
-[[Creating a Programmable Machine]]
 ## Textbook
 
 [[The Digital Abstraction]]

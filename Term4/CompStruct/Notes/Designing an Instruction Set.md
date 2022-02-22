@@ -92,7 +92,7 @@ The generic anatomy of a Von Neumann architecture is: 4 main components:
 > CPU is a part of the computer that executes instructions. 
 > A series of these instructions is called a computer program.
 
-Before building a CPU, one usually designs a figurative blueprint for how the CPU operates and how all the internal systems interact with each other.
+Before building a [[Anatomy of the Beta CPU|CPU]], one usually designs a figurative blueprint for how the CPU operates and how all the internal systems interact with each other.
 > This blueprint is called the Instruction Set Architecture.
 
 There are many different types of ISAs a CPU can be built upon.

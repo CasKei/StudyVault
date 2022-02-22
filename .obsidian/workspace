@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "623a85fcd45a9a54",
+        "id": "e953adf4d25eec75",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/Algo/Homework, ProblemSet/PSet 1.md",
+            "file": "Term4/ISP/Visitor.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.00825119018555,
+    "width": 245.004056930542,
     "collapsed": true
   },
   "right": {
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/Algo/Homework, ProblemSet/PSet 1.md",
+                "file": "Term4/ISP/Visitor.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/Algo/Homework, ProblemSet/PSet 1.md"
+                "file": "Term4/ISP/Visitor.md"
               }
             }
           },
@@ -107,17 +107,17 @@
     "width": 218.33169555664062,
     "collapsed": true
   },
-  "active": "623a85fcd45a9a54",
+  "active": "e953adf4d25eec75",
   "lastOpenFiles": [
-    "Term4/Algo/Homework, ProblemSet/PSet 1.md",
-    "Term4/Algo/Notes/L03.02 - Heap Operations.md",
-    "Term4/Algo/Notes/Algo week 3.md",
-    "Term4/Algo/Algo.md",
-    "Term4/Algo/Notes/Master Theorem.md",
-    "Term4/Algo/Notes/L02.02 - Master Theorem, Divide and Conquer, Peak Finding.md",
-    "Term4/Algo/Notes/Algo week 2.md",
-    "Term4/Algo/Notes/Traversals of a BST.md",
-    "Term4/Algo/Notes/Binary Seach Trees (BST).md",
-    "Term4/Algo/Notes/Algo week 4.md"
+    "Term4/ISP/Visitor.md",
+    "Term4/ISP/W5.md",
+    "Term4/ISP/IS & Programming.md",
+    "Term4/Algo/Notes/Hashing.md",
+    "Term4/Algo/Notes/Re-hashing.md",
+    "Term4/Algo/Notes/Hash Operations.md",
+    "Term4/Algo/Notes/Hash Table.md",
+    "Term4/Algo/Notes/Designing hash functions.md",
+    "Term4/Algo/Notes/Hash functions.md",
+    "Term4/Algo/Notes/Intro to hashing.md"
   ]
 }

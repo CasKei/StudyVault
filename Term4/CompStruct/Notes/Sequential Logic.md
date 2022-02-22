@@ -63,20 +63,28 @@ Combinational component requires $t_{pd}$ to produce meaningful results, and ove
 ## The Dynamic Discipline
 The _dynamic discipline_ is a contract that is made to address the first problem above: the possibility of **storing invalid information** in the memory device. It is imperative to never violate the dynamic discipline to ensure any sequential logic circuits to work properly.
 [[CMOS Technology#Propagation delay t_ pd|Recall propagation delay.]]
+[[CMOS Technology#Contamination delay t_ cd|Recall contamination delay.]]
 
 > The dynamic discipline states that there are **two timing** **requirements for the input signal supplied at D**, named as $T_{setup}$ and $T_{hold}$, which lengths are:
 > 1. $T_{setup} \approx 2 t_{pd}$ of the components that make up the D-Latch
 > 2. $T_{hold} \approx t_{pd}$ of the components that make up the D-Latch
 
 > $T_{setup}$: minimum time that voltage on wire D needs to be valid/stable BEFORE the clock edge changs from `1` to `0` (write to read)
-> $T_{hold}$: minimum time that voltage on wire D nees to be valid/stable AFTER the cock edge reaches `0` from previous `1`
+> $T_{hold}$: minimum time that voltage on wire D nees to be valid/stable AFTER the clock edge reaches `0` from previous `1`
 
 Informal: 
 - $T_{setup}$: how long you should wait to ensure that output signal at Q reflects what was supplied at D ($t_{pd}$), and ensure this output at Q maintains this alue when CLK at G turns `0` (another $t_{pd}$)
 - $T_{hold}$: CLK is an input, and device needs ($t_{pd}$) time to realise it is in read mode after CLK turns `0`. During this time, input at D must be held valid.
 
+The **tpd** and **tcd** of a sequential circuit is counted from the **last** downstream register(s) (there can be more than one) in the circuit because our reference "input" is no longer IN but the CLK.
+
+**ts** and **th** is concerning the path from **INPUT** until the **first** upstream register(s) (there can be more than one) in the circuit.
+$$t_s = t_{s.R1} + t_{pd.CL1}$$
+$$t_h= t_{h.R1} - t_{cd.CL1}$$
+**The dynamic discipline is always obeyed in any middle path** between two DFFs or register in the circuit because of the hardware characteristics (tcds and CLK period) of the sequential circuit, so we don't need to worry about that. Therefore the definition of **ts** and **th** of the **entire** circuit is only concerning the first upstream register, because this is where we need need to be wary of its **ts** and **th** since it has to be fulfilled by the (unreliable) external input.
+
 ## Edge-Triggered D Flip-Flop (Register)
-Addressing the [[#Probems arising from using simple D-Latch without any contract|second problem]] of the presence of unstable/invalid output during transition of input, we need to create another device called Edge-Triggered D Flip-Flop (Flip-Flop) byt putting 2 D-Latches in series.
+Addressing the [[#Probems arising from using simple D-Latch without any contract|second problem]] of the presence of unstable/invalid output during transition of input, we need to create another device called Edge-Triggered D Flip-Flop (Flip-Flop) by putting 2 D-Latches in series.
 ![[Pasted image 20220214094519.png]]
 Flip-Flop: put D-Latches in series, and invert the CLK signal fed to the first latch.
 
@@ -131,9 +139,10 @@ For sequential logic devices,
 | Combinational Logic Devices                                                                                                | Sequential Logic Devices                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | No input CLK and units with feedback paths                                                                                 | Has CLK and feedback path                                                                                                       |
-| $t_{pd}$: time measured from the moment a valid input is fed to the circuit to the moment a valid output is produced       | Input is CLK, not user input, inparticular only with CLK transition from `0` to `1`, where Flip-Flop captures a new input value |
+| $t_{pd}$: time measured from the moment a valid input is fed to the circuit to the moment a valid output is produced       | Input is CLK, not user input, inparticular only with CLK transition from `0` to `1`, where Flip-Flop captures a new input value <br>**tpd** and **tcd** of a sequential circuit is counted from the **last** downstream register(s)|
 | $t_{cd}$: time measured from the moment an invalid input is fed to the circuit to the moment it produces an invalid output | Ditto: input is CLK                                                                                                                       |
 
+The **tpd** and **tcd** of a sequential circuit is counted from the **last** downstream register(s) (there can be more than one) in the circuit because our reference "input" is no longer IN but the CLK.
 ## Flip-Flop Timing Constraint
 [[#The Dynamic Discipline]] has to be obeyed to make sure we do not store invalid input signals.
 Hence, the dynamic discipline for slave has to be obeyed by master, because the output of master is input to slave.
