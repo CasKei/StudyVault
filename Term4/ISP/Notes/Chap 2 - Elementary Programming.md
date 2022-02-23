@@ -1,6 +1,7 @@
 ---
 tags: #50.001
 ---
+[[IS & Programming|ISP]]
 ## 2.1 Introduction
 The focus of this chapter is on leaning elementary programming techniques to solve problems.
 ## 2.2 Writing a Simple Program

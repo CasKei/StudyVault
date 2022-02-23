@@ -24,6 +24,8 @@ tags: #50.002
 [[Asynchronous Handling of IO Devices]]
 
 [[Lab dump]]
+[[Practice dump]]
+
 
 ## Textbook
 

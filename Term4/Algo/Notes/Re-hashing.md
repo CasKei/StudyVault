@@ -3,28 +3,52 @@ aliases:
 tags: #50.004
 ---
 [[Algo]]
-[[Algo week 5
+[[Algo week 5]]
 
-## Why [[Hash Operations]] are usually fast
-> Observation:
-> If the number of elements is at most some ratio of the number of slots in the [[Hash Table]], i.e. $n=O(m)$, then $\alpha$ is $\frac{O(m)}{m} = O(1)$, so the average case complexity is $\Theta(1+\alpha)=O(1)$. 
+## Why re-hash?
+If the [[Designing hash functions|simple uniform hashing]] assumption is satisfied, then the 
+average case complexity of both `chain_hash_search(A, k)` and `chain_hash_delete_key(A, k)` is $\Theta(1+\alpha)$, 
+where $\alpha = \frac{n}{m}$ is the [[Hash Operations|load factor]] of the [[Hash Table]] `A`.
 
--> How do we keep the number of slots to be at least the number of elements in the [[Hash Table]] `A`?
-i.e. how to ensure that $n=O(m)$ as $n$ grows?
-[[Re-hashing]]!
+We want to minimise this complexity, so we want $\alpha = O(1)$.
+To get $\alpha = O(1)$, we need to have $n=O(m)$.
+- $n$: number of elements in `A`
+- $m$: number of slots in `A`
+- As we insert elements into `A`, $n$ grows. So if we want to keep $n=O(m)$, we have to increase $m$ together with $n$.
+
+We want to keep $n \leq \gamma m$ for some constant $\gamma > 0$.
+- ==Ensure that [[Hash Operations|load factor]] $\alpha \not> \gamma$ ==
+- Whenever $\alpha > \gamma$ with the insertion of just one more element, we need to re-hash to increase the number of slots so that $n' \leq \gamma m'$.
 
 ## What is re-hashing
-> Let $\gamma > 0$ be a fixed constant.
-> For every new element to be inserted into a [[Hash Table]] `A`, check  its [[Hash Operations|load factor]] $\alpha=\frac{n}{m}$
+> Let $\gamma > 0$ be a fixed constant. This is the threshold for the [[Hash Operations|load factor]] $\alpha$
+> For every new element to be *inserted* into a [[Hash Table]] `A`, check its [[Hash Operations|load factor]] *after insertion* : $\alpha=\frac{n}{m}$
 > where $n=(\text{number of elements already in A})+1$ and $m=(\text{current number of slots in A})$.
 > - $\alpha \leq \gamma$: [[Hash Operations#Operations on a Hash Table A|insert]] new element as per normal.
-> - $\alpha > \gamma$: re-hash `A` intoa new [[Hash Table]] `A'` with $>m$ slots (usually $2m$), followed by the usual insertion of new element into this new [[Hash Table]] `A'`
+> - $\alpha > \gamma$: re-hash `A` into a new [[Hash Table]] `A'` with $>m$ slots (usually $2m$), followed by the usual insertion of new element into this new [[Hash Table]] `A'`
 
 Intuition: resize the [[Hash Table]] when it gets too full!
 
+In general, the new re-hashed table could look quite different.
+We are not merely adding new slots to `A`, we are initialising a new [[Hash Table]] `A'` and re-inserting all elements originally in `A` into this new `A'`.
+The elements originally in `A` could have new hash values.
+
+Because re-hashing is computationally expensive, we do not want to re-hash unless necessary, and we want the number of times we need to re-hash (to keep $\alpha \leq \gamma$) to be minimised.
+
 ## How to build re-hashed table
+Let $h: K \to \set{0, 1, \dots , m-1}$ be the current [[Hash functions|hash function]] for the [[Hash Table]] `A`, before we [[#Re-hashing by doubling]].
+
 We need a new [[Hash functions|hash function]]. modified from the original $h$.
-==Cohort class cont.
+Currently, $h$ hashes key values only to $m$ slots.
+We need a [[Hash functions|hash function]] that hashes key values to $2m$ slots.
+
+> In general, [[Designing hash functions]]/re-hashing algorithms will depend on your creativity and algorithmic thinking skills
+> - Typically we want a systematic process to geneerate new [[Hash functions|hash functions]] whenever we need to [[#Re-hashing by doubling|re-hash by doubling]]
+
+Some methods we already know of for generating [[Hash functions]]:
+[[Hash functions#Division Method|Division method]]: $h(k) = k \text{ mod } m$ (for integer key values)
+[[Hash functions#Multiplication Method|Multiplication method]]: $h(k) = \lfloor m(k\beta \text{ mod } 1) \rfloor$. (for numerical key values)
+	$\beta>0$ is a constant
 
 ## Rehash to what size?
 Let $\gamma > 0$ be a fixed constant.
@@ -57,7 +81,7 @@ What happens if $m' = m + 1$?
 - For every insertion, we have to re-hash, starting with $m=1$
 - Re-hashing a [[Hash Table]] with `n'` elements takes at least `n'` steps.
 
-Consequence: inserting $n$ elements into a [[Hash Table]] takes at least 
+Consequence: inserting $n$ elements into a [[Hash Table]] takes ==at least== 
 $$\sum_{n'=1}^{n} n' =\frac{n(n+1)}{2} = \Omega(n^2)$$
 steps. (Quadratic is very high for hashing)
 ***
@@ -75,7 +99,7 @@ Since $\gamma c - 1 \leq n' - n < \gamma c + 1$,
 we have to re-hash after every $\approx \gamma c$ insertions.
 Rehashing a [[Hash Table]] with `n'` elements takes at least `n'` steps.
 
-Consequence: inserting $n$ elements into a [[Hash Table]] (starting from an empty table) takes at least 
+Consequence: inserting $n$ elements into a [[Hash Table]] (starting from an empty table) takes ==at least==
 $$
 \begin{align}
 &\Omega\left(\gamma c + 2\gamma c + \cdots + \left\lfloor\frac{n}{\gamma c}\right\rfloor \gamma c \right)\\
@@ -104,7 +128,7 @@ we have to re-hash every time the number of insertions doubles, starting from th
 
 Re-hashing a [[Hash Table]] with $n' \leq \gamma m' \leq m'$ elements and `m'` slots takes at most $O(m'+n'+2m')$ steps.
 
-Consequence: inserting $n$ elements into a [[Hash Table]] (with the necessary re-hashing) takes at **most**
+Consequence: inserting $n$ elements into a [[Hash Table]] (with the necessary re-hashing) takes ==at **most**==
 $$
 \begin{align}
 &O\left( n_0 + 2n_0 + \cdots + 2^{\left\lfloor\log_2{(n/n_0)}\right\rfloor}n_0  \right)\\

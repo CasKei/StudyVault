@@ -226,9 +226,9 @@ Does not guarantee minimal transistors, though more efficient than using just th
 It is implemented using basic logic gates (INV, AND, and OR, or NANDs).
 The mux is expensive to manufacture, but _universal_, meaning that it can **implement any boolean function because essentially it “hardcodes” the truth table**.
 A mux **always** has **three** types of terminals:
--   2^k2k bits data inputs,
--   `k` bits selector signal(s) –_this is also an input, but we have a special name for them them: selector_– , and
--   1-bit output.
+-   $2^k$ bits data **inputs**,
+-   `k` bits selector signal(s) : this is also an input, but we have a special name for them them: **selector**, and
+-   1-bit **output**.
 
 It's function components: the inputs, the selector signals, and the output.
 It basically allows one of the input signals to pass trough when selected to be reflected at `OUT`.

@@ -3,6 +3,11 @@ aliases: beta CPU
 tags: #50.002
 ---
 [[Comp Struct]]
+
+## Exam cheats
+[[beta instruction + schematic + truth table]]
+
+
 ## Overview
 We were introduced to the [[Designing an Instruction Set#Beta ISA Format|beta ISA]], a [[Designing an Instruction Set#Central Processing Unit CPU|CPU]] [[Designing an Instruction Set#Preview The Beta CPU|blueprint]] that specifies what instructions the CPU can process, how it interacts with the [[Designing an Instruction Set#Memory Unit|memory unit]], the [[Designing an Instruction Set#Central Processing Unit CPU|CPU]] components, [[Designing an Instruction Set#High Level language Assembly Language and Machine Language|instruction formats]], and many more.
 

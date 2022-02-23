@@ -5,8 +5,15 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
+    {
+      "query": "StudyVault",
+      "color": {
+        "a": 1,
+        "rgb": 16777215
+      }
+    },
     {
       "query": "50.004",
       "color": {
@@ -43,16 +50,16 @@
       }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": -0.5,
   "nodeSizeMultiplier": 0.871891563124511,
   "lineSizeMultiplier": 1.33979494308802,
-  "collapse-forces": false,
-  "centerStrength": 0.533211213762345,
-  "repelStrength": 7.9117553360943,
-  "linkStrength": 0.895030264415419,
-  "linkDistance": 286,
-  "scale": 0.2717393528911546,
+  "collapse-forces": true,
+  "centerStrength": 0.761489971346705,
+  "repelStrength": 10.9753581661891,
+  "linkStrength": 1,
+  "linkDistance": 191,
+  "scale": 0.2044768252833699,
   "close": true
 }

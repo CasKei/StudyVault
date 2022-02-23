@@ -83,3 +83,5 @@ Since there is **no lower bound** on $\|V_{out} - V_m\|$, then there is **no upp
 The only thing we can do is to **minimize** the metastable state's probability from happening. We can do that by introducing more **delays** between the first 'upstream' Flip-Flop and the CL devices downstream in the hopes that the signal will somehow settle towards either end before reaching the CL, as illustrated here:
 ![[Pasted image 20220214123311.png]]
 Note that this comes at the cost of _responsiveness_ of the device.
+
+

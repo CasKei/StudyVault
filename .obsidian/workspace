@@ -4,13 +4,27 @@
     "type": "split",
     "children": [
       {
-        "id": "e953adf4d25eec75",
+        "id": "41cca2ca1a458d39",
         "type": "leaf",
+        "dimension": 50,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/ISP/Notes/Visitor.md",
-            "mode": "source",
+            "file": "Term4/CompStruct/Notes/Sequential Logic.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "d0b65633d5755c45",
+        "type": "leaf",
+        "dimension": 50,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term4/CompStruct/Notes/Turing Machine and Programmability.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -53,7 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245.004056930542
+    "width": 394.004056930542
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -69,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/ISP/Notes/Visitor.md",
+                "file": "Term4/CompStruct/Notes/Sequential Logic.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -86,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/ISP/Notes/Visitor.md"
+                "file": "Term4/CompStruct/Notes/Sequential Logic.md"
               }
             }
           },
@@ -103,20 +117,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.33169555664062,
-    "collapsed": true
+    "width": 218.33169555664062
   },
-  "active": "e953adf4d25eec75",
+  "active": "41cca2ca1a458d39",
   "lastOpenFiles": [
-    "Term4/ISP/Notes/Visitor.md",
-    "Term4/ISP/Notes/W5.md",
-    "Term4/ISP/IS & Programming.md",
-    "Term4/Algo/Notes/Hashing.md",
-    "Term4/Algo/Notes/Re-hashing.md",
-    "Term4/Algo/Notes/Hash Operations.md",
-    "Term4/Algo/Notes/Hash Table.md",
-    "Term4/Algo/Notes/Designing hash functions.md",
-    "Term4/Algo/Notes/Hash functions.md",
-    "Term4/Algo/Notes/Intro to hashing.md"
+    "Term4/CompStruct/Notes/Sequential Logic.md",
+    "Term4/CompStruct/Notes/Turing Machine and Programmability.md",
+    "Term4/CompStruct/Notes/Finite State Machine.md",
+    "Term4/CompStruct/Practice dump.md",
+    "Term4/CompStruct/Comp Struct.md",
+    "README.md",
+    "Term4/CompStruct/Notes/Logic Synthesis.md",
+    "Term4/CompStruct/Notes/Basics of Information.md",
+    "Term4/CompStruct/Notes/Digital Abstraction.md",
+    "Term4/CompStruct/Notes/Building Beta CPU.md"
   ]
 }

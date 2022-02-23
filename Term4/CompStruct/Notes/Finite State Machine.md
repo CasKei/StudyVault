@@ -33,10 +33,10 @@ We can represent a state machine in 2 forms: [[#State transition diagram]] or [[
 ### State transition diagram
 Suppose we have a simple digital lock machine that will only open when we give the password `0110`.
 ![[Pasted image 20220215181206.png]]
-Bolded node `sx` is the initial state.
-Arrows are the possible transitions between states.
-Numbers on arrows are the input required for the state transition to happen.
-Number inside state is the output of each state.
+**Bolded** node `sx` is the initial state.
+**Arrows** are the possible transitions between states.
+**Numbers on arrows** are the input required for the state transition to happen.
+**Number inside state** is the output of each state.
 In this case, `1` if unlocked.
 
 There are 5 states in total and we can [[Basics of Information|encode]] them using 3 bits:

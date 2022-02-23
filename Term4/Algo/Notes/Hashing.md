@@ -12,6 +12,5 @@ tags: #50.004
 [[Hash Operations]]
 [[Re-hashing]]
 [[Open addressing]]
-[[Probing]]
 [[Cryptographic hashing]]
 [[Universal hashing]]

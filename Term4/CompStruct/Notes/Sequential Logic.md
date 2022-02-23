@@ -70,7 +70,7 @@ The _dynamic discipline_ is a contract that is made to address the first problem
 > 2. $T_{hold} \approx t_{pd}$ of the components that make up the D-Latch
 
 > $T_{setup}$: minimum time that voltage on wire D needs to be valid/stable BEFORE the clock edge changs from `1` to `0` (write to read)
-> $T_{hold}$: minimum time that voltage on wire D nees to be valid/stable AFTER the clock edge reaches `0` from previous `1`
+> $T_{hold}$: minimum time that voltage on wire D needs  to be valid/stable AFTER the clock edge reaches `0` from previous `1`
 
 Informal: 
 - $T_{setup}$: how long you should wait to ensure that output signal at Q reflects what was supplied at D ($t_{pd}$), and ensure this output at Q maintains this alue when CLK at G turns `0` (another $t_{pd}$)
@@ -175,9 +175,10 @@ From the above:
  t_1&: &t_{cd}R_1 + t_{cd}CL &\geq t_H R_2 \\
  t_2&: &t_{pd}R_1 + t_{pd}CL &\leq t_{CLK}
  \end{align}
- $$
+ >$$
 
  where $t_{CLK}$ is clock period.
+
  ### Explanation
  - $t_1$: ensures $t_H$ requirement of R2 is fulfilled by devices before it; that is CL and R1 in example above
 	 - When CLK rises at $t_i$, both R1 and R2 are capturing different values simultaneously

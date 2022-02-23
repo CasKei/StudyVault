@@ -1,5 +1,10 @@
+---
+aliases: StudyVault
+tags: #StudyVault
+---
 # StudyVault
  An attempt to sync a backlinked network of notes
+[[README|StudyVault]]
 
 ## Term 3
 [[Data Driven World|DDW]]
