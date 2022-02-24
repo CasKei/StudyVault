@@ -17,7 +17,7 @@ There are several **layers** to software abstraction, summarised below:
 
 -   ==_Basic Layer_: compilation tool softwares such as _assemblers_, _interpreters_ and _compilers_:==
     -   **[[Assembler]] and [[Interpreter and Compiler|Interpreter]]**: hides bit-level representations, hex locations, and binary values
-    -   **[[Interpreter and Compiler|Compiler]]:** hides machine instructions, registers, machine architecture
+    -   **[[Interpreter and Compiler|Compiler]]:** hides machine instructions, registers, machine architecture. Convert a prog from high-end language into assembly.
 -   ==_Higher Layers_: interpretive tool softwares such as Operating System and Applications (web browser, video player, text editors, etc):==
     -   **Operating System:** hides resources (memory, CPU, I/O devices) limitations and details.
     -   **Applications:** hides local parameters, network location, security details, etc.

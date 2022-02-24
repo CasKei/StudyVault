@@ -66,7 +66,7 @@ Try it yourself by running this code step by step on BSIM and observe the datapa
 -   At each timestep, be aware of the value of PC and all Registers.
 -   Familiarise yourself with how to translate from the assembly language to the 32-bit machine language
 
-```ruby
+```haskell
 .include beta.uasm
 
 ADDC(R31, 5, R0)
@@ -173,7 +173,7 @@ The control signals therefore must be set to:
 -   Be aware on the value stored at certain memory locations
 -   Familiarise yourself with how to translate from the assembly language to the 32-bit machine language using _labels_ and _literals_
 
-```
+```haskell
 .include beta.uasm
 
 LD(R31, x, R0)

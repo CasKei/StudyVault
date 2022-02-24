@@ -2,6 +2,8 @@
 tags: #50.001
 ---
 [[IS & Programming|ISP]]
+[[Object Oriented Programming|OOP]]
+[[Week 2 - OOP and Classes]]
 [[Inheritance and Abstract Base Class]]
 
 ## Motivations

@@ -4,26 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "41cca2ca1a458d39",
+        "id": "58a24f204d3c4e8b",
         "type": "leaf",
-        "dimension": 50,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/CompStruct/Notes/Sequential Logic.md",
-            "mode": "preview",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "d0b65633d5755c45",
-        "type": "leaf",
-        "dimension": 50,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term4/CompStruct/Notes/Turing Machine and Programmability.md",
+            "file": "Term4/CompStruct/Notes/Anatomy of the Beta CPU.md",
             "mode": "preview",
             "source": false
           }
@@ -67,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 394.004056930542
+    "width": 126.00405693054199
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -83,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/CompStruct/Notes/Sequential Logic.md",
+                "file": "Term4/CompStruct/Notes/Anatomy of the Beta CPU.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -100,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/CompStruct/Notes/Sequential Logic.md"
+                "file": "Term4/CompStruct/Notes/Anatomy of the Beta CPU.md"
               }
             }
           },
@@ -117,19 +103,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.33169555664062
+    "width": 218.33169555664062,
+    "collapsed": true
   },
-  "active": "41cca2ca1a458d39",
+  "active": "58a24f204d3c4e8b",
   "lastOpenFiles": [
-    "Term4/CompStruct/Notes/Sequential Logic.md",
-    "Term4/CompStruct/Notes/Turing Machine and Programmability.md",
-    "Term4/CompStruct/Notes/Finite State Machine.md",
-    "Term4/CompStruct/Practice dump.md",
+    "Term4/CompStruct/Notes/Anatomy of the Beta CPU.md",
+    "Term4/CompStruct/Notes/Building Beta CPU.md",
     "Term4/CompStruct/Comp Struct.md",
-    "README.md",
-    "Term4/CompStruct/Notes/Logic Synthesis.md",
-    "Term4/CompStruct/Notes/Basics of Information.md",
-    "Term4/CompStruct/Notes/Digital Abstraction.md",
-    "Term4/CompStruct/Notes/Building Beta CPU.md"
+    "Term4/CompStruct/Lab dump.md",
+    "Term4/Algo/HW Set 3.md",
+    "Term4/Algo/Algo.md",
+    "Term4/Algo/Notes/Re-hashing.md",
+    "Term4/Algo/Notes/Hashing.md",
+    "Term4/Algo/Notes/Algo week 5.md",
+    "Attachments/Pasted image 20220224151357.png"
   ]
 }

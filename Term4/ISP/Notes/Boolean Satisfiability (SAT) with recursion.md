@@ -21,7 +21,7 @@ tags: #50.001
 ## DeMorgan's Law
 ![[Pasted image 20220212131239.png]]
 ## Boolean Satisfiability (SAT)
-> SAT: Decide whetehr there is an assignment to the variables of a Boolean formula such that the formula is true (satisfied)
+> SAT: Decide whether there is an assignment to the variables of a Boolean formula such that the formula is true (satisfied)
 
 - Yes: there exists such an assignment: satisfiable
 - No: if all assignments cannot make the formula true

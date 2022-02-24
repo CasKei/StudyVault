@@ -1,5 +1,5 @@
 ---
-aliases: CPU
+aliases: CPU, PC, memory unit, REGFILE, ALU CU, CLU
 tags: #50.002
 ---
 [[Comp Struct]]
@@ -155,7 +155,7 @@ The following schematic is a big picture for how to go about the design:
 
 Start by implementing the 32-bit add using a ripple-carry architecture. You’ll have to construct the 32-input NOR gate required to compute Z using a tree of smaller fan-in gates (the parts library only has gates with up to 4 inputs).
 
-#### #### Computing Overflow
+#### Computing Overflow
 
 **Overflow** can never occur when the two operands to the addition have **different** signs; if the two operands have the same sign, then overflow can be detected if the sign of the result differs from the **sign** of the operands (Note that `XA` and `XB` are just the input nodes of the `FA`, refer to the diagram above):
 $$V=XA_{31}\cdot XB_{31} \cdot \overline{S_{31}}+\overline{XA_{31}}\cdot \overline{XB_{31}} \cdot S_{31}$$
@@ -227,8 +227,8 @@ It’s easy to build a shifter after noticing that a **multi-bit shift** can be 
 | Shifter                  | Schematic                            |
 | ------------------------ | ------------------------------------ |
 | Left shifter             | ![[Pasted image 20220221101756.png]] |
-| Right shifter            | ![[Pasted image 20220221101806.png]] |
-| Right arithmetic shifter | ![[Pasted image 20220221101821.png]] |
+| Right shifter            | ![[Pasted image 20220224193148.png]] |
+| Right arithmetic shifter | ![[Pasted image 20220224193158.png]] |
 
 Combined:
 ![[Pasted image 20220221101837.png]]

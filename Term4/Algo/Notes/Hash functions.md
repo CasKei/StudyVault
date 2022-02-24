@@ -15,15 +15,15 @@ Assumptions: $K$ is a set of integers, [[Hash Table]] has $m$ slots
 > Define $h$ by the map $$h(k) = k \% m$$
 > where % denotes remainder of k/m
 
-Example 1: K: 0 to 99999, m=10
-h(k) = last digit of k
-e.g. h(43564) = 4
+Example 1: $K$: 0 to 99999, $m=10$
+$h(k)$ = last digit of k
+e.g. $h(43564) = 4$
 
-Example 2: K: -1000 to 1000, m = 137
-h(k) = remainder of k when divided by 137
-e.g. h(743) = 58
+Example 2: $K:$ -1000 to 1000, $m = 137$
+$h(k)$ = remainder of k when divided by 137
+e.g. $h(743) = 58$
 
-Initialize 𝐴 as a hash table with 5 slots, and suppose its hash function is created using the division method. Suppose we insert the following integers 2, 7, 5, −1, −8,4,11 into 𝐴.
+Initialize 𝐴 as a hash table with 5 slots, and suppose its hash function is created using the division method. Suppose we insert the following integers $2, 7, 5, −1, −8,4,11$ into 𝐴.
 Draw the final hash table `A` after these insertions:
 ![[Pasted image 20220221142603.png]]
 

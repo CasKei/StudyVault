@@ -5,11 +5,11 @@ tags: #50.002
 [[Comp Struct]]
 [[Assemblers and Compilers]]
 
-> An assembler is technically a program for writing programs. It also can be called as a _primitive compiler_.
+> An assembler is a *machine specific* program for writing programs. It also can be called as a _primitive compiler_.
 
 It provides:
 - A symbolic **language** (assembly language) for representing strings of bits. (`beta.uasm` in this course)
-- A program for translating assembly source code to machine code in binary. (`bsim` in this course)
+- A program for **translating assembly source code to machine code in binary**. (`bsim` in this course)
 
 ## UASM
 In order to write a code thats runnable in BSIM conveniently, we need:
@@ -87,6 +87,14 @@ If one were to store `0xDEADBEEF` in big-endian format, it will result in:
 But the above is so unintuitive! We need to chop the original instruction into 1 byte chunks and “load” them from right to left so they’re stored from lowest to highest memory location to follow the little-endian format.
 
 Better yet, we can define a macro called `betaopc` and `ADDC` that relies on the former:
+Also `betaop`
+```haskell
+.macro betaop(OP, RA, RB, RC) {
+	.align 4 | each instruction is 4 bytes
+	LONG((OP<<26) + ((RC%32)<<21) + ((RA%32)<<16) + ((RB%32)<<11))
+}
+.macro ADD(RA,RB,RC) betaop(0x20,RA,RB,RC)
+```
 
 ```haskell
 .macro betaopc(OP,RA,CC,RC) {

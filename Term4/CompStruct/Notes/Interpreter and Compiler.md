@@ -11,6 +11,8 @@ Some higher level languages, like Java and C/C++ have to be **compiled** first u
 
 Compilers typically go through sophisticated steps of analysing the entire high-level source code to produce an optimized set of instructions for the machine. We will not be able to execute the program if the compiler meets an error, hence making it comparatively harder to debug. It slows down program _development_ but it will result in faster execution.
 
+## Interpreter
+
 Other languages like Python and Ruby are **_interpreted_**. The **interpreter** for these languages execute the program directly, often by translating each statement into a sequence of one or more standard subroutines, and finally into machine code.
 
 There’s not too much _analysing_ of source code done, and will translate the program on the fly. It will execute the program until the first error is met, hence debugging will be comparatively easier than debugging compiled languages.
