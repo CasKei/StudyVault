@@ -59,4 +59,21 @@ For our case, no upper limit, so lower limit $n=1$
 However, when $n=1$, $cn\log{n} = c\log{1} = 0$.
 We know our $T(1) = \Theta(1) > 0$ as there is no algorithm that takes no time.
 
-==CONT==.
+Thus let us go back to the definition for big O:
+We do not need to prove that $T(n) \leq cn\log{n}$ is true for all $n$, but only for those that are $\geq n_0$, and we can choose what $n_0$ could be.
+
+We could use $T(2)$ or above to replace $T(1)$ if it isn't applicable.
+
+$$
+\begin{align}
+T(n) = 2T(n/2) + n &\implies T(2) = 2T(1) + 2 &= 4\\
+&\implies T(3) = T(2) + T(1) + 3 &= 8 
+\end{align}
+$$
+And we want both $T(2)$ and $T(3)$ both to satisfy our boundary condition, which are
+$$T(2) \leq 2c\log{2}, T(3) \leq 3c\log{3}$$
+Thus we can have $c=8$ that satisfy all the conditions.
+And we also have $n_0=2$ for big O definition.
+
+**Avoid Pitfalls**
+We need to explicitly prove that $T(n) \leq cn$ when we want to show that $T(n) = O(n)$.

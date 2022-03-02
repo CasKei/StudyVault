@@ -16,7 +16,7 @@ tags: #50.004
 
 ## [[Bubble Sort and Insertion Sort#Insertion Sort|Insertion Sort]]
 ![[Pasted image 20220204105033.png]]
-```
+```php
 for j = 2 to A.length
 	key = A[j]
 	//Insert A[j] into the sorted sequence A[1..j-1].
@@ -85,7 +85,7 @@ We repeat this step until one input sequence is empty, at which time we just tak
 -6  -5  -4  -3  -2  -1
 ```
 ## [[Merge Sort]]
-```
+```php
 MERGE(A, p, q, r)
 	n1 = q - p + 1
 	n2 = r - q

@@ -10,7 +10,7 @@ tags: #50.002
 To create a programmable control system suitable for general purposes (like the [[Turing Machine and Programmability#Universal Function|universal TM]]), we need to define a set of instructions for that system, such that it is able to support a rich repertoire of operations.
 
 We can create a machine that is simply programmable, but also has to support:
-- An expandable memory unit
+- An expandable [[Anatomy of the Beta CPU|memory unit]] 
 - A rich repertoire of operations
 - Ability to generate a new program and then execute it
 

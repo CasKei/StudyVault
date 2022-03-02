@@ -26,7 +26,10 @@ tags: #50.002
 [[Lab dump]]
 [[Practice dump]]
 
+[[Adder]]
 
+
+[[FPGA]]
 
 #### Course Description
 

@@ -93,26 +93,26 @@ The worst case occurs when all positive integers appear before the negative inte
 #### i)
 ![[Pasted image 20220128101323.png]]
 
-**==Ans: ==**$T(n) = \Theta(n^4)$
+**==Ans:== **$T(n) = \Theta(n^4)$
 
 #### ii)
 ![[Pasted image 20220128101331.png]]
 (Edit: Errata: last line is `print(f(n))`)
-**==Ans: ==**$T(n) = \Theta(1)$
+**==Ans:==** $T(n) = \Theta(1)$
 Correction: $\Theta(n)$
 The subroutine $f(m)$ within the program will be recursively executed $m+1$ times in total, and each execution of this subroutine takes constant time to compute.
 
 #### iii)
 ![[Pasted image 20220128101341.png]]
-**==Ans: ==**$T(n) = \Theta(n^3)$
+**==Ans:==**$T(n) = \Theta(n^3)$
 
 #### iv)
 ![[Pasted image 20220128101350.png]]
-**==Ans: ==** $T(n) = \Theta(\log_k{n})$
+**==Ans:==** $T(n) = \Theta(\log_k{n})$
 
 #### v)
 ![[Pasted image 20220128101401.png]]
-**==Ans: ==** $T(n) = \Theta(n)$
+**==Ans:==** $T(n) = \Theta(n)$
 
 ### Qn 4
 ![[Pasted image 20220128101413.png]]

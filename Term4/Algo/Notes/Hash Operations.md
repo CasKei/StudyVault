@@ -16,6 +16,37 @@ Assume that `h` is a fixed hash function associated to `A`
 | `chain_hash_search(𝐴, 𝑘)`     | `list_search(𝐴[ℎ(k)], 𝑘)`     | Return element (pointer) of `𝐴` whose key value is `𝑘`.                                  | Worst case $O(n)$ |
 | `chain_hash_delete_key(𝐴, 𝑘)` | `list_delete_key(𝐴[ℎ(𝑘)], 𝑘)` | Delete element (pointer) of `𝐴` whose key value is `𝑘`.                                  | Worst case $O(n)$ |
 
+## Hash insert
+(does not include deleted value)
+```php
+function hash_insert(T, k)
+	i = 0
+	repeat
+		j = h(k,i)
+		if T[j] == NIL
+			T[j] = k
+			return j
+		else i++
+	until i == m
+	error "hash table overflow"
+
+```
+(see clrs 11.4-2 ans)
+## Hash search
+```php
+function hash_search(T, k)
+	i = 0
+	repeat
+		j = h(k,i)
+		if T[j] == k
+			return j
+		i++
+	until T[j] == NIL or i == m
+	return NIL
+```
+## Hash delete
+(clrs 11.4-2)
+
 ## Load Factor
 > A [[Hash Table]] with `n` elements and `m` slots has a ==load factor== of $\frac{n}{m}$.
 > This ==load factor== is the average number of elements in each slot, under the [[Designing hash functions|simple uniform hashing]] assumption.

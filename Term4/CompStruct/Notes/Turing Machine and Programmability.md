@@ -183,7 +183,7 @@ In order to be efficient, we need to replace each of these hardwares with a code
 Writing programs is much easier than building a physical machine.
 Also programs can easily receive another program as input and output other programs.
 
-> Universal Turing Machine: a coded description of a pieve of hardware.
+> Universal Turing Machine: a coded description of a piece of hardware.
 
 It allows us to migrate from the hardware paradigm into software paradigm.
 
@@ -195,7 +195,7 @@ Until this point, we have learned how a TM works, and its advantage over [[Finit
 If we manage to create a physical manifestation of Universal Turing Machine, we need to ensure that this machine is **programmable**. This can be achieved by designing an **instruction set** so that we can write “programs” / “algorithms” _using these instruction set_.
 Hence allowing it to emulate the behavior of whatever machine $k$ when running the program with its corresponding input $j$ on this machine.
 
-> An instruction set is a set of standard _basic_ commands that we can use as **building blocks** so that we can write a bigger programs that will cause the machine running it to emulate complex tasks.
+> An [[Designing an Instruction Set|instruction set]] is a set of standard _basic_ commands that we can use as **building blocks** so that we can write a bigger programs that will cause the machine running it to emulate complex tasks.
 
 >We can say that our computer is **programmable**, because the program that we wrote is translated into **a set of instructions** that our machine can understand.
 

@@ -7,4 +7,3 @@ tags: #50.004
 
 [[L03.01 - Heap]]
 [[L03.02 - Heap Operations]]
-[[L03.03 - More on Heaps]]

@@ -7,11 +7,14 @@ tags: #02.137
 # HASS 2.137: INTRODUCTION TO DIGITAL HUMANITIES
 [[Notes on Digital Humanities]]
 
-| Week | Notes    |
-| ---- | -------- |
-| 1    | [[DHW1]] |
-| 2    | [[DHW2]] |
-| 3    | [[DHW3]]         |
+| Week | Notes |
+| ---- | ----- |
+| 1    |       |
+
+transformDH: a movement that is trying to make digital stuff closer to the humanities/social aspects
+
+
+[[Midterm assignment - DH project proposal]]
 
 Instructors
 Dr. Sayan Bhattacharyya (Office: XXXX) and Dr. Alastair Gornall (Office: 1.202.15)

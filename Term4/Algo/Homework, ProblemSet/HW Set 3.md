@@ -47,22 +47,82 @@ As the multiplication method in this case leads to many key values being hashed 
 The mid-square method hashes each key value to a unique hash value and is the better option without collisions in this situation.
 <br>
 ## 2)
-Design an algorithm that takes as its two inputs a singly linked list $L$ with $n$ elements, and a positive integer value $k$, and returns as its output the total number of pairs of elements whose sum of their key values is divisible by $k$. Assume that every element $x$ in $L$ has an integer key value $x.key$. Here, a pair shall mean a set with two elements, which means that the order of the elements in a pair does not matter. (If $\set{x, y}$ is a pair, then $\set{y, x}$ is the exact same pair; so $\set{x, y}$ and $\set{y, x}$ should be counted only once if $x.key$ + $y.key$ is divisible by $k$.) Please present your algorithm in pseudocode, and explain why your algorithm works as intended. Your algorithm should have time complexity $O(n)$ to have full credit, but a correct algorithm with time complexity $O(n^2)$ will still get most of the credit.
-
-For example, if $k = 10$, and if the singly linked list $L$ has 4 elements $a, b, c, d$, whose key values are $2, 12, 8, 18$ respectively, then your algorithm should return the output $4$, which corresponds to the 4 pairs of elements $\set{a, c}, \set{a, d}, \set{b, c}, \set{b, d}$. 
-
-As another example, if $k = 10$, and if the singly linked list $L$ has 3 elements $a, b, c$, whose key values are $5, 5, 5$ respectively, then your algorithm should return the output $3$, which corresponds to the $3$ pairs of elements $\set{a, b}, \set{a, c}, \set{b, c}$. Note that elements of a set must be distinct. [5]
+Design an algorithm that takes as its two inputs a singly linked list $L$ with $n$ elements, and a positive integer value $k$, and returns as its output the total number of pairs of elements whose sum of their key values is divisible by $k$. Assume that every element $x$ in $L$ has an integer key value $x.key$. Here, a pair shall mean a set with two elements, which means that the order of the elements in a pair does not matter. (If $\set{x, y}$ is a pair, then $\set{y, x}$ is the exact same pair; so $\set{x, y}$ and $\set{y, x}$ should be counted only once if $x.key$ + $y.key$ is divisible by $k$.) Please present your algorithm in pseudocode, and explain why your algorithm works as intended. Your algorithm should have time complexity $O(n)$ to have full credit, but a correct algorithm with time complexity $O(n^2)$ will still get most of the credit.[5]
 ***
+Let elements mod k and place them in hash table
+If a+b is divisible by k, either
+- a = b = 0
+	- if there are n numbers, there are (n(n-1))/2 pairs : nC2
+- a % k = 0 but b % k = x => (a + b) % k = b % k = b
+- a % k and b % k not 0 =>  (a + b) = ck
 
+Use combinations to make sure no repeats
+```php
+'''
+Require: L is a singly linked list with each node having attributes
+		 .next, .head and .key, and has n nodes.
+Require: k is a positive integer
+Require: hash table is indexed from 0
+'''
+function pairFinder(L, k)
+	Create hash_arr <- int Array[k]
+	hash_arr <- [0 for i in range k]
 
+	pair_count <- 0
+
+	node <- L.head
+	while node != NIL and node.key != NIL do
+		hash_arr[node.key % k] += 1
+		node <- node.next
+		
+	// a%k = b%k = 0
+	divisible <- hash_arr[0]
+	pair_count += (divisible*(divisible - 1))/2
+
+	// since summing pairs from mirror half is k, pairwise multiply
+	// ignore 0
+	if k%2 == 0 then
+		mid <- hash_arr[k/2]
+		from (i = 1 to i = k/2 - 1) and (i != k - 1) do
+			pair_count += hash_arr[i] * hash_arr[k-i]
+		pair_count += (mid*(mid - 1))/2
+		
+	else if k%2 != 0
+		from (i = 1 to i = k/2) and (i != k - 1) do
+			pair_count += hash_arr[i] * hash_arr[k-i]
+
+	return pair_count
+```
+<br>
 
 ## 3)
-Design an algorithm that takes as its two inputs a singly linked list $L$ with $n$ elements, and a non-negative integer $k$, and returns as its output the key value of the $k$-th last element in $L$. If the $k$-th last element does not exist, your algorithm should return $NIL$. Here, the $0$-th last element refers to the last element $x$ in $L$, which must satisfy $x.next = NIL$, while the $k$-th last element for $k = 1$ refers to the “second last” element. Please present your algorithm in pseudocode. Your algorithm must have time complexity $O(n)$ and space complexity $O(1)$. Also, your algorithm must use at most one for/while loop. (To be clear, this means that if part of your pseudocode already uses a for-loop, then to get full credit, you cannot use another for-loop or while-loop. Similarly, if part of your pseudocode already uses a while-loop, then to get full credit, you cannot use another for-loop or while-loop. A solution receiving full credit will not use any iterated for-loops or iterated while-loops.) [5]
 
-Hint 1: By space complexity, we refer to the additional space required for anything you initialize beyond the inputs. Having a space complexity of $O(1)$ is not the same as having a space complexity of $O(k)$. If you initialize a new linked list with $k$ elements, then you would have a space complexity of $O(k)$. What could take up a space complexity of $O(1)$?
-
-Hint 2: It is possible to design an algorithm that uses exactly one while-loop and no for-loops.
+Design an algorithm that takes as its two inputs a singly linked list $L$ with $n$ elements, and a non-negative integer $k$, and returns as its output the key value of the $k$-th last element in $L$. If the $k$-th last element does not exist, your algorithm should return $NIL$. Here, the $0$-th last element refers to the last element $x$ in $L$, which must satisfy $x.next = NIL$, while the $k$-th last element for $k = 1$ refers to the “second last” element. Please present your algorithm in pseudocode. Your algorithm must have time complexity $O(n)$ and space complexity $O(1)$. Also, your algorithm must use at most one for/while loop. [5]
 ***
+Input: L with n elements, k >= 0
+Output: kth last element key value
+
+```php
+'''
+Require: L is a linked list with attribute .head and .next
+Require: k is a non-negative integer
+'''
+function k_last_element(L, k)
+	i = 0
+	x <- L.head
+	y <- L.head
+
+	while x.next != NIL do
+		x <- x.next
+		i++
+		if i > k then
+			y <- y.next
+	if i < k then
+		return NIL
+	else
+		return y.key
+```
+
 
 ## 4)
 Initialize a hash table $A$ with 5 slots, whose hash function is created using the division method. Assume that collisions are resolved by chaining. Also, assume that the load factor cannot exceed $\gamma = 0.8$, and that re-hashing is done by doubling. Suppose we insert the following twelve integer key values into $A: 2, 3, 6, 7, 10, 21, 24, 28, 30, 32, 35, 39$ (in this given order).
@@ -72,10 +132,11 @@ Draw A immediately before A is re-hashed for the second time. [2]
 ### ii)
 Draw the final hash table after the insertion of all eleven key values. [3]
 ***
-i) 
-![[Pasted image 20220224180426.png]]
-ii)
-![[Pasted image 20220224153259.png]]
+|(i)|(ii)|
+|---|---|
+|![[Pasted image 20220224180426.png]]|![[Pasted image 20220224153259.png]]|
+
+
 ## 5)
 Let $A$ be an empty open address hash table with $30$ slots. Suppose we insert the key values $2, 32, 62, 92, 122$ into $A$ in this given order. For each of the three following probing strategies, please give all non-empty slots of the hash table with their corresponding key values. 
 ### i)
