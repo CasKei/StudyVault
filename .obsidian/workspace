@@ -4,11 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "f8f95f58859d6de6",
+        "id": "d24f591200ae5488",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term4/CompStruct/Notes/Sequential Logic.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "7a2e87ac377f8ac7",
         "type": "leaf",
         "state": {
           "type": "graph",
           "state": {}
+        }
+      },
+      {
+        "id": "d732af8d89e8cacc",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term4/CompStruct/2D short description.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -49,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 126.00405693054199,
-    "collapsed": true
+    "width": 126.00405693054199
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -66,6 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Term4/CompStruct/2D short description.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -81,7 +105,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Term4/CompStruct/2D short description.md"
+              }
             }
           },
           {
@@ -100,17 +126,17 @@
     "width": 218.33169555664062,
     "collapsed": true
   },
-  "active": "f8f95f58859d6de6",
+  "active": "d732af8d89e8cacc",
   "lastOpenFiles": [
-    "Term4/Algo/Algo.md",
+    "Term4/CompStruct/2D short description.md",
     "Term4/CompStruct/Comp Struct.md",
     "README.md",
+    "Term4/CompStruct/Notes/Sequential Logic.md",
+    "Attachments/Pasted image 20220303095808.png",
+    "Attachments/Pasted image 20220302091601.png",
+    "Attachments/Pasted image 20220302224508.png",
     "UMD proposed courses.md",
-    "Term4/CompStruct/Adder.md",
-    "Term4/CompStruct/Notes/Building Beta CPU.md",
-    "Term4/CompStruct/Notes/Anatomy of the Beta CPU.md",
-    "Term4/Algo/Depth-First-Search (DFS).md",
-    "Term4/Algo/Topological sort.md",
-    "Term4/Algo/Algo week 6.md"
+    "Pasted image 20220303091624.png",
+    "Term4/CompStruct/Adder.md"
   ]
 }
