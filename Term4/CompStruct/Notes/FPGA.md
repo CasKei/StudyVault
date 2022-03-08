@@ -1,7 +1,7 @@
 ---
 tags: #50.002
 ---
-
+[[Comp Struct|50.002]]
 ## What is FPGA
 > Field Programmable Gate Arrays:
 > Semicon devices based around a matrix configurable logic blocks (CLBs) connected via programmable interconnects.
@@ -28,3 +28,9 @@ The core of an FPGA is simply an array of logic gates and wires etched into an I
 - Peripherals: 8 general use LED, button for reset, 100MHz oscillator
 
 [[Lucid]]
+
+Projects
+[[First FPGA Project]]
+[[Toddler]]
+[[Synchronous logic for FPGA]]
+[[Children]]

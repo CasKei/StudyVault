@@ -12,6 +12,10 @@ aliases: ISP, 50.001
 [[W4]]
 [[W5]]
 
+[[Android Java revision]]
+[[Android 0]]
+[[Android 1]]
+
 #### Course Description
 
 This course is an introduction to the design and programming of information systems. Topics include object oriented programming, data structures, mobile system and programming, design pattern and use of software libraries. Sample applications include Internet of Things, Android app and data analytics.

@@ -4,32 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "d24f591200ae5488",
+        "id": "c2225d79569823ac",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/CompStruct/Notes/Sequential Logic.md",
-            "mode": "preview",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "7a2e87ac377f8ac7",
-        "type": "leaf",
-        "state": {
-          "type": "graph",
-          "state": {}
-        }
-      },
-      {
-        "id": "d732af8d89e8cacc",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term4/CompStruct/2D short description.md",
+            "file": "Term4/CompStruct/Notes/Children.md",
             "mode": "source",
             "source": false
           }
@@ -73,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 126.00405693054199
+    "width": 126.00405693054199,
+    "collapsed": true
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -89,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/CompStruct/2D short description.md",
+                "file": "Term4/CompStruct/Notes/Children.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -106,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/CompStruct/2D short description.md"
+                "file": "Term4/CompStruct/Notes/Children.md"
               }
             }
           },
@@ -126,17 +107,17 @@
     "width": 218.33169555664062,
     "collapsed": true
   },
-  "active": "d732af8d89e8cacc",
+  "active": "c2225d79569823ac",
   "lastOpenFiles": [
-    "Term4/CompStruct/2D short description.md",
+    "Term4/CompStruct/Notes/Children.md",
+    "Term4/CompStruct/Notes/FPGA.md",
+    "Term4/CompStruct/Notes/Synchronous logic for FPGA.md",
+    "Term4/CompStruct/Notes/Toddler.md",
     "Term4/CompStruct/Comp Struct.md",
-    "README.md",
-    "Term4/CompStruct/Notes/Sequential Logic.md",
-    "Attachments/Pasted image 20220303095808.png",
-    "Attachments/Pasted image 20220302091601.png",
-    "Attachments/Pasted image 20220302224508.png",
+    "Term4/CompStruct/Notes/Basics of Information.md",
+    "Term4/CompStruct/Notes/First FPGA Project.md",
+    "Term4/CompStruct/Notes/Lucid.md",
     "UMD proposed courses.md",
-    "Pasted image 20220303091624.png",
-    "Term4/CompStruct/Adder.md"
+    "Term4/Algo/Homework, ProblemSet/HW Set 3.md"
   ]
 }

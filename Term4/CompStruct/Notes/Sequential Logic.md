@@ -53,7 +53,7 @@ Each device drawn as a rectangle is called a Flip-Flop, which are made of D-latc
 - **Invalid/unstable output due to transition in input**: If existing stable input in D is flipped, value at D will be invalid (momentarily) during this transition
 	- Voltage value at D can also be invalid due to any disturbance.
 	- This will affect the output at Q if G is `1` because it will pass all input from D to Q res of whether it is valid or not. We end up with unstable/invalid input half the time.
-	- Unacceptable in practice as we do not want out devices to have invalid input comuted at any time, even when D is transitioning.
+	- Unacceptable in practice - we do not want our devices to have invalid input computed at any time, even when D is transitioning.
 
 ### Solutions
 Combinational component requires $t_{pd}$ to produce meaningful results, and over this timeframe we need to hold the input stable. However, external input is unreliable, so there is no guarantee that this requirement is fulfilled.

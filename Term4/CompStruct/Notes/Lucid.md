@@ -2,6 +2,7 @@
 tags: #50.002
 ---
 [[Comp Struct]]
+[[FPGA]]
 ## Modules
 When you create any design you will have a top-level module.
 This is where inputs and outputs are actual inputs and outputs on the FPGA pins.

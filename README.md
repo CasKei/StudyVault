@@ -6,6 +6,13 @@ tags: #StudyVault
  An attempt to sync a backlinked network of notes
 [[README|StudyVault]]
 
+## Other
+[[CS50]]
+[[Crash Couse Cybersecurity]]
+[[Crash Course Cryptography]]
+[[Crash Course Hackers and Cyber Attacks]]
+[[Network Fundamentals]]
+
 ## Term 3
 [[Data Driven World|DDW]]
 

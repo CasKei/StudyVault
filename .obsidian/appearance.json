@@ -1,6 +1,6 @@
 {
-  "baseFontSize": 14,
-  "cssTheme": "Atom",
+  "baseFontSize": 18,
+  "cssTheme": "Things",
   "theme": "obsidian",
   "translucency": false,
   "enabledCssSnippets": []
