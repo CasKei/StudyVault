@@ -58,10 +58,27 @@ Once you have an android phone connected or an emulator ready, you press this bu
 
 ### Test your app
 It is recommended to get an android phone.
+Enable USB debugging mode. [Instructions](https://developer.android.com/studio/run/device).
+Connect your phone to the device and you should see i at the [[#Available emulators]].
+Then press the run button to see your app appear.
+
+[1.1 - Introduction to Android](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-1-build-your-first-app/1-0-c-introduction-to-android/1-0-c-introduction-to-android.html)
+[1.1 - Your first Android app](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-1-build-your-first-app/1-1-c-your-first-android-app/1-1-c-your-first-android-app.html)
+
+## Summary (dev android tutorial)
+- To see the app's Android hierarchy in the Project pane, click the **Project** tab in the vertical tab column, and then choose **Android** in the popup menu at the top.
+- Edit the `build.gradle(Module:app)` file when you need to add new libraries to your project or change library versions.
+- All code and resources for the app are located in the `app` and `res` folders. The `java` folder includes activities, tests, and other components in Java source code. The `res` folder holds resources, such as layouts, strings, and images.
+- Edit the `AndroidManifest.xml` file to add feature components and permissions to your Android app. All components for an app, such as multiple activities, must be declared in this XML file.
+- Use the AVD manager to create a emulator for your app
+- Add `Log` statements to your app, which display messages in the Logcat pane as a basic tool for debugging
+- To run your app on a physical Android device, turn on USB Debugging on the device. Open **Settings > About phone** and tap **Build number** 7 times. Return to the previous screen (**Settings**), and tap **Developer Options**. Choose **USB Debugging**.
 # Make one simple modification
+Change the xml tag in xml file from `<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android">`
+to
+`<LinearLayout>`
 
-
-# Quiz
-
-
-# Read about XML
+# Further reading
+[[XML Syntax]]
+[Documentation on Linear Layout](https://developer.android.com/guide/topics/ui/layout/linear)
+[[Linear Layout]]

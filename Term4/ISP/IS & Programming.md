@@ -12,9 +12,14 @@ aliases: ISP, 50.001
 [[W4]]
 [[W5]]
 
+
 [[Android Java revision]]
 [[Android 0]]
 [[Android 1]]
+[[W8L1]]
+
+[[Google Developer Training]]
+[[Udacity Android]]
 
 #### Course Description
 

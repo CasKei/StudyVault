@@ -8,9 +8,7 @@ tags: #StudyVault
 
 ## Other
 [[CS50]]
-[[Crash Couse Cybersecurity]]
-[[Crash Course Cryptography]]
-[[Crash Course Hackers and Cyber Attacks]]
+[[Crash Course]]
 [[Network Fundamentals]]
 
 ## Term 3

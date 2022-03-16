@@ -33,4 +33,5 @@ Projects
 [[First FPGA Project]]
 [[Toddler]]
 [[Synchronous logic for FPGA]]
+[[IO Element]]
 [[Children]]

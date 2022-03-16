@@ -1,5 +1,5 @@
 {
-  "collapse-filter": false,
+  "collapse-filter": true,
   "search": "",
   "showTags": false,
   "showAttachments": false,
@@ -48,18 +48,39 @@
         "a": 1,
         "rgb": 3014789
       }
+    },
+    {
+      "query": "Crash Course",
+      "color": {
+        "a": 1,
+        "rgb": 11010115
+      }
+    },
+    {
+      "query": "Network",
+      "color": {
+        "a": 1,
+        "rgb": 35457
+      }
+    },
+    {
+      "query": "CS50",
+      "color": {
+        "a": 1,
+        "rgb": 21888
+      }
     }
   ],
   "collapse-display": true,
-  "showArrow": false,
-  "textFadeMultiplier": -1.7,
-  "nodeSizeMultiplier": 0.871891563124511,
-  "lineSizeMultiplier": 1.33979494308802,
+  "showArrow": true,
+  "textFadeMultiplier": -1.1,
+  "nodeSizeMultiplier": 2.06620077438852,
+  "lineSizeMultiplier": 1.82904429124563,
   "collapse-forces": false,
-  "centerStrength": 0.244952893674293,
-  "repelStrength": 8.81683592316163,
-  "linkStrength": 0.150984950446592,
-  "linkDistance": 30,
-  "scale": 0.09102055737738178,
-  "close": false
+  "centerStrength": 0,
+  "repelStrength": 19.9900849858357,
+  "linkStrength": 0.370998205685145,
+  "linkDistance": 500,
+  "scale": 0.034164874940555985,
+  "close": true
 }

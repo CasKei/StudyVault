@@ -6,10 +6,9 @@ tags: #02.137
 
 # HASS 2.137: INTRODUCTION TO DIGITAL HUMANITIES
 [[Notes on Digital Humanities]]
+[[wk8]]
 
-| Week | Notes |
-| ---- | ----- |
-| 1    |       |
+
 
 transformDH: a movement that is trying to make digital stuff closer to the humanities/social aspects
 

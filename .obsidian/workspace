@@ -4,12 +4,60 @@
     "type": "split",
     "children": [
       {
-        "id": "c2225d79569823ac",
+        "id": "a155fa6a58678faf",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/CompStruct/Notes/Children.md",
+            "file": "Term4/Algo/2SAT solver.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "b1becac6cc105b71",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term4/Algo/Kosaraju's Algorithm.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "1617a5e02f77c4a0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term4/Algo/Strongly connected components.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "b227ce8dd56e1388",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term4/Algo/Implication Graph.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "71c88a4831751cd5",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term4/ISP/Notes/Android Java revision.md",
             "mode": "source",
             "source": false
           }
@@ -25,6 +73,7 @@
       {
         "id": "0c0aaa5ba09a7988",
         "type": "tabs",
+        "dimension": 60.30150753768844,
         "children": [
           {
             "id": "4972470be55ee35b",
@@ -50,10 +99,25 @@
             }
           }
         ]
+      },
+      {
+        "id": "a440322c0bcecb1b",
+        "type": "tabs",
+        "dimension": 39.698492462311556,
+        "children": [
+          {
+            "id": "da258fd36802327e",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 126.00405693054199,
+    "width": 100,
     "collapsed": true
   },
   "right": {
@@ -63,6 +127,7 @@
       {
         "id": "b3d868b18fdd377d",
         "type": "tabs",
+        "dimension": 62.04933586337761,
         "children": [
           {
             "id": "6ea68abcfd928d9c",
@@ -70,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/CompStruct/Notes/Children.md",
+                "file": "Term4/Algo/2SAT solver.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -87,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/CompStruct/Notes/Children.md"
+                "file": "Term4/Algo/2SAT solver.md"
               }
             }
           },
@@ -98,26 +163,52 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "526e459e99fd6838",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
+      },
+      {
+        "id": "14d9efe52874fe3e",
+        "type": "tabs",
+        "dimension": 37.95066413662239,
+        "children": [
+          {
+            "id": "2a67915f4db8517c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 218.33169555664062,
-    "collapsed": true
+    "width": 100
   },
-  "active": "c2225d79569823ac",
+  "active": "a155fa6a58678faf",
   "lastOpenFiles": [
-    "Term4/CompStruct/Notes/Children.md",
-    "Term4/CompStruct/Notes/FPGA.md",
-    "Term4/CompStruct/Notes/Synchronous logic for FPGA.md",
-    "Term4/CompStruct/Notes/Toddler.md",
-    "Term4/CompStruct/Comp Struct.md",
-    "Term4/CompStruct/Notes/Basics of Information.md",
-    "Term4/CompStruct/Notes/First FPGA Project.md",
-    "Term4/CompStruct/Notes/Lucid.md",
-    "UMD proposed courses.md",
-    "Term4/Algo/Homework, ProblemSet/HW Set 3.md"
+    "Term4/Algo/2SAT solver.md",
+    "Term4/Algo/Kosaraju's Algorithm.md",
+    "Term4/Algo/Implication Graph.md",
+    "Term4/Algo/Strongly connected components.md",
+    "Term4/Algo/Algo.md",
+    "Term4/ISP/IS & Programming.md",
+    "Term4/ISP/Notes/Android 1.md",
+    "Term4/Algo/Homework, ProblemSet/HW Set 2.md",
+    "Term4/ISP/Notes/Week 1 - ArrayList, LinkedList, Generics.md",
+    "Term4/ISP/Notes/W1.md"
   ]
 }

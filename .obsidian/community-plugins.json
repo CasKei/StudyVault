@@ -1,4 +1,13 @@
 [
   "table-editor-obsidian",
-  "obsidian-plantuml"
+  "obsidian-plantuml",
+  "cycle-through-panes",
+  "obsidian-autocomplete-plugin",
+  "obsidian-living-graph",
+  "obsidian-kanban",
+  "obsidian-tabs",
+  "calendar",
+  "smart-random-note",
+  "obsidian-charts",
+  "obsidian-dynamic-toc"
 ]

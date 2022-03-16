@@ -9,7 +9,7 @@ tags: #50.001
 List<Integer> a = new ArrayList<>();
 a.add(1);
 a.add(2);
-a.add(1, 3);
+a.add(1, 3); // add 3 in the position of 1
 a.add(5);
 System.out.println(a.toString());
 ```
@@ -28,23 +28,26 @@ class Point2D{
 	Point2D(double x, double y){  
 		this.x = x; this.y = y;  
 	} 
+	/** you don't need this.x because as long as there is no static keyword it refers to the instance. method is a instance method, not a class method.*/
 	public double getX() {  
-		return this.x;  
+		return x;
 	} 
 	public double getY() {  
-		return this.y;  
+		return y;  
 	}
 }  
 class Point3D extends Point2D{  
 	private double z;  
 	Point3D( double x, double y, double z ){  
-		this.x = x; this.y = y; this.z = z;  
+		super(x,y);
+		this.z = z; 
 	} 
 	public double getZ() {  
 		return this.z;  
 	}
 }
 ```
+`Point3D` cannot get x and y directly as they are private attributes. Cannot set or get them from `Point3D`. But you can use `getX()` and `getY` as they are public.
 
 ## Polymorphism
 [[Polymorphism]]
@@ -70,8 +73,14 @@ class Hound extends Dog {
 	public void drool(int time) { System.out.println("drool" + time);}
 }
 ```
+Given `Dog g = new Hound();`:
+- `g.bark()`:  We are upcasting this object into the superclass. We are calling the child method because of `@Override`, so it returns `"growl"`
+- `g.drool(1)`: compile error. You are expecting a drool method from Dog class that takes in an integer. We have upcasted `g` into a `Dog` class, so this cannot work.
+- `g.drool()`: `"drool"`
+- `g.sniff()`: compile error. Upcasted to `Dog` class. But `Dog` does not have sniff method.
+  
 `g` is referencing `Hound` object, but can be declared as an instance of the `Dog` class.
-*Upcasting*: putting an object of the subtype in the context of the subtype. Does not override behaviours in the object.
+*Upcasting*: putting an object of the subtype in the context of the superclass. Does not override behaviours in the object.
 
 To **override** a method in a super-class, the method signature must be the same.
 The `@Override` annotation allows the compiler to help you check if you have this condition correct.
@@ -95,6 +104,10 @@ class B extends A {
 	}
 }
 ```
+Given `A x = new B();`
+- `x.f(1)`: visible in A so this is fine
+- `x.g(1)`: not visible in A, not possible
+- `x.h(1)`: visible in A so this is fine
 
 - By making use of the subtyping and inheritance
 - Code for the super class is unchanged
@@ -172,13 +185,28 @@ class K implements I {
 	}
 }
 ```
+Which are legal?
+- `K x = new K();` Yes
+- `K x new I();` No
+- `I x = new K();` Yes
+- `I x = new I();` No
 
-Interfaces help in the maintenance of software.
-A method that takes in an interface is more flexible.
-It will be able to accept any object that implements that interface.
+
+Interfaces help in the maintenance of software.\
+Which method is better?
+```java
+void firstMethod(K k) {
+	// code;
+}
+void secondMethod(I i) {
+	// code;
+}
+```
+A method that takes in an *interface* is *more flexible*.\
+It will be able to *accept any object that implements that interface*.\
 Suppose you create a new class implementing an interface that has a better implementation of `m`, you are able to pass it to this method implementing the interface without having to change its signature.
 
-All method signatures in interfaces are automatically abstract. You do not have to specify the keyword.
+All method signatures in interfaces are **automatically abstract**. You do not have to specify the keyword.
 ```java
 interface Pokemon {
 	void adjustCP(int value);
@@ -193,11 +221,14 @@ class Bulbasaur implements Pokemon {
 	void attack() {
 		// code not shown
 	}
-	void defend() {
-		//code not shown
-	}
 }
 ```
+Which methods does `Bulbasaur` still need to implement?
+- `defend()` and `adjustCP(int)`
+
+*Similar* to [[Abstract Class]], [[Interfaces]] leaves the inplementation details to its sub-classes. In *contrast* to abstract class,
+- All *methods* in interfaces are *abstract*
+- A *class* can *extend multiple interfaces*
 
 ## Exceptions
 [[Exception]]
@@ -218,7 +249,7 @@ public class TestExceptions1 {
 	}
 }
 ```
-`RS`
+`S`
 
 ```java
 public class TestExceptions1 {
