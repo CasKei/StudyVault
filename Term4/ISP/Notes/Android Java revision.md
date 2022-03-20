@@ -120,7 +120,7 @@ Given `A x = new B();`
 public void log(int x) {
 	System.out.println(x.toString());
 }
-oublic void log(String s){
+public void log(String s){
 	System.outprintln(s);
 }
 ```

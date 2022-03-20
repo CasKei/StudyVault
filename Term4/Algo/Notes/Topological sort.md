@@ -16,3 +16,7 @@ tags: #50.004
 ## Properties
 Topological sort applies to a [[Directed acyclic graph (DAG)|DAG]]
 
+A top sort of [[Directed acyclic graph (DAG)|DAG]] G is a linear ordering of all its vertices such that if G contains an edge u pointing to v, then u appears before v in the ordering.
+
+## DFS Tree
+Graph formed by DFS is called DFS tree, which is a DAG. Therefore, resultant topsort is the topsort for the DFS forest

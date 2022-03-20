@@ -4,60 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "a155fa6a58678faf",
+        "id": "75e60096be5d684f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/Algo/2SAT solver.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "b1becac6cc105b71",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term4/Algo/Kosaraju's Algorithm.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "1617a5e02f77c4a0",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term4/Algo/Strongly connected components.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "b227ce8dd56e1388",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term4/Algo/Implication Graph.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "71c88a4831751cd5",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term4/ISP/Notes/Android Java revision.md",
+            "file": "Term4/Algo/Homework, ProblemSet/HW Set 4.md",
             "mode": "source",
             "source": false
           }
@@ -73,7 +25,7 @@
       {
         "id": "0c0aaa5ba09a7988",
         "type": "tabs",
-        "dimension": 60.30150753768844,
+        "dimension": 57.286432160804026,
         "children": [
           {
             "id": "4972470be55ee35b",
@@ -103,7 +55,7 @@
       {
         "id": "a440322c0bcecb1b",
         "type": "tabs",
-        "dimension": 39.698492462311556,
+        "dimension": 42.71356783919598,
         "children": [
           {
             "id": "da258fd36802327e",
@@ -127,7 +79,7 @@
       {
         "id": "b3d868b18fdd377d",
         "type": "tabs",
-        "dimension": 62.04933586337761,
+        "dimension": 50.39123630672926,
         "children": [
           {
             "id": "6ea68abcfd928d9c",
@@ -135,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term4/Algo/2SAT solver.md",
+                "file": "Term4/Algo/Homework, ProblemSet/HW Set 4.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -152,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term4/Algo/2SAT solver.md"
+                "file": "Term4/Algo/Homework, ProblemSet/HW Set 4.md"
               }
             }
           },
@@ -178,7 +130,7 @@
       {
         "id": "14d9efe52874fe3e",
         "type": "tabs",
-        "dimension": 37.95066413662239,
+        "dimension": 49.60876369327074,
         "children": [
           {
             "id": "2a67915f4db8517c",
@@ -196,19 +148,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 100
+    "width": 188.15509033203125,
+    "collapsed": true
   },
-  "active": "a155fa6a58678faf",
+  "active": "75e60096be5d684f",
   "lastOpenFiles": [
-    "Term4/Algo/2SAT solver.md",
-    "Term4/Algo/Kosaraju's Algorithm.md",
-    "Term4/Algo/Implication Graph.md",
-    "Term4/Algo/Strongly connected components.md",
+    "Term4/Algo/Homework, ProblemSet/HW Set 4.md",
+    "Term4/Algo/Notes/Breadth-First-Search (BFS).md",
+    "Term4/Algo/Notes/Algo week 6.md",
     "Term4/Algo/Algo.md",
-    "Term4/ISP/IS & Programming.md",
-    "Term4/ISP/Notes/Android 1.md",
-    "Term4/Algo/Homework, ProblemSet/HW Set 2.md",
-    "Term4/ISP/Notes/Week 1 - ArrayList, LinkedList, Generics.md",
-    "Term4/ISP/Notes/W1.md"
+    "Term4/Algo/Notes/Depth-First-Search (DFS).md",
+    "Term3/DDW/Notes/Graph Search.md",
+    "Term4/Algo/Notes/Topological sort.md",
+    "Term4/Algo/Homework, ProblemSet/PSet 1.md",
+    "Term4/Algo/Notes/Connectedness.md",
+    "Term4/Algo/Notes/Graphs.md"
   ]
 }

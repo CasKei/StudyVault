@@ -2,6 +2,8 @@
 tags: #50.001
 ---
 [[IS & Programming|ISP]]
+[[Textbook notes]]
+
 ## 2.1 Introduction
 The focus of this chapter is on leaning elementary programming techniques to solve problems.
 ## 2.2 Writing a Simple Program
@@ -123,19 +125,19 @@ All identifiers obey the following rules:
 - can be of any length
 
 ## 2.5 Variables
-Variables are used to represent values that may be changed in the program.
+**Variables** are used to represent values that may be changed in the program.
 
-Variables are for representing data of a certain type. Declare it by telling the compiler its name as well as what type of data it can store.
+Variables are for representing data of a certain type. **Declare** it by telling the compiler its name as well as what type of data it can store.
 Variable declaration tells the compiler to allocate appropriate memory space for the variable based on its data type
 Syntax:
 `datatype variableName;`
 
 Datatypes: `int`, `double`, `byte`, `short`, `long`, `float`, `char`, `boolean`.
 
-If of the same type, can be declared together:
+If of the same type, can be declared *together*:
 `datatype var1, var2 ...;`
 
-Can declare and initialise initial value in one step
+Can **declare** and **initialise** initial value in one step
 `int x = 4;`
 is equivalent to 
 `int x;
@@ -169,9 +171,9 @@ Sticking with the Java naming conventions makes your programs easy to read and a
 
 Descriptive names
 
-Name variables and methods: use lowercase for variables and methods, concatenate multiple words, camelCase
-Name classes: capitalise first letter, CapCase
-Name constants: capitalise all letters, use underscores between words
+Name **variables** and **methods**: use lowercase for variables and methods, concatenate multiple words, **camelCase**
+Name **classes**: capitalise first letter, **CapCase**
+Name **constants**: **capitalise all** letters, use **underscores** between words
 
 ## 2.9 Numeric Data Types and Operations
 Java has 6 numeric types for ints and floats with operators `+`, `-`, `*`, `/`, and `%`.
@@ -226,9 +228,60 @@ Make a number a `double` by appending the letter `d` or `D`.
 ## 2.11 Evaluating Expressions and Operator Precedence
 Java expressions are evaluated in the same way as arithmetic expressions.
 
-Listing2.6 `FahrenheitToCelsius.java`
-```java
-import java.util.Scanner;
+## 2.12 Case Study: Displaying the current time
+*You can invoke `System.currentTimeMillis()` to invoke current time.*
 
-public 
+`currentTimeMillis()` method in the `System` class returns milliseconds elapsed since Jan 1 1970 GMT. This is the UNIX epoch. Epoch is when time starts, and 1970 is when the UNIX operating system was formally introduced.
+
+```java
+public class ShowCurrentTime {
+	public static void main (String[] args) {
+		long totalMilliseconds = System.currentTimeMillis();
+		long totalSeconds = totalMilliseconds / 1000;
+		long currentSecond = totalSeconds % 60;
+		long totalMinutes = totalSeconds / 60;
+		long currentMinute = totalMinutes % 60;
+		long currentHour = totalHours % 24;
+		System.out.println("Current time is" + currentHour + ":" + currentMinute + ":" + " GMT");
+	}
+}
 ```
+
+## 2.13 Augmented Assignment Operations
+*The operators `+`, `-`, `*`, `/`, and `%` can be combined with the assignment operator `=` to form augmented operators.*
+
+`+=, -=, *=, /=, %=`
+
+## 2.14 Increment and Decrement Operators
+*The increment operator `++` and decrement operator `--` are for incrementing and decrementing a variable by 1.*
+
+```java
+int i = 10;
+int newNum = 10 * (++1);
+System.out.print("i is " + i + ", newNum is " + newNum);
+```
+> i is 11, newNum is 110
+
+## 2.15 Numeric Type Conversoins
+*Floating-point numbers can be converted into integers using **explicit casting***.
+
+If `int` and `float/double` are involved in a binary operation, Java automatically converts the integer into a floating point value.
+
+You can always assign a value to a numeric variable whose type supports a larger range of values.
+
+You cannot assign a variable of a type with smaller range unless you use *type casting*.
+*Casting* a type with a small range to a type with larger range is *widening* a type. Otherwise larger to smaller is *narrowing*.
+Java automatically widens, but you must narrow explicitly.
+
+The syntax for casting a type is to specify the target type in parentheses, followed by variable name or value to be cast.
+
+*Caution: casting is necessary if you are assigning a value to a variable of a smaller type range. A compile error will occur if casting is not used. But loss of information may lead to inaccuracy.*
+
+## 2.16 Software Development Process
+*The software development life cycle is a multistage process that includes requirements specification, analysis, design, implementation, testing, deployment and maintenance.*
+
+## 2.17 Case Study: Counting Monetary Units
+
+## 2.18 Common Errors and Pitfalls
+*Common elementary programming errors often involve undeclared variables, uninitialised variables, integer overflow, unintended integer division, and round-off errors.*
+

@@ -30,7 +30,7 @@ Algo starting at `v`
 - repeat: $F' = \set{\text{all new neighbours of vertices in F}}$, $F=F'$
 - until all possible vertices are found.
 
-> **Frontier**: the last level of reachable bodes
+> **Frontier**: the last level of reachable nodes
 > **Level**: stores the nodes seen so far and their distance from the root
 
  ## Problem: Cycles

@@ -3,6 +3,7 @@ aliases: ISP, 50.001
 ---
 
 [Course Handout](https://docs.google.com/document/d/1UwOEHwjA18vm4vhfzTBcV6qRlVub2DHofblT_BcInSU/edit)
+
 [[Textbook notes]]
 
 # Lectures

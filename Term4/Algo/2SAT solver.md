@@ -43,12 +43,17 @@ First find groups of [[Strongly connected components]] by using [[Kosaraju's Alg
 ## Check SAT
 After finding the [[Strongly connected components]], check if the variable and its complement exists within the same [[Strongly connected components]]. If it does, it is UNSAT as it is impossible for a variable to be both true and false.
 
+
+
 ## Procedure
 Create [[Implication Graph]]
 
 Find [[Strongly connected components]].
 1. 2 [[Depth-First-Search (DFS)|DFS]]
-	1. [[Depth-First-Search (DFS)|DFS]] 1 aims to arrange nodes in the stack based on which node vomes first
+	1. [[Depth-First-Search (DFS)|DFS]] 1 aims to arrange nodes in the stack based on which node comes first
 	2. Transpose to indentify paths between nodes where arrows are reversed to check for [[Strongly connected components]] on both paths x -> y or y -> x.
 	3. [[Depth-First-Search (DFS)|DFS]] 2 on the transposed graph to find [[Strongly connected components]] between adjacent nodes.
 
+```php
+function 
+```

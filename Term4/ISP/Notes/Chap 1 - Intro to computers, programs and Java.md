@@ -2,6 +2,8 @@
 tags: #50.001
 ---
 [[IS & Programming|ISP]]
+[[Textbook notes]]
+
 ## 1.1 Introduction
 The central theme of this book is to learn how to solve problems by writing a program.
 ## 1.2 What is a Computer?
