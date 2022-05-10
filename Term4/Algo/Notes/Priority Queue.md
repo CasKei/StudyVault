@@ -6,7 +6,7 @@ tags: #50.004
 [[Binary Heap and Heapsort]]
 [[Heap]]
 [[Data Types and Data Structures]]
-[[L03.01 - Heap]]
+[[W3 Heap]]
 
 > A Priority Queue is an [[Data Types and Data Structures#Data types versus abstract data types ADT|abstract data type (ADT)]] that consists of a set $S$ of elements, together with operations on S
 

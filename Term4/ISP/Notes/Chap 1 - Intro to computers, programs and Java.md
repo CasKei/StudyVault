@@ -16,7 +16,7 @@ Hardware:
 - Output devices
 - Communication devices
 
-Components are interconnected by a subsystemcalled a bus.
+Components are interconnected by a subsystem  called a bus.
 The bus is built into the computer's motherboard, which is a circuit case that connects all of the parts of a computer together.
 ### 1.2.1 CPU
 Contral processing unit.
@@ -43,12 +43,12 @@ Each byte has a unique address.
 The address can be used to locate the byte and retrieve the data.
 Since bytes can be accessed in any order, the memory is also referred to as random access memory RAM.
 ### 1.2.4 Storage decides
-Long term memroy that can be moved to RAM when needed.
+Long term memory that can be moved to RAM when needed.
 - Magnetic disk drives
 - Optical disc drives
-- USB flash drives (universal serial bu)
+- USB flash drives (universal serial bus)
 
-Drives are devices fo operating a medium, such as disks and CDs. A storage medium physically stores data and prgram isntructions. Drive reads data from medium and writes data onto the medium.
+Drives are devices for operating a medium, such as disks and CDs. A storage medium physically stores data and prgram isntructions. Drive reads data from medium and writes data onto the medium.
 ### 1.2.5 Input and Output Devices
 Keyboard, Mouse,  Monitor, etc.
 ### 1.2.6 Communication Devices
@@ -66,7 +66,7 @@ Uses a short descriptive word known as a mnemonic to represent each of the machi
 English like.
 Instructions are called statements.
 
-Progrm is called a source program or source code.
+Program is called a source program or source code.
 Source code must be translated into machine code using an interpreter or a compiler.
 - An interpreter reads one statement from source code, traslates it to machine code or virtual machine code, then executes it.
 - A compiler translates the entire source code into a machine code file, then the file is executed.
@@ -78,7 +78,7 @@ Schedule operations.
 ### 1.4.1 Controlling and Monitoring System Activities
 Security and management
 ### 1.4.2 Allocating and Assigning System Resources
-Determine what resources a program needs and alloctes them.
+Determine what resources a program needs and allocates them.
 ### 1.4.3 Scheduling Operations
 Multiprogramming: multiple programs to run simultaneously by sharing the same CPU
 Multithreading: a single program to execute multiple tasks at the same time.
@@ -88,7 +88,7 @@ Java: simple, object oriented, distributed, interpreted, robust, secure, archite
 
 Full-featured, general-purpose.
 
-The WWW is an electronic info repository accessible on the Internet. Java is attractive as Java programs canrun from a web browser, called applets.
+The WWW is an electronic info repository accessible on the Internet. Java is attractive as Java programs can run from a web browser, called applets.
 
 Today you can create rich Internet Applications (RIA)..
 ## 1.6 The Java Language Specification, API, JDK, and IDE.

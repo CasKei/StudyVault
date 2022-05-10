@@ -4,7 +4,7 @@ tags: #50.001
 [[IS & Programming|ISP]]
 
 ## ArrayList
-[[Week 1 - ArrayList, LinkedList, Generics]]
+[[ArrayList, LinkedList, Generics]]
 ```java
 List<Integer> a = new ArrayList<>();
 a.add(1);
@@ -128,7 +128,7 @@ public void log(String s){
 - By reusing the same method name for different implementation given different input arguments
 
 ### Parametric polymorphism: Generics
-[[Week 1 - ArrayList, LinkedList, Generics]]
+[[ArrayList, LinkedList, Generics]]
 **Generics** are type parameters, often used in augmenting some type constructors, e.g. `ArrayList<>`, `Optional<>`...
 
 In the following the implementations of `getFirst()`, `setFirst()`, `getSecond()`, `setSecond()` and `swap()` are independent of what `T` and `S` are.

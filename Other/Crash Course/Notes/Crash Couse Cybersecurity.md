@@ -1,3 +1,6 @@
+---
+tags: CC, Security
+---
 # Cybersecurity
 A set of techniques to protect the [[#secrecy]], [[#integrity]], and [[#availability]] of computer systems and data against threats.
 

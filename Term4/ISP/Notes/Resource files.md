@@ -4,6 +4,37 @@ tags: #50.001
 [[IS & Programming|ISP]]
 [[Google Developer Training]]
 
+[[Android 2]]
+## res/values folder
+Stores constants that appear throughout the app, such as 
+- Strings
+- Style definitions
+- Color definitions
+- Dimensions
+
+Useful because
+- Different parts of app can use same constants
+- Changes can be made in one place instead of trawling through your code
+
+## Modifying res/values/strings.xml
+**strings.xml** is where you place string constrants used throughout the app, e.g.
+- Name of app and activities
+- Text of buttons or other widgets
+- Messages in Toasts
+
+Might look like
+```xml
+<string name="app_name">Exchange Rate </string>  
+<string name="action_settings">Settings</string>  
+<string name="set_exchange_rate">Set Exchange Rate</string>  
+<string name="main_activity_name">Convert Currency</string>
+```
+As you code your app, you are free to modify or add to this list.
+An example of how constants are accessed by the **R** class is
+**R.string.set_exchange_rate** (note how string is spelt)
+
+## Google cont.
+
 Resource files are a way of separating static values from code so that you don't have to change the code itself to change the values. You can store all the strings, layouts, dimensions, colors, styles, and menu text separately in resource files.
 
 Resource files are stored in folders located in the `res` folder when viewing the Project > Android pane. These folders include:

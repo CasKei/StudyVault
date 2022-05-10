@@ -20,4 +20,8 @@ tags: #StudyVault
 [[Algo]]
 [[Digital Humanities|DH]]
 
+## Term 5
+[[50.005 Computer System Engineering]]
+
+
 [[UMD proposed courses]]

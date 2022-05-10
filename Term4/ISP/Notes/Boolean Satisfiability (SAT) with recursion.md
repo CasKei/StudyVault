@@ -3,7 +3,7 @@ tags: #50.001
 ---
 [[IS & Programming|ISP]]
 [[W4]]
-[[L02.01 - Sorting, solving recursion]]
+[[Sorting, solving recursion]]
 [[Recursion]]
 [[Logic Synthesis]]
 

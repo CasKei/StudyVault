@@ -23,9 +23,8 @@ Give the adjacency-matrix representation of $G$. When giving your answer, please
 | 0   | 1   | 0   | 0   | 0   | 1   | 1   | **e**   |
 | 0   | 1   | 0   | 0   | 0   | 0   | 1   | **f**   |
 | 1   | 0   | 0   | 1   | 0   | 0   | 0   | **g**   |
-
 <br>
-## 2)
+## 2) 
 Consider the directed graph $G$ in Fig. 1, and run the breadth-first search on $G$, with vertex $c$ as the source vertex. Assume that at each level, the vertices are traversed in alphabetical order.
 
 ### i)
@@ -58,7 +57,7 @@ Show that $r$ is a cut vertex of $G$ if and only if $r$ (treated as a vertex in 
 ***
 $r$ is the root of the DFS tree $T$.
 
-Suppose $r$ has no children. Since it is the root, it is the sole vertex in the whole graph. Removing it will result in an empty subgraph $G-r$ that by definitoin cannot be disconnected. So $r$ is not a cut vertex.
+Suppose $r$ has no children. Since it is the root, it is the sole vertex in the whole graph. Removing it will result in an empty subgraph $G-r$ that by definition cannot be disconnected. So $r$ is not a cut vertex.
 
 Suppose $r$ has one child in $T$. If $r$ is removed, the affected edges include the tree edge between $r$ and its child in $T$, and the back edges of $r$ linking it to its ancestors , not shown in $T$ but in $G$. However, from the DFS graph, the removal of the root with one child does not disconnect the rest. So $r$ is not a cut vertex.
 
@@ -123,7 +122,7 @@ Hence its complexity is worst case $O(n + p)$.
 
 In hindsight the map isn't needed in this case as the question is asking for number of semesters only, so simply incrementing the count is enough. But with the map, we can see and store what mods to take at each sem.
 <br>
-## 5) [5]
+## 5) 
 A 1-dimensional variable jumping maze can be represented as an array of integers $A[1..n]$, and an initial jump distance $j_1$. A token starts on the left-most square (index 1), and your goal is to bring the token to the rightmost square at index n.
 ![[Pasted image 20220319093848.png]]
 For each turn $t$, starting from turn $t = 1$, you are allowed to move your token exactly $j_t$ steps left or right. These $j_t$ steps must all be in the same direction in that turn, which means that at each turn you are deciding between the two directional choices. Then, your jump distance $j_t+1$ in the next turn $t + 1$ will change by the value under the token, meaning that $j_t+1 = j_t + A[x_t]$. 
@@ -141,9 +140,63 @@ Design an algorithm that takes as its two inputs an integer array $A[1..n]$ (who
 ***
 Inputs: int array $A[1...n]$, initial jump distance $j_1$
 Output: maximum number of steps required to solve maze if have solution, else -1
+
+We need a way to track the nature of the positions we visit.
 ```php
-// create graph
-function makeGraph(A, j1)
-	G.root <- A[0]
-	
+class Point()
+	Point(val)
+		this.color = "WHITE"
+		this.currentDists = []
+		this.val = val
+
+function solution(A, j1)
+	count = 0
+	position = 1
+	position_arr = []
+
+	for (i = 1; i <= A.length; i++)
+		pos = Point(A[index])
+		position_arr.append(pos)
+
+	count = helper(position_arr, position, j1, count)
+	return count
+
+function helper(position_arr, position, jump, count)
+	// out of range or no jump available
+	if (position <= 0 || position > position_arr.length || jump == 0)
+		return -1
+	// reached end
+	else if position == position_arr.length
+		return count
+	// more possible moves
+	else if position_arr[position].color == "grey"
+		if jump in position_arr[position].currentDists // jump same as old position == loop
+			return -1
+
+	jump += position_arr[position+1].value // change jump according to array entry (use next entry to get next jump value)
+	count += 1 // moves are valid. increase count.
+
+	position_arr[position].color = "GREY"
+	position_arr[position].currentDists.append(jump) // add jump to distance arr
+
+	// recurse for next 2 possible positions
+	nextPos1 = position - jump
+	nextPos2 = position + jump
+	count1 = helper(nextPos1, position, jump, count)
+	count2 = helper(nextPos2, position, jump, count)
+
+	if count1 < 0 // out of range
+		ans = count2
+	else if count2 < 0 // out of range
+		ans = count1
+	else 
+		ans = min(count1 , count2) // return shortest path if both paths valid
+
+	position_arr[position].color = "BLACK" // mark visited since all paths from node explored
+	return ans // shortest path required
 ```
+The helper function branches into the moves' two possible moves, to the left or to the right, whilst checking for loop, and out of range base cases, done recursively for all possible moves any branch can go.
+A DFS graph is used to find if the maze has a solution for each possible move.
+If more than one possible move is found, it is to return the shortest path.
+This DFS search takes $O(V+E)$ time complexity. The graph will only reach one correct answer if there is one. In the worst case where there is a solution and the pointer has to jump to $n$ vertices out of a total of $n$ vertices where each vertex represents one possible state in the path the pointer can ever jump to, the graph DFS can reach a total of $n$ vertices with $n-1$ edges.
+Total time complexity is then $O(n + (n-1)) = O(2n-1) = O(n)$.

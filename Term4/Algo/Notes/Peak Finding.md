@@ -4,7 +4,7 @@ tags: #50.004
 ---
 [[Algo]]
 [[Algo week 2]]
-[[L02.02 - Master Theorem, Divide and Conquer, Peak Finding]]
+[[Master Theorem, Divide and Conquer, Peak Finding]]
 
 ## Peak Finding Problem (PFP): 1D array
 ---

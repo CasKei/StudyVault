@@ -1,0 +1,32 @@
+.include beta.uasm
+|| we call fact(4) first
+LD(R31, n_1, R1)	| load 4 to R1
+ADDC(R31, 1, R2)    | instantiate r
+
+check_while_fact_4: CMPLT(R31, R1, R0)	| compute whether n_1 > 0
+BNE(R0, while_true_fact_4, R31)	| if R0 != 0, go to while_true_fact_4
+ST(R2, result_1, R31)	| store to result_1
+
+|| then we call fact(9)
+LD(R31, n_2, R1) 	| load 9 to R1, rewriting its old value
+ADDC(R31, 1, R2)    | reset r
+
+check_while_fact_9: CMPLT(R31, R1, R0)	| compute whether n_1 > 0
+BNE(R0, while_true_fact_9, R31)	| if R0 != 0, go to while_true_fact_9
+ST(R2, result_2, R31)	| store to result_2
+
+HALT() | stop
+
+while_true_fact_9: MUL(R1, R2, R2)	| r = r*n
+SUBC(R1, 1, R1)	| n = n-1
+BEQ(R31, check_while_fact_9, R31)	| always go back to check_while_fact_9
+
+
+while_true_fact_4: MUL(R1, R2, R2)	| r = r*n
+SUBC(R1, 1, R1)	| n = n-1
+BEQ(R31, check_while_fact_4, R31)	| always go back to check_while_fact_4
+
+n_1 : LONG(4)
+n_2 : LONG(9)
+result_1 : LONG(1)
+result_2 : LONG(1)

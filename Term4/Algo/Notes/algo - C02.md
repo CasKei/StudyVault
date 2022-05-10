@@ -3,8 +3,8 @@ aliases: algo class 2
 tags: #50.004, #practice
 ---
 [[Algo]]
-[[L02.01 - Sorting, solving recursion]]
-[[L02.02 - Master Theorem, Divide and Conquer, Peak Finding]]
+[[Sorting, solving recursion]]
+[[Master Theorem, Divide and Conquer, Peak Finding]]
 
 # Use master theorem
 ## Exercise 1

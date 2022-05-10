@@ -2,8 +2,8 @@
 aliases: algo class 1
 tags: #50.004, #practice
 ---
-[[L01.01 - Basic Definitions and Complexity]]
-[[L01.02 - Document Distance]]
+[[Basic Definitions and Complexity]]
+[[Document Distance]]
 [[Algo week 1]]
 [[Algo]]
 

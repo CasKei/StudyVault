@@ -4857,9 +4857,12 @@ var Replacer = class {
     return result.replace(/&nbsp;/gi, " ");
   }
   replaceLinks(text, path) {
-    return text.replace(/\[\[\[([\s\S]*)\]\]\]/g, (_, args) => {
+    return text.replace(/\[\[\[([\s\S]*?)\]\]\]/g, (_, args) => {
       const split = args.split("|");
       const file = this.plugin.app.metadataCache.getFirstLinkpathDest(split[0], path);
+      if (!file) {
+        return "File with name: " + split[0] + " not found";
+      }
       const url = this.plugin.app.getObsidianUrl(file);
       let alias = file.basename;
       if (split[1]) {
@@ -4873,6 +4876,9 @@ var Replacer = class {
       return this.plugin.app.vault.adapter.getFullPath("");
     }
     const file = this.plugin.app.vault.getAbstractFileByPath(path);
+    if (!file) {
+      return this.plugin.app.vault.adapter.getFullPath("");
+    }
     const folder = this.plugin.app.vault.getDirectParent(file);
     return this.plugin.app.vault.adapter.getFullPath(folder.path);
   }
@@ -5222,7 +5228,7 @@ var DebouncedProcessors = class {
       if (el.dataset.plantumlDebounce) {
         const debounceId = el.dataset.plantumlDebounce;
         if (this.debounceMap.has(debounceId)) {
-          this.debounceMap.get(debounceId)(source, el, ctx);
+          yield this.debounceMap.get(debounceId)(source, el, ctx);
         }
       } else {
         const func = (0, import_obsidian2.debounce)(processor, this.debounceTime, true);
@@ -5310,6 +5316,11 @@ var PlantumlPlugin = class extends import_obsidian5.Plugin {
       yield this.loadSettings();
       this.addSettingTab(new PlantUMLSettingsTab(this));
       this.replacer = new Replacer(this);
+      this.serverProcessor = new ServerProcessor(this);
+      if (import_obsidian5.Platform.isDesktopApp) {
+        this.localProcessor = new LocalProcessors(this);
+      }
+      const processor = new DebouncedProcessors(this);
       if (isUsingLivePreviewEnabledEditor()) {
         const view = (init_PumlView(), PumlView_exports);
         (0, import_obsidian5.addIcon)("document-" + view.VIEW_TYPE, LOGO_SVG);
@@ -5318,11 +5329,6 @@ var PlantumlPlugin = class extends import_obsidian5.Plugin {
         });
         this.registerExtensions(["puml"], view.VIEW_TYPE);
       }
-      this.serverProcessor = new ServerProcessor(this);
-      if (import_obsidian5.Platform.isDesktopApp) {
-        this.localProcessor = new LocalProcessors(this);
-      }
-      const processor = new DebouncedProcessors(this);
       this.registerMarkdownCodeBlockProcessor("plantuml", processor.png);
       this.registerMarkdownCodeBlockProcessor("plantuml-ascii", processor.ascii);
       this.registerMarkdownCodeBlockProcessor("plantuml-svg", processor.svg);

@@ -1,5 +1,5 @@
 ---
-aliases: tree, forest
+aliases: forest
 tags: #50.004
 ---
 [[Algo]]

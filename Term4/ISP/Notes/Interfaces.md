@@ -1,4 +1,5 @@
 ---
+aliases: interface
 tags: #50.001
 ---
 [[IS & Programming|ISP]]
@@ -127,4 +128,27 @@ public class IntegerAbsComparator implements Comparator<Integer> {
 ![[Pasted image 20220212113044.png]]
 ![[Pasted image 20220212113056.png]]
 
+## Generic Classes & Interfaces
+[[ArrayList, LinkedList, Generics#Generics|Generic Classes]]:
+```java
+ArrayList<Integer> arrayList = new ArrayList<>();
+```
+So the code below will have compile-time error:
+```java
+arrayList.add("abc");
+```
 
+[[#Comparable Interface]]
+```java
+public class Octagon implements Comparable<Octagon> {
+	//code not shown
+	@Override
+	public int compareTo(Octagon octagon) {
+		//code not shown
+	}
+}
+```
+
+The [[ArrayList, LinkedList, Generics#ArrayList LinkedList|ArrayList]] class is an example of a [[ArrayList, LinkedList, Generics#Generics|Generic class]] where a class takes in an object or objects as a parameter and operates on it.
+
+Similarly, the `Comparable<T>` [[Interfaces|interface]] is an example of a [[ArrayList, LinkedList, Generics|Generic]] [[Interfaces|interface]]. 

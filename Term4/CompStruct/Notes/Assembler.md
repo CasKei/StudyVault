@@ -74,7 +74,7 @@ If one were to store `0xDEADBEEF` in big-endian format, it will result in:
 | ------- | ---- | ---- | ---- | ---- |
 | Content | 0xDE | 0xAD | 0xBE | 0xEF |
 
-**Note** that our `bsim.jar` program displays the memory address the other way around, that is **high address** on the **left** and **low address** on the **right**, so our little-endian format in \betaβ _looks like_ the big-endian format for easy debugging:
+**Note** that our `bsim.jar` program displays the memory address the other way around, that is **high address** on the **left** and **low address** on the **right**, so our little-endian format in $\beta$ _looks like_ the big-endian format for easy debugging:
 
 | Address | 0x3  | 0x2  | 0x1  | 0x0  |
 | ------- | ---- | ---- | ---- | ---- |

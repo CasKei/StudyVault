@@ -23,6 +23,7 @@ Xreset2 0#31 RESETAddr[30:0] bus
 
 ***** JMP mux *************
 * BEGIN ANSWER
+Xjmp_mux ia31 0 ra31 jmp31 mux2
 
 
 
@@ -31,7 +32,19 @@ Xreset2 0#31 RESETAddr[30:0] bus
 
 **** 5-to-1 PCSEL mux *****
 * BEGIN ANSWER
+Xpcsel_mux1 PCSEL1#32 PCSEL0#32
++ ia31 PC_4[30:2] 0#2
++ jmp31 ra[30:2] 0#2
++ ia31 PC_4_SXTC[30:2] 0#2
++ ILLOP[31:0]
++ pcsel_mux1[31:0]
++ mux4
 
+Xpcsel_mux2 PCSEL2#32
++ pcsel_mux1[31:0]
++ XAddr[31:0]
++ pcsel_mux2[31:0]
++ mux2
 
 * END ANSWER
 ****************************
@@ -39,15 +52,18 @@ Xreset2 0#31 RESETAddr[30:0] bus
 
 **** RESET mux *************
 * BEGIN ANSWER
-
+Xreset_mux RESET#32
++ pcsel_mux2[31:0]
++ RESETAddr[31:0]
++ reset_mux[31:0]
++ mux2
 
 * END ANSWER
 ****************************
 
 **** PC Register ***********
 * BEGIN ANSWER
-
-
+Xpc_reg reset_mux[31:0] clk#32 ia[31:0] dreg
 * END ANSWER
 ****************************
 
@@ -64,7 +80,13 @@ XPC43 0#2 PC_4[1:0] bus
 
 **** shift add unit ********
 * BEGIN ANSWER
+Xincrement_c
++ increment_4[31:0]
++ id15#14 id[15:0] 0#2
++ increment_c[31:0]
++ adder32
 
+Xbus_c ia31 increment_c[30:2] 0#2 PC_4_SXTC[31:0] bus
 
 * END ANSWER
 ****************************

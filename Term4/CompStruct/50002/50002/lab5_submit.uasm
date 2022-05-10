@@ -1,7 +1,6 @@
 .include beta.uasm
 .include lab5checkoff.uasm
 
-
 count_bull_cows: | your subroutine must have this name
 	| standard subroutine entry sequence
 	PUSH(LP)	
@@ -26,17 +25,81 @@ count_bull_cows: | your subroutine must have this name
 	CMOVE(0xF,R8)		| set initial val of var mask = 0xF
 	CMOVE(0,R3)		| set initial val of var i = 0
   	CMOVE(0,R4)   | set initial val of var j = 0
-	
-	|||||||||||||||||||||||||||||||||||||||||||||||
-	|||| … your code here, leave score (return value) in R0 …
-	|||||||||||||||||||||||||||||||||||||||||||||||
 
-	| … POP saved registers above in reverse order…
+    bull: 
+    	CMPLTC(R3, 4, R9)
+    	BEQ(R9, end_bull, R31)
+    	AND(R11, R8, R9)
+    	AND(R12, R8, R10)
+    	CMPEQ(R9, R10, R9)
+    	BEQ(R9, end_if_bull, R31)
+
+    	ADDC(R1, 1, R1)
+    	OR(R11, R8, R11)
+    	OR(R12, R8, R12)
+
+    end_if_bull:
+    	SHLC(R8, 4, R8)
+    	ADDC(R3, 1, R3) |increment 1
+
+		BR(bull)
+
+    end_bull: 
+    	CMOVE(0, R2)
+    	CMOVE(0, R3)
+
+    cow: |cows
+    	CMPLTC(R3, 4, R9)
+    	BEQ(R9, end_cow, R31)
+		ANDC(R11, 0xF, R6)
+		SHRC(R11, 4, R11)
+		CMPEQC(R6, 0xF, R9)
+		BNE(R9, end_if_cow1, R31)
+    	ADDC(R12, 0, R5)
+    	CMOVE(0xF, R8)
+
+    	CMOVE(0, R4)
+    cow_inner:
+    	CMPLTC(R4, 4, R9)
+    	BEQ(R9, end_if_cow1, R31)
+    	ANDC(R5,0xF, R7)
+    	SHRC(R5, 4, R5)
+    	CMPEQ(R7, R6, R9)
+    	BEQ(R9, end_if_cow2, R31)
+		ADDC(R2, 1, R2)
+		OR(R12, R8, R12)
+    	BR(end_if_cow1)
+
+    end_if_cow2:
+    	SHLC(R8, 4, R8)  
+
+    	ADDC(R4, 1, R4)
+    	BR(cow_inner)
+    
+    end_if_cow1:
+    	ADDC(R3, 1, R3)
+    	BR(cow)
+
+    end_cow:
+    	SHLC(R1, 4, R1)
+    	ADD(R1, R2, R0) | store value in R0
+
+    POP(R12)
+	POP(R11)
+	POP(R10)
+	POP(R9)
+	POP(R8)
+	POP(R7)
+	POP(R6)
+	POP(R5)
+	POP(R4)
+	POP(R3)
+	POP(R2)
+	POP(R1)
 	MOVE(BP,SP)
 	POP(BP)
 	POP(LP)
 	RTN()
-
 
 StackBase: 
 	LONG(.+4)		| Pointer to the bottom of stack

@@ -80,16 +80,28 @@ Xresetmux reset wr_temp 0 wr_cu mux2
 
 **** Branch check **********
 * BEGIN ANSWER
-
-
+X_bc_inv id[31] fourAndA inverter
+X_bc_fourAnd fourAndA id[30] id[29] id[28] twoAndA and4
+X_bc_xor id[27] id[26] twoAndB xor2
+X_bc_twoAnd twoAndA twoAndB br_chk and2
+X_bc_zxor id[26] z opmux1sel Xor2
+X_bc_opmux1 opmux1sel vdd 0 pcsel_temp1[0] mux2
+.connect 0 pcsel_temp1[1] pcsel_temp1[2]
+X_pcsel_cu_mux br_chk#3 pcsel_temp[2:0] pcsel_temp1[2:0] pcsel_cu[2:0] mux2
 * END ANSWER
 ****************************
 
 
 ****  IRQ handling *********
 * BEGIN ANSWER
-
-
+X_irq_inv ia[31] And1 inverter
+X_irq_and irq And1 irqsel and2
+X_irq_wdsel irqsel#2 wdsel_cu[1:0] 0#2 wdsel[1:0] mux2
+X_irq_wasel irqsel wasel_cu vdd wasel mux2
+X_irq_werf irqsel werf_cu vdd werf mux2
+X_irq_wr irqsel wr_cu 0 wr mux2
+X_irq_pcsel01 irqsel#2 pcsel_cu[1:0] 0#2 pcsel[1:0] mux2
+X_irq_pcsel2 irqsel pcsel_cu[2] vdd pcsel[2] mux2
 * END ANSWER
 ****************************
 

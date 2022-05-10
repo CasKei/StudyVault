@@ -4,7 +4,7 @@ tags: #50.004
 ---
 [[Algo]]
 [[Binary Heap and Heapsort]]
-[[L03.01 - Heap]]
+[[W3 Heap]]
 
 ## What is a Data Type
 A type of data.

@@ -4,7 +4,7 @@ tags: #50.004
 ---
 [[Algo]]
 [[Algo week 2]]
-[[L02.02 - Master Theorem, Divide and Conquer, Peak Finding]]
+[[Master Theorem, Divide and Conquer, Peak Finding]]
 # Master Method for Solving Recurrences
 For recurrences of the form $T(n) = aT(n/b) + f(n)$,
 where $a \geq 1$ and $b > 1$ are constants and $f(n)$ is an asymptotically positive function.
@@ -21,9 +21,9 @@ The function $f(n)$ encompasses the cost of dividing the problem and combining t
 ---
 Let $a \geq 1$ and $b > 1$ be constants, let $f(n)$ be a function, and let $T(n)$ be defined on the non-negative integers by the recurrence $$T(n) = aT(n/b) + f(n)$$ where we interpret $\dfrac{n}{b}$ to mean either $\lfloor{n/b}\rfloor$ or $\lceil{n/b}\rceil$.
 Then $T(n)$ has the following asymptotic bounds:
-1. If $f(n) = O(n^{\log_b{a} - \epsilon})$ for some constant $\epsilon > 0$, then $T(n) = \Theta(n^{\log_b{a}})$.
-2. If $f(n) = \Theta(n^{\log_b{a}})$, then $T(n) = \Theta(n^{\log_b{a}} \lg{n}) = \Theta(f(n)\lg{n})$.
-3. If $f(n) = \Omega(n^{\log_b{a} + \epsilon})$ for some constant $\epsilon > 0$, and if $af(n/b) \leq cf(n)$ for some constant $c<1$, then $T(n) = \Theta(f(n))$.
+1. If $f(n) = O\left(n^{\log_b{a} - \epsilon}\right)$ for some constant $\epsilon > 0$, then $T(n) = \Theta\left(n^{\log_b{a}}\right)$.
+2. If $f(n) = \Theta\left(n^{\log_b{a}}\right)$, then $T(n) = \Theta(n^{\log_b{a}} \lg{n}) = \Theta(f(n)\lg{n})$.
+3. If $f(n) = \Omega\left(n^{\log_b{a} + \epsilon}\right)$ for some constant $\epsilon > 0$, and if $af(n/b) \leq cf(n)$ for some constant $c<1$, then $T(n) = \Theta(f(n))$.
 ---
 What it says:
 - In each case, we compare $f(n)$ with $n^{\log_b{a}}$.

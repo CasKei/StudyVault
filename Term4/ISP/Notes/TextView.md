@@ -4,6 +4,20 @@ tags: #50.001
 [[IS & Programming|ISP]]
 [[Google Developer Training]]
 
+## Overview
+Basic widget:
+```xml
+<TextView
+	android:id="@+id/myTextView"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:gravity="end"
+	android:text="second"/>
+```
+- **id attribute** enables you to give a unique ID to each widget in the XML layout file. Allows you to access the widget through the java code
+- **text attribute** specifies the text that the widget should contain
+
 ## TextView
 One `View` subclass you may use often is the [`TextView`](https://developer.android.com/reference/android/widget/TextView.html) class, which displays text on the screen. You can use `TextView` for a `View` of any size, from a single character or word to a full screen of text. You can add a resource `id` to the `TextView` in the layout, and control how the text appears using attributes in the layout file.
 

@@ -1,5 +1,5 @@
 ---
-tags: CC, Crash Course
+tags: CC, Security
 ---
 [[Crash Couse Cybersecurity]]
 [[Crash Course Cryptography]]

@@ -38,7 +38,7 @@ int x,y;
 x = 20
 y = x + 5
 ```
-```haskell
+```cpp
 .include beta.uasm
 
 LD(R31, x, R1)		| load the content of memory address x to R1
@@ -57,7 +57,7 @@ x[0] = 12;
 x[1] = 13;
 x[2] = x[0] + x[1];
 ```
-```haskell
+```cpp
 .include beta.uasm
 
 ADDC(R31, 12, R0)	| supposed content of x[0]

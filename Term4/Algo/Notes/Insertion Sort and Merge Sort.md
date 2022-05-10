@@ -4,7 +4,7 @@ tags: #50.004
 ---
 [[Algo]]
 [[Algo week 2]]
-[[L02.01 - Sorting, solving recursion]]
+[[Sorting, solving recursion]]
 [[Analysing Complexity of Recursions]]
 
 ## Sorting Problem

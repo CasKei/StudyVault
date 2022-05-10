@@ -102,7 +102,7 @@ Basic anatomy of CPU: [[#Example of a Basic Programmable Control System Datapath
 ![[Pasted image 20220217135006.png]]
 
 Functionalities of a CPU:
-- Lead a series of instructions from the [[#Memory Unit]]
+- Load a series of instructions from the [[#Memory Unit]]
 - Produce the corresponding control signals, hence effectively executing that loaded instruction using the ALU
 - And store them in its (limited capacity) internal storage
 - Store the computed output back into [[#Memory Unit]].
@@ -251,7 +251,7 @@ The full anatomy of the (general-purpose) $\beta$ datapath is shown in the Figur
 The details of the $\beta$ datapath will be explained in the next chapter, so that you have a complete understanding on how the datapath allows the working of each of the 32 instruction sets.
 
 ![[Pasted image 20220217161155.png]]
-As of right now, we just need to understand the _big idea_ of the $\beta$ ISA , and how the$ \beta$ CPU realises it:
+As of right now, we just need to understand the _big idea_ of the $\beta$ ISA , and how the $\beta$ CPU realises it:
 
 1.  The **PC (program counter)** is a part of the CPU that in theory, fetch one instruction (set to be 32-bit in length) from the Memory Unit per clock cycle.
 2.  The **`OPCODE`** part of the instruction is processed by the Control Logic unit, and appropriate control signals are produced.

@@ -18,7 +18,7 @@ What is the best software design to avoid redundancy?
 Use keyword `extends`
 Subclass inherits all accessible data fields and methods from the superclass, except constructors.
 
-In a subclass inherited from a supercalss, you can
+In a subclass inherited from a superclass , you can
 - add new properties
 - add new methods
 - override the methods of the superclass
@@ -39,7 +39,7 @@ In a subclass inherited from a supercalss, you can
 ## super
 Superclass's constructors are not inherited.
 They are invoked explicitly using `super` keyword.
-If the keyword `super` us not explicitly used, the superclass' no-arg constructor is automatially invoked.
+If the keyword `super` is not explicitly used, the superclass' no-arg constructor is automatially invoked.
 
 ### To call a superclass constructor
 - Use `super()` to call the superclass constructor

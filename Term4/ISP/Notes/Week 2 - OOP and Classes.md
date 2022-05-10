@@ -6,7 +6,7 @@ tags: #50.001
 # Object-Oriented Programming
 - OOP: Porgramming using objects
 	- VS *procedural programming* (step by step statements, procedure call)
-	- **Program: interaction between objects
+	- **Program**: interaction between objects
 	- Abstraction, encapsulation, inheritance, polymorphism
 - Enable development of large-scale software
 - Object represents an entity in the real world

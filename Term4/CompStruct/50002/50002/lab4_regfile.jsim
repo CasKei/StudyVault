@@ -10,14 +10,14 @@ Xxp2 0 XP0 bus
 
 **** RA2SEL mux ************
 * BEGIN ANSWER
-
+Xraselmux ra2sel#5 id[15:11] id[25:21] ratwo[4:0] mux2
 
 * END ANSWER
 ****************************
 
 **** WASEL mux *************
 * BEGIN ANSWER
-
+Xwaselmux wasel#5 id[25:21] vdd#4 0 wa[4:0] mux2
 
 * END ANSWER
 ****************************
@@ -25,39 +25,50 @@ Xxp2 0 XP0 bus
 
 **** Regfile memory ********
 * BEGIN ANSWER
-
+Xregfile
++ vdd 0 0 id[20:16] rd1[31:0] // A read port
++ vdd 0 0 ratwo[4:0] rd2[31:0] // B read port
++ 0 clk werf wa[4:0] WDSEL_OUT[31:0] // write port
++ $memory width=32 nlocations=31
 * END ANSWER
 
 * R31 checker for RD1 
 * BEGIN ANSWER
-
+Xrd1n4 id[20:17] rd1n and4
+Xrd1n2 rd1n id[16] rd1sel and2
 * END ANSWER
 
 * RD1 mux
 * BEGIN ANSWER
-
+Xrd1mux rd1sel#32 rd1[31:0] 0#32 ra[31:0] mux2
 * END ANSWER
 
 * R31 checker for RD2 
 * BEGIN ANSWER
-
+Xrd2n4 ratwo[4:1] rd2n and4
+Xrd2n2 rd2n ratwo[0] rd2sel and2
 * END ANSWER
 
 * RD2 mux
 * BEGIN ANSWER
-
+Xrd2mux rd2sel#32 rd2[31:0] 0#32 rb[31:0] mux2
 * END ANSWER
 ****************************
 
 **** Z computation *********
 * BEGIN ANSWER
-
+X16ors ra[31:16] ra[15:0] out8[15:0] or2
+X8ors out8[15:8] out8[7:0] out4[7:0] or2
+X4ors out4[7:4] out4[3:0] out2[3:0] or2
+X2ors out2[3:2] out2[1:0] out[1:0] or2
+Xorf out1 out0 zinv or2
+XzInv zinv z inverter
 * END ANSWER
 ****************************
 
 **** mwd[31:0] output ******
 * BEGIN ANSWER
-
+Xbuss rb[31:0] mwd[31:0] bus
 * END ANSWER
 ****************************
 

@@ -5,6 +5,29 @@ tags: #50.001
 [[IS & Programming|ISP]]
 [[Google Developer Training]]
 
+[[Android 2]]
+## Android Manifest
+[[Android Manifest]] is found in the **app/manifest** folder and is in a file named **AndroidManifest.xml**.
+
+Stores all important info regarding app:
+- App name
+- App icon
+- Activities the app contains
+- Permissions of app e.g. to access internet
+
+The **android: label** attribute under the application tag specifies app name. See it references the **strings.xml** file.
+```xml
+<application
+	...
+	android:label="@string/app_name"
+```
+Notice there is a similar attribute under the **activity** tag.
+Specifying this attribute this changes the titile of your activity displayed on the screen.
+
+The **android:parentActivityName** attribute specifies the parent Activity. A back arrow appears in the title, allowing the user to go back to parent.
+
+## Google cont.
+
 Before the Android system can start an app component such as an `Activity`, the system must know that the `Activity` exists. It does so by reading the app's `AndroidManifest.xml` file, which describes all of the components of your Android app. Each `Activity` must be listed in this XML file, along with all components for the app.
 
 To view and edit the `AndroidManifest.xml` file, expand the `manifests` folder in the **Project > Android** pane, and double-click `AndroidManifest.xml`. Its contents appear in the editing pane:

@@ -1,3 +1,6 @@
+---
+tags: CC, Security
+---
 # Social Engineering
 The most common way of hacking into people's accounts isn't hacking, but tricking people.
 This is called social engineering, where a person is manipulated into divulging confidential information, or configuring a computer system so that it permits entry by attackers.

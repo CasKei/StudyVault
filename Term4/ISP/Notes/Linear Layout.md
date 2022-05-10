@@ -2,9 +2,29 @@
 tags: #50.001
 ---
 [[IS & Programming|ISP]]
+[[Android 1]]
 [Doc for Linear Layout](https://developer.android.com/guide/topics/ui/layout/linear)
 
 # Linear Layout
+## Overview
+Edit the XML file generated for you by replacing `ConstraintLayout` with `LinearLayout`.
+In LinearLayout:
+- Widgets are stacked in sequence according to orientation
+- Two possible orientations: **horizontal** and **vertical**
+- If no orientation attribute is specified, the default orientationis horizontal.
+
+```xml
+<LinearLayout
+	android:orientation = "vertical"
+>
+```
+```xml
+<LinearLayout
+	android:orientation = "horizontal"
+>
+```
+
+## Detail
 `LinearLayout` is a view group that aligns all children in a single direction, vertically or horizontally. You can specify the layout direction with the [`android:orientation`](https://developer.android.com/reference/android/widget/LinearLayout#attr_android:orientation) attribute.
 
 **Note:** For better performance and tooling support, you should instead [build your layout with ConstraintLayout](https://developer.android.com/training/constraint-layout).

@@ -1,3 +1,6 @@
+---
+tags: CC, Security
+---
 # Defense in Depth
 There will always be bugs, so system architects employ a strategy called defense in depth, which uses may layers of varying security mechanisms to frustrate attackers.
 # Cryptography

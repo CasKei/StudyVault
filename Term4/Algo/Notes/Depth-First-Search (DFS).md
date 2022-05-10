@@ -21,7 +21,7 @@ Can be used to perform [[Topological sort]]
 Similar to exploring a maze
 - follow path till stuck
 - backtrack along breadcrumbs
-- [[L02.01 - Sorting, solving recursion|recursively]] explore
+- [[Sorting, solving recursion|recursively]] explore
 
 ## Traversal Order
 see also: [[Breadth-First-Search (BFS)|BFS]]

@@ -6,7 +6,7 @@ tags: #50.001
 
 ## 7.1 Introduction
 A single array variable can reference a large collection of data.
-[[Week 1 - ArrayList, LinkedList, Generics]]
+[[ArrayList, LinkedList, Generics]]
 An efficient, organized approach is needed. Java and most other high-level languages provide a data structure, the array, which stores a fixed-size sequential collection of elements of the same type.
 
 ## 7.2 Array Basics

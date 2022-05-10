@@ -26,7 +26,7 @@ In class, we demonstrated the implementation of `Increase-key` on a max heap:
 Design an efficient algorithm to ==decrease a key== in a ==max heap== (while maintaining the max-heap property), and analyze the running time complexity of your algorithm in terms of $n$, the size of the heap. Similar to the Increase key operation, your algorithm should not return any output, but rather, modifications should be made to the input max heap. State any ==assumptions== made on the input(s) of your algorithm. Please present your algorithm in pseudocode.
 ***
 To decrease a key in an already given max-heap, just assign the decreased value to the index needed and then call `max_heapify(A,i)` on that index.
-The pseudocode will look like this, with `max_heapify(A,i)` as a support function:
+The pseudocode will look like this, with `max_heapify(A,i)` as a support function: ^4bd01d
 ```php
 function left(i)
 	return (i*2)+1
@@ -105,6 +105,9 @@ function convert_max_to_min(A) // basically a buildminheap
 		i--
 	return A
 ```
+
+^74b861
+
 - First, `convert_max_to_min(A)` is called as a main function.
 	- First line calculates the index to start calling min_heapify from: $O(1)$ complexity
 	- Next is a `while` loop starting from the first non-leaf element from the bottom, with a maximum of $n/2$ iterations of this block.

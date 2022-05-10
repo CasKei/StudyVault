@@ -94,7 +94,7 @@ def max-heapify(A, i):
 
 The above are iterative/looping.
 Recursive solution:
-[[L03.02 - Heap Operations#Pseudocode|Recursive heapify]]
+[[Heap Operations#Pseudocode|Recursive heapify]]
 
 # Build a Heap with Heap Property
 We can then use the previous max-heapify to build a binary heap data structure from any arbitrary array. The idea is to go through every node and heapify them. However, we do not need to d so for all nodes, only half. This is because we do not need to heapify the leaves.

@@ -18,15 +18,15 @@ In the preceding section, the statement
 assigns the object `new Student()` to a parameter of the `Object` type.
 
 This statement is equivalent to
-`Object o = new Student();//implicit casting
-`m(o);`
+`Object o = new Student();//implicit casting`
+ `m(o);`
 
 ## Down-Casting
 > Casting from superclass to subclass
 
 Explicit casting must be used when casting an object from a superclass to a subclass. 
 This type of casting may not always succeed
-`Object y = new Circle();
+`Object y = new Circle();`
 `Circle x = (Circle)y;`
 
 (Declared type vs Actual type)
@@ -44,8 +44,8 @@ if (myOject instanceof Circle) {
 ```
 
 ## The protected Modifier
-Con be applied on data and methods in a class.
-A protected data or method in a `public` class can be accessed b any class inthe same package or its subclasses, even if the subclasses are in a different package
+Can be applied on data and methods in a class.
+A protected data or method in a `public` class can be accessed b any class in the  same package or its subclasses, even if the subclasses are in a different package
 `private`, `default`, `protected`, `public`
 
 ## Visibility Modifiers
