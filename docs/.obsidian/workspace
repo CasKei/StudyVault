@@ -1,0 +1,265 @@
+{
+  "main": {
+    "id": "04671a667846a0bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "a02ce75675895ea2",
+        "type": "split",
+        "children": [
+          {
+            "id": "8abcfc517a444fff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Term5/Cybersec/Notes/Electronic Code Book (ECB).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f64791653a605396",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Term5/Cybersec/Notes/Block ciphers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "horizontal"
+      },
+      {
+        "id": "699c566dc6c60ffb",
+        "type": "split",
+        "children": [
+          {
+            "id": "a63a8b498ea4388f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Term5/Cybersec/Notes/Ring.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d90696dce923ab18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Term5/Cybersec/Notes/Modular Arithmetic.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "horizontal"
+      },
+      {
+        "id": "b171226d568160c6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/CSE/Week 5 - Process Synchronisation.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "2c7a65015698d58c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/CSE/Critical section problem.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "f585d2fa937fc8f6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/CSE/50.005 Computer System Engineering.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "8c6bba09d008c506",
+        "type": "leaf",
+        "state": {
+          "type": "image",
+          "state": {
+            "file": "Attachments/Pasted image 20220608181104.png"
+          }
+        }
+      },
+      {
+        "id": "fd8bc1503a9f5e2b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/Cybersec/Notes/Output-Feedback-Mode OFB.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "20f4c1f6ba130820",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/Cybersec/Notes/Initialisation vector.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e4eecdccbf8f881e",
+    "type": "split",
+    "children": [
+      {
+        "id": "0c0aaa5ba09a7988",
+        "type": "tabs",
+        "dimension": 59.66209081309398,
+        "children": [
+          {
+            "id": "4972470be55ee35b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "2317d904ca2167eb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "a440322c0bcecb1b",
+        "type": "tabs",
+        "dimension": 40.33790918690602,
+        "children": [
+          {
+            "id": "da258fd36802327e",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 361.504056930542
+  },
+  "right": {
+    "id": "4351db21b389b6a0",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3d868b18fdd377d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ea68abcfd928d9c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Attachments/Pasted image 20220608181104.png",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3dc8cce6935788e1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Attachments/Pasted image 20220608181104.png"
+              }
+            }
+          },
+          {
+            "id": "422217d650de9298",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "526e459e99fd6838",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 164.266357421875,
+    "collapsed": true
+  },
+  "active": "8c6bba09d008c506",
+  "lastOpenFiles": [
+    "Attachments/Pasted image 20220608181104.png",
+    "Attachments/A7F9CD13-8578-419F-9E0A-69EE34FB0FC7.jpeg",
+    "Term5/Cybersec/Notes/Modular Arithmetic.md",
+    "Term5/CSE/Notes/Week 4 - Processes and Thread management.md",
+    "Term5/Cybersec/Notes/Initialisation vector.md",
+    "Term5/CSE/Week 5 - Process Synchronisation.md",
+    "Term5/CSE/Critical section problem.md",
+    "Term5/CSE/Race condition.md",
+    "Term5/CSE/50.005 Computer System Engineering.md",
+    "Term3/DDW/Data Driven World.md"
+  ]
+}

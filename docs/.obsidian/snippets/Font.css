@@ -1,0 +1,13 @@
+/* Set fonts for both Edit and Preview mode
+.view-content {
+  font-family: 'Georgia', !important;
+}
+*/
+
+.markdown-source-view {
+  font-family: 'Fira Code', 'Victor Mono', 'Consolas', monospace !important;
+}
+
+.markdown-preview-view {
+  font-family: 'Georgia', !important;
+}

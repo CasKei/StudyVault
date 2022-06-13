@@ -1,0 +1,19 @@
+{
+  "promptDelete": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
+  "fileSortOrder": "byCreatedTimeReverse",
+  "legacyEditor": false,
+  "livePreview": true,
+  "defaultViewMode": "preview",
+  "strictLineBreaks": false,
+  "newFileLocation": "current",
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 74
+  }
+}
