@@ -48,7 +48,7 @@ Complexity depends on how we implement $Q$ as a min-[[Priority Queue]].
 
 Initialisation: $\Theta(|V|)$\
 Initialise S as empty set: $\Theta(1)$\
-extract_min(Q): implement [[Priority Queue]] as a min-[[Heap]]: $O(\log{|V|})$\
+extract_min(Q): implement [[Priority Queue]] as a min-[[Heap data structure]]: $O(\log{|V|})$\
 S <- S ∪ {u}: $\Theta(1)$\
 [[Edge relaxation|relax]]: require [[PSet 1#^4bd01d|decrease_key]] operation when assigning new $d$ value, which has complexity $O(\log{|V|})$
 

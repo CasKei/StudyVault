@@ -1,10 +1,36 @@
 ---
 aliases: cache
-tags: 50.002
+tags: 50.002, 50.005
 ---
 [[Comp Struct|50.002]]
+[[50.005 Computer System Engineering|50.005]]
 [[Memory Hierarchy]]
 
+# 50.005
+## Cache
+[[Cache]]
+Used to speed up performance.
+Storing a few of the most recently used instruction pages.
+Wired directly to [[Anatomy of the Beta CPU|CPU]] so CPU has direct access.
+
+Limited size, so management is important [[Cache Design Issues]].
+
+[[OS Kernel]] dictates details pertaining to cache management, such as which supported [[Replacement policy]] should be used.
+
+## Cache Performance
+**Caching** is an important principle of computer systems. We perform the [[Caching algorithm]] each time the CPU needs to execute a new piece of instruction or fetch new data from the main memory. Remember that cache is hardware, built into CPU:
+![](https://natalieagus.github.io/50005/assets/images/week1/14.png)
+Note:
+"DMA" = [[Direct addressing|Direct memory access]] from [[Device Controller]] onto [[Dynamic Random-Access Memory (DRAM)|RAM]].
+
+Data transfer between [[Hard Disk Drive (Disk)|disk]] and [[Dynamic Random-Access Memory (DRAM)|main memory]] is usually controlled by [[OS Kernel]] (requires [[Context switch]]ing), while data transfer between CPU registers to CPU cache is a hardware function **without kernel intervention**. There is too much *overhead* if kernel is tasked to do that.
+
+Recall Kernel is responsible to program and set up cache and [[Pagetable|MMU]] hardware, and manage the entire [[Virtual Memory]]. Kernel memory management routines are triggered when processes running in [[Kernel mode and User mode|user mode]] encounter [[Demand Paging|page fault]] related interrupts. Careful selection of page size and a [[Replacement policy]] can result in greatly increased performance.
+
+Given a cache hit ratio $\alpha$, a cache miss access time $\epsilon$, and cache hit access time $\tau$, we can compute the **cache effective access time** as:
+$$\alpha \tau + (1-\alpha ) \times \epsilon$$
+
+# 50.002 
 ## What
 > **Cache**
 > A small storage device assembled close to a processor core within a [[Anatomy of the Beta CPU|CPU]].

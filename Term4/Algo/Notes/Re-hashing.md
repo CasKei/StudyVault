@@ -36,18 +36,18 @@ The elements originally in `A` could have new hash values.
 Because re-hashing is computationally expensive, we do not want to re-hash unless necessary, and we want the number of times we need to re-hash (to keep $\alpha \leq \gamma$) to be minimised.
 
 ## How to build re-hashed table
-Let $h: K \to \set{0, 1, \dots , m-1}$ be the current [[Hash functions|hash function]] for the [[Hash Table]] `A`, before we [[#Re-hashing by doubling]].
+Let $h: K \to \set{0, 1, \dots , m-1}$ be the current [[Algo Hash functions|hash function]] for the [[Hash Table]] `A`, before we [[#Re-hashing by doubling]].
 
-We need a new [[Hash functions|hash function]]. modified from the original $h$.
+We need a new [[Algo Hash functions|hash function]]. modified from the original $h$.
 Currently, $h$ hashes key values only to $m$ slots.
-We need a [[Hash functions|hash function]] that hashes key values to $2m$ slots.
+We need a [[Algo Hash functions|hash function]] that hashes key values to $2m$ slots.
 
 > In general, [[Designing hash functions]]/re-hashing algorithms will depend on your creativity and algorithmic thinking skills
-> - Typically we want a systematic process to geneerate new [[Hash functions|hash functions]] whenever we need to [[#Re-hashing by doubling|re-hash by doubling]]
+> - Typically we want a systematic process to geneerate new [[Algo Hash functions|hash functions]] whenever we need to [[#Re-hashing by doubling|re-hash by doubling]]
 
-Some methods we already know of for generating [[Hash functions]]:
-[[Hash functions#Division Method|Division method]]: $h(k) = k \text{ mod } m$ (for integer key values)
-[[Hash functions#Multiplication Method|Multiplication method]]: $h(k) = \lfloor m(k\beta \text{ mod } 1) \rfloor$. (for numerical key values)
+Some methods we already know of for generating [[Algo Hash functions]]:
+[[Algo Hash functions#Division Method|Division method]]: $h(k) = k \text{ mod } m$ (for integer key values)
+[[Algo Hash functions#Multiplication Method|Multiplication method]]: $h(k) = \lfloor m(k\beta \text{ mod } 1) \rfloor$. (for numerical key values)
 	$\beta>0$ is a constant
 
 ## Rehash to what size?

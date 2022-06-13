@@ -1,10 +1,19 @@
 ---
-aliases: MMU, pagetable, pagemap
-tags: 50.002
+aliases: MMU, pagetable, pagemap, memory management unit
+tags: 50.002, 50.005
 ---
 [[Comp Struct|50.002]]
+[[50.005 Computer System Engineering|50.005]]
 [[Virtual Memory]]
+[[Week 1 - Introduction to Operating System]]
 
+# 50.005
+## Configuring the MMU
+The MMU (Memory Management Unit) is a computer **hardware** component that primarily handles translation of [[Virtual Address]] to physical memory address. It relies on data on the system’s RAM to operate: e.g utilise the **pagetable**. The [[OS Kernel]] sets up the pagetable and determine rules for the address mapping.
+
+Recall from 50.002 that the CPU always operates on virtual addresses (commonly **linear**, `PC+4` unless branch or JMP), but they’re translated to physical addresses by the MMU. The [[OS Kernel]] is aware of the translations and it is ==solely responsible== to **program** (configure) the MMU to perform them.
+
+# 50.002
 ## Purpose
 Each `VA` has to be mapped to a `PA`, so that the system may return the requested data to the [[Anatomy of the Beta CPU|CPU]] upon instruction fetch (`LD`), or complete the executionof `ST` related instructions. This mapping is done via the **memory management unit** (MMU).
 

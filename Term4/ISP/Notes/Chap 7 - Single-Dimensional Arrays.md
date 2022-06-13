@@ -130,7 +130,7 @@ To copy the contents of one array into another, you have to copy the array’s i
 There are three ways to copy arrays: 
 - Use a loop to copy individual elements one by one. 
 - Use the static arraycopy method in the System class. 
-- Use the clone method to copy arrays; this will be introduced in [[Chap 13 - Abstract Classes and Interfaces]].
+- Use the clone method to copy arrays; this will be introduced in Chap 13
 
 Loop
 ```java

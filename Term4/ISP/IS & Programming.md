@@ -22,7 +22,6 @@ aliases: ISP, 50.001
 [[Android 4]]
 
 [[Google Developer Training]]
-[[Udacity Android]]
 
 #### Course Description
 

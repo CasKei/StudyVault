@@ -1,10 +1,35 @@
 ---
-aliases: dual mode, dual mode system, kernel mode, user mode
-tags: 50.002
+aliases: dual mode, dual mode system, kernel mode, user mode, mode switch
+tags: 50.002, 50.005
 ---
 [[Comp Struct|50.002]]
+[[50.005 Computer System Engineering|50.005]]
 [[Virtual Machine]]
 
+# 50.005
+[[OS Kernel]] runs with special privileges. Can do what normal user programs cannot:
+1. Ultimate access and control to all hardware in [[Computer System]]
+2. Know and lives in [[Memory Addressing|physical address]] space and manage [[Memory Hierarchy]]
+3. Interrupt other user programs
+4. Manage other user program locations on [[Dynamic Random-Access Memory (DRAM)|RAM]], [[Pagetable|MMU]], and [[Example of basic kernel scheduler|schedule]] user program executions
+
+Must support dual mode operation
+
+## Hardware Support
+[[Dual Mode Hardware Support]]
+
+## Mode switching
+- The **privilege** of a [[Week 4 - Processes and Thread management|process]] changes.
+- Singply escalates privilege from [[Kernel mode and User mode|user mode]] to [[Kernel mode and User mode|kernel mode]] to access kernel [[OS Services]]
+- Done by:
+	- [[Hardware Interrupt]]
+	- [[System calls]] ([[Software Interrupt|trap]])
+	- [[Exceptions]]
+	- [[CPU reset]]
+
+Mode switch MAY NOT ALWAYS LEAD TO [[Context switch]]. Depending on implementation, Kernel code decides whether or not it is necessary.
+
+# 50.002
 ## Overview
 To support a safe [[Virtual Machine]] for each process, we need to establish the notion of *dual mode system*, that is a system that has a **Kernel mode** (privileged mode) and a **User mode** (non-privileged mode).
 

@@ -1,10 +1,38 @@
 ---
 aliases: locality of reference
-tags: 50.002
+tags: 50.002, 50.005
 ---
 [[Comp Struct|50.002]]
+[[50.005 Computer System Engineering|50.005]]
 
-## Overview
+## 50.005
+The storage structure in a typical [[Computer System]] is made up of [[Sequential Logic|register]]s, [[Cache]]s, [[Dynamic Random-Access Memory (DRAM)|main memory]], and non-volatile [[Hard Disk Drive (Disk)|secondary storage]] such as disk. In increasing speed and cost from bottom up:
+![](https://natalieagus.github.io/50005/assets/images/week1/3.png)
+
+- The [[Anatomy of the Beta CPU|CPU]] can load instructions only from memory, so any programs to run must be stored there
+- General-purpose computers run most programs from rewritable memory called [[Dynamic Random-Access Memory (DRAM)|main memory]].
+- At each [[Anatomy of the Beta CPU|CPU]] clock cycle, instructions are fetched from [[Dynamic Random-Access Memory (DRAM)|main memory]] to [[Anatomy of the Beta CPU|CPU]].
+
+### RAM
+[[Dynamic Random-Access Memory (DRAM)|RAM]]
+Ideal: permanent storage
+Not possible:
+- Main mem too smol
+- Volatile and loses contents when powered off
+
+Recall that the memory unit sees only a stream of memory addresses; it does not know how they are generated (by the instruction counter, indexing, indirection, literal addresses, or some other means) or what they are for (instructions or data).
+
+### Cache
+[[Cache]]
+Used to speed up performance.
+Storing a few of the most recently used instruction pages.
+Wired directly to [[Anatomy of the Beta CPU|CPU]] so CPU has direct access.
+
+Limited size, so management is important [[Cache Design Issues]].
+
+[[OS Kernel]] dictates details pertaining to cache management, such as which supported [[Replacement policy]] should be used.
+
+## 50.002 Overview
 ![](https://dropbox.com/s/88up5y3aitc893l/p1.png?raw=1)
 [[Building Beta CPU|beta CPU]] has its own internal storage [[Anatomy of the Beta CPU|REGFILE]], consisted of a limited amount of [[Sequential Logic|registers]].
 

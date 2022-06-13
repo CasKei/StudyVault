@@ -10,7 +10,7 @@ tags: 50.002
 
 Each scheduling policy has its own pros and cons. Non-preemptive Kernel is simpler to develop, but without it the device with the slowest service time constraints response to the fastest devices. 
 
-With preemption, [[Real-Time IO Handling|latency]] for higher priority devices is not affected by service times of the lower priority devices. However, this additional feature will complicate the Kernel code. 
+With [[Preemption]], [[Real-Time IO Handling|latency]] for higher priority devices is not affected by service times of the lower priority devices. However, this additional feature will complicate the Kernel code. 
 
 We will use some examples to understand how each policy works, and justify whether there's any one that is better than the other.
 

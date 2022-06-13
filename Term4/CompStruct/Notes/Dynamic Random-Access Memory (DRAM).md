@@ -1,10 +1,22 @@
 ---
 aliases: DRAM, physical memory, RAM, main memory
-tags: 50.002
+tags: 50.002, 50.005
 ---
 [[Comp Struct|50.002]]
+[[50.005 Computer System Engineering|50.005]]
 [[Memory Hierarchy]]
 
+## 50.005
+### RAM
+[[Dynamic Random-Access Memory (DRAM)|RAM]]
+Ideal: permanent storage
+Not possible:
+- Main mem too smol
+- Volatile and loses contents when powered off
+
+Recall that the memory unit sees only a stream of memory addresses; it does not know how they are generated (by the instruction counter, indexing, indirection, literal addresses, or some other means) or what they are for (instructions or data).
+
+## 50.002
 ![](https://dropbox.com/s/4wovmxsgb7896vd/dram.png?raw=1)
 ![A stick of RAM](https://lh6.googleusercontent.com/O_L9qNZezzm7XJCtTBBnSnWHASX7IBX6t1EcGGs7rvg1QvftQVQXaVVDJOATdiv_VL8FBSlUxkE_02Wdz78n7Hmt2Nosu-WYh3qEATOTIIXUJFYPPOQN9m4PpZNCV1E7U3xuYdZU)  
 A stick of RAM

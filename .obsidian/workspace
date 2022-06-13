@@ -4,25 +4,135 @@
     "type": "split",
     "children": [
       {
-        "id": "45b65bd2a059e99f",
+        "id": "a02ce75675895ea2",
+        "type": "split",
+        "children": [
+          {
+            "id": "8abcfc517a444fff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Term5/Cybersec/Notes/Electronic Code Book (ECB).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f64791653a605396",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Term5/Cybersec/Notes/Block ciphers.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "horizontal"
+      },
+      {
+        "id": "699c566dc6c60ffb",
+        "type": "split",
+        "children": [
+          {
+            "id": "a63a8b498ea4388f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Term5/Cybersec/Ring.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d90696dce923ab18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Term5/Cybersec/Modular Arithmetic.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "horizontal"
+      },
+      {
+        "id": "b171226d568160c6",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Other/Network/Network Fundamentals.md",
+            "file": "Term5/CSE/Week 5 - Process Synchronisation.md",
             "mode": "source",
             "source": false
           }
         }
       },
       {
-        "id": "3d0e477ab7acda23",
+        "id": "2c7a65015698d58c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Other/Network/Notes/Mac and IP.md",
+            "file": "Term5/CSE/Critical section problem.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "f585d2fa937fc8f6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/CSE/50.005 Computer System Engineering.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "8c6bba09d008c506",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/CSE/Notes/Week 4 - Processes and Thread management.md",
             "mode": "preview",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "fd8bc1503a9f5e2b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/Cybersec/Notes/Output-Feedback-Mode OFB.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "20f4c1f6ba130820",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/Cybersec/Notes/Initialisation vector.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -37,7 +147,7 @@
       {
         "id": "0c0aaa5ba09a7988",
         "type": "tabs",
-        "dimension": 80.56713928273561,
+        "dimension": 59.66209081309398,
         "children": [
           {
             "id": "4972470be55ee35b",
@@ -67,7 +177,7 @@
       {
         "id": "a440322c0bcecb1b",
         "type": "tabs",
-        "dimension": 19.432860717264386,
+        "dimension": 40.33790918690602,
         "children": [
           {
             "id": "da258fd36802327e",
@@ -81,7 +191,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 115
+    "width": 361.504056930542,
+    "collapsed": true
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -90,7 +201,6 @@
       {
         "id": "b3d868b18fdd377d",
         "type": "tabs",
-        "dimension": 50.39123630672926,
         "children": [
           {
             "id": "6ea68abcfd928d9c",
@@ -98,7 +208,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Other/Network/Notes/Mac and IP.md",
+                "file": "Term5/CSE/Critical section problem.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -115,7 +225,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Other/Network/Notes/Mac and IP.md"
+                "file": "Term5/CSE/Critical section problem.md"
               }
             }
           },
@@ -135,44 +245,24 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "14d9efe52874fe3e",
-        "type": "tabs",
-        "dimension": 49.60876369327074,
-        "children": [
-          {
-            "id": "2a67915f4db8517c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 158.19049072265625,
+    "width": 164.266357421875,
     "collapsed": true
   },
-  "active": "3d0e477ab7acda23",
+  "active": "2c7a65015698d58c",
   "lastOpenFiles": [
-    "Other/Network/Notes/Mac and IP.md",
-    "Other/Network/Network Fundamentals.md",
-    "Term5/Cybersec/50.042 Foundations of Cybersecurity.md",
-    "Term5/ChiLyr/02.110DH The Chinese Lyrical Tradition - Arts, Literature and Landscape Design.md",
-    "Term5/ESC/50.003 Elements of Software Construction.md",
+    "Term5/CSE/Critical section problem.md",
+    "Term5/CSE/Race condition.md",
+    "Term5/CSE/Week 5 - Process Synchronisation.md",
+    "Term5/CSE/Notes/Week 4 - Processes and Thread management.md",
     "Term5/CSE/50.005 Computer System Engineering.md",
-    "Attachments/Pasted image 20220508141701.png",
-    "README.md",
-    "Term4/CompStruct/Comp Struct.md",
-    "Term4/Algo/Notes/NP-complete.md"
+    "Term3/DDW/Data Driven World.md",
+    "Term5/CSE/Producer Consumer problem.md",
+    "Term4/CompStruct/Notes/Cache benchmarking.md",
+    "Term4/ISP/Notes/Google Developer Training.md",
+    "Term4/CompStruct/Notes/Cache Design Issues.md"
   ]
 }

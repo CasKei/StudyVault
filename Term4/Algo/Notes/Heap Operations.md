@@ -8,7 +8,7 @@ tags: #50.004
 | Operation        | Function                                                                                                                                  |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `build_max_heap` | Build a max-heap from an (unordered) input array. $O(n)$                                                                                  |
-| `max_heapify`    | Corect a **single** violation of the [[Heap#Types of heap\|max-heap property]] occuring **at the root of an input subtree**. $O(\log{n})$ |
+| `max_heapify`    | Corect a **single** violation of the [[Heap data structure#Types of heap\|max-heap property]] occuring **at the root of an input subtree**. $O(\log{n})$ |
 | `insert`         | Insert element into an array, array must remain as a max heap. $O(\log{n})$                                                               |
 | `extract_max`    | Return element with largest key and remove from array; array must remain as a max heap. $O(\log{n})$                                      |
 | `increase_key`   | Increase key value of node with given input index; array must remain as a max heap. $O(\log{n})$                                          |

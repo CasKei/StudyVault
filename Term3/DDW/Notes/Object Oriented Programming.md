@@ -347,6 +347,7 @@ print(p1)
 > (2, 3)
 
 # UML Diagram
+[[UML]]
 UML stands for *Unified Modeling Language* and it gives some specifications how to represent the classes visually.
 ![[Pasted image 20211226140252.png]]
 The UML Class diagram consists of:

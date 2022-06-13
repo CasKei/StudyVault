@@ -36,18 +36,18 @@ We cannot insert `x` into `A[q]`, otherwise there will be a [[Intro to hashing|c
 
 To insert a new element `x`, try to insert `x` into slots $i_1, \dots, i_m$ one by one in this order, until insertion is successful.
 
-## Comparison with normal [[Hash functions|hash function]]
+## Comparison with normal [[Algo Hash functions|hash function]]
 
 | Open addressing                                                                                                                                     | Normal hash                                                                                                                                                        |  
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 
-| Insert a new element `x` into `A` based on probe sequence associated to its key value $k$                                                           | Insert `x` into slot $h(k)$, where $h$ is the [[Hash functions\|hash function]] of `A`. Usually gives us only one slot number and tells us which slot to insert to |     
-| Require the [[Hash functions]] to give us a sequence of slot numbers: $h(k,0), h(k,1),\dots,h(k,m-1)$. This is the probe sequence associated to $k$ | [[Hash functions\|hash function]] only gives a single hash value                                                                                                   |     
+| Insert a new element `x` into `A` based on probe sequence associated to its key value $k$                                                           | Insert `x` into slot $h(k)$, where $h$ is the [[Algo Hash functions\|hash function]] of `A`. Usually gives us only one slot number and tells us which slot to insert to |     
+| Require the [[Algo Hash functions]] to give us a sequence of slot numbers: $h(k,0), h(k,1),\dots,h(k,m-1)$. This is the probe sequence associated to $k$ | [[Algo Hash functions\|hash function]] only gives a single hash value                                                                                                   |     
 
 ## Linear probing
 > Let `A` be a [[Hash Table]] with $m$ slots.
 > Let $K=\set{\text{all possible key values}}$.
 
-> Start with an auxiliary [[Hash functions|hash function]] $h': K \to \set{0,1,\dots, m'-1}$.
+> Start with an auxiliary [[Algo Hash functions|hash function]] $h': K \to \set{0,1,\dots, m'-1}$.
 > Then define $h(k,i) = (h'(k) + i) \text{ mod } m$.
 
 Example: $𝑚 = 𝑚' = 10$, $ℎ'(𝑘) = (𝑘 \text{ mod }10)$.
@@ -56,14 +56,14 @@ Example: $𝑚 = 𝑚' = 10$, $ℎ'(𝑘) = (𝑘 \text{ mod }10)$.
 > Let `A` be a [[Hash Table]] with $m$ slots.
 > Let $K=\set{\text{all possible key values}}$.
 
-> Start with an auxiliary [[Hash functions|hash function]] $h': K \to \set{0,1,\dots, m'-1}$.
+> Start with an auxiliary [[Algo Hash functions|hash function]] $h': K \to \set{0,1,\dots, m'-1}$.
 > Then define $h(k,i) = (h'(k) + c_1i + c_2i^2) \text{ mod } m$.
 
 ## Double hashing
 > Let `A` be a [[Hash Table]] with $m$ slots.
 > Let $K=\set{\text{all possible key values}}$.
 
-> Use 2 auxiliary [[Hash functions|hash function]] 
+> Use 2 auxiliary [[Algo Hash functions|hash function]] 
 > $h_1: K \to \set{0,1,\dots, m_1-1}$ and 
 > $h_2: K \to \set{0,1,\dots, m_2-1}$
 > Then define $h(k,i) = (h_1(k) + ih_2(k)) \text{ mod } m$.

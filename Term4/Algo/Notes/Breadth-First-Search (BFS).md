@@ -60,7 +60,7 @@ function BFS(s, Adj)
 		i += 1
 ```
 
-[[Stacks and Queues|Queue]] + [[Graphs#Adjacency list|adjacency list]] implementation
+[[Stacks and Queues data structure|Queue]] + [[Graphs#Adjacency list|adjacency list]] implementation
 ```python
 function BFS(G, s)
 	for each vertex u in G.V - {s}
@@ -84,7 +84,7 @@ function BFS(G, s)
 				enqueue(Q,v)
 		u.color = BLACK
 ```
-(If replace [[Stacks and Queues|queue]] with [[Stacks and Queues|stack]], it becomes [[Depth-First-Search (DFS)|DFS]])
+(If replace [[Stacks and Queues data structure|queue]] with [[Stacks and Queues data structure|stack]], it becomes [[Depth-First-Search (DFS)|DFS]])
 
 ## Shortest Paths from S
 The length of shortest path from `s` to `v` is

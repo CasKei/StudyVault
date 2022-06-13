@@ -65,7 +65,7 @@ Under the [[Designing hash functions|simple uniform hashing]] assumption,
 - If $\alpha = O(1)$ then $\Theta(1 + \alpha) = O(1)$
 
 Justification:
-Let $h: K \to \set{0, 1, \dots, m-1}$ be the [[Hash functions|hash function]] of `A`.
+Let $h: K \to \set{0, 1, \dots, m-1}$ be the [[Algo Hash functions|hash function]] of `A`.
 - Case 1: `k` is not the key value of any element in `A`
 	- It takes $\Theta(1)$ steps to compute $h(k)$
 	- Within the [[Arrays and Linked Lists|LL]] `A[h(k)]`, all elements must be visited before the operation returns NIL. On avg there are $\alpha$ elements in `A[h(k)]`, so the overall complexity is $\Theta(1+\alpha)$

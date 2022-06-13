@@ -4,7 +4,7 @@ tags: #50.004
 [[Algo]]
 [[Algo week 4]]
 Recall:
-[[Heap]]: [[Heap#Depth of a heap|Depth of Heap]], [[Heap#Height of a heap|Height of Heap]]
+[[Heap data structure]]: [[Heap data structure#Depth of a heap|Depth of Heap]], [[Heap data structure#Height of a heap|Height of Heap]]
 [[Data Types and Data Structures]]
 [[What is a Binary Seach Tree]]
 [[Traversals of a BST]]

@@ -4,7 +4,7 @@ tags: #50.004
 ---
 [[Algo]]
 [[Binary Heap and Heapsort]]
-[[Heap]]
+[[Heap data structure]]
 [[Data Types and Data Structures]]
 [[W3 Heap]]
 

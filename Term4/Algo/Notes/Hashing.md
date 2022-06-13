@@ -7,7 +7,7 @@ tags: #50.004
 [[Direct addressing]]
 [[Intro to hashing]]
 [[Hash Table]]
-[[Hash functions]]
+[[Algo Hash functions]]
 [[Designing hash functions]]
 [[Hash Operations]]
 [[Re-hashing]]

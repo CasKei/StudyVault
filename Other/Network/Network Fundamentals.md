@@ -2,6 +2,7 @@
 tags: networking, networks
 ---
 https://github.com/s0md3v/be-a-hacker#origin-of-hacking
+[Video](https://www.youtube.com/watch?v=9uebakqWlB0)
 
 [[Mac and IP]]
 [[Network Interface]]

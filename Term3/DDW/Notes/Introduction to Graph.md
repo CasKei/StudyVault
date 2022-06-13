@@ -5,7 +5,7 @@ tags: #data-structure, #graph
 Back to [[Data Driven World|DDW]]
 # Introduction to Graph
 ## What is a Graph?
-Previous data structures like lists, arrays, [[Stacks and Queues|stacks and queues]], only are related in a linear fashion.
+Previous data structures like lists, arrays, [[Stacks and Queues data structure|stacks and queues]], only are related in a linear fashion.
 A Graph allows more relationship to be represented between each item.
 ![[Pasted image 20211226195430.png]]
 This example represents some kind of connection between places, like in a map.With this kind of data, we can find a path from one place to another, or find the shortest distance between the two places.

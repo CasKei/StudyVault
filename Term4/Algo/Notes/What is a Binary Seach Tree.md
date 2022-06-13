@@ -6,11 +6,11 @@ tags: #50.004
 [[Algo week 4]]
 Recall:
 [[Binary Heap and Heapsort]]
-[[Heap]]
+[[Heap data structure]]
 [[Data Types and Data Structures]]
 
 ## What is a binary search tree?
-> Binary search tree (BST) is a [[Data Types and Data Structures|data structure]] whose data storage format can be visualised as a [[Heap|binary tree]], such that the [[#Binary Search Tree Property]] is satisfied.
+> Binary search tree (BST) is a [[Data Types and Data Structures|data structure]] whose data storage format can be visualised as a [[Heap data structure|binary tree]], such that the [[#Binary Search Tree Property]] is satisfied.
 > - A BST is allowed to be very "imbalanced"
 > - In contrast to heaps, this binary tree need not be complete
 > - You can still have a child even if your parent does not have 2 children
@@ -39,7 +39,7 @@ Basically a max heap but left children must be smaller than right children, but 
 ![[Pasted image 20220214193618.png]]
 
 ## Uses
-Similar to [[Heap]], BSTs can also be used to implement priority queues and sorting algorithms.
+Similar to [[Heap data structure]], BSTs can also be used to implement priority queues and sorting algorithms.
 
 [[Traversals of a BST]]
 

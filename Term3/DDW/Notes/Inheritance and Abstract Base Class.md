@@ -49,7 +49,7 @@ Note `__str__()` methodis overriden in the child class. The name and argument is
 ## Queue and Deque
 ![[Pasted image 20211228093556.png]]
 A `Deque` can have items inserted from either the front or the rear. Items can also be popped out from either.
-This is when [[Stacks and Queues#Queue with Double Stack|Queue is implemented with double stack]].
+This is when [[Stacks and Queues data structure#Queue with Double Stack|Queue is implemented with double stack]].
 
 Notice that in the UML diagram `/` is used to represent computed property.
 Deque does not have any additional attributes or property, only new methods.

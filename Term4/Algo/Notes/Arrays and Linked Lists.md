@@ -17,13 +17,13 @@ Storing objects in computer memory
 - Made up of 'smaller' objects stored in multiple ranges of memory locations (e.g. LL)
 
 In [[Data Types and Data Structures|data structures]] such as [[Binary Seach Trees (BST)|BSTs]], their elements are stored as pointers
-- [[Data Types and Data Structures|Data structures]] (e.g. [[Heap]]) or [[Data Types and Data Structures|datatypes]] (e.g. [[Priority Queue]]), even if implemented using arrays, could have attributes stored as pointers.
+- [[Data Types and Data Structures|Data structures]] (e.g. [[Heap data structure]]) or [[Data Types and Data Structures|datatypes]] (e.g. [[Priority Queue]]), even if implemented using arrays, could have attributes stored as pointers.
 
 
 ## Key values
 In many [[Data Types and Data Structures|data structures]], each element `x` is asusmed to have an attribute `x.key`.
 
-[[Heap]] and [[Binary Seach Trees (BST)]]:
+[[Heap data structure]] and [[Binary Seach Trees (BST)]]:
 - assume key values are numerical so we can make numerical comparisons
 
 Other data structures where operations do not involve numerical comparisons of key values, we can allow non-numerical key values like strings

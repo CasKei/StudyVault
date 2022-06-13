@@ -1,8 +1,26 @@
 ---
-tags: 50.002
+tags: 50.002, 50.005
 ---
 [[Comp Struct|50.002]]
+[[50.005 Computer System Engineering|50.005]]
+[[Week 1 - Introduction to Operating System]]
 
+# 50.005
+## VM Implementation
+The [[OS Kernel]] implements the Virtual Memory.
+It has to:
+- **Support [[Demand Paging]] protocol**
+- **Keep track** of which parts of memory are currently being used and by whom
+- **Decide** which processes and data to move into and out of memory
+- **Mapping files** into process address space
+- [[C dynamic memory allocation|Allocate and deallocate]] memory space as needed
+	- If [[Dynamic Random-Access Memory (DRAM)|RAM]] full, migrate some contents (e.g. [[Replacement policy|LRU]]) onto swap space on [[Hard Disk Drive (Disk)|disk]].
+- **Manage** the [[Pagetable]] and any operation associated with it.
+
+> CPU [[Cache]]s are managed entirely by **hardware** (cache [[Replacement policy]], determining cache `HIT` or `MISS`, etc). Depending on the cache hardware, the [[OS Kernel]] may do some initial setup (caching policy to use, etc).
+
+
+# 50.002
 ## Overview
 > **Program**: a group of instructions made to carry out a specified task.
 
@@ -15,7 +33,7 @@ The [[Dynamic Random-Access Memory (DRAM)|physical memory]] can contain all kind
 Lower addresses: `0` onwards: typically have executable instructions loaded there ([[Anatomy of the Beta CPU|PC]] starts from `0`).
 
 [[Stack and Procedures|Stack]] can grow during runtime mainly due to recursion and creation of local variables.
-[[Heap]] grows upwards (towards lower addresses) and is used to store global variables. [external materials](http://www.enderunix.org/docs/memory.pdf)
+[[Heap data structure]] grows upwards (towards lower addresses) and is used to store global variables. [external materials](http://www.enderunix.org/docs/memory.pdf)
 
 Note: an OS may not know in advance whether stack or heap will be used predominantly before the program is actually run. Therefore, an OS must layout these 2 memory regions ina way to guarantee maximum space for both.
 

@@ -11,4 +11,3 @@ The **Configure Activity** screen differs depending on which template you chose.
 -   **Generate Layout file**: Leave this checkbox selected to create the layout resource connected to this `Activity`, which is usually named `activity_main`. The layout defines the UI for the `Activity`.
 -   **Backwards Compatibility (AppCompat):** Leave this checkbox selected to include the `AppCompat` library. Use the `AppCompat` library to make sure that the app is compatible with previous versions of Android, even if the app uses features found only in newer Android versions.
 
-[[Activities and intents]]

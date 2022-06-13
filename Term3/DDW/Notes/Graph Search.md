@@ -23,7 +23,7 @@ To do this, start with the starting vertex A. Then look into the neighbours, in 
  Stop when all the vertices have been explored in terms of the children.
  Can use boolean or colour to indicate if the vertex has been visited.
 
- One way is to use a [[Stacks and Queues#^55e4cd|queue]] data structure.
+ One way is to use a [[Stacks and Queues data structure#^55e4cd|queue]] data structure.
  When we visit a vertex, we put all its neighbours into a queue.
  This also ensures that we explore the vertices in a breadth-first manner.
 

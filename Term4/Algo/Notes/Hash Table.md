@@ -8,14 +8,14 @@ tags: #50.004
 
 Formally, a hash table is an array where each element is a (doubly)-[[Arrays and Linked Lists|LL]].
 
-Every hash table with $N$ slots has an associated [[Hash functions|hash function]]
+Every hash table with $N$ slots has an associated [[Algo Hash functions|hash function]]
 $$h: K \to \set{0, 1, \dots, N-1}$$
 where $K= \set{\text{all possible key values}}$
 
 ![[Pasted image 20220221140348.png]]
 Example: Hash tables are useed to implement dictionaries in Python
 
-A good [[Hash functions|hash function]] maps a very large set of key values to a small set of hash values, such that [[Intro to hashing#Collisions in hashing|collisions]] are uncommon.
+A good [[Algo Hash functions|hash function]] maps a very large set of key values to a small set of hash values, such that [[Intro to hashing#Collisions in hashing|collisions]] are uncommon.
 
 ## Operations on a Hash Table A
 [[Hash Operations]]

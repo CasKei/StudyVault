@@ -13,7 +13,7 @@ tags: #50.004
 - Key values need not be integers
 
 ## Key ideas
-[[Hash functions]]: function that maps arbitrary key values to a fixed set of integers
+[[Algo Hash functions]]: function that maps arbitrary key values to a fixed set of integers
 [[Hash Table]]: Similar to a [[Direct addressing|direct address table]], but instead each object is stored based on its hash value, i.e. the value obtained after passing the key value to the hash function.
 
 ## Idea of Hash function
@@ -37,7 +37,7 @@ e.g. chaining
 ## [[Direct addressing]] VS [[Intro to hashing|Hashing]]
 | Direct addressing                                                                                                                                                                           | Hashing                                                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objects we want to store must have distinct integer key values. Store the pointers to the objects in a [[Direct addressing\| direct address table]] based on the key values.                | Objects we want to store can have arbitrary key values. Given some [[Hash functions\|hash function]], these key values are mapped to hash values. We store the pointers to these objects in a [[Hash Table]] based on their hash values. |
+| Objects we want to store must have distinct integer key values. Store the pointers to the objects in a [[Direct addressing\| direct address table]] based on the key values.                | Objects we want to store can have arbitrary key values. Given some [[Algo Hash functions\|hash function]], these key values are mapped to hash values. We store the pointers to these objects in a [[Hash Table]] based on their hash values. |
 | If `x` is a pointer to an object with key value `k`, then store `x` in slot `k`                                                                                                             | If `x` is a pointer to an object with hash value `k`, then store `x` in slot `k`.                                                                                                                                                        |
 | We assume objects have distinct key values, no two pointers of different objects will be stored in the same slot. Hence there are no [[Intro to hashing#Collisions in hashing\|collisions]] | Distinct objects could have the same hash value, so [[Hash Table]]s could have [[Intro to hashing#Collisions in hashing\|collisions]]                                                                                                    |
 

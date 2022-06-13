@@ -6,7 +6,7 @@ tags: network
 
 ## One To One
 - 2 machines can talk to each other
-- Each machine has a [[Network Interface]]
+- Each machine has a [[Network Interface]] (connected with a network cable)
 - [[Network Interface]]s can be connected directly to each other via network cable
 - Each [[Network Interface]] has a Media Access Control (MAC) address (hardware address)
 - Looks like this: `50:46:5d:54:94:23`

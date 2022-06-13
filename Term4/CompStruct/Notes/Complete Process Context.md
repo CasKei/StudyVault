@@ -1,18 +1,21 @@
 ---
+aliases: process context, context
 tags: 50.002
 ---
 [[Comp Struct|50.002]]
 [[Virtual Machine]]
+
+[[Process vs Program]]
 
 ## A Complete Process Context
 [[Complete Process Context]]
 [[Virtual Memory|Previously]] we learned that each process has its own [[Virtual Address|VA]] to [[Memory Addressing|PA]] mapping we call as part of a process [[Context switch|context]], hence allowing it to run on its own [[Virtual Memory]].
 
 Assigning a separate context for each process has 2 benefits:
-1. Timesharing among processes (multitask, switching)
+1. [[Timesharing]] among processes (multitask, switching)
 2. Allow each process to run in isolation - every program can be written as if it has access to all memory
 
-Kernel needs to store more info about a process so that it can pause and resume execution without conflict.
+[[OS Kernel]] needs to store more info about a [[Process vs Program|process]] so that it can pause and resume execution without conflict.
 
 List of components that make up a process context:
 - Values of `R0, R1, ..., R30`

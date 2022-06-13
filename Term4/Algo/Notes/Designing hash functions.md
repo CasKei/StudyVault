@@ -24,7 +24,7 @@ Suppose `A` is a hash table with `n` elements and `m` slots.
 > For any hash function satisfying this assumption, the key values would be on average distributed equally over all slots (best case scenario)
 
 Suppose $K=[0, 1]$ is the unit interval representing all possible key values.
-Let `A` be a [[Hash Table]] with $m$ slots, and consider the [[Hash functions|hash function]] $h:K\to \set{0,1,\dots ,m-1}$ given by 
+Let `A` be a [[Hash Table]] with $m$ slots, and consider the [[Algo Hash functions|hash function]] $h:K\to \set{0,1,\dots ,m-1}$ given by 
 $$h(x) = \lfloor mx \rfloor$$
 If the key values are uniformly distibuted, i.e. every value in $K$ is equally likely to be a key value, then the simple uniform hashing assumption is satisfied.
 
@@ -48,7 +48,7 @@ Has characters from almost all written languages (inc. all characters in Arabic,
 
 Similarly, each character can be converted into its Unicode number.
 
-## Designing [[Hash functions]]
+## Designing [[Algo Hash functions]]
 > Designing good hash functions requires knowing at least some information about the possible key values
 
 It is not always easy to achieve the [[#Simple Uniform Hashing]] assumption.
@@ -69,7 +69,7 @@ Suppose we use a hash function to hash the actual content of an entire large fil
 If the file has been tampered with, then there is a good chance that the hash value would change.
 Hence, keeping track of the hash value is a good way to detect tampering, without having to know the content of the file.
 
-## Comments on [[Hash functions#Division Method|division]] and [[Hash functions#Multiplication Method|multiplication method]]
+## Comments on [[Algo Hash functions#Division Method|division]] and [[Algo Hash functions#Multiplication Method|multiplication method]]
 ### Division
 Recall `m` is the number of slots in the [[Hash Table]]
 - Avoid letting `m` be a power of 2 unless you know what you are doing (e.g you know the distribution of the key values)
@@ -86,4 +86,4 @@ Recall `m` is the number of slots in the [[Hash Table]]
 - However this still makes sense even if $\beta > 1$ or $\beta < 0$.
 - For this course we shall allow $\beta$ to be any strictly positive value.
 - A suggested 'good default' value for $\beta$ is $\dfrac{\sqrt{5} - 1}{2} \approx 0.618034$
-- This method is slower than  [[Hash functions#Division Method|division]] method.
+- This method is slower than  [[Algo Hash functions#Division Method|division]] method.

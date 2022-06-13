@@ -6,5 +6,5 @@ tags: #50.004
 [[W3 Heap]]
 
 [[Data Types and Data Structures]]
-[[Heap]]
+[[Heap data structure]]
 [[Priority Queue]]

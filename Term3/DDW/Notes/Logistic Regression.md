@@ -3,7 +3,6 @@ aliases: categorical regression
 tags: #regression, #data, #ML
 ---
 Back to [[Data Driven World|DDW]]
-Back to [[Term 3]]
 # Logistic Regression for Classification
 ## Introduction
 The problem of classification deals with _categorical_ data.

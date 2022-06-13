@@ -4,7 +4,7 @@ tags: #50.004
 ---
 [[Algo]]
 [[Algo week 4]]
-[[Heap]]
+[[Heap data structure]]
 [[What is a Binary Seach Tree]]
 [[Traversals of a BST]]
 [[Operations of BSTs]]

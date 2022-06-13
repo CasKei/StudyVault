@@ -12,7 +12,7 @@ Tags: #DDW, #Contents
 - [[Divide and Conquer]]
 - [[Merge Sort]]
 - [[Object Oriented Programming]]
-- [[Stacks and Queues]]
+- [[Stacks and Queues data structure]]
 - [[Introduction to Graph]]
 - [[Graph Search]]
 - [[Inheritance and Abstract Base Class]]

@@ -129,4 +129,3 @@ Android developer documentation:
 ## 1.4: Resources to help you learn
 [[Available resources for android]]
 ## 2.1: Activities and intents
-[[Activities and intents]]

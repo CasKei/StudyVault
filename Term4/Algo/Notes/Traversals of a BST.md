@@ -5,7 +5,7 @@ tags: #50.004
 [[Algo week 4]]
 Recall:
 [[Binary Heap and Heapsort]]
-[[Heap]]
+[[Heap data structure]]
 [[Data Types and Data Structures]]
 [[What is a Binary Seach Tree]]
 

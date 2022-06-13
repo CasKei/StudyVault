@@ -1,0 +1,22 @@
+---
+aliases:
+tags: 50.005
+---
+[[50.005 Computer System Engineering|50.005]]
+[[Week 4 - Processes and Thread management]]
+
+## Comparison
+
+| [[Kernel level thread]]     | [[User level thread]]  | 
+|---|---|
+| <span style="color:#f7007f;"><b>Known to OS Kernel</b></span>  | <span style="color:#f77729;"><b>Not known to OS Kernel</b></span>  | 
+| <span style="color:#f7007f;"><b>Runs</b></span> in Kernel mode. All code and data structures for the Thread API exist in Kernel space.   | <span style="color:#f7007f;"><b>Runs</b></span> entirely in User mode. All code and data structures for the Thread API exist in user space.|
+| Invoking a function in the API results in <span style="color:#f7007f;"><b>trap</b></span> (system call) to the Kernel Mode (requires a change of mode)  | Invoking a function in the API results in <span style="color:#f7007f;"><b>local</b></span> function call in user space.   | 
+| <span style="color:#f7007f;"><b>Scheduled directly by Kernel scheduler</b></span>| <span style="color:#f77729;"><b>Managed and scheduled entirely by the run time system</b></span> (user level library). |
+|Scheduler maintains one <span style="color:#f7007f;"><b>thread control block</b></span> per thread in the system in a system wide thread table.<br><br>Scheduler also manages <span style="color:#f7007f;"><b>one process control block</b></span> per process in the system in a system wide process table.<br><br>From the OS's point of view, these are what is scheduled to run on a CPU. Kernel <span style="color:#f7007f;"><b>must</b></span> manage the scheduling of both <span style="color:#f7007f;"><b>threads</b></span> and <span style="color:#f7007f;"><b>processes</b></span>. | The thread scheduler is running in <span style="color:#f77729;"><b>user</b></span> mode.<br>It exists in the <span style="color:#f77729;"><b>thread library </b></span>(e.g: phtread of Java thread) linked with the process. |
+|Multiple Kernel threads can run on <span style="color:#f7007f;"><b>different</b></span> processors.  | Multiple user threads on the same user process <span style="color:#f77729;"><b>may not be run</b></span> on multiple cores (since the Kernel isn’t aware of their presence).<br>It depends on the mapping model (see next section).|
+|Take up <span style="color:#f77729;"><b>Kernel</b></span> data structure, <span style="color:#f77729;"><b>specific</b></span> to the operating system. | Take up <span style="color:#f77729;"><b>thread</b></span> data structure (depends on the library). More <span style="color:#f77729;"><b>generic</b></span> and can run on any system, even on OS that doesn’t support multithreading  |
+| Requires more <span style="color:#f7007f;"><b>resources</b></span> to allocate / deallocate. |<span style="color:#f77729;"><b>Cheaper</b></span> to allocate / deallocate. |
+| Significant <span style="color:#f7007f;"><b>overhead</b></span> and increase in kernel complexity.  | <span style="color:#f77729;"><b>Simple management</b></span>, creating, switching and synchronizing threads done in user-space without kernel intervention. |
+|Switching threads is as <span style="color:#f7007f;"><b>expensive</b></span> as making a system call. |<span style="color:#f77729;"><b>Fast and efficient</b></span>, switching threads not much more expensive than a function call|
+| Since kernel has full <span style="color:#f7007f;"><b>knowledge</b></span> of all kernel threads, the scheduler may be more efficient.<br><br><span style="color:#f7007f;"><b>Example</b></span>: <br>• Give <span style="color:#f7007f;"><b>more</b></span> CPU time for processes with larger number of threads<br>• <span style="color:#f7007f;"><b>Schedule</b></span> threads that are currently holding a lock. | Since <span style="color:#f77729;"><b>OS is not aware</b></span> of user-level threads, Kernel may forcibly make poor decisions.<br><br><span style="color:#f77729;"><b>Example:</b></span><br>• Scheduling a process with <span style="color:#f77729;"><b>idle</b></span> threads<br>• <span style="color:#f77729;"><b>Blocking</b></span> a process due to a blocking thread even though the process has other threads that can run<br>• Giving a process as a whole one time slice <span style="color:#f77729;"><b>irrespective</b></span> of whether the process has 1 or 1000 threads<br>• <span style="color:#f77729;"><b>Unschedule</b></span> a process with a thread holding a lock|

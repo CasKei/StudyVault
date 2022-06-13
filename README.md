@@ -7,7 +7,6 @@ tags: #StudyVault
 [[README|StudyVault]]
 
 ## Other
-[[CS50]]
 [[Crash Course]]
 [[Network Fundamentals]]
 
@@ -22,6 +21,9 @@ tags: #StudyVault
 
 ## Term 5
 [[50.005 Computer System Engineering]]
+[[50.003 Elements of Software Construction]]
+[[50.042 Foundations of Cybersecurity]]
+[[02.110DH The Chinese Lyrical Tradition - Arts, Literature and Landscape Design]]
 
-
+## Term 6
 [[UMD proposed courses]]

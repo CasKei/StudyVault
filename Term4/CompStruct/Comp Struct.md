@@ -23,9 +23,6 @@ tags: #50.002
 [[Virtual Machine]]
 [[Asynchronous Handling of IO Devices]]
 
-[[Lab dump]]
-[[Practice dump]]
-
 [[Adder]]
 [[2D short description]]
 

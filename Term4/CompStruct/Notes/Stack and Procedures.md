@@ -1,5 +1,5 @@
 ---
-aliases:
+aliases: stack
 tags: #50.002
 ---
 [[Comp Struct]]
@@ -148,14 +148,14 @@ The above issues can be solved by ==establishing a kind of procedure linkage con
 4. Leave *stack data* **unchanged** upon returning to the caller.
 
 ## The "Stack" implementation
-In general, a [[Stacks and Queues|stack]] is a type of [[Data Types and Data Structures|data structure]] where you can perform two essential operations: `PUSH` and `POP`. Its principle is *last-in-first-out* (LIFO).
+In general, a [[Stacks and Queues data structure|stack]] is a type of [[Data Types and Data Structures|data structure]] where you can perform two essential operations: `PUSH` and `POP`. Its principle is *last-in-first-out* (LIFO).
 
 You always add item via `PUSH` operation to the top of the stack, and can only remove the topmost item in succession via `POP` operation from the top of the stack.
 
-How to implement a [[Stacks and Queues|stack]] [[Data Types and Data Structures|data structure]] to aid our function execution?
+How to implement a [[Stacks and Queues data structure|stack]] [[Data Types and Data Structures|data structure]] to aid our function execution?
 
 We ==**reserve** an arbitrary block of location== in our [[Anatomy of the Beta CPU|memory unit]] to be space for the stack.
-Illustrated below is a block of [[Anatomy of the Beta CPU|memory unit]] from address `0x010C` to `0x0128` reserved as our [[Stacks and Queues|stack]]:
+Illustrated below is a block of [[Anatomy of the Beta CPU|memory unit]] from address `0x010C` to `0x0128` reserved as our [[Stacks and Queues data structure|stack]]:
 ![](https://dropbox.com/s/zwaa983jxrmq78n/stack_empty.png?raw=1)
 We have ==conventions== as mentioned:
 - `R29 (SP)`: contains address of top of stack (available location ot write to)

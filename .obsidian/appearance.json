@@ -1,7 +1,9 @@
 {
-  "baseFontSize": 17,
+  "baseFontSize": 18,
   "cssTheme": "Things",
   "theme": "obsidian",
   "translucency": false,
-  "enabledCssSnippets": []
+  "enabledCssSnippets": [],
+  "textFontFamily": "Bahnschrift,Lucida Sans Unicode,Candara,Verdana,Palatino Linotype,Rockwell",
+  "monospaceFontFamily": "Fira Code,Victor Mono,Consolas,Lucida Console"
 }

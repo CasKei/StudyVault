@@ -32,5 +32,17 @@
       ],
       "key": "Q"
     }
+  ],
+  "editor:focus-top": [],
+  "editor:focus-bottom": [],
+  "editor:focus-left": [],
+  "editor:focus-right": [],
+  "graph:animate": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "T"
+    }
   ]
 }

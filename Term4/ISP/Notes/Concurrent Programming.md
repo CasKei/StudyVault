@@ -1,5 +1,5 @@
 ---
-aliases: concurrent
+aliases: concurrent, concurrency
 tags: 50.001
 ---
 [[IS & Programming|ISP]]
@@ -11,7 +11,7 @@ tags: 50.001
 Concurrency: events or circumstances that are happening or existing at the same time.
 
 > Concurrent programming:
-> A technique in which 2 or more processes start, run in an interleaved fashion through *context switching*, and complete in an overlapping time period by managing access to *shared resources* e.g. on a single core of CPU
+> A technique in which 2 or more processes start, run in an interleaved fashion through [[Context switch]]ing, and complete in an overlapping time period by managing access to *shared resources* e.g. on a single core of CPU
 
 This doesn't necessarily mean that multiple processes will be running at the same instant, even if results make it seem like it,
 
@@ -28,12 +28,12 @@ While data is retrieved, you want UI to remain responsive and inform the user th
 
 This means that **download** should be done on a *separate thread* from the **UI**.
 
-## Thread
+## [[Week 4 - Processes and Thread management|thread]]
 > A unit of executing sequences in a program.
 
 A concurrent program consists of multiple threads and an **executor (scheduler)** which orchestrates the actual execution/scheduling of the threads.
 
-In the presence of multiple processing units ([[Anatomy of the Beta CPU|CPU]] cores), the scheduler might be able to execute/schedule multiple threads simultaneously in different processing units, otherwise, the scheduler will interleave the executions of the given set of scheduled threads.
+In the presence of multiple processing units ([[Anatomy of the Beta CPU|CPU]] cores), the [[Process Manager|scheduler]] might be able to execute/schedule multiple threads simultaneously in different processing units, otherwise, the scheduler will interleave the executions of the given set of scheduled threads.
 
 This is often [[Abstraction|abstracted]] away from the programmers, so as to prevent deadlock or other abnormal outcomes.
 
