@@ -4,110 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "a02ce75675895ea2",
+        "id": "0fff32bc59b595fb",
         "type": "split",
         "children": [
           {
-            "id": "8abcfc517a444fff",
+            "id": "88914de858b18ed2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Term5/Cybersec/Notes/Electronic Code Book (ECB).md",
+                "file": "Term5/Cybersec/Notes/Extension field.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f64791653a605396",
+            "id": "a079221a01f49d77",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Term5/Cybersec/Notes/Block ciphers.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "mindmap",
+              "state": {}
             }
           }
         ],
         "direction": "horizontal"
       },
       {
-        "id": "699c566dc6c60ffb",
-        "type": "split",
-        "children": [
-          {
-            "id": "a63a8b498ea4388f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Term5/Cybersec/Notes/Ring.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d90696dce923ab18",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Term5/Cybersec/Notes/Modular Arithmetic.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "direction": "horizontal"
-      },
-      {
-        "id": "b171226d568160c6",
+        "id": "8abcfc517a444fff",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term5/CSE/Week 5 - Process Synchronisation.md",
+            "file": "Term5/Cybersec/Notes/Block ciphers.md",
             "mode": "source",
             "source": false
-          }
-        }
-      },
-      {
-        "id": "2c7a65015698d58c",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term5/CSE/Critical section problem.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "f585d2fa937fc8f6",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term5/CSE/50.005 Computer System Engineering.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "8c6bba09d008c506",
-        "type": "leaf",
-        "state": {
-          "type": "image",
-          "state": {
-            "file": "Attachments/Pasted image 20220608181104.png"
           }
         }
       },
@@ -124,12 +55,12 @@
         }
       },
       {
-        "id": "20f4c1f6ba130820",
+        "id": "6d00324a99dc4f4c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term5/Cybersec/Notes/Initialisation vector.md",
+            "file": "Term5/CSE/Week 5, 6 - Deadlock.md",
             "mode": "source",
             "source": false
           }
@@ -170,7 +101,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a440322c0bcecb1b",
@@ -189,7 +121,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 361.504056930542
+    "width": 361.504056930542,
+    "collapsed": true
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -205,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Attachments/Pasted image 20220608181104.png",
+                "file": "Term5/CSE/Week 5, 6 - Deadlock.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -222,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Attachments/Pasted image 20220608181104.png"
+                "file": "Term5/CSE/Week 5, 6 - Deadlock.md"
               }
             }
           },
@@ -249,17 +182,17 @@
     "width": 164.266357421875,
     "collapsed": true
   },
-  "active": "8c6bba09d008c506",
+  "active": "6d00324a99dc4f4c",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20220608181104.png",
-    "Attachments/A7F9CD13-8578-419F-9E0A-69EE34FB0FC7.jpeg",
-    "Term5/Cybersec/Notes/Modular Arithmetic.md",
-    "Term5/CSE/Notes/Week 4 - Processes and Thread management.md",
-    "Term5/Cybersec/Notes/Initialisation vector.md",
-    "Term5/CSE/Week 5 - Process Synchronisation.md",
-    "Term5/CSE/Critical section problem.md",
-    "Term5/CSE/Race condition.md",
+    "Term5/CSE/Week 5, 6 - Deadlock.md",
     "Term5/CSE/50.005 Computer System Engineering.md",
-    "Term3/DDW/Data Driven World.md"
+    "Term5/CSE/Notes/Week 5 - Process Synchronisation.md",
+    "Term5/Cybersec/Notes/Block ciphers.md",
+    "Term5/Cybersec/Notes/Affine mapping.md",
+    "Term5/Cybersec/Notes/Multiplicative Inverse.md",
+    "Term5/Cybersec/Notes/Modular Arithmetic.md",
+    "Term3/DDW/Data Driven World.md",
+    "Term3/DDW/Notes/Linear Regression.md",
+    "Term5/Cybersec/Notes/Output-Feedback-Mode OFB.md"
   ]
 }

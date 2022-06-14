@@ -1,8 +1,8 @@
 ---
 aliases:
-tags: 50.042
+tags: 50.005
 ---
-[[50.042 Foundations of Cybersecurity|50.042]]
+[[50.005 Computer System Engineering|50.005]]
 [[Week 5 - Process Synchronisation]]
 [[Producer Consumer problem]]
 

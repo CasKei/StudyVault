@@ -18,3 +18,7 @@ tags: 50.042
 
 ## Extension fields
 [[Extension field]]
+
+More:
+[[GF(pn) arithmetics]]
+[[Multiplicative Inverse]]

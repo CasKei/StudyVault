@@ -48,3 +48,7 @@ Algebraic structure consists of:
 - [[Group]]
 - [[Ring]]
 - [[Field]]
+
+[[GF(pn) arithmetics]]
+[[Multiplicative Inverse]]
+Finite structures are useful for arithmetics on computers. They allow us to translate XOR and similar operators to arithmetics.

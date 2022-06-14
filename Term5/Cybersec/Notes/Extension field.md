@@ -39,5 +39,7 @@ If different reduction polynomial used, result may be different.
 - With irreducible [[Polynomial]]: $$P(x) = x^8 + x^4 + x^3 + x + 1$$
 - S-boxes are usually hard-coded, but also can be replaced by $GF(2^8)$ multiplication/division
 - S-box:
-	- byte substitution for $A_i$ requires the computation of the multiplicative [[Invertibility|inverse]] , and then an affine mapping
-- Multiplicative inverse can be computed on-the-fly using the extended euclidean algorithm
+	- byte substitution for $A_i$ requires the computation of the [[Multiplicative Inverse]], and then an affine mapping
+- [[Multiplicative Inverse]] can be computed on-the-fly using the extended euclidean algorithm
+
+
