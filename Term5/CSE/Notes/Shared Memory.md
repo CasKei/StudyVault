@@ -53,9 +53,9 @@ Finally, one of the processes can destroy it, typically the reader because it is
 shmctl(shmid, IPC_RMID, NULL);
 ```
 
-Of course one obvious issue that might happen here is that BOTH writer and reader are accessing the shared memory concurrently, therefore we will run into **synchronisation** problems whereby **writer overwrites before reader finished reading** or **reader attempts to read an empty memory value before writer finished writing**.
+Of course one obvious issue that might happen here is that BOTH writer and reader are accessing the shared memory [[Concurrent Programming|concurrent]]ly, therefore we will run into [[Week 5 - Process Synchronisation|synchronisation]] problems whereby **writer overwrites before reader finished reading** or **reader attempts to read an empty memory value before writer finished writing**.
 
-We will address such synchronisation problems in the next chapter.
+We will address such synchronisation problems in the next chapter. [[Week 5 - Process Synchronisation]]
 
 ## IPC without SVC
 [[Supervisor Call|SVC]]

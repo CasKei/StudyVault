@@ -1,0 +1,38 @@
+{
+  "userAdmonitions": {
+    "note": {
+      "type": "note",
+      "color": "9, 37, 62",
+      "icon": {
+        "type": "obsidian",
+        "name": "note-glyph"
+      },
+      "command": false,
+      "title": "Note",
+      "injectColor": true,
+      "noTitle": false,
+      "copy": false
+    }
+  },
+  "syntaxHighlight": true,
+  "copyButton": false,
+  "version": "9.0.3",
+  "autoCollapse": true,
+  "defaultCollapseType": "closed",
+  "injectColor": true,
+  "parseTitles": true,
+  "dropShadow": true,
+  "hideEmpty": false,
+  "open": {
+    "admonitions": true,
+    "icons": true,
+    "other": true,
+    "advanced": true
+  },
+  "icons": [],
+  "useFontAwesome": true,
+  "rpgDownloadedOnce": false,
+  "msDocConverted": false,
+  "useSnippet": false,
+  "snippetPath": "custom-admonitions.0d6c68"
+}

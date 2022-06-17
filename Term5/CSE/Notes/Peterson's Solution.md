@@ -18,9 +18,9 @@ int turn;
 bool flag[2]
 ```
 - `turn == i`: process `Pi` allowed to enter the [[Critical section]]. Similar otherwise.
-- `flag[[i] == true`: process `Pi` ready to enter [[Critical section]].
+- `flag[i] == true`: process `Pi` ready to enter [[Critical section]].
 
-An operation acting on shared memory is **atomic** if it completes in a single step relative to other threads. For example, when an atomic store is performed on a shared variable, no other thread/process can observe the modification half-complete.
+An operation acting on [[Shared Memory]] is **atomic** if it completes in a ==single step relative to other threads==. For example, when an atomic store is performed on a shared variable, no other thread/process can observe the modification half-complete.
 
 ## Initialisation
 `flag` : `false` for all `i`\

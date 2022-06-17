@@ -4,66 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0fff32bc59b595fb",
-        "type": "split",
-        "children": [
-          {
-            "id": "88914de858b18ed2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Term5/Cybersec/Notes/Extension field.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a079221a01f49d77",
-            "type": "leaf",
-            "state": {
-              "type": "mindmap",
-              "state": {}
-            }
-          }
-        ],
-        "direction": "horizontal"
-      },
-      {
-        "id": "8abcfc517a444fff",
+        "id": "2f90d4b12b19148c",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term5/Cybersec/Notes/Block ciphers.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "fd8bc1503a9f5e2b",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term5/Cybersec/Notes/Output-Feedback-Mode OFB.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "6d00324a99dc4f4c",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term5/CSE/Week 5, 6 - Deadlock.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -76,7 +21,6 @@
       {
         "id": "0c0aaa5ba09a7988",
         "type": "tabs",
-        "dimension": 59.66209081309398,
         "children": [
           {
             "id": "4972470be55ee35b",
@@ -92,7 +36,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#resources",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,13 +45,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a440322c0bcecb1b",
         "type": "tabs",
-        "dimension": 40.33790918690602,
         "children": [
           {
             "id": "da258fd36802327e",
@@ -121,8 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 361.504056930542,
-    "collapsed": true
+    "width": 253
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -138,7 +79,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term5/CSE/Week 5, 6 - Deadlock.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -154,9 +94,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Term5/CSE/Week 5, 6 - Deadlock.md"
-              }
+              "state": {}
             }
           },
           {
@@ -182,17 +120,17 @@
     "width": 164.266357421875,
     "collapsed": true
   },
-  "active": "6d00324a99dc4f4c",
+  "active": "2f90d4b12b19148c",
   "lastOpenFiles": [
-    "Term5/CSE/Week 5, 6 - Deadlock.md",
-    "Term5/CSE/50.005 Computer System Engineering.md",
-    "Term5/CSE/Notes/Week 5 - Process Synchronisation.md",
+    "Term5/ChiLyr/Notes/Week 1 - 六义.md",
+    "Term5/ChiLyr/02.110 Writing assignment.md",
+    "Term5/ChiLyr/Notes/Week 5 - Nineteen Old Poems.md",
+    "Term5/ChiLyr/Notes/Week 2 - 诗经.md",
     "Term5/Cybersec/Notes/Block ciphers.md",
-    "Term5/Cybersec/Notes/Affine mapping.md",
-    "Term5/Cybersec/Notes/Multiplicative Inverse.md",
-    "Term5/Cybersec/Notes/Modular Arithmetic.md",
-    "Term3/DDW/Data Driven World.md",
-    "Term3/DDW/Notes/Linear Regression.md",
-    "Term5/Cybersec/Notes/Output-Feedback-Mode OFB.md"
+    "Term5/Cybersec/Notes/Initialisation vector.md",
+    "Term5/Cybersec/Notes/nonce.md",
+    "Term5/Cybersec/Notes/Electronic Code Book (ECB).md",
+    "Term5/Cybersec/Notes/Cipher-Feedback-Mode CFB.md",
+    "Term5/Cybersec/Notes/Counter-mode CTR.md"
   ]
 }

@@ -13,6 +13,8 @@ tags: 50.042
 > - when the 2 [[Group]]s are mixed,  the [[Distributive]] law holds.
 > 	- $\forall a, b, c \in \mathbb{S} : a \times (b\star c) = (a \times b) \star (a\times c)$
 
+A field is a set of numbers on which addition, subtraction, multiplication, and division/inversion are defined.
+
 ## Galois Field (finite field)
 [[Galois Field]]
 

@@ -1,0 +1,28 @@
+---
+aliases: number-used once
+tags: 50.042
+---
+[[50.042 Foundations of Cybersecurity|50.042]]
+[[Initialisation vector|IV]]
+## What
+An trary number that can be used just once in a cryptographic commincation. Often a random or pseudorandom number issued in an authentication protocol to ensure old comminications cannot be reused in replay attacks. Also useful as [[Initialisation vector|IV]] in cryptographic [[Hash functions]].
+
+## Definition
+A nonce is an arbitrary number used only once in a cryptographic communication, in the spirit of a [nonce word](https://en.wikipedia.org/wiki/Nonce_word "Nonce word"). They are often [random](https://en.wikipedia.org/wiki/Randomness "Randomness") or [pseudo-random](https://en.wikipedia.org/wiki/Pseudo-random "Pseudo-random") numbers. Many nonces also include a [timestamp](https://en.wikipedia.org/wiki/Timestamp "Timestamp") to ensure exact timeliness, though this requires clock synchronisation between organisations. The addition of a client nonce ("**cnonce**") helps to improve the security in some ways as implemented in [digest access authentication](https://en.wikipedia.org/wiki/Digest_access_authentication "Digest access authentication"). To ensure that a nonce is used only once, it should be time-variant (including a suitably fine-grained timestamp in its value), or generated with enough random bits to ensure a probabilistically insignificant chance of repeating a previously generated value. Some authors define pseudo-randomness (or unpredictability) as a requirement for a nonce.
+
+## Usage
+### Authentication
+[Authentication protocols](https://en.wikipedia.org/wiki/Authentication_protocol "Authentication protocol") may use nonces to ensure that old communications cannot be reused in [replay attacks](https://en.wikipedia.org/wiki/Replay_attack "Replay attack"). For instance, nonces are used in [HTTP](https://en.wikipedia.org/wiki/HTTP "HTTP") [digest access authentication](https://en.wikipedia.org/wiki/Digest_access_authentication "Digest access authentication") to calculate an [MD5](https://en.wikipedia.org/wiki/MD5 "MD5") digest of the [password](https://en.wikipedia.org/wiki/Password "Password"). The nonces are different each time the 401 authentication challenge [response code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes "List of HTTP status codes") is presented, thus making [replay attacks](https://en.wikipedia.org/wiki/Replay_attack "Replay attack") virtually impossible. The scenario of ordering products over the Internet can provide an example of the usefulness of nonces in replay attacks. An attacker could take the encrypted information and—without needing to decrypt—could continue to send a particular order to the supplier, thereby ordering products over and over again under the same name and purchase information. The nonce is used to give 'originality' to a given message so that if the company receives any other orders from the same person with the same nonce, it will discard those as invalid orders.
+
+A nonce may be used to ensure security for a [stream cipher](https://en.wikipedia.org/wiki/Stream_cipher "Stream cipher"). Where the same key is used for more than one message and then a different nonce is used to ensure that the [keystream](https://en.wikipedia.org/wiki/Keystream "Keystream") is different for different messages encrypted with that key; often the message number is used.
+
+Secret nonce values are used by the [Lamport signature](https://en.wikipedia.org/wiki/Lamport_signature "Lamport signature") scheme as a signer-side secret which can be selectively revealed for comparison to public hashes for signature creation and verification.
+
+### [[Initialisation vector]]s
+[Initialization vectors](https://en.wikipedia.org/wiki/Initialization_vector "Initialization vector") may be referred to as nonces, as they are typically random or pseudo-random.
+
+### [[Hashing applications]]
+
+Nonces are used in [proof-of-work systems](https://en.wikipedia.org/wiki/Proof-of-work_system "Proof-of-work system") to vary the input to a [cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function "Cryptographic hash function") so as to obtain a hash for a certain input that fulfils certain arbitrary conditions. In doing so, it becomes far more difficult to create a "desirable" hash than to verify it, shifting the burden of work onto one side of a transaction or system. For example, proof of work, using hash functions, was considered as a means to combat [email spam](https://en.wikipedia.org/wiki/Email_spam "Email spam") by forcing email senders to find a hash value for the email (which included a timestamp to prevent pre-computation of useful hashes for later use) that had an arbitrary number of leading zeroes, by hashing the same input with a large number of values until a "desirable" hash was obtained.
+
+Similarly, the [bitcoin](https://en.wikipedia.org/wiki/Bitcoin "Bitcoin") [blockchain](https://en.wikipedia.org/wiki/Blockchain "Blockchain") hashing algorithm can be tuned to an arbitrary difficulty by changing the required minimum/maximum value of the hash so that the number of bitcoins awarded for new blocks does not increase linearly with increased network computation power as new users join. This is likewise achieved by forcing bitcoin miners to add nonce values to the value being hashed to change the hash algorithm output. As cryptographic hash algorithms cannot easily be predicted based on their inputs, this makes the act of blockchain hashing and the possibility of being awarded bitcoins something of a lottery, where the first "miner" to find a nonce that delivers a desirable hash is awarded bitcoins.

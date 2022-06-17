@@ -125,7 +125,7 @@ The latter 3 uses the block cipher as a building block for a [[Stream ciphers]].
 
 [[Counter-mode CTR]]
 [[Output-Feedback-Mode OFB]]
-[[Counter-Feedback-Mode CFB]]
+[[Cipher-Feedback-Mode CFB]]
 
 ### Confidentiality and Authentication
 In practice we not only want Confidentiality, but also Authentication.

@@ -4,8 +4,19 @@ tags: 50.005
 ---
 [[50.005 Computer System Engineering|50.005]]
 [[Week 5 - Process Synchronisation]]
-[[Producer Consumer problem]]
 
+
+## Overview
+A **race condition** occurs when two or more threads (or processes) access and perform **non-atomic operations** on a shared variable (be it across threads or processes) value at the same time. Since we cannot control the **order** of execution, we can say that the threads / processes race to modify the value of the shared variable.
+
+The **final** value of the shared variable therefore can be **non deterministic**, depending on the particular **order** in which the access takes place. In other words, the cause of race condition is due to the fact that the function performed on the shared variable is non-atomic.
+
+In this lab we are going to **exploit** a program that is **vulnerable to race-condition**.
+
+-   The program alone is single-threaded, so in the absence of an attacker, there’s nothing wrong with the program.
+-   The program however is vulnerable because an attacker can exploit the fact that the program can be subjected to race-condition.
+
+[[Producer Consumer problem]]
 ![[Producer Consumer problem#What happens if there is no synchronisation]]
 
 > Assume `buffer` and `counter` are [[Shared Memory|shared]] between the two [[Week 4 - Processes and Thread management|processes]] / [[Week 4 - Processes and Thread management|threads]]. The instructions `counter ++` and `counter --` are **not** implemented in a single clock cycle (it is **not atomic**).

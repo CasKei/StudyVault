@@ -7,13 +7,16 @@ tags: 50.042
 [[Field]]
 
 ## Definition
-> A finite [[Field]].
+> A [[Field]] with a finite order (number of elements).
 
-Order of any finite field:
+Order of any finite field: always a prime or a power of prime.
 - $p$ where $p$ is a prime
 - or $p^n$ where $p$ is a prime and $n>1$
 
+For each prime power $q = p^r$, there exists exactly one finite field with $q$ elements. 
+-   This field is denoted $GF(q)$, and the prime field of GF(q) is GF(p).
 Written as $GF(p)$ or $GF(p^n)$
+> A field is called a prime field if it has no proper (i.e., strictly smaller) subfields. Every non-prime field contains a prime field.
 
 > $p$ is called the **characteristic** of the field.
 

@@ -52,3 +52,8 @@ Algebraic structure consists of:
 [[GF(pn) arithmetics]]
 [[Multiplicative Inverse]]
 Finite structures are useful for arithmetics on computers. They allow us to translate XOR and similar operators to arithmetics.
+
+### Additional Resources
+-   [Galois Fields, Polynomial Algebra and more](https://link.springer.com/content/pdf/bbm%3A978-3-642-54649-5%2F1.pdf)
+-   [Modular Arithmetic, lecture by Christof Paar](https://www.youtube.com/watch?v=W1SY6qKZrUk&ab_channel=IntroductiontoCryptographybyChristofPaar)
+-   [Introduction to Galois Fields, lecture by Christof Paar](https://www.youtube.com/watch?v=x1v2tX4_dkQ&ab_channel=IntroductiontoCryptographybyChristofPaar)
