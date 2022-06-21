@@ -4,6 +4,7 @@ tags: 50.004, 50.042
 [[Algo]]
 [[Algo week 5]]
 [[50.042 Foundations of Cybersecurity|50.042]]
+[[BH22]]
 [[Hash functions]]
 [[Crash Course Cryptography]]
 
@@ -40,3 +41,6 @@ $h$: a cryptographic [[Algo Hash functions|hash function]] known to both you and
 Recipient receives both document $D'$ and signature $s'$, and wants to check if $D'=D$ by running $verify(h(D'), s', PK)$.
 - Using PK, check if $s'=s$
 - Assuming $s'-s$,  running verify will return `false` if $D'\not=D$.
+
+## BH
+![[Pasted image 20220619170756.png]]

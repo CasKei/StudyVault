@@ -1,13 +1,15 @@
 ---
-aliases: ipcs, ipcrm
+aliases: ipcs, ipcrm, shared buffer, memory for locks
 tags: 50.005
 ---
 [[50.005 Computer System Engineering|50.005]]
 [[Week 4 - Processes and Thread management]]
 [[Interprocess Communication]]
 
+![Shared Memory in PostgreSQL](https://www.postgresql.fastware.com/hs-fs/hubfs/Images/Diagrams/img-dgm-postgresql-shared-memory.png?width=500&name=img-dgm-postgresql-shared-memory.png)
+
 ## POSIX Shared Memory
-Shared memory is a region in the RAM that can be **created** and shared among multiple processes using [[System calls]].
+==Shared memory is a region in the RAM== that can be **created** and shared among multiple processes using [[System calls]].
 
 1.  [[OS Kernel]] **allocates** and **establishes** a region of memory and return to the caller process.
 2.  Once shared memory is established, all accesses are treated as routine **user memory accesses** for writing or reading to or from it, and **no assistance from the kernel is required**.

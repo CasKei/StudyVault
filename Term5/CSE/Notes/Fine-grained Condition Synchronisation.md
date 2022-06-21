@@ -5,6 +5,8 @@ tags: 50.005
 [[Week 5 - Process Synchronisation]]
 [[Java synchronisation]]
 
+https://www.tutorialspoint.com/java_concurrency/concurrency_condition.htm
+`Condition` [[Interfaces|interface]].
 If we want to perform fine grained condition synchronization, we can use Java’s **named** [[Conditional variables]] and a [[Reentrant Lock]]. Named conditional variables are created explicitly by first creating a `ReentrantLock()`. The template is as follows:
 
 ```java

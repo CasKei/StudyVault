@@ -4,6 +4,10 @@ tags: packet, ARP
 ---
 [[Network Fundamentals]]
 
+
+![[Pasted image 20220619151703.png]]
+![[Pasted image 20220619151726.png]]
+
 ## Message 1
 Machine A wants to talk to Machine B
 Machine A:

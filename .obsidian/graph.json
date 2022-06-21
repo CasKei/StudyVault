@@ -78,6 +78,13 @@
       }
     },
     {
+      "query": "BH",
+      "color": {
+        "a": 1,
+        "rgb": 7115776
+      }
+    },
+    {
       "query": "Network",
       "color": {
         "a": 1,
@@ -104,11 +111,11 @@
   "textFadeMultiplier": -1,
   "nodeSizeMultiplier": 1.23858575556689,
   "lineSizeMultiplier": 0.70185443823712,
-  "collapse-forces": false,
-  "centerStrength": 0.796961044258617,
+  "collapse-forces": true,
+  "centerStrength": 0.753008362227208,
   "repelStrength": 20,
-  "linkStrength": 0.849071996736692,
+  "linkStrength": 1,
   "linkDistance": 500,
-  "scale": 0.027096993087987326,
+  "scale": 0.08007164346551728,
   "close": false
 }

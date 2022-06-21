@@ -1,4 +1,5 @@
 ---
+aliases: object level lock in Java
 tags: 50.005
 ---
 [[50.005 Computer System Engineering|50.005]]
@@ -6,6 +7,7 @@ tags: 50.005
 [[Java synchronisation]]
 
 ## Java Object Mutex Lock
+https://www.geeksforgeeks.org/object-level-lock-in-java/
 [[Mutex lock]]
 The Java programming language provides two basic synchronization idioms: synchronized **methods** and synchronized **statements**.
 
@@ -18,7 +20,9 @@ With this lock, mutex is guaranteed for this object’s **method**; at most only
 
 Threads **waiting** to acquire the object lock are waiting in the **entry** set, status is still `blocked` and not runnable until it acquires the lock. Once the thread acquires the lock, it becomes `runnable`.
 
+```ad-note
 The wait set is NOT equal to the entry set – it contains threads that are **waiting for a certain condition (NOT WAITING FOR THE LOCK)**.
+```
 
 ![](https://natalieagus.github.io/50005/assets/images/week4/3.png)
 
@@ -46,7 +50,7 @@ And below is a synchronized block based on a **specific** named object (not `thi
 Object mutexLock = new Object();
 public returnType methodName(args)
 {
-   synchronized(mutexLock)
+   synchronized(mutexLock) // this is a synchronised statement
    {
        // Critical section here
        // ...

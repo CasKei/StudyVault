@@ -74,3 +74,32 @@ else:
 	d, x, y = egcd(b, r)  // (xb + yr = d)
 	return (d, y, x - yq)
 ```
+
+## Examples
+- Consider $GF(17)$, what is inverse of 2?
+$$\begin{align}egcd(17,2)\\
+a = 8(2) + 1\\
+d, x, y = egcd(2, 1)\\
+return (d, y, x-yq) = 2, 0, 1\\
+\\
+
+\end{align}$$
+- Consider $GF(2^4)$ with reduction polynomical $P(x) = x^4 + x + 1$. What is the inverse of $x^3 + x^2 + 1$?
+$$\begin{align}&egcd(x^4 + x + 1 , x^3 + x^2 + 1)\\
+&\text{Long division:}\\
+&\underbrace{x^4 + x + 1}_{a} = \underbrace{(x+1)}_q \underbrace{(x^3+x^2+1)}_b + \underbrace{x^2}_r\\
+&d, x, y = ecgd(x^3 + x^2 + 1 , x^2) &= 1, 1, -(x+1)\\
+&return (d, y, x-yq) &=  1, -(x+1), 1 - (x+1)(x+1)\\
+&&= 1 , -(x+1), 1 - (x+1)^2
+\\
+&ecgd(x^3 + x^2 + 1 , x^2)\\
+&\text{Long division:}\\
+&\underbrace{x^3 + x^2 + 1}_a = \underbrace{(x + 1)}_q \underbrace{(x^2)}_b + \underbrace{1}_r \\
+&d, x, y = egcd(x^2 , 1) &= 1, 0, 1\\
+&return (d, y, x-yq) &= 1, 1, -(x+1)
+\\
+&&\text{recursion backtrack}\\
+&d, x, y = 1, -(x+1), 1-(x+1)^2\\
+&y = 1-(x+1)^2 = x^2 + 2x + 2\\
+&= x^2 \text{ (since binary (remove all 2))}
+\end{align}$$

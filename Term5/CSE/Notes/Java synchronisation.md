@@ -5,6 +5,10 @@ tags: 50.005
 [[Week 5 - Process Synchronisation]]
 
 ## Java Synchronisation
+[Java Intrinsic locks](https://www.logicbig.com/tutorials/core-java-tutorial/java-multi-threading/java-intrinsic-locks.html)
+
+[Java Locks API](https://www.tutorialspoint.com/java_concurrency/concurrency_condition.htm)
+
 [[Java Object Mutex Lock]]
 [[Java Static Lock]]
 

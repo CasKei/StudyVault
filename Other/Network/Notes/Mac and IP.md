@@ -25,3 +25,19 @@ tags: network
 
 ## Why a MAC *and* a IP?
 Machine can have more than 1 IP address... and other reasons too.
+
+These are representative ways of expressing addresses in a network.
+
+## IP Address (version4)
+- 4 octets(32 bit)
+- used at internet connection.
+
+![[Pasted image 20220619150307.png]]
+
+## MAC Address
+- 6 octets (48 bits)
+- first 3: OUI
+- last 3: NIC unique number
+- used at network communication
+
+![[Pasted image 20220619150353.png]]

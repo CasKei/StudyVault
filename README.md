@@ -25,5 +25,7 @@ tags: #StudyVault
 [[50.042 Foundations of Cybersecurity]]
 [[02.110DH The Chinese Lyrical Tradition - Arts, Literature and Landscape Design]]
 
+[[BH22]]
+
 ## Term 6
 [[UMD proposed courses]]

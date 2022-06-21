@@ -4,11 +4,27 @@
     "type": "split",
     "children": [
       {
-        "id": "2f90d4b12b19148c",
+        "id": "3e32c124a7443380",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "77f4ff9525fcfa1f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Term5/CSE/Notes/Deadlock prevention.md",
+            "mode": "preview",
+            "source": false
+          }
         }
       }
     ],
@@ -21,6 +37,7 @@
       {
         "id": "0c0aaa5ba09a7988",
         "type": "tabs",
+        "dimension": 76.5065502183406,
         "children": [
           {
             "id": "4972470be55ee35b",
@@ -36,20 +53,22 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#resources",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a440322c0bcecb1b",
         "type": "tabs",
+        "dimension": 23.493449781659386,
         "children": [
           {
             "id": "da258fd36802327e",
@@ -79,10 +98,11 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Term5/CSE/Notes/Deadlock prevention.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
@@ -94,7 +114,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Term5/CSE/Notes/Deadlock prevention.md"
+              }
             }
           },
           {
@@ -117,20 +139,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 164.266357421875,
-    "collapsed": true
+    "width": 234.37625122070312
   },
-  "active": "2f90d4b12b19148c",
+  "active": "77f4ff9525fcfa1f",
   "lastOpenFiles": [
-    "Term5/ChiLyr/Notes/Week 1 - 六义.md",
-    "Term5/ChiLyr/02.110 Writing assignment.md",
-    "Term5/ChiLyr/Notes/Week 5 - Nineteen Old Poems.md",
-    "Term5/ChiLyr/Notes/Week 2 - 诗经.md",
-    "Term5/Cybersec/Notes/Block ciphers.md",
-    "Term5/Cybersec/Notes/Initialisation vector.md",
-    "Term5/Cybersec/Notes/nonce.md",
-    "Term5/Cybersec/Notes/Electronic Code Book (ECB).md",
-    "Term5/Cybersec/Notes/Cipher-Feedback-Mode CFB.md",
-    "Term5/Cybersec/Notes/Counter-mode CTR.md"
+    "Term5/CSE/Notes/Deadlock prevention.md",
+    "README.md",
+    "Term5/CSE/Notes/Week 5, 6 - Deadlock.md",
+    "Term5/CSE/Notes/Resource allocation graph.md",
+    "Term5/CSE/Notes/Deadlock.md",
+    "Term5/CSE/Notes/System resource.md",
+    "Term5/CSE/50.005 Computer System Engineering.md",
+    "Term5/CSE/Notes/Week 6 - Files.md",
+    "Term5/CSE/Notes/Week 5 - Process Synchronisation.md",
+    "Term5/CSE/Notes/Java synchronisation.md"
   ]
 }

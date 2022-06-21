@@ -1,6 +1,6 @@
 /*───────────────────────────────────────────────────────
 THINGS
-Version 1.7.0
+Version 1.7.6
 Created by @colineckert
 
 Readme:
@@ -8,6 +8,9 @@ https://github.com/colineckert/obsidian-things
 
 Support my work:
 https://www.buymeacoffee.com/colineckert
+
+Support @kepano
+https://www.buymeacoffee.com/kepano
 
 ----------------------------------------------------------------
 
@@ -64,7 +67,7 @@ For help and/or CSS snippets, thanks to:
   --purple: #9e86c8;
 
   --light-yellow-highlighter: #fff3a3a6;
-  --dark-yellow-highlighter: #ffed7977;
+  --dark-yellow-highlighter: #dbce7e77;
   --pink-highlighter: #ffb8eba6;
   --red-highlighter: #db3e606e;
   --blue-highlighter: #adccffa6;
@@ -90,7 +93,7 @@ For help and/or CSS snippets, thanks to:
 
   /* Code */
 
-  --font-monospace: 'Victor Mono', 'JetBrains Mono', SFMono-Regular, Consolas, 'Roboto Mono',
+  --font-monospace: 'JetBrains Mono', SFMono-Regular, Consolas, 'Roboto Mono',
     monospace;
 
   /* UI */
@@ -141,7 +144,7 @@ For help and/or CSS snippets, thanks to:
   --line-height: 1.5;
   --border-width: 1px;
   --border-width-alt: 1px;
-  --max-width: 85%; /* Amount of padding around the text, use 90% for narrower padding */
+  --max-width: 90%; /* Amount of padding around the text, use 90% for narrower padding */
   --nested-padding: 3.5%; /* Amount of padding for quotes and transclusions */
   --input-height: 36px;
 
@@ -306,7 +309,7 @@ body {
   /* --tag-font-color: rgb(29, 105, 75); */
   --tag-font-color-l: #1d694b;
 
-  --code-color: #383a42;
+  --code-color: #5c5c5c;
   --atom-gray-1: #383a42;
   --atom-gray-2: #383a42;
   --atom-red: #e75545;
@@ -424,7 +427,7 @@ body {
   --tag-background-color-d: rgb(29, 105, 75);
   --tag-font-color-d: var(--text-normal);
 
-  --code-color: #c9d1d9;
+  --code-color: #a6a6a6;
   --atom-gray-1: #5c6370;
   --atom-gray-2: #abb2bf;
   --atom-red: #e06c75;
@@ -445,7 +448,7 @@ Desktop Styling
 /* ---------------------- */
 
 .is-live-preview {
-  padding: 0 1em !important;
+  padding: 0 0.5em !important;
 }
 
 /* Quote blocks */
@@ -457,7 +460,7 @@ Desktop Styling
 
 /* Live Preview list bullets */
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
-  left: -5px;
+  left: -3px;
 }
 .mod-cm6 .HyperMD-list-line .list-bullet::after,
 .mod-cm6 span.list-bullet::after {
@@ -474,13 +477,9 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
   padding-bottom: 2px;
 }
 
-.is-live-preview .HyperMD-header {
-  padding-top: 0.25em;
-}
-
 /* Temp fix to match Live Preview checkbox color */
 .is-live-preview input[type='checkbox']:checked {
-  background-color: #00a8c5 !important;
+  background-color: #00a7c4 !important;
 }
 
 /* Align checkboxes */
@@ -492,6 +491,15 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
 .is-live-preview .collapse-indicator.collapse-icon {
   top: 2px !important;
 }
+
+/* Cursor color */
+/* .markdown-source-view.mod-cm6.is-live-preview div.cm-editor .cm-cursor {
+  border-left-color: var(--text-accent);
+  border-width: 2px;
+}
+.markdown-source-view.mod-cm6.is-live-preview div.cm-editor div {
+  caret-color: var(--text-accent);
+} */
 
 /* ---------------------- */
 
@@ -970,7 +978,6 @@ input.prompt-input:hover {
 }
 .theme-dark .modal-container .suggestion-item.is-selected {
   border-radius: 6px;
-  /* background: var(--blue-highlighter); */
   background: var(--blue);
 }
 .menu-item {
@@ -1088,13 +1095,6 @@ input.prompt-input:hover {
 
 .markdown-source-view .cm-s-obsidian .cm-hmd-frontmatter {
   font-family: var(--font-monospace);
-}
-
-.theme-light .cm-def {
-  color: #dd4a68 !important;
-}
-.theme-light .cm-number {
-  color: #905 !important;
 }
 
 /* --------------- */
@@ -1481,12 +1481,12 @@ body.full-borders .side-dock-ribbon {
 /* EDITOR MODE */
 /* --------------- */
 
-/* Fancy cursor */
-.CodeMirror-cursor,
+/* Fancy cursor - commented out due to text selection behavior */
+/* .CodeMirror-cursor,
 .cm-s-obsidian .cm-cursor {
   border: none;
   border-right: 2px solid var(--text-accent);
-}
+} */
 .markdown-source-view.mod-cm6,
 .markdown-source-view.mod-cm5,
 .markdown-source-view {
@@ -1516,7 +1516,8 @@ body.full-borders .side-dock-ribbon {
 }
 .cm-s-obsidian .HyperMD-header,
 .cm-s-obsidian pre.HyperMD-header {
-  padding-left: 0 !important;
+  /* Commenting to better align header and content */
+  /* padding-left: 0 !important; */
   font-size: 1em !important;
 }
 .CodeMirror-linenumber {
@@ -1700,13 +1701,18 @@ span.cm-formatting.cm-formatting-quote {
 .document-search-close-button:before {
   font-weight: 200;
 }
-.document-search-container {
-  position: fixed;
-  padding-top: 10px;
-  height: 50px;
+body .document-search-container {
+  margin-top: 12px;
+  padding: 0;
+  height: 38px;
   background-color: var(--background-primary);
-  border-top: var(--border-width-alt) solid var(--background-modifier-border);
+  border-top: none;
   width: 100%;
+}
+.markdown-reading-view.is-searching,
+.markdown-source-view.is-replacing,
+.markdown-source-view.is-searching {
+  flex-direction: column-reverse;
 }
 input.document-search-input,
 input.document-replace-input {
@@ -1929,9 +1935,10 @@ input[type='checkbox']:checked {
 .markdown-preview-section > .contains-task-list {
   padding-bottom: 0.5em;
 }
-.markdown-preview-view ul > li.task-list-item.is-checked {
+.markdown-preview-view ul > li.task-list-item.is-checked,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='x'],
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='X'] {
   text-decoration: none;
-  color: var(--text-normal);
 }
 .markdown-preview-view .task-list-item-checkbox {
   width: 16px;
@@ -2350,7 +2357,7 @@ span[title='Unfold line']:hover,
 /* --------------- */
 
 .outline {
-  padding: 15px 10px 20px 0;
+  padding: 15px 10px 20px 5px;
   font-size: var(--font-adaptive-small);
 }
 .outline .pane-empty {
@@ -2587,6 +2594,12 @@ input.search-input:focus {
   width: 15px;
   margin-left: -15px;
 }
+.outline .tree-item-self .collapse-icon {
+  margin-left: -20px;
+}
+.tag-container .collapse-icon {
+  margin-left: -20px;
+}
 .tree-item-self:hover .collapse-icon {
   color: var(--text-normal);
 }
@@ -2650,9 +2663,9 @@ input.search-input:focus {
 .backlink-pane > .tree-item-self {
   padding-left: 15px;
   color: var(--text-muted);
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: var(--font-adaptive-small);
+  font-size: var(--font-adaptive-smaller);
   font-weight: 500;
   padding: 10px 7px 5px 10px;
   background: transparent;
@@ -2681,7 +2694,7 @@ input.search-input:focus {
 /* --------------- */
 
 .tag-container {
-  padding: 10px;
+  padding: 10px 15px;
 }
 .tag-pane-tag-count {
   margin-right: 10px;
@@ -2709,11 +2722,17 @@ input.search-input:focus {
 /* --------------- */
 
 .status-bar {
-  transition: color 200ms linear;
+  transition: color 0.2s linear;
   color: var(--text-faint);
   font-size: var(--font-adaptive-smaller);
+  border-top: var(--border-width) solid var(--background-divider);
   line-height: 1;
   max-height: 24px;
+}
+.minimal-status-off .status-bar {
+  background-color: var(--background-secondary);
+  border-width: var(--border-width);
+  padding: 2px 6px 4px;
 }
 .status-bar {
   background-color: var(--background-primary);
@@ -2728,17 +2747,20 @@ input.search-input:focus {
   max-height: 26px;
   padding: 2px 8px 6px 3px;
 }
-.sync-status-icon.mod-working,
-.sync-status-icon.mod-success {
+.sync-status-icon.mod-success,
+.sync-status-icon.mod-working {
   color: var(--text-faint);
-  transition: color 200ms linear;
   cursor: var(--cursor);
 }
-.status-bar:hover .sync-status-icon.mod-working,
+.status-bar:hover,
 .status-bar:hover .sync-status-icon.mod-success,
-.status-bar:hover {
+.status-bar:hover .sync-status-icon.mod-working {
   color: var(--text-muted);
-  transition: color 200ms linear;
+  transition: color 0.2s linear;
+}
+.status-bar .plugin-sync:hover .sync-status-icon.mod-success,
+.status-bar .plugin-sync:hover .sync-status-icon.mod-working {
+  color: var(--text-normal);
 }
 .status-bar-item {
   padding: 0 5px;
@@ -2746,24 +2768,24 @@ input.search-input:focus {
 .status-bar-item-segment {
   margin-right: 10px;
 }
-.status-bar-item.mod-clickable {
-  cursor: var(--cursor);
-}
-.status-bar-item.mod-clickable:hover {
-  background-color: var(--background-tertiary);
-  border-radius: 4px;
-}
 .status-bar-item {
-  padding: 7px 5px;
-  margin: 0 2px 0 0;
+  cursor: var(--cursor) !important;
+}
+/* .status-bar-item.cMenu-statusbar-button:hover,
+.status-bar-item.mod-clickable:hover,
+.status-bar-item.plugin-sync:hover {
+  text-align: center;
+  background-color: var(--background-tertiary) !important;
+  border-radius: 4px;
+} */
+.status-bar-item {
+  padding: 7px 4px;
+  margin: 0;
 }
 .status-bar-item,
 .sync-status-icon {
   display: flex;
   align-items: center;
-}
-.status-bar-item.plugin-sync {
-  padding-right: 0;
 }
 .status-bar-item.plugin-sync svg {
   height: 15px;
@@ -2774,9 +2796,47 @@ input.search-input:focus {
 /* Workplace ribbon & sidedock icons */
 /* --------------- */
 
+.workspace-ribbon {
+  flex: 0 0 42px;
+  padding-top: 7px;
+}
+.workspace-ribbon.mod-right {
+  right: 4px;
+  bottom: 0;
+  height: 32px;
+  padding-top: 6px;
+  position: absolute;
+  background: 0 0;
+  border: 0;
+}
 .workspace-ribbon-collapse-btn {
   margin: 0;
-  padding: 12px 5px;
+  padding: 2px 4px;
+}
+.mod-right .workspace-ribbon-collapse-btn {
+  background-color: var(--background-primary);
+}
+.mod-right .workspace-ribbon-collapse-btn:hover {
+  background-color: var(--background-tertiary);
+}
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,
+.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn {
+  opacity: 1;
+  position: fixed;
+  width: 26px;
+  display: flex;
+  align-items: center;
+  top: auto;
+  text-align: center;
+  bottom: 42px;
+  right: 15px;
+  z-index: 9;
+}
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  left: 8px;
+}
+.side-dock-settings {
+  padding-bottom: 30px;
 }
 .workspace-ribbon-collapse-btn,
 .view-action,
@@ -2827,16 +2887,10 @@ a[href*="obsidian://search"]
 /* Style settings to toggle link underlines */
 body:not(.links-int-on) a[href*="obsidian://"],
 body:not(.links-int-on) .markdown-preview-view .internal-link,
-body:not(.links-int-on) .external-link {
+body:not(.links-int-on) .markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-underline,
+body:not(.links-ext-on) .external-link,
+body:not(.links-ext-on) .markdown-source-view.mod-cm6 .cm-link .cm-underline {
   text-decoration: none;
-}
-body.links-int-on .markdown-preview-view .internal-link,
-.markdown-preview-view .internal-link {
-  text-decoration: underline;
-}
-body.links-ext-on .external-link,
-.external-link {
-  text-decoration: underline;
 }
 
 .footnotes-list {
@@ -2893,15 +2947,18 @@ iframe {
   border: solid var(--quote-opening-modifier);
   border-width: 0px 0px 0px 2px;
   background-color: transparent;
-  color: var(--green);
   font-style: italic;
   padding: 0 0 0 calc(var(--nested-padding) / 2);
   margin-inline-start: var(--nested-padding);
 }
 
 .cm-s-obsidian span.cm-quote {
-  color: var(--green);
   font-style: italic;
+}
+
+body:not(.default-font-color) .cm-s-obsidian span.cm-quote,
+body:not(.default-font-color) .markdown-preview-view blockquote {
+  color: var(--green);
 }
 
 /* ---------------
@@ -2916,45 +2973,45 @@ span.cm-formatting {
 
 /* Italics */
 
-em,
-.cm-s-obsidian .cm-em.cm-header,
-.cm-s-obsidian .cm-em.cm-header.cm-header-1,
-.cm-s-obsidian .cm-em.cm-header.cm-header-2,
-.cm-s-obsidian .cm-em.cm-header.cm-header-3,
-.cm-s-obsidian .cm-em.cm-header.cm-header-4,
-.cm-s-obsidian .cm-em.cm-header.cm-header-5,
-.cm-s-obsidian .cm-em.cm-header.cm-header-6,
-.cm-s-obsidian .cm-em.cm-header.cm-header-1,
-.cm-s-obsidian .cm-em.cm-header.cm-header-2,
-.cm-s-obsidian .cm-em.cm-header.cm-header-3,
-.cm-s-obsidian .cm-em.cm-header.cm-header-4,
-.cm-s-obsidian .cm-em.cm-header.cm-header-5,
-.cm-s-obsidian .cm-em.cm-header.cm-header-6,
-.markdown-preview-section em,
-.cm-s-obsidian .cm-em {
+body:not(.default-font-color) em,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-1,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-2,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-3,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-4,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-5,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-6,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-1,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-2,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-3,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-4,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-5,
+body:not(.default-font-color) .cm-s-obsidian .cm-em.cm-header.cm-header-6,
+body:not(.default-font-color) .markdown-preview-section em,
+body:not(.default-font-color) .cm-s-obsidian .cm-em {
   font-style: italic;
   color: var(--em-color);
 }
 
 /* Bold */
 
-strong,
-.cm-s-obsidian .cm-strong.cm-header,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-1,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-2,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-3,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-4,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-5,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-6,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-1,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-2,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-3,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-4,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-5,
-.cm-s-obsidian .cm-strong.cm-header.cm-header-6,
-.cm-header.cm-header-3.cm-hmd-internal-link,
-.markdown-preview-section strong,
-.cm-s-obsidian .cm-strong {
+body:not(.default-font-color) strong,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-1,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-2,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-3,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-4,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-5,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-6,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-1,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-2,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-3,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-4,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-5,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong.cm-header.cm-header-6,
+body:not(.default-font-color) .cm-header.cm-header-3.cm-hmd-internal-link,
+body:not(.default-font-color) .markdown-preview-section strong,
+body:not(.default-font-color) .cm-s-obsidian .cm-strong {
   color: var(--strong-color);
 }
 
@@ -3097,7 +3154,6 @@ pre .copy-code-button:hover {
 }
 .markdown-source-view.mod-cm6 .code-block-flair {
   color: var(--text-muted);
-  padding: 5px;
 }
 
 /* ------------------- */
@@ -3111,11 +3167,15 @@ pre .copy-code-button:hover {
 .token.cdata {
   color: var(--atom-gray-1) !important;
 }
-.token.punctuation {
+.token.punctuation,
+.cm-hmd-codeblock {
   color: var(--atom-gray-2) !important;
 }
+code[class*='language-'],
 .token.selector,
-.token.tag {
+.token.tag,
+.cm-def,
+.cm-property {
   color: var(--atom-red) !important;
 }
 .token.property,
@@ -3124,17 +3184,20 @@ pre .copy-code-button:hover {
 .token.constant,
 .token.symbol,
 .token.attr-name,
-.token.deleted {
+.token.deleted,
+.cm-number {
   color: var(--atom-orange) !important;
 }
 .token.string,
 .token.char,
 .token.attr-value,
 .token.builtin,
-.token.inserted {
+.token.inserted,
+.cm-string {
   color: var(--atom-green) !important;
 }
 .token.operator,
+.cm-operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
@@ -3142,14 +3205,20 @@ pre .copy-code-button:hover {
   color: var(--atom-aqua) !important;
 }
 .token.atrule,
-.token.keyword {
+.token.keyword,
+.cm-keyword {
   color: var(--atom-purple) !important;
 }
 .token.function,
-.token.macro.property {
+.token.macro.property,
+.cm-variable {
   color: var(--atom-blue) !important;
 }
-.token.class-name {
+.token.class-name,
+.cm-atom,
+.cm-tag,
+.cm-type,
+.theme-dark .cm-variable-2 {
   color: var(--atom-yellow) !important;
 }
 .token.regex,
@@ -3200,6 +3269,9 @@ pre.line-numbers > code {
   display: block !important;
   padding-right: 0.8em !important;
   text-align: right !important;
+}
+.cm-s-obsidian .HyperMD-codeblock {
+  line-height: 1.5 !important;
 }
 
 /* --------------- */
@@ -3621,7 +3693,7 @@ input[type='range']::-webkit-slider-thumb:active {
 /* --------------- */
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px !important;
 }
 ::-webkit-scrollbar-track {
   background-color: var(--background-primary);
@@ -3706,7 +3778,7 @@ body.is-mobile .view-header-title,
   transform: none !important;
 }
 .is-mobile .workspace-drawer:not(.is-pinned) {
-  width: 90vw;
+  width: 100vw;
   max-width: 360pt;
   border: none;
   box-shadow: 0 5px 50px 5px rgba(0, 0, 0, 0.05);
@@ -3795,11 +3867,13 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile .workspace-drawer-header-name {
   font-weight: var(--bold-weight);
   color: var(--text-normal);
+  font-size: 1.125em;
+  margin-top: 3px;
 }
 .is-mobile .workspace-drawer-header-info {
   color: var(--text-faint);
-  font-size: var(--font-adaptive-small);
-  margin-bottom: 5px;
+  font-size: var(--font-adaptive-smaller);
+  margin-bottom: 0;
 }
 .is-mobile .mod-left .workspace-drawer-header-info,
 .is-mobile.hider-status .workspace-drawer-header-info {
@@ -3808,7 +3882,6 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile .workspace-drawer-active-tab-header {
   margin: 2px 12px 2px;
   padding: 8px 0 8px 8px;
-  border-radius: 8px;
 }
 .is-mobile .workspace-leaf-content .item-list,
 .is-mobile .tag-container,
@@ -3874,7 +3947,31 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile .modal.mod-community-plugin,
 .is-mobile .modal.mod-settings {
   width: 100vw;
-  max-height: 80vh;
+  max-height: 90vh;
+  padding: 0;
+}
+.is-mobile .modal.mod-settings .vertical-tab-header:before {
+  content: 'Settings';
+  font-weight: 600;
+  font-size: var(--font-settings);
+  position: sticky;
+  display: flex;
+  height: 54px;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.is-mobile .modal .vertical-tab-header-group-title {
+  padding: 15px 20px 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 .is-mobile .nav-buttons-container {
   padding: 0 0 10px 15px;
@@ -3985,8 +4082,12 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 .is-mobile.focus-mode .view-actions {
   opacity: 1;
 }
+.is-mobile .workspace-drawer-header-icon {
+  align-self: start;
+}
 .is-mobile .workspace-drawer-header-icon svg {
   width: 22px;
+  height: 100%;
 }
 .is-mobile .workspace-drawer-tab-options {
   padding-top: 10px;
@@ -4128,7 +4229,6 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   border: 0;
   background-color: var(--background-secondary);
 }
-
 .is-mobile .view-header-icon .three-horizontal-bars {
   opacity: 0;
 }
@@ -4246,7 +4346,8 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
     font-size: 18px;
   }
   .is-mobile .workspace-drawer-header-name-text {
-    font-size: 18px;
+    font-size: var(--font-settings-title);
+    letter-spacing: -0.015em;
   }
   .is-mobile .menu-item.is-label {
     font-size: 18px;
@@ -6477,6 +6578,21 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: default-font-color
+        title: Default font colors
+        description: Use the default font color styling for bold, italics, and quotes
+        type: class-toggle
+        default:  false
+    - 
+        id: accent-h
+        title: Link hue color
+        description: Hue of both internal and external links
+        type: variable-number-slider
+        default: 215
+        min: 0
+        max: 360
+        step: 1
+    - 
         id: strong-color
         title: Bold font color
         type: variable-color
@@ -6519,11 +6635,25 @@ settings:
         format: hex
         default: '#' 
     - 
+        id: editor-font-size
+        title: Editor font size
+        description: Font size in em for editor and preview overall font size
+        type: variable-number
+        default: 1
+        format: em
+    - 
         id: font-small
         title: Sidebar and tag font size
         description: Font size in px of sidebar, tags, and small text
         type: variable-number
         default: 13
+        format: px
+    - 
+        id: font-smaller
+        title: Smaller font size
+        description: Font size in px of smaller text
+        type: variable-number
+        default: 11
         format: px
     - 
         id: line-height
@@ -6543,7 +6673,7 @@ settings:
         title: Maximum line width
         description: Percentage of space inside a pane that a line can fill. Recommended values between 80 to 100
         type: variable-number
-        default: 85
+        default: 90
         format: '%'
     -
         id: headings

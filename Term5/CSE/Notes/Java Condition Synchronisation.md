@@ -6,6 +6,8 @@ tags: 50.005
 [[Java synchronisation]]
 
 ## Java Condition Synchronisation
+[slide from elsewhere](https://www.doc.ic.ac.uk/~jnm/concurrency/online/monitors/sld005.htm)
+
 Similarly, Java allows for condition synchronization using `wait()` and `notify()` method, as well as its own condition variables.
 
 Example: suppose a few threads are trying to execute the same method as follows,
@@ -30,18 +32,18 @@ public synchronized void doWork(int id)
 }
 ```
 
-Suppose `N` threads are running this `doWork` function **[[Concurrent Programming|concurrent]]ly** with argument `id` varying between `0` to `N-1`, i.e: 0 for thread 0, 1 for thread 1, and so on.
+Suppose `N` threads are running this `doWork` function **[[Concurrent Programming|concurrent]]ly** with argument `id` varying between `0` to `N - 1`, i.e: 0 for thread 0, 1 for thread 1, and so on.
 
 In this example, the condition in **question** is that ONLY thread whose `id == turn` can execute the CS.
 
 When calling `wait()`, the lock for [[Mutex]] **must** be held by the caller (same as the conditional variable in the section above). That’s why the `wait` to the conditional variable is made inside a `synchronized` method. If not, disaster might happen, for example the following execution sequence:
 
--   At `t=0`,
+-   At `t = 0`,
     -   Thread Y check that `turn != id_y`, and then Y is suspended.
--   At `t=n`,
+-   At `t = n`,
     -   Thread X **resumes** and **increments** the `turn`. This causes `turn == id_y`.
     -   Suppose X then calls `notify()`, and then X is suspended
--   At `t=n+m`,
+-   At `t = n + m`,
     -   Thread Y **resumes** execution and enters `wait()`.
 -   However at this time, the value of `turn` is ALREADY `== id_y`.
 

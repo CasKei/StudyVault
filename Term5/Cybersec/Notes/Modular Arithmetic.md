@@ -53,6 +53,23 @@ Algebraic structure consists of:
 [[Multiplicative Inverse]]
 Finite structures are useful for arithmetics on computers. They allow us to translate XOR and similar operators to arithmetics.
 
+## Modular exponentiation?
+- There is no "exponentiation" instruction on CPU
+- There is no "take modular remainter" instruction on CPU
+- An efficient algorithm: square and multiply
+> Square and multiply algorithm (MSB first, i.e., bits are read from left to right)
+> ```python
+> def squAndMult(m, k, n):
+> 	res = 1
+> 	for i in bin(k)[2:]: # step bitwise through key
+> 		res = res * res % n
+> 		if (i == '1'):
+> 			res = res * m % n
+> 	return res
+> ```
+
+Example: $5^{23} \text{ mod }11$
+
 ### Additional Resources
 -   [Galois Fields, Polynomial Algebra and more](https://link.springer.com/content/pdf/bbm%3A978-3-642-54649-5%2F1.pdf)
 -   [Modular Arithmetic, lecture by Christof Paar](https://www.youtube.com/watch?v=W1SY6qKZrUk&ab_channel=IntroductiontoCryptographybyChristofPaar)

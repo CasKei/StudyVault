@@ -35,10 +35,10 @@ There are two common CPU scheduling operations ([[System calls]]): `block()` and
     
     ```c
     wait(semaphore *S)
-    {  S->value--;
-     if (S->value < 0)
+    {  S <- value--;
+     if (S <- value < 0)
      {
-         add this process to S->list; // this will call block() 
+         add this process to S <- list; // this will call block() 
      }
     }
     ```
@@ -48,10 +48,10 @@ There are two common CPU scheduling operations ([[System calls]]): `block()` and
     ```c
     signal(semaphore *S)
     {
-     S->value++;
-     if (S->value <= 0)
+     S <- value++;
+     if (S <- value >= 0)
      {
-         remove a process P from S->list;
+         remove a process P from S <- list;
          wakeup(P);
      }
     }
@@ -67,6 +67,11 @@ Further notes about the above simple implementation of Semaphore `wait` and `sig
     -   Each semaphore data structure for example, can contain an **integer** value and a **pointer to a list of PCBs.**
 
 Note that semaphore implementation may vary between different libraries, but the idea remains the same.
+
+> NOTE: `wait()` and `signal()` are [[Critical section solutions]]
+> If [[Re-entrancy|re-entrant]], more than one process can be in the kernel, but `wait` and `signal` are in kernel. So potential [[Race condition]] in kernel and that's bad.
+
+
 
 ## Circular Dependency
 How can we implement `signal()` and `wait()` atomically **without** [[Spinlock|busy waiting]], if it relies on [[Hardware supported spinlocks|synchronisation hardware]] in [[Multiprocessor System]] or even basic [[Software Mutex Algorithm]]s (e.g: if on uniprocessor systems) that **requires** [[Spinlock|busy waiting]]?
@@ -98,10 +103,10 @@ Shared resources:
 char buf[N];
 int in = 0; int out = 0;
 
-semaphore chars = 0; 
-semaphore space = N;
-semaphore mutex_p = 1; 
-semaphore mutex_c = 1;
+semaphore chars = 0; // to sync between 1 p and 1 c
+semaphore space = N; // to sync between 1 p and 1 c
+semaphore mutex_p = 1; // to sync between multiple p
+semaphore mutex_c = 1; // to sync between multiple c
 ```
 
 Producer program:
@@ -115,7 +120,7 @@ void send (char c){
    in = (in + 1)%N;
 
    signal(mutex_p);
-   signal(space);
+   signal(chars);
 }
 ```
 
@@ -128,9 +133,13 @@ char rcv(){
    wait(mutex_c);
 
    c = buf[out];
-   out = (out+1)%N;
+   out = (out + 1)%N;
 
    signal(mutex_c);
-   signal(chars);
+   signal(space);
 }
 ```
+
+![[Pasted image 20220619092629.png]]
+![[Pasted image 20220619102559.png]]
+(mutex, empty, full)
