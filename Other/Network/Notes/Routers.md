@@ -1,6 +1,6 @@
 ---
 aliases: routing, router, hop
-tags: network
+tags: network, 50.005
 ---
 [[Network Fundamentals]]
 
@@ -32,3 +32,6 @@ Example: Machine A wants to talk to Machine B, but B is on a different subnet.
 https://www.youtube.com/watch?v=9uebakqWlB0
 
 25.13 cont.
+
+## Router
+Type of [[Packet switching & statistical multiplexing|packet switch]]

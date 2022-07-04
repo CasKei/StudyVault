@@ -4,25 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "3e32c124a7443380",
+        "id": "3b62d5c3e8c86abd",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term4/ISP/Notes/Unit testing.md",
+            "file": "Term5/Cybersec/50.042 Foundations of Cybersecurity.md",
             "mode": "preview",
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "a2e1c959fccd953c",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Term5/CSE/Week 8 - Network basics.md",
-            "mode": "source",
             "source": false
           }
         }
@@ -62,7 +50,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a440322c0bcecb1b",
@@ -81,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253,
-    "collapsed": true
+    "width": 253
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term5/CSE/Week 8 - Network basics.md",
+                "file": "Term5/Cybersec/50.042 Foundations of Cybersecurity.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term5/CSE/Week 8 - Network basics.md"
+                "file": "Term5/Cybersec/50.042 Foundations of Cybersecurity.md"
               }
             }
           },
@@ -143,17 +131,17 @@
     "width": 234.37625122070312,
     "collapsed": true
   },
-  "active": "a2e1c959fccd953c",
+  "active": "3b62d5c3e8c86abd",
   "lastOpenFiles": [
-    "Term5/CSE/Week 8 - Network basics.md",
-    "Term5/CSE/Notes/Socket.md",
-    "Term5/CSE/Week 12 - Client-server and the web.md",
-    "Term5/CSE/50.005 Computer System Engineering.md",
-    "Term5/CSE/Week 11 - Internet naming and addressing.md",
+    "Term5/Cybersec/50.042 Foundations of Cybersecurity.md",
+    "Term4/Algo/Notes/Intro to hashing.md",
+    "Term3/DDW/Notes/Linear Regression.md",
     "Other/brainhack/DNS.md",
-    "Term5/CSE/Week 10 - Network security.md",
-    "Term5/Cybersec/Notes/Authentication scheme.md",
-    "Term5/Cybersec/Notes/Identification scheme.md",
-    "Term5/CSE/Week 9 - Network performance.md"
+    "Term4/Algo/Notes/Universal hashing.md",
+    "Term4/CompStruct/Notes/Worked example on scheduling policies.md",
+    "Term4/CompStruct/Notes/Fully Associative Cache (FA).md",
+    "Other/brainhack/Introduction to Malware.md",
+    "Term3/DDW/Notes/Multiple Linear Regression.md",
+    "Term5/CSE/Notes/UNIX File System Data Structure.md"
   ]
 }
