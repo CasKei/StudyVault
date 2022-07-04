@@ -10,8 +10,8 @@ Why is [[Diffie-Hellman key exchange]] secure?
 - Attacker cannot find $a$ from $g^a \text{ mod }p$
 
 This is called the DLP.
-> Given a finite cyclic [[Group]] $G$ of order $p-1$ and an element $r$, and a (multiplicative) generator element $g$:
-> - DLP: Find $1 \leq x \leq p-1$, such that $g^x \equiv r \text{ mod } p$
+> Given a finite cyclic [[Group]] $G$ of order $p-1$ and an element $r$, and a (multiplicative) generator element $g$ :
+> - Find $1 \leq x \leq p-1$, such that $$g^x \equiv r \text{ mod } p$$
 > > Also written as
 > > $$x = \log_gr \text{ mod } p$$
 

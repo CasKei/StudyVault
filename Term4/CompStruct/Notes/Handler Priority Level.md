@@ -15,6 +15,6 @@ Some hardware tweaks on [[Anatomy of the Beta CPU|CPU]] is needed to support thi
 
 Value `p` depends on how many priority levels you want the mahcine to have, e.g. 3 bits for 8 levels.
 
-This is analogous to what we have learned before. A system two mode: Kernel and user mode, is differentiated only with the MSB of the PC – `1` for Kernel mode (hence enabling the highest privilege) and `0` for user mode.
+This is analogous to what we have learned before. A system has [[Kernel mode and User mode|dual modes]]: Kernel and user mode, is differentiated only with the MSB of the PC – `1` for Kernel mode (hence enabling the highest privilege) and `0` for user mode.
 
 

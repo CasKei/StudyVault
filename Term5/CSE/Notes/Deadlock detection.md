@@ -45,3 +45,6 @@ The deadlock detection algorithm goes as follows:
     -   If Step 2 does not produce such index `i`, prepare for exit:
         -   If `finish[i] == False` for some `i`, then the system is **already** in a deadlock (caused by Process `i` getting deadlocked by another Process `j` where `finish[j] == False` too)
         -   Else if `finish[i] == True` for all `i<N`, then the system is **not in a [[Deadlock]]**.
+
+## Complexity
+$$O(MN^2)$$

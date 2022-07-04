@@ -9,20 +9,20 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Term4/ISP/Notes/Unit testing.md",
             "mode": "preview",
             "source": false
           }
         }
       },
       {
-        "id": "77f4ff9525fcfa1f",
+        "id": "a2e1c959fccd953c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Term5/CSE/Notes/Deadlock prevention.md",
-            "mode": "preview",
+            "file": "Term5/CSE/Week 8 - Network basics.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -37,7 +37,7 @@
       {
         "id": "0c0aaa5ba09a7988",
         "type": "tabs",
-        "dimension": 76.5065502183406,
+        "dimension": 84.07643312101911,
         "children": [
           {
             "id": "4972470be55ee35b",
@@ -62,13 +62,12 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a440322c0bcecb1b",
         "type": "tabs",
-        "dimension": 23.493449781659386,
+        "dimension": 15.92356687898089,
         "children": [
           {
             "id": "da258fd36802327e",
@@ -82,7 +81,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253
+    "width": 253,
+    "collapsed": true
   },
   "right": {
     "id": "4351db21b389b6a0",
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Term5/CSE/Notes/Deadlock prevention.md",
+                "file": "Term5/CSE/Week 8 - Network basics.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Term5/CSE/Notes/Deadlock prevention.md"
+                "file": "Term5/CSE/Week 8 - Network basics.md"
               }
             }
           },
@@ -135,23 +135,25 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 234.37625122070312
+    "width": 234.37625122070312,
+    "collapsed": true
   },
-  "active": "77f4ff9525fcfa1f",
+  "active": "a2e1c959fccd953c",
   "lastOpenFiles": [
-    "Term5/CSE/Notes/Deadlock prevention.md",
-    "README.md",
-    "Term5/CSE/Notes/Week 5, 6 - Deadlock.md",
-    "Term5/CSE/Notes/Resource allocation graph.md",
-    "Term5/CSE/Notes/Deadlock.md",
-    "Term5/CSE/Notes/System resource.md",
+    "Term5/CSE/Week 8 - Network basics.md",
+    "Term5/CSE/Notes/Socket.md",
+    "Term5/CSE/Week 12 - Client-server and the web.md",
     "Term5/CSE/50.005 Computer System Engineering.md",
-    "Term5/CSE/Notes/Week 6 - Files.md",
-    "Term5/CSE/Notes/Week 5 - Process Synchronisation.md",
-    "Term5/CSE/Notes/Java synchronisation.md"
+    "Term5/CSE/Week 11 - Internet naming and addressing.md",
+    "Other/brainhack/DNS.md",
+    "Term5/CSE/Week 10 - Network security.md",
+    "Term5/Cybersec/Notes/Authentication scheme.md",
+    "Term5/Cybersec/Notes/Identification scheme.md",
+    "Term5/CSE/Week 9 - Network performance.md"
   ]
 }

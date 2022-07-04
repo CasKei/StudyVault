@@ -6,19 +6,10 @@ tags: 50.005
 
 ## Basic Concepts of Files
 [[File]]
-[[File Content Structure]]
-[[File Format and Type]]
-[[File Interpreter]]
 
 [[File Abstract Data Type]]
 - [[File Attributes]]
 - [[File Interface]]
-	- [[File Creation]]
-	- [[File Read and Write]]
-	- [[File Deletion]]
-	- [[File Truncation]]
-	- [[File Reposition]]
-	- [[Combining File Operations]]
 
 [[File System]]
 - [[UNIX File System Data Structure]]
